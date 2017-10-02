@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 220px;
+  height: 101px;
   width: 100%;
   background-color: #292929;
 }
@@ -20,6 +20,8 @@ body {
   align-self: flex-start;
   position: absolute;
   width: 100px;
+  max-width:100%;
+  height:auto;
 }
 
 #main-nav {
