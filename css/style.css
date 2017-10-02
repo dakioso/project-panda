@@ -15,6 +15,13 @@ body {
   background-color: #292929;
 }
 
+.main-head img {
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  width: 100px;
+}
+
 #main-nav {
   box-sizing: border-box;
   display: flex;
