@@ -37,10 +37,13 @@ body {
 
 #main-nav ul {
   display: flex;
+  /* flex: 1; */
   list-style-type: none;
   margin-top: auto;
   padding: 0;
 }
+
+
 
 #main-nav a {
   display: inline;
@@ -55,4 +58,10 @@ body {
 #main-nav a:hover {
   border: 1px solid #e0e0e0;
   background-color: #2d2c2c;
+}
+
+.login-link {
+  display: flex;
+  /* flex: 1; */
+  justify-content: flex-end;
 }
