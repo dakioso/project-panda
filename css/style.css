@@ -33,21 +33,22 @@ body {
   width: 100%;
   background-color: #292929;
   overflow: hidden;
+
 }
 
 #main-nav ul {
   display: flex;
-  /* flex: 1; */
   list-style-type: none;
   margin-top: auto;
   padding: 0;
+
 }
 
 
 
 #main-nav a {
   display: inline;
-  padding: 15px;
+  padding: 5px 15px 5px 15px;
   border: 1px solid #292929;
   color: white;
   background-color: #292929;
@@ -62,6 +63,22 @@ body {
 
 .login-link {
   display: flex;
-  /* flex: 1; */
+  align-items: center;
   justify-content: flex-end;
+  margin-top: -41px;
+}
+
+.login-link a {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #292929;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  border: 1px solid #e0e0e0;
+  background-color: #2d2c2c;
 }
