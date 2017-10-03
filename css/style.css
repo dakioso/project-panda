@@ -1,3 +1,14 @@
+*{
+	border:.5px solid;
+	border-color:red;
+
+
+
+
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -66,18 +77,42 @@ body {
   justify-content: flex-end;
 }
 
-.courses div {
-  padding:1px 0px;
-  text-align: center;
-  border: 2px solid #999;
-  border-radius: 20px;
-  margin:20px 250px;
-  background: linear-gradient(to bottom,orange, #222);
-  box-shadow: 10px 10px 5px #888888;
+.platsnavknapp {
+	position:absolute;
+	padding-left:30px;
+	padding-top:60px;
+}
+.sidenav {
+    height: 40%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    left: 0;
+    background-color: #292929;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	height:200px;
 }
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
 
-.courses{
-  text-align: center;
+.sidenav a:hover {
+    color: white;
+}
 
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
