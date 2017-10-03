@@ -14,7 +14,7 @@ function loginChecker(form){
   for(let i = 0; i < users.length; i++){
     if(form.userid.value === users[i].username && form.passwordid.value === users[i].password){
       if(form.userid.value === 'student'){
-        return window.location.replace('?');
+        return window.location.replace('student.html');
     } else if(form.userid.value === 'teacher'){
         return window.location.replace('?');
       }
