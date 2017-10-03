@@ -5,6 +5,10 @@ body {
   background: white;
 }
 
+* {
+  /*  border: 1px solid red;*/
+}
+
 .main-head {
   box-sizing: border-box;
   display: flex;
@@ -61,6 +65,11 @@ body {
   background-color: #2d2c2c;
 }
 
+#main-nav a.active {
+  border: 1px solid #e0e0e0;
+  background-color: #2d2c2c;
+}
+
 .login-link {
   display: flex;
   align-items: center;
@@ -81,4 +90,22 @@ body {
 .login-link a:hover {
   border: 1px solid #e0e0e0;
   background-color: #2d2c2c;
+}
+
+#main-nav .icon {
+
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #main-nav ul {
+    display: none;
+  }
+
+  #main-nav .icon {
+    display: block;
+    position: absolute;
+  }
+
+
 }
