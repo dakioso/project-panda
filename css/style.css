@@ -32,3 +32,33 @@ border: 0;
   justify-content: center;
   height: 300px;
 }
+.content-1 h1{
+  line-height: 220px;
+  font-size: 60px;
+  font-family: Arial Black;
+  background-color: black;
+  color: white;
+  width: 600px;
+  text-align: center;
+}
+
+#h2-style{
+  font-family: Arial Black;
+  font-size: 30px;
+}
+
+#p-style{
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.content-3 h1{
+  font-family: Arial Black;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 600px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
