@@ -35,28 +35,6 @@ function loginCheck(form){
   }  alert('Sorry invalid username or password');
 }
 
-
-let button = document.getElementById("loginBtn");
-let modal = document.getElementById('myModal');
-let span = document.getElementsByClassName("close")[0];
-
-// onclick button to log in, shows the login modal
-button.onclick = function() {
-  modal.style.display = "block";
-}
-
-// Close the login box if user click x or outside loginbox
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-        modal.style.display = "none";
-  }
-}
-
-
 //JQUERY FUNCTION. ADD STICKY CLASS TO #NAVBAR WHEN SCROLLING
 (function($) {
     "use strict";
