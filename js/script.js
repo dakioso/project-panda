@@ -22,6 +22,8 @@ function loginChecker(form){
   }  alert('Sorry invalid username or password');
 }
 
+
+//JQUERY FUNCTION. ADD STICKY CLASS TO #NAVBAR WHEN SCROLLING
 (function($) {
     "use strict";
 
