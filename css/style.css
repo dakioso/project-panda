@@ -1,6 +1,6 @@
 *{
-	border:.5px solid;
-	border-color:red;
+	border:0.1px solid;
+	border-color:green;
 
 
 
@@ -77,32 +77,33 @@ body {
   justify-content: flex-end;
 }
 
-.platsnavknapp {
+.placenav {
 	position:absolute;
-	padding-left:30px;
-	padding-top:60px;
+	left:80px;
+	top:150px
 }
 .sidenav {
-    height: 40%;
-    width: 0;
+    height: 0%;
+    width: 15%;
     position: fixed;
     z-index: 1;
-    top: 200px;
+    top: 150px;
     left: 0;
     background-color: #292929;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-	height:200px;
+    transition: .5s;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
     color: white;
     display: block;
     transition: 0.3s;
+	height:20px;
+	padding-left:60px;
+	padding-top:30px;
 }
 
 .sidenav a:hover {
@@ -111,10 +112,20 @@ body {
 
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: -20px;
+    right: 5px;
+    font-size: 24px;
+    margin-left: 60px;
+}
+
+
+.student {
+	position:absolute;
+	top:400px;
+	right:50px
+	
+	
+	
 }
 .courses div {
   padding:1px 0px;
