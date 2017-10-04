@@ -13,7 +13,7 @@ border: 0;
 .content-2{
   display: flex;
   justify-content: center;
-  height: 500px;
+  height: auto;
 }
 .box-1{
   flex: 2;
