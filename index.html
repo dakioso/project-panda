@@ -22,11 +22,25 @@
       <a class="icon" href="#">&#9776;</a>
 
     </div>
+
     <!-- LOGIN BUTTON -->
     <div class="login-link">
-      <a href="#">Log-In</a>
+      <a id="loginbutton">Log-In</a>
     </div>
-    </header>
+  </header>
+
+  <!-- LOGIN BOX -->
+  <div class="login-content" id="login-box">
+    <span class="close">&times;</span>
+    <form name="log-in">
+      <div class="login">
+        <input type="text" placeholder="username" name="userId" /><br />
+        <input type="password" placeholder="password" name="passwordId" /><br />
+        <input type="button" onclick="loginCheck(this.form)" value="login" />
+      </div>
+    </form>
+  </div>
+
 
   <div class = "content-1">
     <h1>Välkommen</h1>
@@ -34,29 +48,29 @@
   <div class = "content-2">
     <div class = "box-1">
       <h2 id = "h2-style">Information</h2>
-        <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
-        </p>
+      <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
+      </p>
     </div>
     <div class = "box-2">
       <h2 id = "h2-style">Information</h2>
-        <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
-        </p>
+      <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
+      </p>
     </div>
   </div>
   <div class  = "content-3">
     <h1>Kontakta oss</h1>
   </div>
+</div>
+
+
+
+
+<footer>
+  <div class="main-footer">
+    <p>&copy; Copyright PandaSoft</p>
   </div>
+</footer>
 
-
-
-
-    <footer>
-      <div class="main-footer">
-      <p>&copy; Copyright PandaSoft</p>
-      </div>
-    </footer>
-
-  <script src="js/script.js"> </script>
+<script src="js/script.js"> </script>
 </body>
 </html>

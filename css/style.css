@@ -202,5 +202,23 @@ background-color: #F5F5F5;
 
 .main-footer p:hover {
   color: #ffa500;
+}
 
+.login-content {
+  display: none;
+  background-color: #fefefe;
+  right: 0;
+  padding: 20px;
+  width: 250px;
+  height: 80px;
+  border: 1px solid #292929;
+  z-index: 1;
+  position: fixed;
+
+}
+
+.close {
+  color: #292929;
+  float: right;
+  font-weight: bold;
 }
