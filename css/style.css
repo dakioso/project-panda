@@ -1,4 +1,4 @@
-*{
+{
 	border:0.1px solid;
 	border-color:green;
 
@@ -79,8 +79,11 @@ body {
 
 .placenav {
 	position:absolute;
-	left:80px;
-	top:150px
+	left:10px;
+	top:110px;
+	font-family: ;
+	color:white;
+	
 }
 .sidenav {
     height: 0%;
@@ -114,15 +117,16 @@ body {
     position: absolute;
     top: -20px;
     right: 5px;
-    font-size: 24px;
+    font-size: 28px;
     margin-left: 60px;
+	color:white
 }
 
 
 .student {
 	position:absolute;
 	top:400px;
-	right:50px
+	right:70px
 	
 	
 	
