@@ -167,6 +167,12 @@ background-color: #F5F5F5;
   display: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
 
 /* START OF MOBILE RESPONSIVE DESIGN*/
 @media screen and (max-width: 600px) {
