@@ -158,7 +158,7 @@ html, body {
 	border-color:Green;
 	width:0px;
 	cursor:default;
-	
+
 }
 
 .placenav {
@@ -190,9 +190,9 @@ html, body {
     color: white;
     display: block;
     transition: 0.3s;
-	height:20px;
-	padding-left:20px;
-	padding-top:30px;
+		height:20px;
+		padding-left:20px;
+		padding-top:30px;
 }
 
 .sidenav a:hover {
@@ -204,16 +204,21 @@ html, body {
 
 /* courses */
 .courses div {
-  padding:1px 0px;
+  position: relative;
+	bottom: 50px;
   text-align: center;
-  border: 2px solid #999;
-  border-radius: 20px;
-  margin:20px 250px;
-  background: linear-gradient(to bottom,orange, #222);
-  box-shadow: 10px 10px 5px #888888;
+  border: 5px solid #ffa500;
+  border-radius:10px;
+  margin:2% 25%;
+	background:#292929;
+	color: white;
+	width: 50%;
+
+
+
 }
 
+.courses div p{
 
-.courses{
-  text-align: center;
+
 }
