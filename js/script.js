@@ -34,3 +34,16 @@ function loginCheck(form){
     }
   }  alert('Sorry invalid username or password');
 }
+
+//navbar open and close. 
+function togNav() {
+  var nav = document.getElementById("nav");
+  if (nav.style.height == '100%') {
+    nav.style.height = '0';
+   // nav.style.opacity = 0;
+  } else {
+    nav.style.height = "100%";
+   // nav.style.opacity = 1
+	
+  }
+}
