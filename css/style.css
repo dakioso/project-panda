@@ -8,7 +8,7 @@ html, body {
 }
 /* SHOW RED BORDERS ON ALL OBJECTS */
 * {
-  /*  border: 1px solid red; */
+/*   border: 1px solid red; */
 }
 
 .main-head {
@@ -39,6 +39,8 @@ html, body {
   width: 100%;
   background-color: #292929;
   overflow: hidden;
+
+
 
 }
 
@@ -167,11 +169,6 @@ background-color: #F5F5F5;
   display: none;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
 
 
 /* START OF MOBILE RESPONSIVE DESIGN*/
@@ -218,13 +215,13 @@ background-color: #F5F5F5;
   width: 250px;
   height: 80px;
   border: 1px solid #292929;
-  z-index: 1;
-  position: fixed;
+  position: absolute;
 
 }
 
 .close {
   color: #292929;
   float: right;
+  font-size: 30px;
   font-weight: bold;
 }
