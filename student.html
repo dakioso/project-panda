@@ -3,47 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css" />
-  <title>Panda Soft</title>
+  <rel="stylesheet">
+  <title>PandaSoft</title>
 </head>
 <body>
   <header>
     <div class="main-head">
       <img src="img/panda.png" alt="Panda logo"/>
     </div>
-
-    <div id="main-nav" class="" style="top: -20px;">
+    <!-- NAVBAR -->
+    <div class="main-nav" id="navbar" style="top: -20px;">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="#home">Home</a></li>
         <li><a href="#aboutus">About us</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="login-link">
-        <a href="#">Log-In</a>
-      </div>
+      <a class="icon" href="#">&#9776;</a>
+
     </div>
-
-
-
-  </header>
- <center> <h1>STUDENT</h1></center>
- <div id class="platsnav">
- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="courses.html">Kurser</a>
+    <!-- LOGIN BUTTON -->
+    <div class="login-link">
+      <a href="#">Log-In</a>
+    </div>
+    </header>
+	
+  
+ <div id class="placenav">
+ <div id="nav" class="sidenav">
+  <a href="#">Kurser</a>
   <a href="#">Schema</a>
-  <a href="#">frånvaro</a>
+  <a href="#">Frånvaro</a>
+</div>
+</div>
+</div>
+</div>
+<div class="navbutton">
+<span style="font-size:30px;cursor:pointer" onclick="togNav()">☰ </span></span></span>
 </div>
 
-<div class="platsnavknapp">
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">></span></span></span>
-</div>
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+function togNav() {
+  var nav = document.getElementById("nav");
+  if (nav.style.height == '100%') {
+    nav.style.height = '0';
+   // nav.style.opacity = 0;
+  } else {
+    nav.style.height = "100%";
+   // nav.style.opacity = 1
+	
+  }
 }
 </script>
   

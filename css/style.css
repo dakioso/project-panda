@@ -1,3 +1,4 @@
+
 *{
 	border:.5px solid;
 	border-color:red;
@@ -7,10 +8,20 @@
 
 
 body {
+=======
+/* INIT HTML AND BODY */
+html, body {
+
   margin: 0;
   padding: 0;
   border: 0;
   background: white;
+  font-family: 'Lato', sans-serif;
+
+}
+/* SHOW RED BORDERS ON ALL OBJECTS */
+{
+   border: 1px solid red; */
 }
 
 .main-head {
@@ -32,7 +43,7 @@ body {
   height:auto;
 }
 
-#main-nav {
+.main-nav {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -41,21 +52,21 @@ body {
   width: 100%;
   background-color: #292929;
   overflow: hidden;
+  font-size: 20px
+
 }
 
-#main-nav ul {
+.main-nav ul {
   display: flex;
-  /* flex: 1; */
   list-style-type: none;
   margin-top: auto;
   padding: 0;
+
 }
 
-
-
-#main-nav a {
+.main-nav a {
   display: inline;
-  padding: 15px;
+  padding: 5px 15px 5px 15px;
   border: 1px solid #292929;
   color: white;
   background-color: #292929;
@@ -63,55 +74,148 @@ body {
   text-decoration: none;
 }
 
-#main-nav a:hover {
-  border: 1px solid #e0e0e0;
+.main-nav a:hover {
+  border: 1px solid #ffa500;
   background-color: #2d2c2c;
+  color: #ffa500;
+}
+
+.main-nav a.active {
+  color: #ffa500;
 }
 
 .login-link {
   display: flex;
-  /* flex: 1; */
+  align-items: center;
   justify-content: flex-end;
+  margin-top: -41px;
+
 }
 
-.platsnavknapp {
+.login-link a {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #e0e0e0;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.login-link a:hover {
+  border: 1px solid #ffa500;
+  background-color: #2d2c2c;
+  color: #ffa500;
+}
+
+.main-nav .icon {
+  display: none;
+}
+
+
+/* START OF MOBILE RESPONSIVE DESIGN*/
+@media screen and (max-width: 600px) {
+  .main-nav ul {
+    display: none;
+  }
+
+  .main-nav.responsive {
+    position: relative;
+  }
+
+  .main-nav .icon {
+    display: block;
+    position: absolute;
+  }
+
+
+}
+
+.main-footer {
+
+  width: 100%;
+  background-color: #292929;
+  margin-bottom: 0px;
+  padding: 1px 0 1px 0;
+}
+
+.main-footer p {
+  text-align: center;
+  color: #fff;
+    transition: all 1s ease;
+}
+
+.main-footer p:hover {
+  color: #ffa500;
+}
+
+.openbutton  {
 	position:absolute;
-	padding-left:30px;
-	padding-top:60px;
+	left:30px;
+	font-family: ;
+	color:orange;
+	width:0px
+
+}
+.navbutton {
+    position: relative;
+    top: -42px;
+    left:20px;
+    font-size: 28px;
+	color:orange;
+	border-style:3px dashed;
+	border-color:Green;
+	width:0px
+}
+
+.placenav {
+	position:absolute;
+	left:0px;
+	top:150px;
+	font-family: ;
+	color:orange;
+	height:100%
+
 }
 .sidenav {
-    height: 40%;
-    width: 0;
-    position: fixed;
+    height:0px;
+    width: 250px;
+    position: sticky;
     z-index: 1;
-    top: 200px;
-    left: 0;
+    bottom: 300px;
+    left: 100px;
     background-color: #292929;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-	height:200px;
+    transition: .5s;
+	overflow-y: hidden;
+	overflow-x: hidden;
+
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
     color: white;
     display: block;
     transition: 0.3s;
+	height:20px;
+	padding-left:70px;
+	padding-top:30px;
 }
 
 .sidenav a:hover {
-    color: white;
+    color: orange;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+
+
+.student {
+	position:absolute;
+	top:400px;
+	right:100px;
+
+
+
 }
 .courses div {
   padding:1px 0px;
