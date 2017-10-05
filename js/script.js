@@ -27,7 +27,7 @@ function loginCheck(form){
   for(let i = 0; i < users.length; i++){
     if(form.userId.value === users[i].username && form.passwordId.value === users[i].password){
       if(form.userId.value === 'student'){
-        return window.location.replace('courses.html');
+        return window.location.replace('student.html');
     } else if(form.userId.value === 'teacher'){
         return window.location.replace('?');
       }
@@ -35,7 +35,7 @@ function loginCheck(form){
   }  alert('Sorry invalid username or password');
 }
 
-//navbar open and close. 
+//navbar open and close.
 function togNav() {
   var nav = document.getElementById("nav");
   if (nav.style.height == '100%') {
@@ -44,6 +44,6 @@ function togNav() {
   } else {
     nav.style.height = "100%";
    // nav.style.opacity = 1
-	
+
   }
 }
