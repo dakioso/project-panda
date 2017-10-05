@@ -198,7 +198,9 @@ html, body {
 .sidenav a:hover {
     color: orange;
 }
-
+.sidenav a.active {
+  color: #ffa500;
+}
 
 /* courses */
 .courses div {
