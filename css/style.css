@@ -216,22 +216,33 @@ html, body {
 
 .login-content {
   display: none;
-  background-color: #fefefe;
+  background-color: #292929;
   right: 0;
   padding: 20px;
   width: 250px;
   height: 80px;
-  border: 1px solid #292929;
+  border: 1px solid #ffa500;
   z-index: 1;
   position: absolute;
-
 }
 
 .close {
-  color: #292929;
+  color: #ffa550;
   float: right;
   font-weight: bold;
+  font-size: 24px;
+}
 
+.login-content input[type=button], input[type=text], input[type=password] {
+  background-color: #292929;
+  color: #FFF;
+  border: 1px solid #ffa500;
+  margin: 5px;
+  transition: color 1s ease;
+}
+
+.login-content input[type=button]:hover {
+  color: #ffa500;
 }
 
 .navbutton {
