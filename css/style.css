@@ -162,6 +162,7 @@ html, body {
   text-decoration: none;
   margin-right: 10px;
   margin-top: -52px;
+  cursor: pointer;
 }
 
 .login-link a:hover {
@@ -169,6 +170,14 @@ html, body {
   background-color: #2d2c2c;
   color: #ffa500;
 }
+
+.login-link a:active {
+  border: 1px solid #ffa500;
+  background-color: #2d2c2c;
+  color: #ffa500;
+}
+
+
 
 .main-nav .icon {
   display: none;
@@ -231,6 +240,12 @@ html, body {
   float: right;
   font-weight: bold;
   font-size: 24px;
+  cursor: default;
+  transition: color 1s ease;
+}
+
+.close:hover {
+  color: #FFF;
 }
 
 .login-content input[type=button], input[type=text], input[type=password] {
