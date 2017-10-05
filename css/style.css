@@ -142,11 +142,16 @@ background-color: #F5F5F5;
   width: 600px;
   text-align: center;
 
+
   border: 5px solid #ffa500;
 
   border: 3px solid #ffa500;
   text-transform: uppercase;
 
+
+
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
 
 }
 
@@ -169,8 +174,10 @@ background-color: #F5F5F5;
   height: 57px;
   text-align: center;
 
+
   line-height: 100px;
   border: 5px solid #ffa500;
+
 
   line-height: 58px;
   border: 3px solid #ffa500;
@@ -179,7 +186,9 @@ background-color: #F5F5F5;
 
 
 
+
   margin-top: -41px;
+
 
 
 }
