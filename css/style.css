@@ -1,3 +1,11 @@
+
+{
+	border:.5px solid;
+	border-color:red;
+
+}
+
+
 /* INIT HTML AND BODY */
 html, body {
   margin: 0;
@@ -5,7 +13,7 @@ html, body {
   border: 0;
   background: white;
   font-family: 'Lato', sans-serif;
-  
+
 }
 /* SHOW RED BORDERS ON ALL OBJECTS */
 {
@@ -144,7 +152,7 @@ html, body {
 	font-family: ;
 	color:orange;
 	width:0px
-	
+
 }
 .navbutton {
     position: relative;
@@ -164,7 +172,7 @@ html, body {
 	font-family: ;
 	color:orange;
 	height:100%
-	
+
 }
 .sidenav {
     height:0px;
@@ -177,7 +185,7 @@ html, body {
     transition: .5s;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	
+
 }
 
 .sidenav a {
@@ -207,6 +215,9 @@ html, body {
 	
 	
 	
+	top:400px;
+	right:100px;
+
 }
 .courses div {
   padding:1px 0px;
@@ -221,3 +232,4 @@ html, body {
 
 .courses{
   text-align: center;
+}
