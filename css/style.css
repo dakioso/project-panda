@@ -146,14 +146,8 @@ html, body {
   color: #ffa500;
 }
 
-.openbutton  {
-	position:absolute;
-	left:30px;
-	font-family: ;
-	color:orange;
-	width:0px
 
-}
+
 .navbutton {
     position: relative;
     top: -42px;
@@ -162,7 +156,9 @@ html, body {
 	color:orange;
 	border-style:3px dashed;
 	border-color:Green;
-	width:0px
+	width:0px;
+	cursor:default;
+	
 }
 
 .placenav {
@@ -204,21 +200,7 @@ html, body {
 }
 
 
-
-.student {
-	position:absolute;
-	top:-300px;
-	right:60px;
-	color:;
-	padding-top:100px;
-	font-size:20px
-	
-	
-	
-	top:400px;
-	right:100px;
-
-}
+/* courses */
 .courses div {
   padding:1px 0px;
   text-align: center;
