@@ -3,32 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css" />
-  <title>Panda Soft</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <title>PandaSoft</title>
 </head>
 <body>
-  <div class = "content-1">
-    <h1>Välkommen</h1>
-    <div class ="valkommen">
-      <h2>Till Panda Soft</h2>
-    </div>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
-  </div>
-  <div class = "content-2">
-    <div class = "box-1">
-      <h2 id = "h2-style">Information</h2>
-        <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
-        </p>
+
+    <header class="main-head" id="hem">
+      <img src="img/panda.png" alt="Panda logo"/>
+
+  </header>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <section class="main-nav"  style="top: -20px;">
+      <ul>
+        <li><a class="active" href="#hem">Hem</a></li>
+        <li><a href="#omoss">Om oss</a></li>
+        <li><a href="#kontaktaoss">Kontakta oss</a></li>
+      </ul>
+      <a class="icon" href="#">&#9776;</a>
+
+    </section>
+
+    <!-- LOGIN BUTTON -->
+    <div class="login-link">
+      <a id="loginbutton">Logga in</a>
     </div>
-    <div class = "box-2">
-      <h2 id = "h2-style">Information</h2>
-        <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
-        </p>
-    </div>
+  </header>
+
+  <!-- LOGIN BOX -->
+  <div class="login-content" id="login-box">
+    <span class="close">&times;</span>
+    <form name="log-in">
+      <div class="login">
+        <input type="text" placeholder="Användarnamn" name="userId" /><br />
+        <input type="password" placeholder="Lösenord" name="passwordId" /><br />
+        <input type="button" onclick="loginCheck(this.form)" value="Logga in" />
+      </div>
+    </form>
   </div>
-  <div class  = "content-3">
+
+
+
+  <section class = "content-1">
+    <h1>Välkommen</h1>
+  </section>
+
+  <section class = "content-2" id="omoss">
+    <section class = "box-1">
+      <h2 id = "h2-style">Information</h2>
+      <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
+      </p>
+
+    </section>
+    <section class = "box-2" id="kontaktaoss">
+      <h2 id = "h2-style">Information</h2>
+      <p id = "p-style">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun.
+      </p>
+    </section>
+  </section>
+
+  <section class  = "content-3">
     <h1>Kontakta oss</h1>
-  </div>
-  </div>
+  </section>
+</div>
+
+
+
+
+<footer class="main-footer">
+  <p>&copy; Copyright PandaSoft</p>
+</footer>
 
 <script src="js/script.js"> </script>
 </body>
