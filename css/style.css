@@ -166,7 +166,7 @@ html, body {
 	left:0px;
 	top:150px;
 	font-family: ;
-	color:orange;
+	color:#ffa500;
 	height:100%
 
 }
@@ -196,7 +196,7 @@ html, body {
 }
 
 .sidenav a:hover {
-    color: orange;
+    color: #ffa500;;
 }
 .sidenav a.active {
   color: #ffa500;
@@ -221,4 +221,27 @@ html, body {
 .courses div p{
 
 
+}
+
+/* assigment*/
+.assigment div {
+  position: relative;
+	bottom: 50px;
+  border: 5px solid #ffa500;
+  border-radius:10px;
+  margin:2% 25%;
+	background:#292929;
+	color: white;
+	width: 50%;
+
+
+
+}
+
+.mission.ul {
+	position:absolute;
+	top:100px;
+	height:200px;
+	
+	
 }
