@@ -12,14 +12,10 @@ let span = document.getElementsByClassName('close')[0];
 
 button.onclick = function(){
   loginBox.style.display = 'block';
-  button.style.color = "#ffa500";
-  button.style.border = "1px solid #ffa500";
 }
 
 span.onclick = function(){
   loginBox.style.display = 'none';
-  button.style.color = "#FFF";
-  button.style.border = "1px solid #FFF";
 }
 
 
