@@ -5,11 +5,13 @@ html, body {
   border: 0;
   background: white;
   font-family: 'Lato', sans-serif;
+
 }
 /* SHOW RED BORDERS ON ALL OBJECTS */
 * {
 /*   border: 1px solid red; */
 }
+
 
 .main-head {
   box-sizing: border-box;
@@ -39,9 +41,6 @@ html, body {
   width: 100%;
   background-color: #292929;
   overflow: hidden;
-
-
-
 }
 
 .main-nav ul {
@@ -49,7 +48,6 @@ html, body {
   list-style-type: none;
   margin-top: auto;
   padding: 0;
-
 }
 
 .main-nav a {
@@ -76,12 +74,12 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-margin: 0;
-padding: 0;
-border: 0;
-background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #F5F5F5;
 }
+
 .content-1{
   display: flex;
   justify-content: center;
@@ -90,43 +88,50 @@ background-color: #F5F5F5;
   background-size: cover;
   background-attachment: fixed;
   background-position: left top;
-  }
+}
+
 .content-2{
   display: flex;
   justify-content: center;
   height: auto;
 }
+
 .box-1{
   flex: 2;
   order: 1;
   text-align: center;
   padding-top: 50px;
 }
+
 .box-2{
   flex: 2;
   order: 3;
   text-align: center;
   padding-top: 50px;
 }
+
 .content-3{
   display:flex;
   justify-content: center;
   height: 300px;
 }
+
 .content-1 h1{
-  line-height: 180px;
+  line-height: 170px;
   font-size: 60px;
   letter-spacing: 10px;
-  background-color: black;
+  background-color: #292929;
   color: white;
   width: 600px;
   text-align: center;
-  border: 5px solid #ffa500;
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
+
 }
 
 #h2-style{
-
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 #p-style{
@@ -137,14 +142,14 @@ background-color: #F5F5F5;
 .content-3 h1{
   letter-spacing: 10px;
   font-size: 30px;
-  background-color: black;
+  background-color: #292929;
   color: white;
-  width: 600px;
-  height: 100px;
+  width: 373px;
+  height: 57px;
   text-align: center;
-  line-height: 100px;
-  border: 5px solid #ffa500;
-
+  line-height: 58px;
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
 }
 
 .login-link a {
@@ -170,9 +175,10 @@ background-color: #F5F5F5;
 }
 
 
-
 /* START OF MOBILE RESPONSIVE DESIGN*/
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 500px) {
+
   .main-nav ul {
     display: none;
   }
@@ -200,12 +206,13 @@ background-color: #F5F5F5;
 .main-footer p {
   text-align: center;
   color: #fff;
-    transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .main-footer p:hover {
   color: #ffa500;
 }
+
 
 .login-content {
   display: none;
@@ -215,6 +222,7 @@ background-color: #F5F5F5;
   width: 250px;
   height: 80px;
   border: 1px solid #292929;
+  z-index: 1;
   position: absolute;
 
 }
@@ -224,4 +232,110 @@ background-color: #F5F5F5;
   float: right;
   font-size: 30px;
   font-weight: bold;
+
+}
+
+.navbutton {
+  position: relative;
+  top: -42px;
+  left:20px;
+  font-size: 28px;
+  color:orange;
+  border-style:3px dashed;
+  border-color:Green;
+  width:0px;
+  cursor:default;
+
+}
+
+.placenav {
+  position:absolute;
+  left:0px;
+  top:150px;
+  color:#ffa500;
+  height:100%
+
+}
+.sidenav {
+  height:0px;
+  width: 140%;
+  position: sticky;
+  z-index: 1;
+  bottom: 300px;
+  left: 100px;
+  background-color: #292929;
+  transition: .5s;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  height:20px;
+  padding-left:20px;
+  padding-top:30px;
+
+}
+
+.sidenav a:hover {
+  color: #ffa500;;
+}
+.sidenav a.active {
+  color: #ffa500;
+}
+
+/* courses */
+.courses div {
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+  border: 5px solid #ffa500;
+  margin:2% 25%;
+  background:#292929;
+  color: white;
+  width: 50%;
+
+
+
+}
+
+section.details{
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+
+}
+
+section.details div{
+  padding:50px;
+  display: inline-block;
+  border: 1px solid red;
+  margin: 100px;
+
+}
+
+/* assigment*/
+.assigment div {
+  position: relative;
+  bottom: 50px;
+  border: 5px solid #ffa500;
+  margin:2% 25%;
+  background:#292929;
+  color: white;
+  width: 50%;
+
+
+
+}
+
+.mission.ul {
+  position:absolute;
+  top:100px;
+  height:200px;
+
+
 }
