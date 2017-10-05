@@ -218,7 +218,17 @@ html, body {
 
 }
 
-.courses div p{
+section.details{
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
 
+}
 
+section.details div{
+	padding:50px;
+	display: inline-block;
+	border: 1px solid red;
+	margin: 100px;
+	
 }
