@@ -115,11 +115,11 @@ background-color: #F5F5F5;
   line-height: 180px;
   font-size: 60px;
   letter-spacing: 10px;
-  background-color: black;
+  background-color: #292929;
   color: white;
   width: 600px;
   text-align: center;
-  border: 15px solid #ffa500;
+  border: 3px solid #ffa500;
 }
 
 #h2-style{
@@ -135,13 +135,13 @@ background-color: #F5F5F5;
 .content-3 h1{
   letter-spacing: 10px;
   font-size: 30px;
-  background-color: black;
+  background-color: #292929;
   color: white;
-  width: 600px;
-  height: 100px;
+  width: 373px;
+  height: 57px;
   text-align: center;
-  line-height: 100px;
-  border: 15px solid #ffa500;
+  line-height: 58px;
+  border: 3px solid #ffa500;
 
 }
 
