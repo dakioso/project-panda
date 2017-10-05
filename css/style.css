@@ -112,19 +112,25 @@ background-color: #F5F5F5;
   height: 300px;
 }
 .content-1 h1{
-  line-height: 180px;
+  line-height: 190px;
   font-size: 60px;
   letter-spacing: 10px;
-  background-color: black;
+  background-color: #292929;
   color: white;
   width: 600px;
   text-align: center;
+<<<<<<< HEAD
   border: 5px solid #ffa500;
+=======
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
+
+>>>>>>> header
 }
 
 #h2-style{
-
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 #p-style{
@@ -135,13 +141,21 @@ background-color: #F5F5F5;
 .content-3 h1{
   letter-spacing: 10px;
   font-size: 30px;
-  background-color: black;
+  background-color: #292929;
   color: white;
-  width: 600px;
-  height: 100px;
+  width: 373px;
+  height: 57px;
   text-align: center;
+<<<<<<< HEAD
   line-height: 100px;
   border: 5px solid #ffa500;
+=======
+  line-height: 58px;
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
+
+
+>>>>>>> header
 
 }
 
@@ -167,15 +181,9 @@ background-color: #F5F5F5;
   display: none;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
 
 /* START OF MOBILE RESPONSIVE DESIGN*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .main-nav ul {
     display: none;
   }
