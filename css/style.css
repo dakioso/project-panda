@@ -8,8 +8,8 @@ html, body {
 
 }
 /* SHOW RED BORDERS ON ALL OBJECTS */
-* {
-  /*  border: 1px solid red; */
+{
+   border: 1px solid red; */
 }
 
 
@@ -239,10 +239,7 @@ html, body {
   top: -42px;
   left:20px;
   font-size: 28px;
-  color:orange;
-  border-style:3px dashed;
-  border-color:Green;
-  width:0px;
+  color:#ffa500;
   cursor:default;
 
 }
@@ -301,6 +298,15 @@ html, body {
 
 
 }
+.courses h1,p{
+    position:relative;
+	font-size:19px;
+    top:-12px
+}
+.courses p {
+	font-size:19px
+}
+
 
 section.details{
   padding: 5px;
@@ -326,15 +332,14 @@ section.details div{
   background:#292929;
   color: white;
   width: 50%;
+  height:250px;
 
 
 
 }
-
-.mission.ul {
-  position:absolute;
-  top:100px;
-  height:200px;
-
-
+.assigment ul {
+	position:absolute;
+	top:50px
+	
+	
 }
