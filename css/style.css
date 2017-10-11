@@ -118,7 +118,7 @@ html, body {
 }
 
 .content-1 h1{
-  line-height: 170px;
+  line-height: 150px;
   font-size: 60px;
   letter-spacing: 10px;
   background-color: #292929;
@@ -127,6 +127,13 @@ html, body {
   text-align: center;
   border: 3px solid #ffa500;
   text-transform: uppercase;
+}
+.valkommen {
+position: absolute;
+line-height: 360px;
+color: white;
+letter-spacing: 7px;
+font-weight: bold;
 }
 .content-4{
   display: flex;
