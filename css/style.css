@@ -355,8 +355,9 @@ html, body {
 }
 .courses h1{
     position:relative;
-	font-size:25px;
-    top:-12px
+	font-size:22px;
+    top:-12px;
+	font-style:italic
 }
 .courses p{
     position:relative;
@@ -381,7 +382,24 @@ html, body {
   position:relative;
   color:white;
   font-size:25px;
-  right:90px
+  right:80px;
+  font-style:italic
+}
+.coursedetails h2{
+  position:relative;
+  color:white;
+  font-size:25px;
+  right:40px;
+  margin-top:10px;
+  font-style:italic
+}
+.coursedetails h3{
+  position:relative;
+  color:white;
+  font-size:25px;
+  right:100px;
+  margin-top:10px;
+  font-style:italic
 }
 .coursedetails p{
   position:relative;
@@ -410,12 +428,17 @@ html, body {
 }
 .assigment ul {
 	position:absolute;
-	top:60px;
+	top:46px;
 	font-size:20px
 
 
 }
 
+#task h1 {
+	font-style:italic
+	
+}
+/* student scheme*/
 .scheme {
   position: relative;
   bottom: -10px;
