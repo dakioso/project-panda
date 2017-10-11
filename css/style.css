@@ -245,7 +245,7 @@ html, body {
   left:0px;
   top:150px;
   color:#ffa500;
-  height:230px
+  height:220px
 
 }
 
@@ -310,7 +310,6 @@ html, body {
 .coursedetails {
  position: relative;
   bottom: 0px;
-  text-align: center;
   border: 3px solid #ffa500;
   background:#292929;
   width: 300px;
@@ -318,7 +317,7 @@ html, body {
   display: inline-block;
   overflow-y: hidden;
   margin:30px;
-
+  overflow-x:hidden
   }
 .coursedetails h1{
   position:relative;
@@ -327,8 +326,14 @@ html, body {
   right:90px
 }
 .coursedetails p{
+  position:relative;
   color:white;
-  font-size:20px
+  font-size:20px;
+  width:270px;
+  text-align:left;
+  left:5px;
+  top:-10px
+  
 }
 
 /* assigment*/
