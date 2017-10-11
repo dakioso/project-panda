@@ -129,12 +129,9 @@ html, body {
 .content-4{
   display: flex;
   text-align: center;
-  color: white;
+  color: black;
   width: 70%;
-  align-self: center;
   margin: auto;
-  border: 3px solid #ffa500;
-  background-color: #292929;
   margin-bottom: 50px;
 
 }
