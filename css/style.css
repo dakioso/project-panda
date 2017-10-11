@@ -101,6 +101,7 @@ html, body {
   order: 1;
   text-align: center;
   padding-top: 50px;
+  font-size: 30px;
 }
 
 .box-2{
@@ -119,7 +120,7 @@ html, body {
 
 .content-1 h1{
   line-height: 150px;
-  font-size: 60px;
+  font-size: 4em;
   letter-spacing: 10px;
   background-color: #292929;
   color: white;
@@ -168,13 +169,13 @@ font-weight: bold;
 .content-3 h1{
   letter-spacing: 10px;
   font-size: 30px;
-  background-color: #292929;
-  color: white;
+
+  color: #292929;
   width: 373px;
   height: 57px;
   text-align: center;
   line-height: 58px;
-  border: 3px solid #ffa500;
+  border: 3px solid #292929;
   text-transform: uppercase;
 }
 
