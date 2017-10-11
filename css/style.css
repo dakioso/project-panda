@@ -88,6 +88,7 @@ html, body {
   background-size: cover;
   background-attachment: fixed;
   background-position: left top;
+
 }
 
 .content-2{
@@ -95,7 +96,6 @@ html, body {
   justify-content: center;
   height: auto;
 }
-
 .box-1{
   flex: 2;
   order: 1;
@@ -113,7 +113,8 @@ html, body {
 .content-3{
   display:flex;
   justify-content: center;
-  height: 300px;
+  height: 125px;
+
 }
 
 .content-1 h1{
@@ -126,6 +127,24 @@ html, body {
   text-align: center;
   border: 3px solid #ffa500;
   text-transform: uppercase;
+}
+.content-4{
+  display: flex;
+  text-align: center;
+  color: black;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+.box-a{
+  flex: 1;
+}
+.box-b{
+  flex: 1;
+}
+.box-c{
+  flex: 1;
 
 }
 
@@ -408,7 +427,4 @@ html, body {
   text-align:center;
   color:black;
   font-style:italic
-	
-	
-	
 }
