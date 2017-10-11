@@ -6,7 +6,7 @@ look at the students courses and grades....
 
 For help and questions please contact one of the contributors below.
 
-* Fadi Gouri
+* Fadi Gourie
 * Daniel Milojevic
 * Mikael Gustafsson
 * David Hansson
