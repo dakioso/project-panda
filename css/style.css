@@ -341,33 +341,40 @@ font-weight: bold;
 }
 
 /* courses */
-.courses div {
-  position: relative;
-  bottom: 50px;
+.courses {
+  display: flex;
   border: 3px solid #ffa500;
   text-align: center;
-  margin:2% 25%;
   background:#292929;
   color: white;
-  width: 50%;
-
-
-
+  width: 90%;
+  height: 700px;
+  margin: auto;
+}
+.during{
+  flex: 1;
+  border-right: 3px solid #ffa500;
+}
+.forward{
+  flex: 1;
+}
+.finished{
+  flex: 1;
+  border-right: 3px solid #ffa500;
 }
 .courses h1{
-    position:relative;
-	font-size:25px;
-    top:-12px
+  position:relative;
+  top:-12px
 }
 .courses p{
     position:relative;
-	font-size:20px;
+
     top:-12px
 }
 /* coursedetails */
 
 .coursedetails {
- position: relative;
+
   bottom: 0px;
   border: 3px solid #ffa500;
   background:#292929;
