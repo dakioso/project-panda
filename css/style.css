@@ -254,12 +254,24 @@ font-weight: bold;
   display: none;
   background-color: #292929;
   right: 0;
-  padding: 20px;
-  width: 250px;
-  height: 80px;
+  padding: 21px;
+  width: 300px;
+  height: 140px;
   border: 1px solid #ffa500;
   z-index: 1;
   position: absolute;
+}
+
+.login-content label {
+  color: #FFF;
+  margin-left: 65px;
+  font-size: 18px;
+}
+
+.login-content .errorText {
+  color: red;
+  margin-left: 0px;
+  font-size: 14px;
 }
 
 .close {
@@ -269,18 +281,31 @@ font-weight: bold;
   font-size: 24px;
   cursor: default;
   transition: color 1s ease;
+  margin-top: -20px;
+  margin-right: -7px;
 }
 
 .close:hover {
   color: #FFF;
 }
 
-.login-content input[type=button], input[type=text], input[type=password] {
+.login-content input[type=text], input[type=password] {
   background-color: #292929;
   color: #FFF;
   border: 1px solid #ffa500;
-  margin: 5px;
+  margin: 7px;
   transition: color 1s ease;
+  padding: 5px;
+  padding-right: 120px;
+}
+
+.login-content input[type=button] {
+  background-color: #292929;
+  color: #FFF;
+  border: 1px solid #ffa500;
+  margin: 7px;
+  transition: color 1s ease;
+  padding: 5px;
 }
 
 .login-content input[type=button]:hover {

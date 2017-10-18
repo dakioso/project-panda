@@ -38,9 +38,11 @@
     <span class="close">&times;</span>
     <form name="log-in">
       <div class="login">
+        <label>Logga in till portalen.</label>
         <input type="text" placeholder="Användarnamn" name="userId" /><br />
         <input type="password" placeholder="Lösenord" name="passwordId" /><br />
         <input type="button" onclick="loginCheck(this.form)" value="Logga in" />
+        <label class="errorText" id="errorCode"></label>
       </div>
     </form>
   </div>
