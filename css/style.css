@@ -341,6 +341,81 @@ font-weight: bold;
 }
 
 /* courses */
+.content-courses1{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 50px;
+ }
+ .content-box1{
+ border: 1px solid black;
+ width: 300px;
+ height: 220px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/frontenddeveloper-400x284.jpg");
+ background-size: cover;
+ color: white;
+ }
+ .content-box2{
+border: 1px solid black;
+margin-left: 100px;
+margin-right: 100px;
+width: 300px;
+height: 220px;
+background-image: url("http://kyh.se/wp-content/uploads/2017/04/energispecialist-400x284.jpg");
+background-size: cover;
+color: white;
+ }
+ .content-box3{
+border: 1px solid black;
+width: 300px;
+height: 220px;
+background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+background-size: cover;
+color: white;
+ }
+ .content-courses2{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 50px;
+ }
+
+ .content-box4{
+border: 1px solid black;
+width: 300px;
+height: 220px;
+background-image: url("http://kyh.se/wp-content/uploads/2017/04/affarsutvecklare-400x284.jpg");
+background-size: cover;
+color: white;
+}
+ .content-box5{
+border: 1px solid black;
+margin-left: 100px;
+margin-right: 100px;
+width: 300px;
+height: 220px;
+background-image: url("http://kyh.se/wp-content/uploads/2017/04/darren-bockman-58266-400x284.jpg");
+background-size: cover;
+color: white;
+ }
+ .content-box6{
+border: 1px solid black;
+width: 300px;
+height: 220px;
+background-image: url("http://kyh.se/wp-content/uploads/2017/04/sergey-zolkin-21232-400x284.jpg");
+background-size: cover;
+color: white;
+ }
+ .kurser{
+   margin-bottom: 50px;
+ }
+ .kurser h1{
+   text-align: center;
+   font-weight: bold;
+   font-size: 3em;
+ }
+
+
 .courses {
   display: flex;
   border: 3px solid #ffa500;
