@@ -88,6 +88,7 @@ html, body {
   background-size: cover;
   background-attachment: fixed;
   background-position: left top;
+
 }
 
 .content-2{
@@ -95,30 +96,31 @@ html, body {
   justify-content: center;
   height: auto;
 }
-
 .box-1{
   flex: 2;
   order: 1;
   text-align: center;
   padding-top: 50px;
+  font-size: 30px;
 }
 
 .box-2{
   flex: 2;
   order: 3;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 75px;
 }
 
 .content-3{
   display:flex;
   justify-content: center;
-  height: 300px;
+  height: 125px;
+
 }
 
 .content-1 h1{
-  line-height: 170px;
-  font-size: 60px;
+  line-height: 150px;
+  font-size: 4em;
   letter-spacing: 10px;
   background-color: #292929;
   color: white;
@@ -126,6 +128,31 @@ html, body {
   text-align: center;
   border: 3px solid #ffa500;
   text-transform: uppercase;
+}
+.valkommen {
+position: absolute;
+line-height: 360px;
+color: white;
+letter-spacing: 7px;
+font-weight: bold;
+}
+.content-4{
+  display: flex;
+  text-align: center;
+  color: black;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+.box-a{
+  flex: 1;
+}
+.box-b{
+  flex: 1;
+}
+.box-c{
+  flex: 1;
 
 }
 
@@ -142,13 +169,13 @@ html, body {
 .content-3 h1{
   letter-spacing: 10px;
   font-size: 30px;
-  background-color: #292929;
-  color: white;
+
+  color: #292929;
   width: 373px;
   height: 57px;
   text-align: center;
   line-height: 58px;
-  border: 3px solid #ffa500;
+  border: 3px solid #292929;
   text-transform: uppercase;
 }
 
@@ -162,6 +189,7 @@ html, body {
   text-decoration: none;
   margin-right: 10px;
   margin-top: -52px;
+  cursor: pointer;
 }
 
 .login-link a:hover {
@@ -169,6 +197,14 @@ html, body {
   background-color: #2d2c2c;
   color: #ffa500;
 }
+
+.login-link a:active {
+  border: 1px solid #ffa500;
+  background-color: #2d2c2c;
+  color: #ffa500;
+}
+
+
 
 .main-nav .icon {
   display: none;
@@ -216,18 +252,41 @@ html, body {
 
 .login-content {
   display: none;
-  background-color: #fefefe;
+  background-color: #292929;
   right: 0;
   padding: 20px;
   width: 250px;
   height: 80px;
-  border: 1px solid #292929;
+  border: 1px solid #ffa500;
   z-index: 1;
   position: absolute;
-
 }
 
-/*sidemeny */
+.close {
+  color: #ffa550;
+  float: right;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: default;
+  transition: color 1s ease;
+}
+
+.close:hover {
+  color: #FFF;
+}
+
+.login-content input[type=button], input[type=text], input[type=password] {
+  background-color: #292929;
+  color: #FFF;
+  border: 1px solid #ffa500;
+  margin: 5px;
+  transition: color 1s ease;
+}
+
+.login-content input[type=button]:hover {
+  color: #ffa500;
+}
+
 .navbutton {
   position: relative;
   top: -42px;
@@ -245,7 +304,7 @@ html, body {
   left:0px;
   top:150px;
   color:#ffa500;
-  height:230px
+  height:220px
 
 }
 
@@ -259,7 +318,7 @@ html, body {
   background-color: #292929;
   transition: .5s;
   overflow-y: hidden;
-  
+
 
 }
 
@@ -310,7 +369,6 @@ html, body {
 .coursedetails {
  position: relative;
   bottom: 0px;
-  text-align: center;
   border: 3px solid #ffa500;
   background:#292929;
   width: 300px;
@@ -318,7 +376,7 @@ html, body {
   display: inline-block;
   overflow-y: hidden;
   margin:30px;
-
+  overflow-x:hidden
   }
 .coursedetails h1{
   position:relative;
@@ -327,8 +385,14 @@ html, body {
   right:90px
 }
 .coursedetails p{
+  position:relative;
   color:white;
-  font-size:20px
+  font-size:20px;
+  width:270px;
+  text-align:left;
+  left:5px;
+  top:-10px
+
 }
 
 /* assigment*/
@@ -351,4 +415,17 @@ html, body {
 	font-size:20px
 
 
+}
+
+.scheme {
+  position: relative;
+  bottom: -10px;
+  border: 2px solid #292929;
+  margin:2% 25%;
+  color: white;
+  width: 50%;
+  height:350px;
+  text-align:center;
+  color:black;
+  font-style:italic
 }
