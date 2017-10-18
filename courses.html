@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/Titel-bild.png"/>
   <title>PandaSoft</title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <header>
     <div class="main-head">
       <img src="img/panda.png" alt="Panda logo"/>
@@ -14,55 +15,45 @@
     <!-- NAVBAR -->
     <div class="main-nav" id="navbar" style="top: -20px;">
       <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#aboutus">About us</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="active" href="#">Kurser</a></a></li>
       </ul>
       <a class="icon" href="#">&#9776;</a>
 
-  </header>
- <!-- Login Navbar -->
- <div id class="placenav">
-    <div id="nav" class="sidenav">
-		<a href="student.html">Student</a>
-			<a class="active" href="courses.html">Kurser</a>
-          		<a href="coursedetails.html">Kursdetaljer</a>
-			<a href="assigment.html">Uppgifter</a>
-
-</div>
-</div>
-<div class="navbutton">
-<span style onclick="togNav()">☰</span>
-</div>
-<!-- Courses -->
-	<section class = "courses">
-    <div id ="during"><h1>Pågående:</h1>
-
-          Hemkunskap <br>
-          Svenska 3 <br>
-
-          Fysik 2b <br>
-
-
+    </header>
+    <!-- Login Navbar -->
+    <div id class="placenav">
+      <div id="nav" class="sidenav">
+        <a href="student.html">Student</a>
+        <a class="active" href="courses.html">Kurser</a>
+        <a href="coursedetails.html">Kursdetaljer</a>
+        <a href="assigment.html">Uppgifter</a>
+      </div>
     </div>
-    <div id ="finished"><h1>Avslutade:</h1>
-      <p>
-         Programmering 2  <img src="img/passed.png" alt="" height="15px" width="15px"> <br>
-         HTML/CSS 2 <img src="img/failed.png" alt="" height="15px" width="15px"> <br>
-
-         Svenska 2 <img src="img/failed.png" alt="" height="15px" width="15px"> <br>
-
-      </p>
+    <div class="navbutton">
+      <span style onclick="togNav()">☰</span>
     </div>
-    <div id ="forward"><h1>Kommande:</h1>
-      <p>
-        Kurs 1 <br>
-        Kurs 2 <br>
+    <!-- Courses -->
+    <section class = "courses">
+      <div id ="during"><h1>Pågående:</h1>
+        <p>Matte 5<br>
+          Svenska 3<br>
+          Fysik 2b<br>
+        </p>
 
-      </p>
-    </div>
-  </section>
-
-  <script src="js/script.js"> </script>
-</body>
-</html>
+      </div>
+      <div id ="finished"><h1>Avslutade:</h1>
+        <p>
+          Programmering 2  <img src="img/passed.png" alt="" height="15px" width="15px"> <br>
+          HTML/CSS 2 <img src="img/failed.png" alt="" height="15px" width="15px"> <br>
+          Svenska 2 <img src="img/failed.png" alt="" height="15px" width="15px"> <br>
+        </p>
+      </div>
+      <div id ="forward"><h1>Kommande:</h1>
+        <p> Teknikvetenskap <br>
+          Samhällsvetenskap <br>
+        </p>
+      </div>
+    </section>
+    <script src="js/script.js"> </script>
+  </body>
+  </html>
