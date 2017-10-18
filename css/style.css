@@ -119,6 +119,7 @@ html, body {
   width: 100%;
   height: 400px;
   margin: 40px 0;
+  text-align: center;
 
 }
 
@@ -126,17 +127,17 @@ html, body {
   width: 250px;
   height: 300px;
   margin: 20px;
-  background: #FFFFFF;
+  background: #E4E2E2;
 
   border-radius: 10px;
 }
 
 .price-plan:hover {
-  background: #cccccc;
+  background: white;
   box-shadow:2px 2px 2px 2px #ffa500;
 }
 .price-box:hover {
-  background: #cccccc;
+  background: white;
   box-shadow:2px 2px 2px 2px #ffa500;
 }
 
@@ -144,6 +145,7 @@ p.price-head {
   font-size: 3em;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 
@@ -152,12 +154,23 @@ p.price-head {
   height: 350px;
   justify-content: center;
 
-  background: #FFFFFF;
+  background: #E4E2E2;
   border-radius: 10px;
   margin: 20px;
 
+
 }
 
+.premium-list {
+    list-style-type: none;
+    text-align: center;
+    margin-right: 38px;
+    font-size: 20px;
+}
+
+.price-box ul {
+  font-size: 25px;
+}
 
 .content-3{
   display:flex;
@@ -280,7 +293,8 @@ font-weight: bold;
 }
 
 .main-footer {
-
+  display: flex;
+justify-content: center;
   width: 100%;
   background-color: #292929;
   margin-bottom: 0px;
@@ -288,13 +302,18 @@ font-weight: bold;
 }
 
 .main-footer p {
-  text-align: center;
   color: #fff;
   transition: all 1s ease;
 }
 
+
 .main-footer p:hover {
   color: #ffa500;
+}
+
+.arrow {
+  margin-top: 5px;
+  mpadding-left: 300px;
 }
 
 
