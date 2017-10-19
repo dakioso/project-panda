@@ -30,6 +30,7 @@ html, body {
   width: 100px;
   max-width:100%;
   height:auto;
+  margin-top: 45px;
 }
 
 .main-nav {
@@ -318,6 +319,7 @@ font-weight: bold;
   background-color: #292929;
   transition: .5s;
   overflow-y: hidden;
+  margin-top: -43px;
 
 
 }
@@ -341,94 +343,181 @@ font-weight: bold;
 }
 
 /* courses */
+.yourcourses{
+  display: flex;
+  justify-content: center;
+  background-image: url("http://www.bu.edu/summer/common/images/st/courses/engineering.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left top;
+  margin-bottom: 50px;
+  height: 300px;
+  margin-top: -38px;
+}
+.yourcourses h1{
+  line-height: 180px;
+  font-size: 4em;
+  letter-spacing: 10px;
+  background-color: #292929;
+  color: white;
+  width: 600px;
+  text-align: center;
+  border: 3px solid #ffa500;
+  text-transform: uppercase;
+}
+
 .content-courses1{
-   display: flex;
-   justify-content: center;
-   text-align: center;
-   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+  margin-top: 50px;
  }
  .content-box1{
- border: 1px solid black;
- width: 300px;
- height: 220px;
- background-image: url("http://kyh.se/wp-content/uploads/2017/04/frontenddeveloper-400x284.jpg");
- background-size: cover;
- color: white;
+  width: 240px;
+  height: 170px;
  }
  .content-box2{
-border: 1px solid black;
-margin-left: 100px;
-margin-right: 100px;
-width: 300px;
-height: 220px;
-background-image: url("http://kyh.se/wp-content/uploads/2017/04/energispecialist-400x284.jpg");
-background-size: cover;
-color: white;
+  margin-left: 60px;
+  margin-right: 60px;
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/energispecialist-400x284.jpg");
+  background-size: cover;
  }
  .content-box3{
-border: 1px solid black;
-width: 300px;
-height: 220px;
-background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
-background-size: cover;
-color: white;
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+  background-size: cover;
  }
  .content-courses2{
-   display: flex;
-   justify-content: center;
-   text-align: center;
-   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 100px;
  }
 
  .content-box4{
-border: 1px solid black;
-width: 300px;
-height: 220px;
-background-image: url("http://kyh.se/wp-content/uploads/2017/04/affarsutvecklare-400x284.jpg");
-background-size: cover;
-color: white;
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/affarsutvecklare-400x284.jpg");
+ background-size: cover;
 }
  .content-box5{
-border: 1px solid black;
-margin-left: 100px;
-margin-right: 100px;
-width: 300px;
-height: 220px;
-background-image: url("http://kyh.se/wp-content/uploads/2017/04/darren-bockman-58266-400x284.jpg");
-background-size: cover;
-color: white;
- }
+ margin-left: 60px;
+ margin-right: 60px;
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/darren-bockman-58266-400x284.jpg");
+ background-size: cover;
+}
  .content-box6{
-border: 1px solid black;
-width: 300px;
-height: 220px;
-background-image: url("http://kyh.se/wp-content/uploads/2017/04/sergey-zolkin-21232-400x284.jpg");
-background-size: cover;
-color: white;
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/sergey-zolkin-21232-400x284.jpg");
+ background-size: cover;
+}
+
+ .kursbild{
+ height: 170px;
+ width: 100%;
+ opacity: 1;
+ display: block;
+ transition: .5s ease;
+ backface-visibility: hidden;
+}
+.content-box1:hover .kursbild {
+ opacity: 0.3;
+}
+.content-box1 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 7px;
+ margin-bottom: 0;
+}
+.content-box1 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.content-box2 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+}
+.content-box2 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.content-box3 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+}
+.content-box3 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.content-box4 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+ text-align: left;
+}
+.content-box4 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+ text-align: left;
  }
- .kurser{
-   margin-bottom: 50px;
+ .content-box5 h3 {
+  color: black;
+  font-weight: bold;
+  margin-top: 175px;
+  margin-bottom: 0;
+  text-align: left;
  }
- .kurser h1{
-   text-align: center;
+ .content-box5 p {
+  color: gray;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  }
+  .content-box6 h3 {
+   color: black;
    font-weight: bold;
-   font-size: 3em;
- }
-
-
+   margin-top: 175px;
+   margin-bottom: 0;
+   text-align: left;
+  }
+  .content-box6 p {
+   color: gray;
+   margin-top: 0;
+   margin-bottom: 0;
+   text-align: left;
+   }
 .courses {
   display: flex;
   border: 3px solid #ffa500;
   text-align: center;
   background:#292929;
   color: white;
-  width: 90%;
-  height: 700px;
+  width: 70%;
+  height: 150px;
   margin: auto;
 }
 .during{
   flex: 1;
   border-right: 3px solid #ffa500;
+}
+.during p {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .forward{
   flex: 1;
