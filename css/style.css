@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   border: 0;
-  background: white;
+  background: #f7f7f7;
   font-family: 'Lato', sans-serif;
 
 }
@@ -108,7 +108,7 @@ html, body {
   flex: 2;
   order: 3;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 100px;
 }
 
 .pricing {
@@ -117,8 +117,8 @@ html, body {
   align-items: center;
   background: #292929;
   width: 100%;
-  height: 400px;
-  margin: 40px 0;
+  height: 700px;
+  margin: 50px 0;
   text-align: center;
 
 }
@@ -171,6 +171,19 @@ p.price-head {
 .price-box ul {
   font-size: 25px;
 }
+
+#compare {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 30px;
+  margin: 0px;
+  background: #E4E2E2;
+
+  border-radius: 10px;
+}
+
+#compare:nth-child()
 
 .content-3{
   display:flex;
