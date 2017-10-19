@@ -511,3 +511,96 @@ color: white;
   color:black;
   font-style:italic
 }
+.header-img{
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-image: url("https://c.s-microsoft.com/sv-se/CMSImages/Hero_0365ForBusiness.jpg?version=6edbf2ec-bff0-aa85-e725-d0f2237c60e0");
+  background-size: cover;
+  background-position: left top;
+  justify-content: center;
+  width: 100%;
+}
+#header-arbetsmetodik{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 3px solid #ffa500;
+  background-color: #292929;
+  color: white;
+  width: 700px;
+  height: 150px;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+#kursinfo-style{
+  font-size: 40px;
+  padding-left: 71px;
+  border: 3px solid #ffa500;
+  background-color: #292929;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  width: 300px;
+  margin-left: 71px;
+
+}
+#p-stil{
+  font-size: 18px;
+  padding-left: 71px;
+  width: 900px;
+  padding-right: 50px;
+}
+#h2-stil{
+  font-size: 30px;
+  padding-left: 71px;
+  text-transform: uppercase;
+}
+#h3-stil{
+  font-size: 20px;
+  padding-left: 71px;
+  text-transform: uppercase;
+}
+#mål-info{
+  font-size: 18px;
+  padding-left: 87px;
+
+}
+.kursinfo-box{
+  display: column;
+  padding-bottom: 50px;
+  align-items: flex-start;
+}
+.betygskriterier{
+  height:300px;
+  background-color: black;
+}
+.fakta{
+  display: flex;
+  letter-spacing: 0.1em;
+  padding-top: 20px;
+  text-align: center;
+
+}
+.fakta-text{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.undervisning{
+  flex: 2;
+
+}
+.ort{
+  flex: 2;
+
+}
+.språk{
+  flex: 2;
+
+}
+.ort-text{
+  padding-left: 100px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
