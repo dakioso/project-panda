@@ -29,12 +29,25 @@
 </div>
 </div>
 <div class="navbutton">
-<span style" onclick="togNav()">☰</span>
+<span  onclick="togNav()">&#9776;</span>
 </div>
 
 
 <center> <h1>Välkommen Student</h1></center>
-<div class="scheme"><h3>Schema Kommer inom kort...</h3></div>
+
+<section class="studentContent">
+<div class="scheme">
+  <h3>Schema Kommer inom kort...</h3>
+</div>
+
+<section class="attendance">
+  <section>
+    <input type="text" id="attendanceCode" placeholder="Närvarokod..." /><br />
+    <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
+        <label id="errorAttendance" class="errorText"></label>
+  </section>
+</section>
+</section>
 
   <script src="js/script.js"> </script>
 </body>

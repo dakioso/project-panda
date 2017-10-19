@@ -274,6 +274,7 @@ font-weight: bold;
   font-size: 14px;
 }
 
+
 .close {
   color: #ffa550;
   float: right;
@@ -297,6 +298,8 @@ font-weight: bold;
   transition: color 1s ease;
   padding: 5px;
   padding-right: 120px;
+  outline-color: rgb(255, 165, 0);
+
 }
 
 .login-content input[type=button] {
@@ -306,10 +309,21 @@ font-weight: bold;
   margin: 7px;
   transition: color 1s ease;
   padding: 5px;
+  outline-color: rgb(255, 165, 0);
 }
 
 .login-content input[type=button]:hover {
   color: #ffa500;
+}
+
+
+input[type="text"], input[type="button"]  {
+  background-color: #FFF;
+  color: #292929;
+  border: 1px solid #292929;
+  margin: 7px;
+  padding: 5px;
+  outline-color: #292929;
 }
 
 .navbutton {
@@ -453,4 +467,18 @@ font-weight: bold;
   text-align:center;
   color:black;
   font-style:italic
+}
+
+.attendance {
+  display: flex;
+  position: relative;
+  border: 2px solid #292929;
+  right: 0;
+  height: 350px;
+  width: 239px;
+}
+
+.studentContent {
+  display: flex;
+  width: 100%;
 }
