@@ -143,7 +143,7 @@ h2 {
 
 p.price-head {
   font-size: 3em;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
@@ -163,6 +163,9 @@ p.price-head {
 
 .price-box ul {
   font-size: 25px;
+}
+.pricing-box h2 {
+  margin: 0
 }
 
 .price-plan:hover {
