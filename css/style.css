@@ -458,9 +458,7 @@ input[type="text"], input[type="button"]  {
 
 .scheme {
   position: relative;
-  bottom: -10px;
   border: 2px solid #292929;
-  margin:2% 25%;
   color: white;
   width: 50%;
   height:350px;
@@ -470,15 +468,21 @@ input[type="text"], input[type="button"]  {
 }
 
 .attendance {
-  display: flex;
-  position: relative;
   border: 2px solid #292929;
   right: 0;
   height: 350px;
   width: 239px;
+  justify-content: flex-end;
+}
+.attendance-hidden {
+  right: 0;
+  height: 350px;
+  width: 239px;
+  justify-content: flex-end;
 }
 
 .studentContent {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
