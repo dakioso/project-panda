@@ -137,6 +137,7 @@ h2 {
   flex: 2;
   order: 3;
   text-align: center;
+<<<<<<< HEAD
   padding-top: 100px;
 }
 
@@ -953,4 +954,231 @@ span {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+	overflow-y:scroll;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.closeutv {
+	position:absolute;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+	right:21%;
+	top:210px;
+}
+
+.closeutv:hover,
+.closeutv:focus {
+    color: #ffa500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-control {
+	position:relative;
+	width:30%;
+	margin-top:-20px;
+	left:-10px
+}
+
+
+.test input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 2px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+	background:white;
+	border-color:orange;
+	outline: none;
+}
+
+
+.test input[type=checkbox] {
+    background-color: #4CAF50;
+    color: white;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	outline: none;
+	
+}
+
+
+.test {
+background-color:#292929;
+width:60%;
+color:white;
+margin-left:20%	;
+background: linear-gradient(to bottom right, #292929, black);
+margin-top:100px;
+height:540px;
+border-radius: 4px;
+
+}
+.test form {
+margin:10px 20px;
+left:100px;
+	
+	
+}
+
+.reviewbutton {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #292929;
+  color: white;
+  border-color:orange;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+  position:absolute;
+  left:10%;
+  margin-top:-20px;
+  font-size:20px;
+  cursor:default;
+  top:200px;	
+}
+
+.sendreview {
+	position:absolute;
+	border: 1px solid #ffa500;
+    background-color: #2d2c2c;
+    color: #ffa500;
+    font-size:16px;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+	position:absolute;
+    resize:vertical;
+	height:270px;
+	font-family:'Lato', sans-serif;
+	font-size:15px;
+	margin-top:-330px;
+	width:30%;	
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 3px 3px 13px 14px;
+	margin-bottom: 10px;
+	width:20%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+    border: 3px solid rgba(10,10,0,0);
+    right:24%;
+   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 8px;
+	outline: none;
+	height:130px;
+	top:622px
+ 
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid orange;
+	color: black;
+	padding: 3px 3px 13px 14px;
+	 -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	outline: none;
+}
+
+.send {
+position:absolute;
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid orange;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+  right:49%;
+  top:680px;
+  font-size:16px	
+}
+.andrarutan {
+position:absolute;
+left:42%;
+top:244px;
+}
+.tredjerutan {
+position:absolute;
+left:42%;
+top:490px;
+}
+
+.textinput2 {
+position:absolute;
+top:240px;
+right:0px;
+width:100%;	
+	
+}
+.firstinputhead{
+position:absolute;
+top:245px;
+left:61%;
+width:100%;	
+	
+}
+.secondinputhead{
+position:absolute;
+top:482px;
+left:62%;
+width:100%;	
+	
+}
+.space { /* important cant scroll without it */
+	position:absolute;
+	width: 10px;
+    height: 10px;    
+    padding: 50px;
+	top:800px;	
 }
