@@ -477,6 +477,7 @@ font-weight: bold;
 
 .attendance p {
   text-align: center;
+  margin-top: 10px;
 }
 
 .attendance input[type=text]  {
