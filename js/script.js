@@ -19,6 +19,7 @@ button.onclick = function(){
   if(hiddenLogin){
     loginBox.style.display = 'block';
     hiddenLogin = false;
+    document.getElementById("userField").focus();
   } else {
       loginBox.style.display = 'none';
       hiddenLogin = true;
