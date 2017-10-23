@@ -317,14 +317,8 @@ font-weight: bold;
 }
 
 
-input[type="text"], input[type="button"]  {
-  background-color: #FFF;
-  color: #292929;
-  border: 1px solid #292929;
-  margin: 7px;
-  padding: 5px;
-  outline-color: #292929;
-}
+
+
 
 .navbutton {
   position: relative;
@@ -471,14 +465,42 @@ input[type="text"], input[type="button"]  {
   border: 2px solid #292929;
   right: 0;
   height: 350px;
-  width: 239px;
-  justify-content: flex-end;
-}
+  width: 250px;
+  }
+
 .attendance-hidden {
   right: 0;
   height: 350px;
   width: 239px;
   justify-content: flex-end;
+}
+
+.attendance p {
+  text-align: center;
+}
+
+.attendance input[type=text]  {
+  background-color: #FFF;
+  color: #292929;
+  border: 1px solid #292929;
+  margin: 7px;
+  padding: 5px;
+  outline-color: #292929;
+  width: 224px;
+}
+
+.attendance div {
+  display: flex;
+  justify-content: center;
+}
+
+.attendance input[type=button]  {
+  background-color: #FFF;
+  color: #292929;
+  border: 1px solid #292929;
+  margin: 7px;
+  padding: 5px;
+  outline-color: #292929;
 }
 
 .studentContent {
