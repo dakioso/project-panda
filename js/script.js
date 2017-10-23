@@ -13,6 +13,7 @@ let error = document.getElementById("errorCode");
 let attendance = document.getElementById("attendanceCode");
 let errorA = document.getElementById("errorAttendance");
 
+
 button.onclick = function(){
   loginBox.style.display = 'block';
 }
@@ -44,10 +45,11 @@ function attendanceCheck() {
   if(attendance.value == "1q2w3e") {
     errorA.innerText = "Din närvaro är nu registrerad.";
     errorA.style.color = "green";
+    errorA.classList.add("hideMe");
   } else {
     errorA.innerText = "Fel närvarokod. Var god försök igen.";
     errorA.style.color = "red";
-
+    errorA.classList.add("hideMe");
   }
 }
 

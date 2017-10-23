@@ -480,6 +480,24 @@ font-weight: bold;
   margin-top: 10px;
 }
 
+/* fade out animation start */
+.hideMe {
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*fade out animation end*/
+
 .attendance input[type=text]  {
   background-color: #FFF;
   color: #292929;
