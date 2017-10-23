@@ -7,7 +7,11 @@ var btn = document.getElementById("openutv");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closeutv")[0];
 
-// When the user clicks the button, open the modal 
+//attendance DOM
+let attendance = document.getElementById("attendanceCode");
+let errorA = document.getElementById("errorAttendance");
+
+// When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
 }
@@ -33,5 +37,18 @@ window.onclick = function(event) {
     nav.style.height = "100%";
 
 
+  }
+}
+
+// Checks the attandance code, if correct then register attendance
+function attendanceCheck() {
+  if(attendance.value == "1q2w3e") {
+    errorA.innerText = "Din närvaro är nu registrerad.";
+    errorA.style.color = "green";
+    errorA.classList.add("hideMe");
+  } else {
+    errorA.innerText = "Fel närvarokod. Var god försök igen.";
+    errorA.style.color = "red";
+    errorA.classList.add("hideMe");
   }
 }

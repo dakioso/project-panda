@@ -9,11 +9,9 @@ let button = document.getElementById('loginbutton'),
     loginBox = document.getElementById('login-box'),
     span = document.getElementsByClassName('close')[0],
     hiddenLogin = true;
+
+// login errorcode
 let error = document.getElementById("errorCode");
-let attendance = document.getElementById("attendanceCode");
-let errorA = document.getElementById("errorAttendance");
-
-
 
 button.onclick = function(){
   if(hiddenLogin){
@@ -48,18 +46,7 @@ function loginCheck(form){
   }  error.innerText = "Fel användarnamn eller lösenord.";
 }
 
-// Checks the attandance code, if correct then register attendance
-function attendanceCheck() {
-  if(attendance.value == "1q2w3e") {
-    errorA.innerText = "Din närvaro är nu registrerad.";
-    errorA.style.color = "green";
-    errorA.classList.add("hideMe");
-  } else {
-    errorA.innerText = "Fel närvarokod. Var god försök igen.";
-    errorA.style.color = "red";
-    errorA.classList.add("hideMe");
-  }
-}
+
 
 // open the feature-box
 let featureBox = document.getElementById('feature'),
