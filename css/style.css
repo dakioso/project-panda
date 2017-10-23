@@ -485,3 +485,7 @@ div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
 }
+
+select.kurser{
+  border:1px solid red;
+}
