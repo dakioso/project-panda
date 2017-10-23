@@ -481,6 +481,10 @@ div.courseEval p{
   background: #777;
 }
 
+.courseText{
+  width: 500px;
+}
+
 div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
@@ -488,4 +492,8 @@ padding-left: 8px;
 
 select.kurser{
   border:1px solid red;
+}
+
+section.radiobuttons{
+  display:inline-block;
 }
