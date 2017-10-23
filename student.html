@@ -36,6 +36,99 @@
 <center> <h1>Välkommen Student</h1></center>
 <div class="scheme"><h3>Schema Kommer inom kort...</h3></div>
 
-  <script src="js/script.js"> </script>
+
+<div class="reviewbutton" button id="openutv">Utvärdering</button> </div>
+
+
+<!-- The Modal -->
+<div id="mymodal" class="modal">
+<div class="test">
+	 <center> <h1>Utvärdering</h1> </center>
+     <span class="closeutv">&times;</span>
+	 
+	    <form>
+		<div><h2>Vilket tempo är det?</h2>
+        <input type="radio" name="questions" id="high" required>
+        <label for="evaluation">Högt</label>
+        <br>
+        <input type="radio" name="questions" id="pretty high">
+        <label for="evaluation">Ganska högt</label>
+	    <br>
+        <input type="radio" name="questions" id="pretty low">
+      <label for="evaluation">Ganska lågt</label>
+	  <br>
+	    <input type="radio" name="questions" id="low">
+      <label for="evaluation">Lågt</label>
+			<h2>Vilken kurs är svårast</h2>
+		    <select class="form-control" id="select" name="select" required>
+	        <option disabled selected value> -- Välj ett alternativ-- </option>
+		    <option value="Arbetsmetodik" name="option">Arbetsmetodik</option>
+			<option value="2" name="option">Arbetsmetodik</option>
+		    <option value="3" name="option">Arbetsmetodik</option>
+			</select>
+	<br>
+    <div>
+    <div>
+	<h2>Det jobbiga är</h2>
+      <input type="radio" name="questions1" id="high" required>
+      <label for="evaluation">Högt</label>
+    <br>
+      <input type="radio" name="questions1" id="pretty high">
+      <label for="evaluation">Ganska högt</label>
+	  <br>
+     <input type="radio" name="questions1" id="pretty low ">
+      <label for="evaluation">Ganska lågt</label>
+	  <br>
+	   <input type="radio" name="questions1" id="low">
+      <label for="evaluation">Lågt</label>
+	  <br>
+  <div>
+
+  <div class="andrarutan">
+  <h2>Tempo i skolan</h2>
+      <input type="radio" name="questions1" id="high" required>
+      <label for="evaluation">Högt</label>
+    <br>
+      <input type="radio" name="questions1" id="pretty high">
+      <label for="evaluation">Ganska högt</label>
+	  <br>
+     <input type="radio" name="questions1" id="pretty low ">
+      <label for="evaluation">Ganska lågt</label>
+	  <br>
+	   <input type="radio" name="questions1" id="low">
+      <label for="evaluation">Lågt</label>
+  </div>
+    <div class="tredjerutan">
+  <h2>Trivsel i klassen</h2>
+      <input type="radio" name="questions1" id="high" required>
+      <label for="evaluation">Högt</label>
+    <br>
+      <input type="radio" name="questions1" id="pretty high">
+      <label for="evaluation">Ganska högt</label>
+	  <br>
+     <input type="radio" name="questions1" id="pretty low ">
+      <label for="evaluation">Ganska lågt</label>
+	  <br>
+	   <input type="radio" name="questions1" id="low">
+      <label for="evaluation">Lågt</label>
+  </div>
+  
+     <h3 class="firstinputhead">Övriga önskemål</h3>
+    <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
+	</div>
+		
+	<h3 class="secondinputhead">Förbättringar</h3>
+   <div class="textinput2">
+    <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
+	</div>
+<input type="submit" id="send" class="send" value="Skicka" />
+                  </div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="space"></div>
+
+  <script src="js/javascript.js"> </script>
 </body>
 </html>
