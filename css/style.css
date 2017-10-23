@@ -436,7 +436,7 @@ html, body {
 
 #task h1 {
 	font-style:italic
-	
+
 }
 /* student scheme*/
 .scheme {
@@ -450,4 +450,38 @@ html, body {
   text-align:center;
   color:black;
   font-style:italic
+}
+
+
+div.courseEval{
+  width: auto;
+  height: auto;
+}
+
+
+
+form.evalForm p{
+  font-size: 15px;
+  font-style: oblique;
+}
+
+form.evalForm{
+    padding-left: 10px;
+}
+
+button.responseBtn{
+  display: block;
+}
+
+div.courseEval p{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding:10;
+  background: #777;
+}
+
+div.courseEval p1{
+letter-spacing: 6px;
+padding-left: 8px;
 }
