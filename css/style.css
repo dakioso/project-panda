@@ -490,8 +490,8 @@ letter-spacing: 6px;
 padding-left: 8px;
 }
 
-select.kurser{
-  border:1px solid red;
+select.selectCourses{
+  width: 5%;
 }
 
 section.radiobuttons{
