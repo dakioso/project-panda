@@ -17,6 +17,9 @@
       <a class="icon" href="#">&#9776;</a>
 
     </div>
+    <div class="login-link">
+      <a href="index.html">Logga ut</a>
+    </div>
     </header>
 <!-- Login Navbar -->
  <div id class="placenav">
@@ -29,12 +32,31 @@
 </div>
 </div>
 <div class="navbutton">
-<span style" onclick="togNav()">☰</span>
+<span  onclick="togNav()">&#9776;</span>
 </div>
 
 
 <center> <h1>Välkommen Student</h1></center>
-<div class="scheme"><h3>Schema Kommer inom kort...</h3></div>
+
+<section class="studentContent">
+  <aside class="attendance-hidden">
+
+  </aside>
+<div class="scheme">
+  <h3>Schema Kommer inom kort...</h3>
+</div>
+
+<aside class="attendance">
+  <section>
+    <p>Registrera din närvaro.</p>
+    <input type="text" id="attendanceCode" placeholder="Närvarokod..." /><br />
+<div>
+    <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
+</div>
+        <p id="errorAttendance" class="errorText" style="margin-top: 5px;"></p>
+  </section>
+</aside>
+</section>
 
   <script src="js/script.js"> </script>
 </body>

@@ -9,6 +9,11 @@ let button = document.getElementById('loginbutton'),
     loginBox = document.getElementById('login-box'),
     span = document.getElementsByClassName('close')[0],
     hiddenLogin = true;
+let error = document.getElementById("errorCode");
+let attendance = document.getElementById("attendanceCode");
+let errorA = document.getElementById("errorAttendance");
+
+
 
 button.onclick = function(){
   if(hiddenLogin){
@@ -23,12 +28,13 @@ button.onclick = function(){
 span.onclick = function(){
   loginBox.style.display = 'none';
   hiddenLogin = true;
+  error.innerText = "";
 }
 
 // login function, directs the user to the right content.
 function loginCheck(form){
   if(form.userId.value == '' || form.passwordId.value == ''){
-    return alert('Sorry there are empty fields');
+    return error.innerText = "Var god fyll i alla fält.";
   }
   for(let i = 0; i < users.length; i++){
     if(form.userId.value === users[i].username && form.passwordId.value === users[i].password){
@@ -38,7 +44,20 @@ function loginCheck(form){
         return window.location.replace('?');
       }
     }
-  }  alert('Sorry invalid username or password');
+  }  error.innerText = "Fel användarnamn eller lösenord.";
+}
+
+// Checks the attandance code, if correct then register attendance
+function attendanceCheck() {
+  if(attendance.value == "1q2w3e") {
+    errorA.innerText = "Din närvaro är nu registrerad.";
+    errorA.style.color = "green";
+    errorA.classList.add("hideMe");
+  } else {
+    errorA.innerText = "Fel närvarokod. Var god försök igen.";
+    errorA.style.color = "red";
+    errorA.classList.add("hideMe");
+  }
 }
 
 // open the feature-box
