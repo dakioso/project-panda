@@ -137,7 +137,7 @@ h2 {
   flex: 2;
   order: 3;
   text-align: center;
-<<<<<<< HEAD
+
   padding-top: 100px;
 }
 
@@ -700,6 +700,7 @@ span {
   align-items: center;
 }
 .courses h1{
+<<<<<<< HEAD
   position:relative;
   font-size:25px;
   top:-12px
@@ -730,6 +731,7 @@ span {
 .courses h1{
   position:relative;
   top:-12px
+
 }
 .courses p{
     position:relative;
@@ -755,7 +757,24 @@ span {
   position:relative;
   color:white;
   font-size:25px;
-  right:90px
+  right:80px;
+  font-style:italic
+}
+.coursedetails h2{
+  position:relative;
+  color:white;
+  font-size:25px;
+  right:40px;
+  margin-top:10px;
+  font-style:italic
+}
+.coursedetails h3{
+  position:relative;
+  color:white;
+  font-size:25px;
+  right:100px;
+  margin-top:10px;
+  font-style:italic
 }
 
 .coursedetails p{
@@ -780,12 +799,18 @@ span {
   height:250px;
 }
 
+
 .assigment ul {
   position:absolute;
   top:60px;
   font-size:20px
 }
 
+#task h1 {
+	font-style:italic
+
+}
+/* student scheme*/
 .scheme {
   position: relative;
   border: 2px solid #292929;
@@ -959,13 +984,13 @@ span {
 /* The Modal (background) */
 .modal {
     display: none;
-    position: fixed; 
+    position: fixed;
     z-index: 1;
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     overflow: hidden;
 	overflow-y:scroll;
     background-color: rgb(0,0,0); /* Fallback color */
@@ -977,7 +1002,7 @@ span {
 
 
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -1033,7 +1058,7 @@ span {
     border-radius: 4px;
     cursor: pointer;
 	outline: none;
-	
+
 }
 
 
@@ -1051,8 +1076,8 @@ border-radius: 4px;
 .test form {
 margin:10px 20px;
 left:100px;
-	
-	
+
+
 }
 
 .reviewbutton {
@@ -1069,7 +1094,7 @@ left:100px;
   margin-top:-20px;
   font-size:20px;
   cursor:default;
-  top:200px;	
+  top:200px;
 }
 
 .sendreview {
@@ -1089,7 +1114,7 @@ textarea {
 	font-family:'Lato', sans-serif;
 	font-size:15px;
 	margin-top:-330px;
-	width:30%;	
+	width:30%;
 }
 
 .feedback-input {
@@ -1115,7 +1140,7 @@ textarea {
 	outline: none;
 	height:130px;
 	top:622px
- 
+
 }
 
 .feedback-input:focus{
@@ -1141,7 +1166,7 @@ position:absolute;
   text-decoration: none;
   right:49%;
   top:680px;
-  font-size:16px	
+  font-size:16px
 }
 .andrarutan {
 position:absolute;
@@ -1158,27 +1183,61 @@ top:490px;
 position:absolute;
 top:240px;
 right:0px;
-width:100%;	
-	
+width:100%;
+
 }
 .firstinputhead{
 position:absolute;
 top:245px;
 left:61%;
-width:100%;	
-	
+width:100%;
+
 }
 .secondinputhead{
 position:absolute;
 top:482px;
 left:62%;
-width:100%;	
-	
+width:100%;
+
 }
 .space { /* important cant scroll without it */
 	position:absolute;
 	width: 10px;
-    height: 10px;    
+    height: 10px;
     padding: 50px;
-	top:800px;	
+	top:800px;
+}
+
+
+div.courseEval{
+  width: auto;
+  height: auto;
+}
+
+
+
+form.evalForm p{
+  font-size: 15px;
+  font-style: oblique;
+}
+
+form.evalForm{
+    padding-left: 10px;
+}
+
+button.responseBtn{
+  display: block;
+}
+
+div.courseEval p{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding:10;
+  background: #777;
+}
+
+div.courseEval p1{
+letter-spacing: 6px;
+padding-left: 8px;
 }

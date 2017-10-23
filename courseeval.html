@@ -1,0 +1,69 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <title>PandaSoft</title>
+</head>
+<body>
+
+<div class ="courseEval">
+  <p>Kurs utvärdering</p>
+  <form action="" class = "evalForm">
+    <p2>Obligatoriska frågor markeras med *</p2>
+    <h3>Välj kurs</h3>
+    <select name="Kurser" class = "selectCourses">
+      <option value="kurs">Välj kurs</option>
+      <option value="Arbetsmetodik">Arbetsmetodik</option>
+
+    </select>
+
+    <h3>* Hur upplevde du tempot i <br> denna kurs?</h3>
+    <p1>1 2 3 4 5 </p1> <br>
+    <input type="radio" name="1">
+    <input type="radio" name="1">
+    <input type="radio" name="1">
+    <input type="radio" name="1">
+    <input type="radio" name="1">
+
+    <h3>* Hur svår upplevde du kursen?</h3>
+    <p1>1 2 3 4 5</p1> <br>
+    <input type="radio" name="2">
+    <input type="radio" name="2">
+    <input type="radio" name="2">
+    <input type="radio" name="2">
+    <input type="radio" name="2">
+
+    <h3>* Hur välplanerad var kursen <br>under läsåret?</h3>
+    <p1>1 2 3 4 5</p1> <br>
+    <input type="radio" name="3">
+    <input type="radio" name="3">
+    <input type="radio" name="3">
+    <input type="radio" name="3">
+    <input type="radio" name="3">
+
+
+
+    <h3> Vad var bra med kursen?</h3>
+    <textarea name="freeForm" id="" cols="50" rows="10"></textarea> <br>
+
+    <h3>Vad har varit dåligt med kursen?</h3>
+    <textarea name="freeForm" id="" cols="50" rows="10"></textarea> <br>
+
+    <button class="responseBtn" onclick=alert("Ditt"+"&nbsp"+"svar"+"&nbsp"+"är"+"&nbsp"+"registrerat!"),window.close()>Skicka</button>
+
+
+  </form>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; Copyright PandaSoft</p>
+  </footer>
+
+  <script src="js/script.js"> </script>
+</body>
+
+
+
+
+</html>
