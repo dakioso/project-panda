@@ -411,13 +411,26 @@ span {
   display: none;
   background-color: #292929;
   right: 0;
-  padding: 20px;
-  width: 250px;
-  height: 80px;
+  padding: 21px;
+  width: 300px;
+  height: 140px;
   border: 1px solid #ffa500;
   z-index: 1;
   position: absolute;
 }
+
+.login-content label {
+  color: #FFF;
+  margin-left: 65px;
+  font-size: 18px;
+}
+
+.login-content .errorText {
+  color: red;
+  margin-left: 0px;
+  font-size: 14px;
+}
+
 
 .close {
   color: #ffa550;
@@ -427,23 +440,43 @@ span {
   font-size: 24px;
   cursor: default;
   transition: color 1s ease;
+  margin-top: -20px;
+  margin-right: -7px;
 }
 
 .close:hover {
   color: #FFF;
 }
 
-.login-content input[type=button], input[type=text], input[type=password] {
+.login-content input[type=text], input[type=password] {
   background-color: #292929;
   color: #FFF;
   border: 1px solid #ffa500;
-  margin: 5px;
+  margin: 7px;
   transition: color 1s ease;
+  padding: 5px;
+  padding-right: 120px;
+  outline-color: rgb(255, 165, 0);
+
+}
+
+.login-content input[type=button] {
+  background-color: #292929;
+  color: #FFF;
+  border: 1px solid #ffa500;
+  margin: 7px;
+  transition: color 1s ease;
+  padding: 5px;
+  outline-color: rgb(255, 165, 0);
 }
 
 .login-content input[type=button]:hover {
   color: #ffa500;
 }
+
+
+
+
 
 .navbutton {
   position: relative;
@@ -754,9 +787,7 @@ span {
 
 .scheme {
   position: relative;
-  bottom: -10px;
   border: 2px solid #292929;
-  margin:2% 25%;
   color: white;
   width: 50%;
   height:350px;
@@ -855,4 +886,71 @@ span {
   padding-left: 100px;
   font-weight: bold;
   font-size: 1.5em;
+}
+
+.attendance {
+  border: 2px solid #292929;
+  right: 0;
+  height: 350px;
+  width: 250px;
+  }
+
+.attendance-hidden {
+  right: 0;
+  height: 350px;
+  width: 239px;
+  justify-content: flex-end;
+}
+
+.attendance p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* fade out animation start */
+.hideMe {
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*fade out animation end*/
+
+.attendance input[type=text]  {
+  background-color: #FFF;
+  color: #292929;
+  border: 1px solid #292929;
+  margin: 7px;
+  padding: 5px;
+  outline-color: #292929;
+  width: 224px;
+}
+
+.attendance div {
+  display: flex;
+  justify-content: center;
+}
+
+.attendance input[type=button]  {
+  background-color: #FFF;
+  color: #292929;
+  border: 1px solid #292929;
+  margin: 7px;
+  padding: 5px;
+  outline-color: #292929;
+}
+
+.studentContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
