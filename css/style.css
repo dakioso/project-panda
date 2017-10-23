@@ -489,10 +489,11 @@ div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
 }
+  select.selectCourses{
+    width: 8%;
+    margin-left: 0px;
+  }
 
-select.selectCourses{
-  width: 5%;
-}
 
 section.radiobuttons{
   display:inline-block;
