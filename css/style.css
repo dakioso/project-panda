@@ -137,9 +137,9 @@ h2 {
   flex: 2;
   order: 3;
   text-align: center;
-
   padding-top: 100px;
 }
+
 
 .pricing-box{
   display: flex;
@@ -345,6 +345,17 @@ span {
   cursor: pointer;
 }
 
+.login-link p {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #292929;
+  color: white;
+  background-color: #292929;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: -236px;
+}
+
 .login-link a:hover {
   border: 1px solid #ffa500;
   background-color: #2d2c2c;
@@ -497,7 +508,7 @@ span {
   left:0px;
   top:150px;
   color:#ffa500;
-  height:220px
+  height:190px
 
 }
 
@@ -930,6 +941,25 @@ cursor: pointer;
   width: 250px;
   }
 
+.daily-vote {
+  display: flex;
+  flex-direction: column;
+}
+
+.smileys img {
+  flex-direction: row;
+  margin: 5px;
+}
+
+#answers {
+    display: none;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+
 .attendance-hidden {
   right: 0;
   height: 350px;
@@ -988,6 +1018,10 @@ cursor: pointer;
   padding: 5px;
   outline-color: #292929;
   cursor: pointer
+}
+
+.attendance input[type=button]:active  {
+  background-color: #f7f7f7;
 }
 
 .studentContent {
@@ -1244,13 +1278,20 @@ button.responseBtn{
 
 div.courseEval p{
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: white;
   padding:10;
   background: #777;
 }
 
+.courseText{
+  width: 400px;
+  resize: none;
+}
+
 div.courseEval p1{
+
+
 letter-spacing: 6px;
 padding-left: 8px;
 
@@ -1277,4 +1318,33 @@ padding-left: 8px;
  height:10px;
  padding:50px;
  top:800px;
+}
+.selectCourses{
+  padding: 8px;
+  width: 150px;
+  margin-left: 0px;
+  border: 1px solid #ffa500;
+  border-radius: 2px;
+  }
+
+
+section.radiobuttons{
+  display:inline-block;
+}
+
+#formAnswerPos{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+
+}
+
+#regAnswer{
+  font-size: 30px;
+
+}
+
+#formBTN{
+  padding: 10px;
+
 }
