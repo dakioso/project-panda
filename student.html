@@ -50,8 +50,22 @@
 <div>
     <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
 </div>
-        <p id="errorAttendance" class="errorText" style="margin-top: 5px;"></p>
+        <p id="errorAttendance" style="margin-top: 5px;">&nbsp;</p>
   </section>
+  <div class="daily-vote">
+    <p>Daglig utvärdering</p>
+    <div class="smileys">
+      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" height="40px" width="40px" alt="happy-face">
+      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" height="40px" width="40px" alt="okey-face">
+      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" height="40px" width="40px" alt="sad-face">
+    </div>
+    <div id="answers">
+
+    </div>
+  </div>
+
+
+
 </aside>
 </section>
 
@@ -136,7 +150,7 @@
     </div>
 	<div class="review">
 	<br><h3 class="secondinputhead">Förbättringar</h3>
-    <div class="textinput2"> <h1></h1>
+    <div class="textinput2">
     <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
    </div>
   </div>
