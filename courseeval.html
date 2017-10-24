@@ -52,13 +52,22 @@
     <textarea name="freeForm" class="courseText" cols="50" rows="10"></textarea> <br>
 
     <h3>Vad har varit dåligt med kursen?</h3>
-    <textarea name="freeForm" class="courseText" cols="50" rows="10"></textarea> <br> 
+    <textarea name="freeForm" class="courseText" cols="50" rows="10"></textarea> <br>
 
-    <button class="responseBtn" onclick=alert("Ditt"+"&nbsp"+"svar"+"&nbsp"+"är"+"&nbsp"+"registrerat!"),window.close()>Skicka</button>
-
+    <input type="button" name="answer" value="Skicka" onclick="showDiv()" />
+    <div id="welcomeDiv"  style="display:none;" class="answer_list" ><p3 id="regAnswer">Ditt svar är registrerat</p3></div>
 
   </form>
   </div>
+
+  <section class ="script1">
+    <script>
+    function showDiv() {
+       document.getElementById('welcomeDiv').style.display = "block";
+       setTimeout(function(){window.close()}, 2500);
+    }
+    </script>
+  </section>
 
   <footer class="main-footer">
     <p>&copy; Copyright PandaSoft</p>
