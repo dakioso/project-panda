@@ -487,12 +487,15 @@ div.courseEval p{
 }
 
 div.courseEval p1{
-letter-spacing: 6px;
-padding-left: 8px;
+  letter-spacing: 6px;
+  padding-left: 8px;
 }
 .selectCourses{
-      width: 100px;
-    margin-left: 0px;
+  padding: 5px;
+  width: 150px;
+  margin-left: 0px;
+  border: 1px solid #ffa500;
+  border-radius: 2px;
   }
 
 
