@@ -475,7 +475,7 @@ button.responseBtn{
 
 div.courseEval p{
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: white;
   padding:10;
   background: #777;
@@ -491,7 +491,7 @@ div.courseEval p1{
   padding-left: 8px;
 }
 .selectCourses{
-  padding: 5px;
+  padding: 8px;
   width: 150px;
   margin-left: 0px;
   border: 1px solid #ffa500;
@@ -504,6 +504,6 @@ section.radiobuttons{
 }
 
 #regAnswer{
-  font-size: 30px;
+  font-size: 35px;
 
 }
