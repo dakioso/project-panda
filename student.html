@@ -53,8 +53,22 @@
 <div>
     <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
 </div>
-        <p id="errorAttendance" class="errorText" style="margin-top: 5px;"></p>
+        <p id="errorAttendance" style="margin-top: 5px;">&nbsp;</p>
   </section>
+  <div class="daily-vote">
+    <p>Daglig utvärdering</p>
+    <div class="smileys">
+      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" height="40px" width="40px" alt="happy-face">
+      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" height="40px" width="40px" alt="okey-face">
+      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" height="40px" width="40px" alt="sad-face">
+    </div>
+    <div id="answers">
+
+    </div>
+  </div>
+
+
+
 </aside>
 </section>
 
@@ -67,7 +81,7 @@
 <div class="test">
 	 <center> <h1>Utvärdering</h1> </center>
      <span class="closeutv">&times;</span>
-	 
+
 	    <form>
 		<div><h2>Vilket tempo är det?</h2>
         <input type="radio" name="questions" id="high" required>
@@ -134,11 +148,11 @@
 	   <input type="radio" name="questions1" id="low">
       <label for="evaluation">Lågt</label>
   </div>
-  
+
      <h3 class="firstinputhead">Övriga önskemål</h3>
     <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
 	</div>
-		
+
 	<h3 class="secondinputhead">Förbättringar</h3>
    <div class="textinput2">
     <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
