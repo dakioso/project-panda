@@ -1234,6 +1234,11 @@ div.courseEval p{
   background: #777;
 }
 
+.courseText{
+  width: 400px;
+  resize: none;
+}
+
 div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
@@ -1261,4 +1266,13 @@ padding-left: 8px;
  height:10px;     
  padding:50px;
  top:800px;	
+}
+.selectCourses{
+      width: 100px;
+    margin-left: 0px;
+  }
+
+
+section.radiobuttons{
+  display:inline-block;
 }
