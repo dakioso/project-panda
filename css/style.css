@@ -484,7 +484,7 @@ span {
   top: -42px;
   left:20px;
   font-size: 28px;
-  color:orange;
+  color:#ffa500;
   border-style:3px dashed;
   width:0px;
   cursor:default;
@@ -700,7 +700,6 @@ span {
   align-items: center;
 }
 .courses h1{
-<<<<<<< HEAD
   position:relative;
   font-size:25px;
   top:-12px
@@ -1012,17 +1011,17 @@ span {
 }
 
 
-.closeutv {
-	position:absolute;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-	right:21%;
-	top:210px;
+.closereview {
+ position:absolute;
+ color: white;
+ font-size: 28px;
+ font-weight: bold;
+ right:21%;
+ top:210px;
 }
 
-.closeutv:hover,
-.closeutv:focus {
+.closereview:hover,
+.closereview:focus {
     color: #ffa500;
     text-decoration: none;
     cursor: pointer;
@@ -1035,20 +1034,18 @@ span {
 	left:-10px
 }
 
-
 .test input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 10px;
-    display: inline-block;
-    border: 2px solid ;
-    border-radius: 4px;
-    box-sizing: border-box;
-	background:white;
-	border-color:orange;
-	outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  display: inline-block;
+  border: 2px solid ;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background:white;
+  border-color:#ffa500;
+  outline: none;
 }
-
 
 .test input[type=checkbox] {
     background-color: #4CAF50;
@@ -1058,26 +1055,25 @@ span {
     border-radius: 4px;
     cursor: pointer;
 	outline: none;
-
 }
 
-
 .test {
-background-color:#292929;
-width:60%;
-color:white;
-margin-left:20%	;
-background: linear-gradient(to bottom right, #292929, black);
-margin-top:100px;
-height:540px;
-border-radius: 4px;
+ background-color:#292929;
+ width:60%;
+ color:white;
+ margin-left:20%;
+ background: linear-gradient(to bottom right, #292929, black);
+ margin-top:100px;
+ height:540px;
+ border-radius:4px;
 
+}
+.test h2 {
+ font-size:1.3em		
 }
 .test form {
 margin:10px 20px;
 left:100px;
-
-
 }
 
 .reviewbutton {
@@ -1085,7 +1081,7 @@ left:100px;
   padding: 5px 15px 5px 15px;
   border: 1px solid #292929;
   color: white;
-  border-color:orange;
+  border-color:#ffa500;
   background-color: #292929;
   transition: all 1s ease;
   text-decoration: none;
@@ -1107,14 +1103,15 @@ left:100px;
     justify-content: center;
 }
 
-textarea {
-	position:absolute;
-    resize:vertical;
-	height:270px;
-	font-family:'Lato', sans-serif;
-	font-size:15px;
-	margin-top:-330px;
-	width:30%;
+.review textarea {
+ position:absolute;
+ resize:vertical;
+ height:150px;
+ font-family:'Lato', sans-serif;
+ font-size:15px;
+ margin-top:-330px;
+ width:20%;	
+ font-size:16px;
 }
 
 .feedback-input {
@@ -1144,22 +1141,22 @@ textarea {
 }
 
 .feedback-input:focus{
-	background: #fff;
-	box-shadow: 0;
-	border: 3px solid orange;
-	color: black;
-	padding: 3px 3px 13px 14px;
-	 -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-	outline: none;
+ background: #fff;
+ box-shadow: 0;
+ border: 3px solid #ffa500;
+ color: black;
+ padding: 3px 3px 13px 14px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
 }
 
 .send {
-position:absolute;
+  position:absolute;
   display: inline;
   padding: 5px 15px 5px 15px;
-  border: 1px solid orange;
+  border: 1px solid #ffa500;
   color: white;
   background-color: #292929;
   transition: all 1s ease;
@@ -1168,15 +1165,15 @@ position:absolute;
   top:680px;
   font-size:16px
 }
-.andrarutan {
-position:absolute;
-left:42%;
-top:244px;
+.secondbox {
+  position:absolute;
+  left:42%;
+  top:242px;
 }
-.tredjerutan {
-position:absolute;
-left:42%;
-top:490px;
+.thirdbox {
+ position:absolute;
+ left:42%;
+ top:484px;
 }
 
 .textinput2 {
@@ -1240,4 +1237,28 @@ div.courseEval p{
 div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
+	
+	
+}
+.firstinputhead {
+ position:absolute;
+ top:245px;
+ left:62%;
+ width:100%;
+	
+}
+
+.secondinputhead {
+ position:absolute;
+ top:488px;
+ left:62%;
+ width:100%;	
+}
+
+.space { /*invisible box, important cant scroll without it */
+ position:absolute;
+ width:10px;
+ height:10px;     
+ padding:50px;
+ top:800px;	
 }
