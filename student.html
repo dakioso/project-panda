@@ -15,7 +15,6 @@
     <!-- NAVBAR -->
     <div class="main-nav" id="navbar" style="top: -20px;">
       <a class="icon" href="#">&#9776;</a>
-
     </div>
     <div class="login-link">
       <a href="index.html">Logga ut</a>
@@ -24,17 +23,18 @@
 <!-- Login Navbar -->
  <div id class="placenav">
 	<div id="nav" class="sidenav">
-			<a  class="active" href="student.html">Student</a>
-			<a href="courses.html">Kurser</a>
-		    <a href="coursedetails.html">Kursdetaljer</a>
-		    <a href="assigment.html">Uppgifter</a>
-
+		<a  class="active" href="student.html">Student</a>
+		<a href="courses.html">Kurser</a>
+		<a href="coursedetails.html">Kursdetaljer</a>
+		<a href="assigment.html">Uppgifter</a>
 </div>
 </div>
+<!-- Sidenavbar -->
 <div class="navbutton">
 <span  onclick="togNav()">&#9776;</span>
 </div>
 
+<<<<<<< HEAD
 
 <center> <h1>Välkommen Student</h1></center>
 
@@ -65,92 +65,95 @@
 <!-- The Modal -->
 <div id="mymodal" class="modal">
 <div class="test">
+<div class="reviewbutton" button id="openreview">Utvärdering</button> </div>
+<!--Modalbox-Review -->
+   <div id="mymodal" class="modal">
+    <div class="test">
 	 <center> <h1>Utvärdering</h1> </center>
-     <span class="closeutv">&times;</span>
-	 
+     <span class="closereview">&times;</span>
 	    <form>
-		<div><h2>Vilket tempo är det?</h2>
-        <input type="radio" name="questions" id="high" required>
+		<h2>Vilket tempo är det?</h2>
+        <input type="radio" name="pace" id="high" required>
         <label for="evaluation">Högt</label>
         <br>
-        <input type="radio" name="questions" id="pretty high">
+        <input type="radio" name="pace" id="pretty high">
         <label for="evaluation">Ganska högt</label>
 	    <br>
-        <input type="radio" name="questions" id="pretty low">
-      <label for="evaluation">Ganska lågt</label>
-	  <br>
-	    <input type="radio" name="questions" id="low">
-      <label for="evaluation">Lågt</label>
-			<h2>Vilken kurs är svårast</h2>
-		    <select class="form-control" id="select" name="select" required>
-	        <option disabled selected value> -- Välj ett alternativ-- </option>
-		    <option value="Arbetsmetodik" name="option">Arbetsmetodik</option>
-			<option value="2" name="option">Arbetsmetodik</option>
-		    <option value="3" name="option">Arbetsmetodik</option>
-			</select>
+        <input type="radio" name="pace" id="pretty low">
+        <label for="evaluation">Ganska lågt</label>
+	    <br>
+	    <input type="radio" name="pace" id="low">
+        <label for="evaluation">Lågt</label>
+	    <h2>Vilken kurs är svårast</h2>
+		<select class="form-control" id="select" name="select" required>
+				<option disabled selected value> -- Välj ett alternativ-- </option>
+				<option value="Arbetsmetodik" name="courses">Arbetsmetodik</option>
+				<option value="Projektmetodik" name="courses">Projektmetodik</option>
+				<option value="Javascript" name="courses">Javascript</option>
+	    </select>
 	<br>
     <div>
     <div>
-	<h2>Det jobbiga är</h2>
-      <input type="radio" name="questions1" id="high" required>
+	  <h2>Nivån på innehållet</h2>
+      <input type="radio" name="level" id="high" required>
       <label for="evaluation">Högt</label>
-    <br>
-      <input type="radio" name="questions1" id="pretty high">
+      <br>
+      <input type="radio" name="level" id="pretty high">
       <label for="evaluation">Ganska högt</label>
 	  <br>
-     <input type="radio" name="questions1" id="pretty low ">
+      <input type="radio" name="level" id="pretty low ">
       <label for="evaluation">Ganska lågt</label>
 	  <br>
-	   <input type="radio" name="questions1" id="low">
+	  <input type="radio" name="level" id="low">
       <label for="evaluation">Lågt</label>
 	  <br>
-  <div>
-
-  <div class="andrarutan">
-  <h2>Tempo i skolan</h2>
-      <input type="radio" name="questions1" id="high" required>
-      <label for="evaluation">Högt</label>
+    <div>
+      <div class="secondbox">
+      <h2>Föreläsningar</h2>
+      <input type="radio" name="lectures" id="Execellent" required>
+      <label for="evaluation">Utmärkt</label>
+      <br>
+      <input type="radio" name="lectures" id="Good">
+      <label for="evaluation">Bra</label>
+	  <br>
+      <input type="radio" name="lectures" id="Less good">
+      <label for="evaluation">Mindre bra</label>
+	  <br>
+	  <input type="radio" name="lectures" id="bad">
+      <label for="evaluation">Dålig</label>
+    </div>
+    <div class="thirdbox">
+      <h2>Trivsel i klassen</h2>
+      <input type="radio" name="comfort" id="Execellent" required>
+      <label for="evaluation">Utmärkt</label>
     <br>
-      <input type="radio" name="questions1" id="pretty high">
-      <label for="evaluation">Ganska högt</label>
+      <input type="radio" name="comfort" id="Good">
+      <label for="evaluation">Bra</label>
 	  <br>
-     <input type="radio" name="questions1" id="pretty low ">
-      <label for="evaluation">Ganska lågt</label>
-	  <br>
-	   <input type="radio" name="questions1" id="low">
-      <label for="evaluation">Lågt</label>
-  </div>
-    <div class="tredjerutan">
-  <h2>Trivsel i klassen</h2>
-      <input type="radio" name="questions1" id="high" required>
-      <label for="evaluation">Högt</label>
-    <br>
-      <input type="radio" name="questions1" id="pretty high">
-      <label for="evaluation">Ganska högt</label>
-	  <br>
-     <input type="radio" name="questions1" id="pretty low ">
-      <label for="evaluation">Ganska lågt</label>
-	  <br>
-	   <input type="radio" name="questions1" id="low">
-      <label for="evaluation">Lågt</label>
-  </div>
-  
-     <h3 class="firstinputhead">Övriga önskemål</h3>
+     <input type="radio" name="comfort" id="Less good ">
+      <label for="evaluation">Mindre bra</label>
+	<br>
+	   <input type="radio" name="comfort" id="bad">
+      <label for="evaluation">Dåligt</label>
+    </div>
+      <div class="review">
+       <h3 class="firstinputhead">Övriga frågor</h3>
+       <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
+    </div>
+	<div class="review">
+	<br><h3 class="secondinputhead">Förbättringar</h3>
+    <div class="textinput2"> <h1></h1>
     <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
-	</div>
-		
-	<h3 class="secondinputhead">Förbättringar</h3>
-   <div class="textinput2">
-    <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
-	</div>
-<input type="submit" id="send" class="send" value="Skicka" />
+   </div>
+  </div>
+  <input type="submit" id="send" class="send" value="Skicka" />
                   </div>
 			</form>
 		</div>
 	</div>
 </div>
+<!-- Invisible space importantee -->
 <div class="space"></div>
-
-  <script src="js/javascript.js"> </script>
+<script src="js/javascript.js"> </script>
 </body>
 </html>
