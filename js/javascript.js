@@ -11,6 +11,13 @@ var span = document.getElementsByClassName("closeutv")[0];
 let attendance = document.getElementById("attendanceCode");
 let errorA = document.getElementById("errorAttendance");
 
+// daily vote dom
+let answers = document.getElementById('answers'),
+    happy = document.getElementById('happyF'),
+    okey = document.getElementById('neutralF'),
+    sad = document.getElementById('sadF'),
+    dailyInvoke = false;
+
 // When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
@@ -35,8 +42,6 @@ window.onclick = function(event) {
     nav.style.height = '0';
   } else {
     nav.style.height = "100%";
-
-
   }
 }
 
@@ -50,5 +55,45 @@ function attendanceCheck() {
     errorA.innerText = "Fel närvarokod. Var god försök igen.";
     errorA.style.color = "red";
     errorA.classList.add("hideMe");
+  }
+}
+
+// Print out the daily evaluation
+function printMess(face){
+  answers.style.display = 'flex';
+
+  if(dailyInvoke){
+    answers.classList.remove("hideMe");
+    answers.style.color = 'red';
+    return answers.innerHTML = "Din dagliga utvärdering är redan avklarad.";
+  }
+
+  switch(face){
+    case 'Nöjd':
+      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
+      answers.style.color = '#00cc00';
+      okey.style.filter = 'grayscale(100%)';
+      sad.style.filter = 'grayscale(100%)';
+      answers.classList.add('hideMe');
+        dailyInvoke = true;
+        break;
+
+    case 'Neutral':
+      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
+      answers.style.color = '#e6e600';
+      happy.style.filter = 'grayscale(100%)';
+      sad.style.filter = 'grayscale(100%)';
+      answers.classList.add('hideMe');
+        dailyInvoke = true;
+        break;
+
+    case 'Missnöjd':
+      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
+      answers.style.color = '#e60000';
+      happy.style.filter = 'grayscale(100%)';
+      okey.style.filter = 'grayscale(100%)';
+      answers.classList.add('hideMe');
+        dailyInvoke = true;
+        break;
   }
 }
