@@ -10,8 +10,8 @@ var span = document.getElementsByClassName("closereview")[0];
 
 //attendance DOM
 let attendance = document.getElementById("attendanceCode");
-let errorA = document.getElementById("errorAttendance");
 let attendanceReg = false;
+let notif = document.getElementById("notification");
 
 
 // When the user clicks the button, open the modal
@@ -47,26 +47,29 @@ window.onclick = function(event) {
 // Checks the attandance code, if correct then register attendance
 function attendanceCheck() {
   if(attendanceReg) {
-    errorA.style.color = "red";
-    errorA.classList.remove("hideMe");
+    notif.style.color = "red";
+    notif.style.borderColor ="red";
+    notif.classList.remove("hideMe");
     setInterval(addHideMe, 1000);
-    return errorA.innerText = "Du har redan anmält din närvaro.";
+    return notif.innerText = "Du har redan anmält din närvaro.";
   }
 
   if(attendance.value == "1q2w3e") {
-    errorA.innerText = "Din närvaro är nu registrerad.";
-    errorA.style.color = "green";
-    errorA.classList.remove("hideMe");
+    notif.innerText = "Din närvaro är nu registrerad.";
+    notif.style.color = "green";
+    notif.style.borderColor ="green";
+    notif.classList.remove("hideMe");
     setInterval(addHideMe, 1000);
     attendanceReg = true;
   } else {
-    errorA.innerText = "Fel närvarokod. Var god försök igen.";
-    errorA.style.color = "red";
-    errorA.classList.remove("hideMe");
+    notif.innerText = "Fel närvarokod. Var god försök igen.";
+    notif.style.color = "red";
+    notif.style.borderColor ="red";
+    notif.classList.remove("hideMe");
     setInterval(addHideMe, 1000);
   }
 }
 
 function addHideMe() {
-  errorA.classList.add("hideMe");
+  notif.classList.add("hideMe");
 }
