@@ -28,6 +28,16 @@ h2 {
   background-color: #292929;
 }
 
+.student-head {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101px;
+  width: 100%;
+  background-color: #292929;
+}
+
 .main-head img {
   display: flex;
   align-self: flex-start;
@@ -35,6 +45,16 @@ h2 {
   width: 100px;
   max-width:100%;
   height:auto;
+}
+
+.student-head img {
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  width: 180px;
+  max-width:100%;
+  height:auto;
+  margin-top: 35px;
 }
 
 .main-nav {
