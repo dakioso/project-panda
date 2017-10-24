@@ -1034,8 +1034,8 @@ span {
 	left:-10px
 }
 
-.test input[type=text], select {
-  width: 100%;
+.test input[type=text], select.form-control{
+  width: 30%;
   padding: 12px 20px;
   margin: 8px 10px;
   display: inline-block;
@@ -1173,7 +1173,7 @@ left:100px;
 .thirdbox {
  position:absolute;
  left:42%;
- top:484px;
+ top:494px;
 }
 
 .textinput2 {
