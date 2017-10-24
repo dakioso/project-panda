@@ -482,14 +482,15 @@ div.courseEval p{
 }
 
 .courseText{
-  width: 500px;
+  width: 400px;
+  resize: none;
 }
 
 div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
 }
-  select.selectCourses{
+select.selectCourses{
     width: 8%;
     margin-left: 0px;
   }
