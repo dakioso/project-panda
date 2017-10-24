@@ -987,6 +987,10 @@ span {
   cursor: pointer
 }
 
+.attendance input[type=button]:active  {
+  background-color: #f7f7f7;
+}
+
 .studentContent {
   display: flex;
   width: 100%;

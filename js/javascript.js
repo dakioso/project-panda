@@ -56,8 +56,8 @@ function attendanceCheck() {
 
   if(attendance.value == "1q2w3e") {
     notif.innerText = "Din närvaro är nu registrerad.";
-    notif.style.color = "green";
-    notif.style.borderColor ="green";
+    notif.style.color = "#3dd43d";
+    notif.style.borderColor ="#3dd43d";
     notif.classList.remove("hideMe");
     setInterval(addHideMe, 1000);
     attendanceReg = true;
