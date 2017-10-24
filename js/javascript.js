@@ -17,6 +17,7 @@ let errorA = document.getElementById("errorAttendance");
 // When the user clicks the button, open the modal
 reviewbutton.onclick = function() {
 modal.style.display = "block";
+}
 
 // daily vote dom
 let answers = document.getElementById('answers'),
@@ -25,11 +26,6 @@ let answers = document.getElementById('answers'),
     sad = document.getElementById('sadF'),
     dailyInvoke = false;
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-
-}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
