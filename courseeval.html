@@ -49,20 +49,25 @@
 
 
     <h3> Vad var bra med kursen?</h3>
-    <textarea name="freeForm" class="courseText" cols="50" rows="10"></textarea> <br>
+    <textarea name="freeForm" class="courseText" cols="30" rows="5"></textarea> <br>
 
     <h3>Vad har varit dåligt med kursen?</h3>
-    <textarea name="freeForm" class="courseText" cols="50" rows="10"></textarea> <br> 
-
-    <button class="responseBtn" onclick=alert("Ditt"+"&nbsp"+"svar"+"&nbsp"+"är"+"&nbsp"+"registrerat!"),window.close()>Skicka</button>
-
-
+    <textarea name="freeForm" class="courseText" cols="30" rows="5"></textarea> <br>
+<section id = "formAnswerPos">
+    <input id = "formBTN"type="button" name="answer" value="Skicka" onclick="showDiv()" />
+    <div id="welcomeDiv"  style="display:none;" class="answer_list" ><p3 id="regAnswer">Ditt svar är registrerat</p3></div>
+</section>
   </form>
   </div>
 
-  <footer class="main-footer">
-    <p>&copy; Copyright PandaSoft</p>
-  </footer>
+  <section class ="script1">
+    <script>
+    function showDiv() {
+       document.getElementById('welcomeDiv').style.display = "block";
+       setTimeout(function(){window.close()}, 2500);
+    }
+    </script>
+  </section>
 
   <script src="js/script.js"> </script>
 </body>
