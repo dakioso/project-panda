@@ -10,10 +10,14 @@ let button = document.getElementById('loginbutton'),
     span = document.getElementsByClassName('close')[0],
     hiddenLogin = true;
 
+// login errorcode
+let error = document.getElementById("errorCode");
+
 button.onclick = function(){
   if(hiddenLogin){
     loginBox.style.display = 'block';
     hiddenLogin = false;
+    document.getElementById("userField").focus();
   } else {
       loginBox.style.display = 'none';
       hiddenLogin = true;
@@ -23,12 +27,13 @@ button.onclick = function(){
 span.onclick = function(){
   loginBox.style.display = 'none';
   hiddenLogin = true;
+  error.innerText = "";
 }
 
 // login function, directs the user to the right content.
 function loginCheck(form){
   if(form.userId.value == '' || form.passwordId.value == ''){
-    return alert('Sorry there are empty fields');
+    return error.innerText = "Var god fyll i alla fält.";
   }
   for(let i = 0; i < users.length; i++){
     if(form.userId.value === users[i].username && form.passwordId.value === users[i].password){
@@ -38,8 +43,10 @@ function loginCheck(form){
         return window.location.replace('?');
       }
     }
-  }  alert('Sorry invalid username or password');
+  }  error.innerText = "Fel användarnamn eller lösenord.";
 }
+
+
 
 // open the feature-box
 let featureBox = document.getElementById('feature'),
