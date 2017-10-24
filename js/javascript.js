@@ -10,8 +10,8 @@ var span = document.getElementsByClassName("closereview")[0];
 
 //attendance DOM
 let attendance = document.getElementById("attendanceCode");
-let errorA = document.getElementById("errorAttendance");
-
+let attendanceReg = false;
+let notif = document.getElementById("notification");
 
 
 // When the user clicks the button, open the modal
@@ -20,8 +20,7 @@ modal.style.display = "block";
 }
 
 // daily vote dom
-let answers = document.getElementById('answers'),
-    happy = document.getElementById('happyF'),
+let happy = document.getElementById('happyF'),
     okey = document.getElementById('neutralF'),
     sad = document.getElementById('sadF'),
     dailyInvoke = false;
@@ -48,55 +47,84 @@ window.onclick = function(event) {
   }
 }
 
+
+
 // Checks the attandance code, if correct then register attendance
 function attendanceCheck() {
+  if(attendanceReg) {
+    notif.style.color = "red";
+    notif.style.borderColor ="red";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+    return notif.innerText = "Du har redan anmält din närvaro.";
+  }
+
   if(attendance.value == "1q2w3e") {
-    errorA.innerText = "Din närvaro är nu registrerad.";
-    errorA.style.color = "green";
-    errorA.classList.add("hideMe");
+    notif.innerText = "Din närvaro är nu registrerad.";
+    notif.style.color = "#3dd43d";
+    notif.style.borderColor ="#3dd43d";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+    attendanceReg = true;
   } else {
-    errorA.innerText = "Fel närvarokod. Var god försök igen.";
-    errorA.style.color = "red";
-    errorA.classList.add("hideMe");
+    notif.innerText = "Fel närvarokod. Var god försök igen.";
+    notif.style.color = "red";
+    notif.style.borderColor ="red";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
   }
 }
 
+
 // Print out the daily evaluation
 function printMess(face){
-  answers.style.display = 'flex';
+
 
   if(dailyInvoke){
-    answers.classList.remove("hideMe");
-    answers.style.color = 'red';
-    return answers.innerHTML = "Din dagliga utvärdering är redan avklarad.";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+    notif.style.color = 'red';
+    notif.style.borderColor ="red";
+    return notif.innerHTML = "Din dagliga utvärdering är redan avklarad.";
   }
 
   switch(face){
     case 'Nöjd':
-      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
-      answers.style.color = '#00cc00';
+      notif.innerHTML = "Tack för din åsikt.";
+      notif.style.color = '#3dd43d';
+      notif.style.borderColor ="#3dd43d";
       okey.style.filter = 'grayscale(100%)';
       sad.style.filter = 'grayscale(100%)';
-      answers.classList.add('hideMe');
+      notif.classList.remove('hideMe');
+      setInterval(addHideMe, 1000);
         dailyInvoke = true;
         break;
 
     case 'Neutral':
-      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
-      answers.style.color = '#e6e600';
+      notif.innerHTML = "Tack för din åsikt.";
+      notif.style.color = '#3dd43d';
+      notif.style.borderColor ="#3dd43d";
       happy.style.filter = 'grayscale(100%)';
       sad.style.filter = 'grayscale(100%)';
-      answers.classList.add('hideMe');
+      notif.classList.remove('hideMe');
+      setInterval(addHideMe, 1000);
         dailyInvoke = true;
         break;
 
     case 'Missnöjd':
-      answers.innerHTML = face + " gubbe<br> Tack för din åsikt.";
-      answers.style.color = '#e60000';
+      notif.innerHTML = "Tack för din åsikt.";
+      notif.style.color = '#3dd43d';
+      notif.style.borderColor ="#3dd43d";
       happy.style.filter = 'grayscale(100%)';
       okey.style.filter = 'grayscale(100%)';
-      answers.classList.add('hideMe');
+      notif.classList.remove('hideMe');
+      setInterval(addHideMe, 1000);
         dailyInvoke = true;
         break;
   }
+}
+
+function addHideMe() {
+  notif.classList.add("hideMe");
+
 }
