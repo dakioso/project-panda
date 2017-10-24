@@ -700,7 +700,6 @@ span {
   align-items: center;
 }
 .courses h1{
-<<<<<<< HEAD
   position:relative;
   font-size:25px;
   top:-12px
@@ -1049,7 +1048,6 @@ span {
 }
 
 .test input[type=checkbox] {
-<<<<<<< HEAD
     background-color: #4CAF50;
     color: white;
     margin: 0px 20px;
@@ -1179,7 +1177,6 @@ left:100px;
 }
 
 .textinput2 {
-<<<<<<< HEAD
 position:absolute;
 top:240px;
 right:0px;
@@ -1240,11 +1237,7 @@ div.courseEval p{
 div.courseEval p1{
 letter-spacing: 6px;
 padding-left: 8px;
-=======
- position:absolute;
- top:240px;
- right:0px;
- width:100%;	
+	
 	
 }
 .firstinputhead {
@@ -1268,5 +1261,4 @@ padding-left: 8px;
  height:10px;     
  padding:50px;
  top:800px;	
->>>>>>> david
 }
