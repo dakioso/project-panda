@@ -489,6 +489,7 @@ div.courseEval p{
 div.courseEval p1{
   letter-spacing: 6px;
   padding-left: 8px;
+
 }
 .selectCourses{
   padding: 8px;
@@ -503,7 +504,19 @@ section.radiobuttons{
   display:inline-block;
 }
 
+#formAnswerPos{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+
+}
+
 #regAnswer{
-  font-size: 35px;
+  font-size: 30px;
+  
+}
+
+#formBTN{
+  padding: 10px;
 
 }
