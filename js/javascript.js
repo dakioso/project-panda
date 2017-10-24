@@ -11,9 +11,10 @@ var span = document.getElementsByClassName("closereview")[0];
 //attendance DOM
 let attendance = document.getElementById("attendanceCode");
 let errorA = document.getElementById("errorAttendance");
+let attendanceReg = false;
 
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 reviewbutton.onclick = function() {
 modal.style.display = "block";
 }
@@ -41,15 +42,30 @@ window.onclick = function(event) {
   }
 }
 
+
+
 // Checks the attandance code, if correct then register attendance
 function attendanceCheck() {
+  if(attendanceReg) {
+    errorA.style.color = "red";
+    errorA.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+    return errorA.innerText = "Du har redan anmält din närvaro.";
+  }
+
   if(attendance.value == "1q2w3e") {
     errorA.innerText = "Din närvaro är nu registrerad.";
     errorA.style.color = "green";
     errorA.classList.add("hideMe");
+    attendanceReg = true;
   } else {
     errorA.innerText = "Fel närvarokod. Var god försök igen.";
     errorA.style.color = "red";
-    errorA.classList.add("hideMe");
+    errorA.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
   }
+}
+
+function addHideMe() {
+  errorA.classList.add("hideMe");
 }
