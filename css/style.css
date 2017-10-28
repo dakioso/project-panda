@@ -724,44 +724,32 @@ span {
    }
 .courses {
   display: flex;
-  border: 3px solid #ffa500;
-  background:#292929;
-  color: white;
-  width: 100%;
-  align-items: flex-start;
+  color: black;
   justify-content: center;
   text-align: center;
-  margin-bottom: 50px;
+  border: 1px solid black;
+  width: 60%;
+  margin: auto;
 }
 .courses h1{
   font-size:25px;
-  top:-12px;
-  margin: 0px;
-
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .courses p{
-  font-size:20px;
-  top:-12px;
-  width: 70%;
-  margin: auto;
+  font-size: 18px;
+  margin: 3px;
 }
 .during{
-  flex: 1;
-  border-right: 3px solid #ffa500;
-}
-.during p {
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 300px;
 }
 .forward{
-  flex: 1;
+  width: 300px;
 }
 .finished{
-  flex: 1;
-  border-right: 3px solid #ffa500;
-}
-.finished h1{
-  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  width: 300px;
 }
 .button1 {
 background-color: #ffa500;
@@ -775,6 +763,7 @@ font-size: 16px;
 margin: 4px 2px;
 transition-duration: 0.4s;
 cursor: pointer;
+margin-top: 15px;
   }
 .button1:hover {background-color: gray;
 }
