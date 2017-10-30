@@ -294,7 +294,8 @@ span {
 }
 
 .grid div{
-  background: pink;
+  background: #292929;
+  color: white;
   font-size: 1.4em;
   text-align: center;
 }
