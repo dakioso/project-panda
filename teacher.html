@@ -22,19 +22,40 @@
     <div class="login-link">
       <p id="notification"></p>
     </div>
-    </header>
-<!-- Login Navbar -->
- <div id class="placenav">
-	<div id="nav" class="sidenav">
-		<a  class="active" href="teacher.html">Lärare</a>
-</div>
-</div>
-<!-- Sidenavbar -->
-<div class="navbutton">
-<span  onclick="togNav()">&#9776;</span>
-</div>
+  </header>
+  <!-- Login Navbar -->
+  <div id class="placenav">
+    <div id="nav" class="sidenav">
+      <a  class="active" href="teacher.html">Lärare</a>
+      <a href="#" onclick="show()">Utvärderingar</a>
+    </div>
+  </div>
+  <!-- Sidenavbar -->
+  <div class="navbutton">
+    <span  onclick="togNav()">&#9776;</span>
+  </div>
+  <section class="canv">
+    <div class="row">
+      <select onchange="showBox(this.value)">
+        <option>Välj utvärdering</option>
+        <option value="daglig">Daglig utvärdering</option>
+        <option value="vecko">Veckoutvärdering</option>
+        <option value="kurs">Kursutvärdering</option>
+      </select>
+      <select onchange="checkDay(this.value)">
+        <option>Välj dag</option>
+        <option value="måndag">Måndag 23/10</option>
+        <option value="tisdag">Tisdag 24/10</option>
+        <option value="onsdag">Onsdag 25/10</option>
+        <option value="torsdag">Torsdag 26/10</option>
+        <option value="fredag">Fredag 27/10</option>
+      </select>
+    </div>
+    <canvas id="myCanvas" width="400px" height="400px"></canvas>
+  </section>
 
 
-<script src="js/script.js"> </script>
+
+<script src="js/teacher.js"> </script>
 </body>
 </html>

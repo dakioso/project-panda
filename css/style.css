@@ -1369,3 +1369,24 @@ section.radiobuttons{
   padding: 10px;
 
 }
+
+
+.canv {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 500px;
+  z-index: 100;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#myCanvas {
+  border: 1px solid gray;
+  display: none;
+  background: #f7f7f7;
+}
