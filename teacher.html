@@ -3,12 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/Titel-bild.png"/>
   <title>PandaSoft</title>
 </head>
 <body>
-   <h1></h1>
+  <header>
+    <div class="student-head">
+      <img src="img/KYH1.png" alt="KYH-logo"/>
+    </div>
+    <!-- NAVBAR -->
+    <div class="main-nav" id="navbar" style="top: -20px;">
+      <a class="icon" href="#">&#9776;</a>
+    </div>
+    <div class="login-link">
+      <a href="index.html">Logga ut</a>
+    </div>
+    <div class="login-link">
+      <p id="notification"></p>
+    </div>
+  </header>
+  <!-- Login Navbar -->
+  <div id class="placenav">
+    <div id="nav" class="sidenav">
+      <a  class="active" href="teacher.html">Lärare</a>
+      <a href="#" onclick="show()">Utvärderingar</a>
+    </div>
+  </div>
+  <!-- Sidenavbar -->
+  <div class="navbutton">
+    <span  onclick="togNav()">&#9776;</span>
+  </div>
+  <section class="canv">
+      <select onchange="showBox(this.value)">
+        <option>Välj utvärdering</option>
+        <option value="daglig">Daglig utvärdering</option>
+        <option value="vecko">Veckoutvärdering</option>
+        <option value="kurs">Kursutvärdering</option>
+      </select>
+      <select onchange="checkDay(this.value)">
+        <option>Välj dag</option>
+        <option value="måndag">Måndag 23/10</option>
+        <option value="tisdag">Tisdag 24/10</option>
+        <option value="onsdag">Onsdag 25/10</option>
+        <option value="torsdag">Torsdag 26/10</option>
+        <option value="fredag">Fredag 27/10</option>
+      </select>
+  </section>
+  <section class="testing">
+    <div class="attendance-hidden">
 
-<script src="js/script.js"> </script>
+    </div>
+    <canvas id="myCanvas" width="400px" height="400px"></canvas>
+    <div class="attendance">
+      hej hej
+    </div>
+  </section>
+
+
+
+
+
+<script src="js/teacher.js"> </script>
 </body>
 </html>
