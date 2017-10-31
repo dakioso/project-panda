@@ -848,6 +848,8 @@ margin-top: 15px;
   height:350px;
   text-align:center;
   color:black;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .header-img{
   display: flex;
@@ -877,7 +879,7 @@ margin-top: 15px;
   padding-left: 71px;
   letter-spacing: 8px;
   text-transform: uppercase;
-  
+
 
 }
 #p-stil{
