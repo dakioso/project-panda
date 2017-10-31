@@ -817,28 +817,158 @@ margin-top: 15px;
 }
 
 /* assigment*/
-.assigment div {
-  position: relative;
-  bottom: 50px;
-  border: 3px solid #ffa500;
-  margin:2% 25%;
-  background:#292929;
-  color: white;
-  width: 50%;
-  height:250px;
+.header-img2{
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-image: url("https://c.s-microsoft.com/sv-se/CMSImages/Hero_0365ForBusiness.jpg?version=6edbf2ec-bff0-aa85-e725-d0f2237c60e0");
+  background-attachment: fixed;
+  background-position: left top;
+  justify-content: center;
+  width: 100%;
+  margin-top: -38px;
+  margin-bottom: 50px;
 }
 
-
-.assigment ul {
-  position:absolute;
-  top:60px;
-  font-size:20px
+  .header-assignment{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 3px solid #ffa500;
+    background-color: #292929;
+    color: white;
+    width: 700px;
+    height: 150px;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 3px;
 }
+.content-assignment1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+  margin-top: 50px;
+ }
+ .assignment-box1{
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+  background-size: cover;
+  border: 1px solid black;
+ }
+ .assignment-box2{
+  margin-left: 60px;
+  margin-right: 60px;
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/energispecialist-400x284.jpg");
+  background-size: cover;
+ }
+ .assignment-box3{
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+  background-size: cover;
+ }
+ .content-assignment2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 100px;
+ }
 
-#task h1 {
-	font-style:italic
-
+ .assignment-box4{
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/affarsutvecklare-400x284.jpg");
+ background-size: cover;
 }
+ .assignment-box5{
+ margin-left: 60px;
+ margin-right: 60px;
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/darren-bockman-58266-400x284.jpg");
+ background-size: cover;
+}
+ .assignment-box6{
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/sergey-zolkin-21232-400x284.jpg");
+ background-size: cover;
+}
+.assignment-box1 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+}
+.assignment-box1 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.assignment-box2 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+}
+.assignment-box2 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.assignment-box3 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+}
+.assignment-box3 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.assignment-box4 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 175px;
+ margin-bottom: 0;
+ text-align: left;
+}
+.assignment-box4 p {
+ color: gray;
+ margin-top: 0;
+ margin-bottom: 0;
+ text-align: left;
+ }
+ .assignment-box5 h3 {
+  color: black;
+  font-weight: bold;
+  margin-top: 175px;
+  margin-bottom: 0;
+  text-align: left;
+ }
+ .assignment-box5 p {
+  color: gray;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  }
+  .assignment-box6 h3 {
+   color: black;
+   font-weight: bold;
+   margin-top: 175px;
+   margin-bottom: 0;
+   text-align: left;
+  }
+  .assignment-box6 p {
+   color: gray;
+   margin-top: 0;
+   margin-bottom: 0;
+   text-align: left;
+   }
 /* student scheme*/
 .scheme {
   position: relative;
