@@ -20,6 +20,7 @@ let dailySurvey = [
 
 let attendance = document.getElementById("attendanceCode");
 let notif = document.getElementById("notification");
+let aCourse = document.getElementById("attendanceCourse");
 
 
 /*
@@ -156,21 +157,23 @@ yValue -= 20;
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
 }
-
+// Generates a random number for attendance
 function numGen() {
-let randomAttendance = Math.ceil(Math.random() * 999999) + 100000;
-if(randomAttendance > 999999){
-  numGen();
-} else {
-   notif.innerText = "Närvarokod genererad.";
+let i = attendanceCourse.selectedIndex;
+let randomAttendance = Math.random().toString(36).substr(2, 6);
+    notif.innerText = "Närvarokod genererad för lektion: " + attendanceCourse.options[i].text + ".";
     notif.style.color = "#3dd43d";
     notif.style.borderColor ="#3dd43d";
     notif.classList.remove("hideMe");
     setInterval(addHideMe, 1000);
   return attendanceCode.value = randomAttendance;
-  }
+
 }
 
 function addHideMe() {
   notif.classList.add("hideMe");
+}
+
+function clearAttendance() {
+  attendanceCode.value = "";
 }

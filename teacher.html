@@ -60,9 +60,18 @@
         <p>Generera en närvarokod.</p>
         <input type="text" id="attendanceCode" placeholder="Närvarokod..." readonly /><br />
       <div>
+        <select id="attendanceCourse" onchange="clearAttendance()">
+          <option value="arbetsmetodik" selected>Arbetsmetodik</option>
+          <option value="html">HTML</option>
+          <option value="backend">Backend Utveckling</option>
+          <option value="css">CSS</option>
+          <option value="javascript">Javascript</option>
+          <option value="php">PHP</option>
+        </select>
         <input type="button" value="Generera" onClick="numGen()" /><br />
       </div>
-      </section>    </div>
+      </section>
+    </div>
   </section>
 
 

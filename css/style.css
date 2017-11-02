@@ -1048,6 +1048,13 @@ cursor: pointer;
   background-color: #f7f7f7;
 }
 
+.attendance select {
+  height: 29px;
+  width: 63%;
+  margin-top: 6px;
+  outline-color: #292929;
+}
+
 .studentContent {
   display: flex;
   width: 100%;
