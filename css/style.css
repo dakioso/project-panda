@@ -821,8 +821,9 @@ margin-top: 15px;
   display: flex;
   align-items: center;
   height: 300px;
-  background-image: url("https://c.s-microsoft.com/sv-se/CMSImages/Hero_0365ForBusiness.jpg?version=6edbf2ec-bff0-aa85-e725-d0f2237c60e0");
+  background-image: url("https://www.instantassignmenthelp.com.au/images/data/page_upload/images/do-assignment.jpg");
   background-attachment: fixed;
+  background-size: cover;
   background-position: left top;
   justify-content: center;
   width: 100%;
@@ -843,11 +844,21 @@ margin-top: 15px;
     font-size: 4em;
     letter-spacing: 3px;
 }
+.assignment-h1{
+  text-align: center;
+}
+.assignment-information{
+  display: flex;
+  justify-content: center;
+}
+.assignment-information h2{
+  text-align: center;
+}
 .content-assignment1{
   display: flex;
   justify-content: center;
   margin-bottom: 55px;
-  margin-top: 50px;
+  margin-top: 100px;
  }
  .assignment-box1{
   width: 240px;
@@ -875,7 +886,6 @@ margin-top: 15px;
  .content-assignment2{
   display: flex;
   justify-content: center;
-  text-align: center;
   margin-bottom: 100px;
   margin-top: 350px;
  }
@@ -914,14 +924,13 @@ margin-top: 15px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box1 p{
-width: 239px;
+.assignment-box1 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 
 
@@ -937,14 +946,13 @@ padding-top: 10px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box2 p{
-width: 239px;
+.assignment-box2 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 }
 .assignment-box3 h3 {
@@ -958,14 +966,13 @@ padding-top: 10px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box3 p{
-width: 239px;
+.assignment-box3 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 }
 .assignment-box4 h3 {
@@ -979,14 +986,13 @@ padding-top: 10px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box4 p{
-width: 239px;
+.assignment-box4 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 }
 .assignment-box5 h3 {
@@ -1000,14 +1006,13 @@ padding-top: 10px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box5 p{
-width: 239px;
+.assignment-box5 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 }
 .assignment-box6 h3 {
@@ -1021,14 +1026,13 @@ padding-top: 10px;
  padding-top: 10px;
  text-align: center;
 }
-.assignment-box6 p{
-width: 239px;
+.assignment-box6 ul{
+width: 199px;
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 margin-top: 0px;
 padding-bottom: 150px;
-text-align: center;
 padding-top: 10px;
 }
 /* student scheme*/
