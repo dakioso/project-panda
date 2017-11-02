@@ -18,6 +18,10 @@ let dailySurvey = [
   {day: 'fredag', survey: ['bra','dåligt', 'bra', 'dåligt', 'bra', 'bra', 'bra','dåligt', 'neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt']}
 ];
 
+let attendance = document.getElementById("attendanceCode");
+let notif = document.getElementById("notification");
+
+
 /*
 let showSurveyButton = document.getElementById('surveybutton');
 showSurveyButton.addEventListener('click', show);
@@ -151,4 +155,22 @@ yValue -= 20;
       col3.font = 'bold 16px Arial, sans-serif';
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
+}
+
+function numGen() {
+let randomAttendance = Math.ceil(Math.random() * 999999) + 100000;
+if(randomAttendance > 999999){
+  numGen();
+} else {
+   notif.innerText = "Närvarokod genererad.";
+    notif.style.color = "#3dd43d";
+    notif.style.borderColor ="#3dd43d";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+  return attendanceCode.value = randomAttendance;
+  }
+}
+
+function addHideMe() {
+  notif.classList.add("hideMe");
 }

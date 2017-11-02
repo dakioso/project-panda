@@ -1026,6 +1026,7 @@ cursor: pointer;
   padding: 5px;
   outline-color: #292929;
   width: 224px;
+  text-align: center;
 }
 
 .attendance div {
