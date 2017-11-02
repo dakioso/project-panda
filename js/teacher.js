@@ -18,19 +18,15 @@ let dailySurvey = [
   {day: 'fredag', survey: ['bra','dåligt', 'bra', 'dåligt', 'bra', 'bra', 'bra','dåligt', 'neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt']}
 ];
 
-/*
-let showSurveyButton = document.getElementById('surveybutton');
-showSurveyButton.addEventListener('click', show);
-*/
+// Shows the optionlist for canvas
 let show = function(){
   document.getElementsByClassName('canv')[0].style.display = 'flex';
 }
 
 let showBox = function(box){
-  let survey = document.getElementById('myCanvas');
-
+  let survey = document.getElementById('dailyCanvas');
   if(box == 'daglig'){
-      myCanvas.style.display = 'flex';
+      dailyCanvas.style.display = 'flex';
   }
 }
 
@@ -73,18 +69,15 @@ function countSurvey(array){
 function surveyXY(good, neutral, bad){
   const heightPerSmiley = 20;
   let totalSmileys = good + neutral + bad,
-      braY = good * heightPerSmiley,
-      bra = good,
-      middleY = neutral * heightPerSmiley,
-      middle = neutral,
-      dåligtY = bad * heightPerSmiley;
-      dåligt = bad;
+      goodY = good * heightPerSmiley,
+      neutralY = neutral * heightPerSmiley,
+      badY = bad * heightPerSmiley;
 
-      return draw(braY, bra, middleY, middle, dåligtY, dåligt, totalSmileys);
+      return draw(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
 }
 
 function draw(a, a1, b, b1, c, c1, total ){
-  let canvasArea = document.getElementById('myCanvas'),
+  let canvasArea = document.getElementById('dailyCanvas'),
       col1 = canvasArea.getContext('2d'),
       col2 = canvasArea.getContext('2d'),
       col3 = canvasArea.getContext('2d'),
