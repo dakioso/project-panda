@@ -28,7 +28,8 @@ let showBox = function(box){
       weeklyCanvas = document.getElementById('weeklyCanvas'),
       courseCanvas = document.getElementById('courseCanvas'),
       dayOption = document.getElementById('dayOption'),
-      courseOption = document.getElementById('courseOption');
+      courseOption = document.getElementById('courseOption'),
+      weeklyResponse = document.getElementById('weeklyAnswers');
 
   if(box == 'daglig'){
       dailyCanvas.style.display = 'flex';
@@ -36,10 +37,12 @@ let showBox = function(box){
       weeklyCanvas.style.display = 'none';
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
+      weeklyResponse.style.display = 'none';
   } else if(box == 'vecko'){
+      weeklyCanvas.style.display = 'flex';
+      weeklyResponse.style.display = 'block';
       dailyCanvas.style.display = 'none';
       dayOption.style.display = 'none';
-      weeklyCanvas.style.display = 'flex';
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
       drawWeek();
@@ -47,9 +50,9 @@ let showBox = function(box){
       dailyCanvas.style.display = 'none';
       weeklyCanvas.style.display = 'none';
       dayOption.style.display = 'none';
+      weeklyResponse.style.display = 'none';
       courseCanvas.style.display = 'flex';
       courseOption.style.display = 'flex';
-
   }
 }
 
@@ -99,7 +102,7 @@ function surveyXY(good, neutral, bad){
       return drawDay(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
 }
 
-function drawDay(a, a1, b, b1, c, c1, total ){
+function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
   let canvasAreaDaily = document.getElementById('dailyCanvas'),
       col1 = canvasAreaDaily.getContext('2d'),
       col2 = canvasAreaDaily.getContext('2d'),
@@ -139,26 +142,26 @@ yValue -= 20;
 
       col1.save();
       col1.fillStyle = '#ffa500';
-      col1.fillRect (110, 367, 15, -a );
+      col1.fillRect (110, 367, 15, -goodY );
       col1.font = 'bold 16px Arial, sans-serif';
-      col1.fillText(a1, 114, (373-a) - 10);
+      col1.fillText(good, 114, (373-goodY) - 10);
       col1.fillText('Bra', 105, 390);
       col1.restore();
 
 
       col2.save();
       col2.fillStyle = '#ffa500';
-      col2.fillRect (180, 367, 15, -b );
+      col2.fillRect (180, 367, 15, -neutralY );
       col2.font = 'bold 16px Arial, sans-serif';
-      col2.fillText(b1, 184, (373-b) - 10);
+      col2.fillText(neutral, 184, (373-neutralY) - 10);
       col2.fillText('Neutral', 160, 390);
       col2.restore();
 
       col3.save();
       col3.fillStyle = '#ffa500';
-      col3.fillRect (250, 367, 15, -c );
+      col3.fillRect (250, 367, 15, -badY );
       col3.font = 'bold 16px Arial, sans-serif';
-      col3.fillText(c1, 255, (373-c) - 10);
+      col3.fillText(bad, 255, (373-badY) - 10);
       col3.fillText('Dåligt', 240, 390);
       col3.restore();
 
@@ -218,14 +221,13 @@ function drawWeek(){
       graphInfo.fillText('Hur upplever du', 445, 20);
       graphInfo.fillText('föreläsningarna', 445, 35);
 
-
       graphInfo.fillStyle = 'red';
       graphInfo.fillRect(45, 50, 50, 15);
 
       graphInfo.fillStyle = 'blue';
       graphInfo.fillRect(185, 50, 50, 15);
 
-      graphInfo.fillStyle = 'yellow';
+      graphInfo.fillStyle = '#e6e600';
       graphInfo.fillRect(330, 50, 50, 15);
 
       graphInfo.fillStyle = 'green';
@@ -248,7 +250,7 @@ function drawWeek(){
 
         red.save();
         red.strokeStyle='red';
-        red.lineWidth = 3;
+        red.lineWidth = 2;
         red.beginPath();
         red.moveTo(110, 285);
         red.lineTo(160, 235);
@@ -265,19 +267,53 @@ function drawWeek(){
 
         blue.save();
         blue.strokeStyle='blue';
-        blue.lineWidth = 3;
+        blue.lineWidth = 2;
         blue.beginPath();
-        blue.moveTo(110, 135);
+        blue.moveTo(110, 235);
         blue.lineTo(160, 185);
         blue.lineTo(205, 210);
         blue.lineTo(255, 185);
-        blue.lineTo(305, 185);
+        blue.lineTo(305, 195);
         blue.lineTo(355, 210);
-        blue.lineTo(405, 185);
-        blue.lineTo(455, 260);
+        blue.lineTo(405, 189);
+        blue.lineTo(455, 200);
         blue.lineTo(505, 235);
-        blue.lineTo(560, 285);
+        blue.lineTo(560, 174);
         blue.stroke();
         blue.restore();
+
+        yellow.save();
+        yellow.strokeStyle='#e6e600';
+        yellow.lineWidth = 2;
+        yellow.beginPath();
+        yellow.moveTo(110, 185);
+        yellow.lineTo(160, 189);
+        yellow.lineTo(205, 205);
+        yellow.lineTo(255, 135);
+        yellow.lineTo(305, 175);
+        yellow.lineTo(355, 175);
+        yellow.lineTo(405, 189);
+        yellow.lineTo(455, 175);
+        yellow.lineTo(505, 210);
+        yellow.lineTo(560, 275);
+        yellow.stroke();
+        yellow.restore();
+
+        green.save();
+        green.strokeStyle='green';
+        green.lineWidth = 2;
+        green.beginPath();
+        green.moveTo(110, 310);
+        green.lineTo(160, 300);
+        green.lineTo(205, 300);
+        green.lineTo(255, 285);
+        green.lineTo(305, 235);
+        green.lineTo(355, 235);
+        green.lineTo(405, 210);
+        green.lineTo(455, 185);
+        green.lineTo(505, 160);
+        green.lineTo(560, 155);
+        green.stroke();
+        green.restore();
 
 }
