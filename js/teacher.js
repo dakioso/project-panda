@@ -24,9 +24,32 @@ let show = function(){
 }
 
 let showBox = function(box){
-  let survey = document.getElementById('dailyCanvas');
+  let dailyCanvas = document.getElementById('dailyCanvas'),
+      weeklyCanvas = document.getElementById('weeklyCanvas'),
+      courseCanvas = document.getElementById('courseCanvas'),
+      dayOption = document.getElementById('dayOption'),
+      courseOption = document.getElementById('courseOption');
+
   if(box == 'daglig'){
       dailyCanvas.style.display = 'flex';
+      dayOption.style.display = 'flex';
+      weeklyCanvas.style.display = 'none';
+      courseCanvas.style.display = 'none';
+      courseOption.style.display = 'none';
+  } else if(box == 'vecko'){
+      dailyCanvas.style.display = 'none';
+      dayOption.style.display = 'none';
+      weeklyCanvas.style.display = 'flex';
+      courseCanvas.style.display = 'none';
+      courseOption.style.display = 'none';
+      drawWeek();
+  } else if(box == 'kurs'){
+      dailyCanvas.style.display = 'none';
+      weeklyCanvas.style.display = 'none';
+      dayOption.style.display = 'none';
+      courseCanvas.style.display = 'flex';
+      courseOption.style.display = 'flex';
+
   }
 }
 
@@ -73,17 +96,17 @@ function surveyXY(good, neutral, bad){
       neutralY = neutral * heightPerSmiley,
       badY = bad * heightPerSmiley;
 
-      return draw(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
+      return drawDay(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
 }
 
-function draw(a, a1, b, b1, c, c1, total ){
-  let canvasArea = document.getElementById('dailyCanvas'),
-      col1 = canvasArea.getContext('2d'),
-      col2 = canvasArea.getContext('2d'),
-      col3 = canvasArea.getContext('2d'),
-      col4 = canvasArea.getContext('2d'),
-      sidenumber = canvasArea.getContext('2d'),
-      lines = canvasArea.getContext('2d');
+function drawDay(a, a1, b, b1, c, c1, total ){
+  let canvasAreaDaily = document.getElementById('dailyCanvas'),
+      col1 = canvasAreaDaily.getContext('2d'),
+      col2 = canvasAreaDaily.getContext('2d'),
+      col3 = canvasAreaDaily.getContext('2d'),
+      col4 = canvasAreaDaily.getContext('2d'),
+      sidenumber = canvasAreaDaily.getContext('2d'),
+      lines = canvasAreaDaily.getContext('2d');
       sidenumber.clearRect(0, 0 , 400, 400);
       sidenumber.save();
       sidenumber.fillStyle = '#292929';
@@ -144,4 +167,117 @@ yValue -= 20;
       col3.font = 'bold 16px Arial, sans-serif';
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
+}
+
+function drawWeek(){
+  let canvasAreaWeekly = document.getElementById('weeklyCanvas'),
+      week = canvasAreaWeekly.getContext('2d'),
+      result = canvasAreaWeekly.getContext('2d'),
+      graphInfo = canvasAreaWeekly.getContext('2d'),
+      lines = canvasAreaWeekly.getContext('2d'),
+      red = canvasAreaWeekly.getContext('2d'),
+      blue = canvasAreaWeekly.getContext('2d'),
+      yellow = canvasAreaWeekly.getContext('2d'),
+      green = canvasAreaWeekly.getContext('2d');
+
+      week.save();
+      week.fillStyle = '#292929';
+      week.font = 'bold 16px Arial, sans-serif';
+      week.fillText('Vecka' , 15, 390)
+      let weekXvalue = 100;
+        for(let i = 36; i < 46; i++){
+          week.fillText(i, weekXvalue, 390);
+            weekXvalue += 50;
+        }
+      week.restore();
+
+      result.save();
+      result.fillStyle = '#292929';
+      result.font = '16px Arial, sans-serif';
+      result.fillText('Dåligt', 15, 370);
+      result.fillText('1', 15, 340);
+      result.fillText('2', 15, 290);
+      result.fillText('3', 15, 240);
+      result.fillText('4', 15, 190);
+      result.fillText('5', 15, 140);
+      result.fillText('Bra', 15, 110);
+      result.restore();
+
+      graphInfo.save();
+      graphInfo.fillStyle = '#292929';
+      graphInfo.font = '16px Arial, sans-serif';
+      graphInfo.fillText('Hur upplever du', 30, 20);
+      graphInfo.fillText('tempot just nu', 30, 35);
+
+      graphInfo.fillText('Hur upplever du', 160, 20);
+      graphInfo.fillText('nivån på innehållet', 160, 35);
+
+      graphInfo.fillText('Hur upplever du', 305, 20);
+      graphInfo.fillText('trivseln i klassen', 305, 35);
+
+      graphInfo.fillText('Hur upplever du', 445, 20);
+      graphInfo.fillText('föreläsningarna', 445, 35);
+
+
+      graphInfo.fillStyle = 'red';
+      graphInfo.fillRect(45, 50, 50, 15);
+
+      graphInfo.fillStyle = 'blue';
+      graphInfo.fillRect(185, 50, 50, 15);
+
+      graphInfo.fillStyle = 'yellow';
+      graphInfo.fillRect(330, 50, 50, 15);
+
+      graphInfo.fillStyle = 'green';
+      graphInfo.fillRect(470, 50, 50, 15);
+      graphInfo.restore();
+
+      lines.save();
+      lines.fillStyle = "rgba(41, 41, 41, 0.5)";
+      lines.lineWidth = 0.2;
+
+      let yValue = 335;
+      for(let i = 0; i < 9; i++){
+        lines.beginPath();
+        lines.moveTo(30, yValue);
+        lines.lineTo(600, yValue);
+        lines.stroke();
+        yValue -= 25;
+      }
+        lines.restore();
+
+        red.save();
+        red.strokeStyle='red';
+        red.lineWidth = 3;
+        red.beginPath();
+        red.moveTo(110, 285);
+        red.lineTo(160, 235);
+        red.lineTo(205, 260);
+        red.lineTo(255, 185);
+        red.lineTo(305, 210);
+        red.lineTo(355, 185);
+        red.lineTo(405, 185);
+        red.lineTo(455, 210);
+        red.lineTo(505, 185);
+        red.lineTo(560, 135);
+        red.stroke();
+        red.restore();
+
+        blue.save();
+        blue.strokeStyle='blue';
+        blue.lineWidth = 3;
+        blue.beginPath();
+        blue.moveTo(110, 135);
+        blue.lineTo(160, 185);
+        blue.lineTo(205, 210);
+        blue.lineTo(255, 185);
+        blue.lineTo(305, 185);
+        blue.lineTo(355, 210);
+        blue.lineTo(405, 185);
+        blue.lineTo(455, 260);
+        blue.lineTo(505, 235);
+        blue.lineTo(560, 285);
+        blue.stroke();
+        blue.restore();
+
 }
