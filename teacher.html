@@ -41,7 +41,7 @@
         <option value="vecko">Veckoutvärdering</option>
         <option value="kurs">Kursutvärdering</option>
       </select>
-      <select onchange="checkDay(this.value)">
+      <select onchange="checkDay(this.value)" id="dayOption">
         <option>Välj dag</option>
         <option value="måndag">Måndag 23/10</option>
         <option value="tisdag">Tisdag 24/10</option>
@@ -49,12 +49,23 @@
         <option value="torsdag">Torsdag 26/10</option>
         <option value="fredag">Fredag 27/10</option>
       </select>
+      <select onchange="showBox(this.value)" id="courseOption">
+        <option>Välj kurs</option>
+        <option value="arbetsmetodik">Arbetsmetodik</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">Javascript</option>
+        <option value="php">PHP</option>
+        <option value="backend">Backend</option>
+      </select>
   </section>
   <section class="testing">
     <div class="attendance-hidden">
 
     </div>
     <canvas id="dailyCanvas" width="400px" height="400px"></canvas>
+    <canvas id="weeklyCanvas" width="600px" height="400px"></canvas>
+    <canvas id="courseCanvas" width="600px" height="400px"></canvas>
     <div class="attendance">
       hej hej
     </div>
