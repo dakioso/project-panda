@@ -1387,11 +1387,29 @@ section.radiobuttons{
 
 }
 
-
 #dailyCanvas {
   border: 1px solid gray;
   display: none;
   background: #f7f7f7;
+}
+
+#dayOption{
+  display: none;
+}
+
+#weeklyCanvas {
+  display: none;
+  border: 1px solid gray;
+  background: #f7f7f7;
+}
+
+#courseCanvas {
+  display: none;
+  border: 1px solid gray;
+}
+
+#courseOption {
+  display: none;
 }
 
 .testing {
