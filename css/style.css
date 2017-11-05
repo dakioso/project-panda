@@ -294,7 +294,8 @@ span {
 }
 
 .grid div{
-  background: pink;
+  background: #292929;
+  color: white;
   font-size: 1.4em;
   text-align: center;
 }
@@ -314,6 +315,11 @@ span {
 .grid-content div:first-child {
   text-align: left;
   font-weight: bold;
+}
+
+.grid-content img {
+  height: 20px;
+  width: 20px;
 }
 
 .content-4{
@@ -955,10 +961,11 @@ cursor: pointer;
 }
 
 .attendance {
-  border: 2px solid #292929;
+  border: 1px solid #292929;
   right: 0;
   height: 350px;
   width: 250px;
+  margin-right: 20px;
   }
 
 .daily-vote {
@@ -984,6 +991,7 @@ cursor: pointer;
   right: 0;
   height: 350px;
   width: 239px;
+  margin-left: 20px;
   justify-content: flex-end;
 }
 
@@ -1367,4 +1375,68 @@ section.radiobuttons{
 #formBTN{
   padding: 10px;
 
+}
+
+
+.canv {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  height: 20px;
+  margin-top: 0;
+
+}
+
+#dailyCanvas {
+  border: 1px solid gray;
+  display: none;
+  background: #f7f7f7;
+}
+
+#dayOption{
+  display: none;
+}
+
+#weeklyCanvas {
+  display: none;
+  border: 1px solid gray;
+  background: #f7f7f7;
+  margin-left: 13px;
+}
+
+#courseCanvas {
+  display: none;
+  border: 1px solid gray;
+}
+
+#courseOption {
+  display: none;
+}
+
+#weeklyAnswers {
+  display: none;
+  width: 600px;
+  height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 607px;
+  border: 1px solid #292929;
+  font-size: 1.3em;
+}
+
+#weeklyAnswers h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.testing {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+  height: 700px;
+}
+
+.evaluation-response {
+  display: flex;
+  justify-content: center;
 }
