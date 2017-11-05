@@ -70,6 +70,7 @@
 
     <div class="attendance">
       hej hej
+	   <center><button id="opentask" onclick="opentask()" height="50px" width="50px" style="cursor: pointer">Uppgifter</center>
     </div>
   </section>
   <section class="evaluation-response">
@@ -107,6 +108,59 @@
     </div>
   </section>
 
+	
+
+
+<!--Modalbox-Review -->
+ <div id="modalteacher" class="modalteacher">
+  <span class="closetask">&times;</span>
+ <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
+<div id="teacherTask">
+
+<div class="RTcontent"> 
+
+    <select>
+    <option disabled selected value>Välj kurs</option>
+      <option value="1">Arbetsmetodik</option>
+      <option value="2">Arbetsmetodik</option>
+      <option value="3">Arbetsmetodik</option>
+    </select>
+	<br>
+	    <select>
+    <option disabled selected value>Välj ett ämne</option>
+      <option value="1">Arbetsmetodik</option>
+      <option value="2">Arbetsmetodik</option>
+      <option value="3">Arbetsmetodik</option>
+    </select>
+   
+	<div class="teacherTask">
+<input placeholder="Inlämningsdatum" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date" style="cursor:default"> 
+  </div>
+
+    <div class="TestOrExam">
+   <input type="radio" id="radio01" name="radio"/>
+			<label for="radio01"><span></span>Exam</label>
+    <input type="radio" id="radio02" name="radio" />
+			<label for="radio02"><span></span>Prov</label>   
+  </div>
+
+  <div class="image-upload">
+    <label for="file-input">
+      <img src="img/addfile.png">
+    </label>
+  <input id="file-input" type="file"/>
+  <div class="input-text"><p>Lägg till fil</p>
+</div>
+</div>
+</div>
+
+<div class="LTcontent">
+<input type="text" placeholder="Titel..."><br>
+<input type="text" placeholder="Uppgifter..."><br>
+
+<textarea placeholder="Max 330 ord..." ></textarea>
+</div>
+</div>
 
 
 
