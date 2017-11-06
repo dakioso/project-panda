@@ -10,12 +10,28 @@ function togNav() {
  }
 }
 
+// Daily smileys answers from the students
 let dailySurvey = [
   {day: 'måndag', survey: ['bra', 'bra', 'dåligt','bra', 'bra', 'bra', 'dåligt', 'neutral', 'bra', 'neutral', 'bra', 'bra', 'bra', 'dåligt']},
   {day: 'tisdag', survey: ['dåligt', 'bra', 'neutral', 'bra', 'bra', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'dåligt', 'bra']},
   {day: 'onsdag', survey: ['neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'bra', 'neutral', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt' ]},
   {day: 'torsdag', survey: ['dåligt', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt']},
   {day: 'fredag', survey: ['bra','dåligt', 'bra', 'dåligt', 'bra', 'bra', 'bra','dåligt', 'neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt']}
+];
+
+// Weekly answers array with good and improvements from the students
+let weekAnswer = [
+  {week: 'v36', good: ['Stämningen i klassen', 'Bra att vi ska sätta igång med projektarbetet snart', 'Tobias och Kristian är kungar', 'Att vi har fått köra Codeschool och lära oss grunderna', 'Att lärarna lyssnar på oss elever'],
+                improvement: ['Glassmaskin i köket', 'Mer specificerat, detaljerad förklaring på föreläsning', 'Jobbigt med dessa otydligheter i schemat. Det ändras hit och dit och på söndagkvällen kan det ibland vara oklart hur måndagen kommer att se ut', 'Mer specificerat, detaljerad förklaring på föreläsning', 'Toapapper måste fyllas på kontinuerligt, för nu kan det ibland vara slut']},
+  {week: 'v37', good: ['Bra föreläsningar', 'Jag tycker att Codeschool är jättebra sätt att lära sig grunderna', 'Trevliga klasskamrater', 'Att ni lärare lyssnar på oss elever och vill förbättra för oss', 'Att hissen nu är lagad'],
+                improvement: ['Allt, gör om gör rätt från början', 'Mer avancerade föreläsningar', 'Jag vill ha tydligare schema om vad lektionen ska handla om, så jag vet om jag ska behöva komma in eller inte', 'Ni lyssnar inte på oss elever', 'Tempot är alldeles för högt och jag känner att jag inte hänger med', 'Luften i stora klassrummet är jättedålig']},
+  {week: 'v38', good: ['Tobias och Kristian e för jäkla bra', 'Nya glassmaskinen i köket är jättebra', 'Projektarbetet är ett jättebra sätt att lära sig', 'Hissen!!', 'Föreläsningarna har blivit toppen, mer avancerade och man kan livekoda med nu', 'Gruppindelningen för projektarbetet var jättebra', 'Kommunikationen har blivit mycket bättre, bra jobbat!'],
+                improvement: ['Fixa en redbull-kyl till klassrummet', 'Kanske att Kristian kan ha mer livekodningar så man själv får hänga med', 'Dåligt städat på toaletten, skulle gärna vilja att dom städar oftare', 'Snabbare wifi', 'Tempot är galet högt och jag hinner inte med', 'Varför börjar vi inte skolan klockan 12 för istället, på tok för tidigt att börja klockan 9']},
+  {week: 'v39', good: ['Våra innovation day på fredagar e svinkul', 'Den senaste föreläsning om Ecmascript 6 var bra', 'Tobias och Kristian', 'Luften i stora klassrummet har blivit mycket bättre', 'Allt är jättebra'],
+                improvement: ['Fixa wifi det laggar', 'Jag tycker lärarna borde köra med mic så man hör längst bak', 'Det hade varit bra om det hade funnits flera grupprum med tv', 'Gratis SL kort som skolan står för', 'Vet ej']},
+  {week: 'v40', good: ['Kristians kod-review var bra för att man fick feedback på sin kod', 'Allt e bra', 'Sköna klasskamrater', 'Fett bra uppstyrt på våra demodagar i arbetsmetodiken', 'Ni har verkligen fixat erat wifi, bra siffror på bredbandskollen.se'],
+                improvement: ['Hur vore det om ni lyssnade på alla elever vad dom vill', 'Skönare stolar i klassrummet, typ riktiga kontorsstolar', 'Flera grenuttag så man kan ladda datorerna', 'Bättre uppdateringar i schemat, för nu kan det komma ändringar söndag kväll. Inte roligt tycker jag!']}
+
 ];
 
 // Shows the optionlist for canvas
@@ -55,7 +71,7 @@ let showBox = function(box){
       courseOption.style.display = 'flex';
   }
 }
-
+// Search thru the dailySurvey array and check for the right day and return to pushSurvey function
 function checkDay(dag){
     for(let i = 0, x = dailySurvey.length; i < x; i++){
       if(dag == dailySurvey[i].day ){
@@ -71,7 +87,7 @@ function pushSurvey(list){
   }
   return countSurvey(arr);
 }
-
+// Counts the answers from daily array
 function countSurvey(array){
   let good = 0,
       neutral = 0,
@@ -91,7 +107,7 @@ function countSurvey(array){
     }
   } return surveyXY(good, neutral, bad);
 }
-
+// surveyXY count the answers and return Y-value for diagram and total amount of answers
 function surveyXY(good, neutral, bad){
   const heightPerSmiley = 20;
   let totalSmileys = good + neutral + bad,
@@ -110,13 +126,14 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
       col4 = canvasAreaDaily.getContext('2d'),
       sidenumber = canvasAreaDaily.getContext('2d'),
       lines = canvasAreaDaily.getContext('2d');
+
       sidenumber.clearRect(0, 0 , 400, 400);
       sidenumber.save();
       sidenumber.fillStyle = '#292929';
       sidenumber.font = 'bold 16px Arial, sans-serif';
 
       let y = 370;
-      for(let i = 0; i < 16; i++){
+      for(let i = 0; i < 16; i++){  // print out sidenumber 0-14 + amount of students
         if(i < 10){
           sidenumber.fillText(i , 15, y);
         } else if(i < 15) {
@@ -130,7 +147,7 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
         sidenumber.restore();
 
 let yValue = 367;
-for(let i = 0; i < 15; i++){
+for(let i = 0; i < 15; i++){  // print out 15 vertical lines
   lines.fillStyle = "rgba(41, 41, 41, 0.5)";
   lines.lineWidth = 0.2;
   lines.beginPath();
@@ -140,6 +157,7 @@ for(let i = 0; i < 15; i++){
 yValue -= 20;
 }
 
+// goodY neutralY and badY prints out 20px * amount smileys on y-axis
       col1.save();
       col1.fillStyle = '#ffa500';
       col1.fillRect (110, 367, 15, -goodY );
@@ -315,7 +333,46 @@ function drawWeek(){
         green.lineTo(560, 155);
         green.stroke();
         green.restore();
+}
 
+function checkWeek(value){
+  for(let i = 0, x = weekAnswer.length; i < x; i++){
+    if(value == weekAnswer[i].week ){
+    return pushWeek(weekAnswer[i].good, weekAnswer[i].improvement);
+    }
+  }
+}
+
+// create answer fragment from weekAnswer array
+function pushWeek(good, improvement){
+
+  let showWeeklyAnswer = document.getElementById('weeklyAnswers1'),
+      fragment = document.createDocumentFragment(),
+      element1 = document.createElement('h2');
+
+      showWeeklyAnswer.innerHTML = "";
+
+      element1.appendChild(document.createTextNode('Vad har varit bra'));
+      fragment.appendChild(element1);
+
+// create fragment with answers from good array
+  for(let i = 0, x = good.length; i < x; i++){
+        let element = document.createElement('li');
+        element.appendChild(document.createTextNode(good[i]));
+        fragment.appendChild(element);
+      }
+
+        let element2 = document.createElement('h2');
+            element2.appendChild(document.createTextNode('Förbättringar'));
+            fragment.appendChild(element2);
+
+// create fragment with answers from improvement arrray
+  for(let i = 0, x = improvement.length; i < x; i++){
+        let elements = document.createElement('li');
+            elements.appendChild(document.createTextNode(improvement[i]));
+            fragment.appendChild(elements);
+  }
+            showWeeklyAnswer.appendChild(fragment);
 }
 
 
