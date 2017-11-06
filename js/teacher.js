@@ -10,6 +10,7 @@ function togNav() {
  }
 }
 
+// getElements for Canvas and optionlists
 let dailyCanvas = document.getElementById('dailyCanvas'),
     weeklyCanvas = document.getElementById('weeklyCanvas'),
     courseCanvas = document.getElementById('courseCanvas'),
@@ -75,6 +76,7 @@ let showBox = function(box){
       courseOption.style.display = 'flex';
   }
 }
+
 // Search thru the dailySurvey array and check for the right day and return to pushSurvey function
 function checkDay(dag){
     for(let i = 0, x = dailySurvey.length; i < x; i++){
@@ -91,6 +93,7 @@ function pushSurvey(list){
   }
   return countSurvey(arr);
 }
+
 // Counts the answers from daily array
 function countSurvey(array){
   let good = 0,
@@ -122,6 +125,7 @@ function surveyXY(good, neutral, bad){
       return drawDay(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
 }
 
+// Draw function for daily Canvas, takes y-axis parameter and total amount och votes
 function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
   let canvasAreaDaily = document.getElementById('dailyCanvas'),
       col1 = canvasAreaDaily.getContext('2d'),
@@ -339,6 +343,7 @@ function drawWeek(){
         green.restore();
 }
 
+// Return the right week and pass in good and improvements to pushWeek function
 function checkWeek(value){
   for(let i = 0, x = weekAnswer.length; i < x; i++){
     if(value == weekAnswer[i].week ){
@@ -352,9 +357,10 @@ function pushWeek(good, improvement){
 
   let showWeeklyAnswer = document.getElementById('weeklyAnswers1'),
       fragment = document.createDocumentFragment(),
-      element1 = document.createElement('h2');
+      element1;
 
       showWeeklyAnswer.innerHTML = "";
+      element1 = document.createElement('h2');
       element1.appendChild(document.createTextNode('Vad har varit bra'));
       fragment.appendChild(element1);
 
@@ -364,7 +370,6 @@ function pushWeek(good, improvement){
         element.appendChild(document.createTextNode(good[i]));
         fragment.appendChild(element);
       }
-
         let element2 = document.createElement('h2');
             element2.appendChild(document.createTextNode('Förbättringar'));
             fragment.appendChild(element2);
