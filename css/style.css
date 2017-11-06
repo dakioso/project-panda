@@ -572,25 +572,30 @@ span {
 /* courses */
 .yourcourses{
   display: flex;
-  justify-content: center;
-  background-image: url("http://www.bu.edu/summer/common/images/st/courses/engineering.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: left top;
-  margin-bottom: 50px;
+  align-items: center;
   height: 300px;
+  background-image: url("http://www.bu.edu/summer/common/images/st/courses/engineering.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left top;
+  justify-content: center;
+  width: 100%;
   margin-top: -38px;
+  margin-bottom: 50px;
 }
-.yourcourses h1{
-  line-height: 180px;
-  font-size: 4em;
-  letter-spacing: 10px;
-  background-color: #292929;
-  color: white;
-  width: 600px;
-  text-align: center;
-  border: 3px solid #ffa500;
-  text-transform: uppercase;
+
+  .yourcourses h1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 3px solid #ffa500;
+    background-color: #292929;
+    color: white;
+    width: 700px;
+    height: 150px;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 3px;
 }
 
 .content-courses1{
@@ -730,44 +735,32 @@ span {
    }
 .courses {
   display: flex;
-  border: 3px solid #ffa500;
-  background:#292929;
-  color: white;
-  width: 100%;
-  align-items: flex-start;
+  color: black;
   justify-content: center;
   text-align: center;
-  margin-bottom: 50px;
+  border: 1px solid black;
+  width: 60%;
+  margin: auto;
 }
 .courses h1{
   font-size:25px;
-  top:-12px;
-  margin: 0px;
-
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .courses p{
-  font-size:20px;
-  top:-12px;
-  width: 70%;
-  margin: auto;
+  font-size: 18px;
+  margin: 3px;
 }
 .during{
-  flex: 1;
-  border-right: 3px solid #ffa500;
-}
-.during p {
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 300px;
 }
 .forward{
-  flex: 1;
+  width: 300px;
 }
 .finished{
-  flex: 1;
-  border-right: 3px solid #ffa500;
-}
-.finished h1{
-  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  width: 300px;
 }
 .button1 {
 background-color: #ffa500;
@@ -781,6 +774,7 @@ font-size: 16px;
 margin: 4px 2px;
 transition-duration: 0.4s;
 cursor: pointer;
+margin-top: 15px;
   }
 .button1:hover {background-color: gray;
 }
@@ -834,30 +828,227 @@ cursor: pointer;
 }
 
 /* assigment*/
-.assigment div {
-  position: relative;
-  bottom: 50px;
-  border: 3px solid #ffa500;
-  margin:2% 25%;
-  background:#292929;
-  color: white;
-  width: 50%;
-  height:250px;
+.header-img2{
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-image: url("https://www.instantassignmenthelp.com.au/images/data/page_upload/images/do-assignment.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left top;
+  justify-content: center;
+  width: 100%;
+  margin-top: -38px;
+  margin-bottom: 50px;
 }
 
-
-.assigment ul {
-  position:absolute;
-  top:60px;
-  font-size:20px
+  .header-assignment{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 3px solid #ffa500;
+    background-color: #292929;
+    color: white;
+    width: 700px;
+    height: 150px;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 3px;
 }
+.assignment-h1{
+  text-align: center;
+}
+.assignment-information{
+  display: flex;
+  justify-content: center;
+}
+.assignment-information h2{
+  text-align: center;
+}
+.content-assignment1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+  margin-top: 100px;
+ }
+ .assignment-box1{
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+  background-size: cover;
+  border: 1px solid black;
+ }
+ .assignment-box2{
+  margin-left: 130px;
+  margin-right: 130px;
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/energispecialist-400x284.jpg");
+  background-size: cover;
+  border: 1px solid black;
+ }
+ .assignment-box3{
+  width: 240px;
+  height: 170px;
+  background-image: url("http://kyh.se/wp-content/uploads/2017/04/lonekonsult-400x284.jpg");
+  background-size: cover;
+  border: 1px solid black;
+ }
+ .content-assignment2{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 350px;
+ }
 
-#task h1 {
-	font-style:italic
+ .assignment-box4{
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/affarsutvecklare-400x284.jpg");
+ background-size: cover;
+ border: 1px solid black;
+}
+ .assignment-box5{
+ margin-left: 130px;
+ margin-right: 130px;
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/darren-bockman-58266-400x284.jpg");
+ background-size: cover;
+ border: 1px solid black;
+}
+ .assignment-box6{
+ width: 240px;
+ height: 170px;
+ background-image: url("http://kyh.se/wp-content/uploads/2017/04/sergey-zolkin-21232-400x284.jpg");
+ background-size: cover;
+ border: 1px solid black;
+}
+.assignment-box1 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box1 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
 
+
+}
+.assignment-box2 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box2 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
+}
+.assignment-box3 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box3 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
+}
+.assignment-box4 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box4 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
+}
+.assignment-box5 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box5 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
+}
+.assignment-box6 h3 {
+ color: black;
+ font-weight: bold;
+ margin-top: 170px;
+ margin-bottom: 0;
+ border-left: 1px solid black;
+ border-right: 1px solid black;
+ width: 239px;
+ padding-top: 10px;
+ text-align: center;
+}
+.assignment-box6 ul{
+width: 199px;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 0px;
+padding-bottom: 150px;
+padding-top: 10px;
 }
 /* student scheme*/
 .scheme {
+  display: column;
   position: relative;
   border: 2px solid #292929;
   color: white;
@@ -865,7 +1056,15 @@ cursor: pointer;
   height:350px;
   text-align:center;
   color:black;
+  max-width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
+#news {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* arbetsmetodik*/
 .header-img{
   display: flex;
   align-items: center;
@@ -875,6 +1074,7 @@ cursor: pointer;
   background-position: left top;
   justify-content: center;
   width: 100%;
+
 }
 #header-arbetsmetodik{
   justify-content: center;
@@ -892,13 +1092,9 @@ cursor: pointer;
 #kursinfo-style{
   font-size: 30px;
   padding-left: 71px;
-  border: 3px solid #ffa500;
-  background-color: #292929;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: white;
-  width: 277px;
-  margin-left: 71px;
+
 
 }
 #p-stil{
