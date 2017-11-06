@@ -128,3 +128,14 @@ function addHideMe() {
   notif.classList.add("hideMe");
 
 }
+
+function utvard() {
+  	modal.style.display = "none";
+	   notif.innerText = "Tack för din åsikt.";
+    notif.style.color = '#3dd43d';
+    notif.style.borderColor ="#3dd43d";
+    setInterval(addHideMe, 5000);
+    dailyInvoke = true;
+}
+
+

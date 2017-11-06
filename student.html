@@ -40,6 +40,7 @@
 
 <section class="studentContent">
   <aside class="attendance-hidden">
+  
 
   </aside>
 <div class="scheme">
@@ -79,14 +80,10 @@
 	 <center><img src="img/review.png" id="openreview" onclick="openreview()" height="50px" width="50px" style="cursor: pointer"></center>
 
   </div>
-
-
-
 </aside>
 </section>
 
 </div>
-
 
 
 
@@ -95,7 +92,7 @@
     <div class="test">
 	 <center> <h1>Utvärdering</h1> </center>
      <span class="closereview">&times;</span>
-	    <form>
+	     <form onsubmit="utvard()">
 		<h2>Vilket tempo är det?</h2>
         <input type="radio" name="pace" id="high" required>
         <label for="evaluation">Högt</label>
@@ -170,7 +167,7 @@
     <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
    </div>
   </div>
-  <input type="submit" id="send" class="send" value="Skicka" />
+  <input type="submit" class="send" value="Skicka" />
                   </div>
 			</form>
 		</div>
