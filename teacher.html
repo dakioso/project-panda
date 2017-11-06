@@ -28,6 +28,7 @@
     <div id="nav" class="sidenav">
       <a  class="active" href="teacher.html">Lärare</a>
       <a href="#" onclick="show()">Utvärderingar</a>
+	  <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
     </div>
   </div>
   <!-- Sidenavbar -->
@@ -84,7 +85,6 @@
         <input type="button" value="Generera" onClick="numGen()" /><br />
       </div>
       </section>
-	   <center><input type="button" id="opentask" onclick="opentask()" height="50px" width="50px" style="cursor: pointer" value="Uppgifter"></center>
     </div>
   </section>
   <section class="evaluation-response">
@@ -111,9 +111,7 @@
   <span class="closetask">&times;</span>
  <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
 <div id="teacherTask">
-
 <div class="RTcontent">
-
     <select>
     <option disabled selected value>Välj kurs</option>
       <option value="1">Arbetsmetodik</option>
@@ -121,7 +119,7 @@
       <option value="3">Arbetsmetodik</option>
     </select>
 	<br>
-	    <select>
+	<select>
     <option disabled selected value>Välj ett ämne</option>
       <option value="1">Arbetsmetodik</option>
       <option value="2">Arbetsmetodik</option>
