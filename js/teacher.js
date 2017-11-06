@@ -107,7 +107,7 @@ function countSurvey(array){
     }
   } return surveyXY(good, neutral, bad);
 }
-// surveyXY count the answers and return Y-value for diagram
+// surveyXY count the answers and return Y-value for diagram and total amount of answers
 function surveyXY(good, neutral, bad){
   const heightPerSmiley = 20;
   let totalSmileys = good + neutral + bad,
@@ -126,13 +126,14 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
       col4 = canvasAreaDaily.getContext('2d'),
       sidenumber = canvasAreaDaily.getContext('2d'),
       lines = canvasAreaDaily.getContext('2d');
+
       sidenumber.clearRect(0, 0 , 400, 400);
       sidenumber.save();
       sidenumber.fillStyle = '#292929';
       sidenumber.font = 'bold 16px Arial, sans-serif';
 
       let y = 370;
-      for(let i = 0; i < 16; i++){
+      for(let i = 0; i < 16; i++){  // print out sidenumber 0-14 + amount of students
         if(i < 10){
           sidenumber.fillText(i , 15, y);
         } else if(i < 15) {
@@ -146,7 +147,7 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
         sidenumber.restore();
 
 let yValue = 367;
-for(let i = 0; i < 15; i++){
+for(let i = 0; i < 15; i++){  // print out 15 vertical lines
   lines.fillStyle = "rgba(41, 41, 41, 0.5)";
   lines.lineWidth = 0.2;
   lines.beginPath();
@@ -156,6 +157,7 @@ for(let i = 0; i < 15; i++){
 yValue -= 20;
 }
 
+// goodY neutralY and badY prints out 20px * amount smileys on y-axis
       col1.save();
       col1.fillStyle = '#ffa500';
       col1.fillRect (110, 367, 15, -goodY );
@@ -353,6 +355,7 @@ function pushWeek(good, improvement){
       element1.appendChild(document.createTextNode('Vad har varit bra'));
       fragment.appendChild(element1);
 
+// create fragment with answers from good array
   for(let i = 0, x = good.length; i < x; i++){
         let element = document.createElement('li');
         element.appendChild(document.createTextNode(good[i]));
@@ -363,6 +366,7 @@ function pushWeek(good, improvement){
             element2.appendChild(document.createTextNode('Förbättringar'));
             fragment.appendChild(element2);
 
+// create fragment with answers from improvement arrray
   for(let i = 0, x = improvement.length; i < x; i++){
         let elements = document.createElement('li');
             elements.appendChild(document.createTextNode(improvement[i]));
