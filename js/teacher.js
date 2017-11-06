@@ -10,6 +10,14 @@ function togNav() {
  }
 }
 
+let dailyCanvas = document.getElementById('dailyCanvas'),
+    weeklyCanvas = document.getElementById('weeklyCanvas'),
+    courseCanvas = document.getElementById('courseCanvas'),
+    dayOption = document.getElementById('dayOption'),
+    courseOption = document.getElementById('courseOption'),
+    weeklyResponse = document.getElementById('weeklyAnswers'),
+    courseAnswers = document.getElementById('courseAnswers1');
+
 // Daily smileys answers from the students
 let dailySurvey = [
   {day: 'måndag', survey: ['bra', 'bra', 'dåligt','bra', 'bra', 'bra', 'dåligt', 'neutral', 'bra', 'neutral', 'bra', 'bra', 'bra', 'dåligt']},
@@ -40,12 +48,6 @@ let show = function(){
 }
 
 let showBox = function(box){
-  let dailyCanvas = document.getElementById('dailyCanvas'),
-      weeklyCanvas = document.getElementById('weeklyCanvas'),
-      courseCanvas = document.getElementById('courseCanvas'),
-      dayOption = document.getElementById('dayOption'),
-      courseOption = document.getElementById('courseOption'),
-      weeklyResponse = document.getElementById('weeklyAnswers');
 
   if(box == 'daglig'){
       dailyCanvas.style.display = 'flex';
@@ -54,6 +56,7 @@ let showBox = function(box){
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
       weeklyResponse.style.display = 'none';
+      courseAnswers.style.display = 'none';
   } else if(box == 'vecko'){
       weeklyCanvas.style.display = 'flex';
       weeklyResponse.style.display = 'block';
@@ -61,6 +64,7 @@ let showBox = function(box){
       dayOption.style.display = 'none';
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
+      courseAnswers.style.display = 'none';
       drawWeek();
   } else if(box == 'kurs'){
       dailyCanvas.style.display = 'none';
@@ -130,7 +134,7 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
       sidenumber.clearRect(0, 0 , 400, 400);
       sidenumber.save();
       sidenumber.fillStyle = '#292929';
-      sidenumber.font = 'bold 16px Arial, sans-serif';
+      sidenumber.font = 'bold 16px Lato, sans-serif';
 
       let y = 370;
       for(let i = 0; i < 16; i++){  // print out sidenumber 0-14 + amount of students
@@ -139,7 +143,7 @@ function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
         } else if(i < 15) {
           sidenumber.fillText(i , 7, y);
         } else {
-          sidenumber.font = 'bold 22px Arial, sans-serif';
+          sidenumber.font = 'bold 22px Lato, sans-serif';
           sidenumber.fillText('Antal Elever', 7, y);
         }
           y-= 20;
@@ -161,7 +165,7 @@ yValue -= 20;
       col1.save();
       col1.fillStyle = '#ffa500';
       col1.fillRect (110, 367, 15, -goodY );
-      col1.font = 'bold 16px Arial, sans-serif';
+      col1.font = 'bold 16px Lato, sans-serif';
       col1.fillText(good, 114, (373-goodY) - 10);
       col1.fillText('Bra', 105, 390);
       col1.restore();
@@ -170,7 +174,7 @@ yValue -= 20;
       col2.save();
       col2.fillStyle = '#ffa500';
       col2.fillRect (180, 367, 15, -neutralY );
-      col2.font = 'bold 16px Arial, sans-serif';
+      col2.font = 'bold 16px Lato, sans-serif';
       col2.fillText(neutral, 184, (373-neutralY) - 10);
       col2.fillText('Neutral', 160, 390);
       col2.restore();
@@ -178,14 +182,14 @@ yValue -= 20;
       col3.save();
       col3.fillStyle = '#ffa500';
       col3.fillRect (250, 367, 15, -badY );
-      col3.font = 'bold 16px Arial, sans-serif';
+      col3.font = 'bold 16px Lato, sans-serif';
       col3.fillText(bad, 255, (373-badY) - 10);
       col3.fillText('Dåligt', 240, 390);
       col3.restore();
 
       col4.save();
       col4.fillStyle = '#ffa500';
-      col3.font = 'bold 16px Arial, sans-serif';
+      col3.font = 'bold 16px Lato, sans-serif';
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
 }
@@ -203,7 +207,7 @@ function drawWeek(){
 
       week.save();
       week.fillStyle = '#292929';
-      week.font = 'bold 16px Arial, sans-serif';
+      week.font = 'bold 16px Lato, sans-serif';
       week.fillText('Vecka' , 15, 390)
       let weekXvalue = 100;
         for(let i = 36; i < 46; i++){
@@ -214,7 +218,7 @@ function drawWeek(){
 
       result.save();
       result.fillStyle = '#292929';
-      result.font = '16px Arial, sans-serif';
+      result.font = '16px Lato, sans-serif';
       result.fillText('Dåligt', 15, 370);
       result.fillText('1', 15, 340);
       result.fillText('2', 15, 290);
@@ -226,7 +230,7 @@ function drawWeek(){
 
       graphInfo.save();
       graphInfo.fillStyle = '#292929';
-      graphInfo.font = '16px Arial, sans-serif';
+      graphInfo.font = 'bold 16px Lato, sans-serif';
       graphInfo.fillText('Hur upplever du', 30, 20);
       graphInfo.fillText('tempot just nu', 30, 35);
 
@@ -351,7 +355,6 @@ function pushWeek(good, improvement){
       element1 = document.createElement('h2');
 
       showWeeklyAnswer.innerHTML = "";
-
       element1.appendChild(document.createTextNode('Vad har varit bra'));
       fragment.appendChild(element1);
 
@@ -373,4 +376,73 @@ function pushWeek(good, improvement){
             fragment.appendChild(elements);
   }
             showWeeklyAnswer.appendChild(fragment);
+}
+
+function showCourseBox(value){
+  if(value == 'arbetsmetodik'){
+      weeklyResponse.style.display = 'none';
+      courseAnswers.style.display = 'block';
+    return drawCourse();
+  }
+}
+
+function drawCourse(){
+  let courseArea = document.getElementById('courseCanvas'),
+      sideNumber1 = courseArea.getContext('2d'),
+      courseInfo = courseArea.getContext('2d'),
+      lines1 = courseArea.getContext('2d');
+
+      lines1.save();
+      lines1.fillStyle = "rgba(41, 41, 41, 0.5)";
+      lines1.lineWidth = 0.2;
+
+      let yValue = 295;
+      for(let i = 0; i < 9; i++){
+        lines1.beginPath();
+        lines1.moveTo(30, yValue);
+        lines1.lineTo(600, yValue);
+        lines1.stroke();
+        yValue -= 25;
+      }
+        lines1.restore();
+
+      courseInfo.save();
+      courseInfo.fillStyle = '#292929';
+      courseInfo.font = 'bold 22px Lato, sans-serif';
+      courseInfo.fillText('Arbetsmetodik', 230, 40);
+      courseInfo.font = 'bold 16px Lato, sans-serif';
+      courseInfo.fillText('Hur upplevde du tempot', 70, 350);
+      courseInfo.fillText('i denna kurs', 100, 370 );
+
+      courseInfo.fillText('Hur upplevde du', 275, 350);
+      courseInfo.fillText('svårighetsgraden', 273, 370);
+
+      courseInfo.fillText('Hur välplanerad var', 440, 350);
+      courseInfo.fillText('kursen under läsåret', 435, 370);
+
+      courseInfo.fillStyle = 'green';
+      courseInfo.fillRect(120, 325, 50, -179);
+
+      courseInfo.fillStyle = 'red';
+      courseInfo.fillRect(305, 325, 50, -104);
+
+      courseInfo.fillStyle = 'blue';
+      courseInfo.fillRect(485, 325, 50, -204);
+      courseInfo.restore();
+
+      sideNumber1.save();
+      sideNumber1.fillStyle = '#292929';
+      sideNumber1.font = 'bold 16px Lato, sans-serif';
+      sideNumber1.fillText('Dåligt', 15, 330);
+      sideNumber1.fillText('1', 15, 300);
+      sideNumber1.fillText('2', 15, 250);
+      sideNumber1.fillText('3', 15, 200);
+      sideNumber1.fillText('4', 15, 150);
+      sideNumber1.fillText('5', 15, 100);
+      sideNumber1.fillText('Bra', 15, 70);
+      sideNumber1.restore();
+
+
+
+
 }
