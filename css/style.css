@@ -1031,6 +1031,7 @@ cursor: pointer;
   padding: 5px;
   outline-color: #292929;
   width: 224px;
+  text-align: center;
 }
 
 .attendance div {
@@ -1050,6 +1051,13 @@ cursor: pointer;
 
 .attendance input[type=button]:active  {
   background-color: #f7f7f7;
+}
+
+.attendance select {
+  height: 29px;
+  width: 63%;
+  margin-top: 6px;
+  outline-color: #292929;
 }
 
 .studentContent {

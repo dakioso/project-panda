@@ -19,6 +19,7 @@ let dailySurvey = [
   {day: 'fredag', survey: ['bra','dåligt', 'bra', 'dåligt', 'bra', 'bra', 'bra','dåligt', 'neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt']}
 ];
 
+
 // Weekly answers array with good and improvements from the students
 let weekAnswer = [
   {week: 'v36', good: ['Stämningen i klassen', 'Bra att vi ska sätta igång med projektarbetet snart', 'Tobias och Kristian är kungar', 'Att vi har fått köra Codeschool och lära oss grunderna', 'Att lärarna lyssnar på oss elever'],
@@ -35,6 +36,17 @@ let weekAnswer = [
 ];
 
 // Shows the optionlist for canvas
+
+let attendance = document.getElementById("attendanceCode");
+let notif = document.getElementById("notification");
+let aCourse = document.getElementById("attendanceCourse");
+
+
+/*
+let showSurveyButton = document.getElementById('surveybutton');
+showSurveyButton.addEventListener('click', show);
+*/
+
 let show = function(){
   document.getElementsByClassName('canv')[0].style.display = 'flex';
 }
@@ -189,6 +201,7 @@ yValue -= 20;
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
 }
+
 
 function drawWeek(){
   let canvasAreaWeekly = document.getElementById('weeklyCanvas'),
@@ -411,4 +424,24 @@ function teacherinput() {
     notif.style.borderColor ="#3dd43d";
     setInterval(addHideMe, 5000);
     dailyInvoke = true;
+}
+// Generates a random number for attendance
+function numGen() {
+let i = attendanceCourse.selectedIndex;
+let randomAttendance = Math.random().toString(36).substr(2, 6);
+    notif.innerText = "Närvarokod genererad för lektion: " + attendanceCourse.options[i].text + ".";
+    notif.style.color = "#3dd43d";
+    notif.style.borderColor ="#3dd43d";
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
+  return attendanceCode.value = randomAttendance;
+
+}
+
+function addHideMe() {
+  notif.classList.add("hideMe");
+}
+
+function clearAttendance() {
+  attendanceCode.value = "";
 }

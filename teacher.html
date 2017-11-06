@@ -69,8 +69,22 @@
       <canvas id="courseCanvas" width="600px" height="400px"></canvas>
 
     <div class="attendance">
-      hej hej
-	   <center><button id="opentask" onclick="opentask()" height="50px" width="50px" style="cursor: pointer">Uppgifter</center>
+      <section>
+        <p>Generera en närvarokod.</p>
+        <input type="text" id="attendanceCode" placeholder="Närvarokod..." readonly /><br />
+      <div>
+        <select id="attendanceCourse" onchange="clearAttendance()">
+          <option value="arbetsmetodik" selected>Arbetsmetodik</option>
+          <option value="html">HTML</option>
+          <option value="backend">Backend Utveckling</option>
+          <option value="css">CSS</option>
+          <option value="javascript">Javascript</option>
+          <option value="php">PHP</option>
+        </select>
+        <input type="button" value="Generera" onClick="numGen()" /><br />
+      </div>
+      </section>
+	   <center><input type="button" id="opentask" onclick="opentask()" height="50px" width="50px" style="cursor: pointer" value="Uppgifter"></center>
     </div>
   </section>
   <section class="evaluation-response">
@@ -85,10 +99,11 @@
       </select>
       <div id="weeklyAnswers1">
       </div>
+
     </div>
   </section>
 
-	
+
 
 
 <!--Modalbox-Review -->
@@ -97,7 +112,7 @@
  <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
 <div id="teacherTask">
 
-<div class="RTcontent"> 
+<div class="RTcontent">
 
     <select>
     <option disabled selected value>Välj kurs</option>
@@ -112,16 +127,16 @@
       <option value="2">Arbetsmetodik</option>
       <option value="3">Arbetsmetodik</option>
     </select>
-   
+
 	<div class="teacherTask">
-<input placeholder="Inlämningsdatum" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date" style="cursor:default"> 
+<input placeholder="Inlämningsdatum" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date" style="cursor:default">
   </div>
 
     <div class="TestOrExam">
    <input type="radio" id="radio01" name="radio"/>
 			<label for="radio01"><span></span>Exam</label>
     <input type="radio" id="radio02" name="radio" />
-			<label for="radio02"><span></span>Prov</label>   
+			<label for="radio02"><span></span>Prov</label>
   </div>
 
   <div class="image-upload">
