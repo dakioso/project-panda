@@ -1467,7 +1467,7 @@ section.radiobuttons{
  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
  -webkit-animation-duration: 0.4s;
  animation-name: animatetop;
- animation-duration: 0.4s;	
+ animation-duration: 0.4s;
 }
 
 #teacherTask{
@@ -1484,7 +1484,7 @@ section.radiobuttons{
 .RTcontent{
  position:absolute;
  width:50%;
- height:540px;  	
+ height:540px;
 }
 
 .RTcontent select {
@@ -1508,19 +1508,19 @@ section.radiobuttons{
  margin-right: auto;
  margin-left: auto;
  margin-top:-10px;
- top:70px;  
+ top:70px;
 }
 
 .LTcontent {
  position:absolute;
  width:50%;
- height:540px; 
+ height:540px;
  right:0px;
  top:0px;
 }
 
 .LTcontent input {
- position:relative;	
+ position:relative;
  top:70px;
  width:50%;
  display: block;
@@ -1533,13 +1533,13 @@ section.radiobuttons{
  margin-right: auto;
  margin-left: auto;
  margin-top:-10px;
-	
+
 }
 
 .LTcontent textarea {
- position:relative;	
+ position:relative;
  top:70px;
- background:white no-repeat scroll; 
+ background:white no-repeat scroll;
  height: 250px;
  border: 1px solid rgba(255,255,255,.6);
  width:60%;
@@ -1550,7 +1550,7 @@ section.radiobuttons{
  justify-content: center;
  display: block;
  margin-left: auto;
- margin-right: auto;	
+ margin-right: auto;
 }
 
 .teacherTask {
@@ -1603,10 +1603,10 @@ section.radiobuttons{
 }
 .TestOrExam{
  position:absolute;
- height:40px; 
+ height:40px;
  left:24%;
  top:220px;
- width:100%; 
+ width:100%;
 }
 /* Custom radio buttons */
 .TestOrExam input[type="radio"] + label {
@@ -1651,20 +1651,20 @@ section.radiobuttons{
  display: none;
 }
 
-.image-upload img {   
+.image-upload img {
  position:absolute;
  width: 45px;
  top:260px;
  cursor: pointer;
  left:24%
 }
-.input-text { 
+.input-text {
  position:absolute;
  top:266px;
  right:35%;
  font-size:14px;
  font-family: Gill Sans Extrabold, sans-serif;
-}	
+}
 
 .closetask {
  position:absolute;
@@ -1721,5 +1721,76 @@ section.radiobuttons{
  height:10px;
  padding:50px;
  top:800px;
- border-style:dotted; 
+ border-style:dotted;
+}
+.selectCourses{
+      width: 150px;
+    margin-left: 0px;
+  }
+
+
+section.radiobuttons{
+  display:inline-block;
+}
+
+.evalbtn{
+  text-decoration: none;
+  border: 2px solid #ffa500;
+  background:#292929;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+p3{
+  font-size: 45px;
+}
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    //width: 25%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance:;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+    border: 1px solid #292929;
+}
+
+.head-cont{
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+
+.head-cont div{
+  color: #fff;
+  border: 1px solid blue;
+}
+
+.head-cont h1{
+color: white;
+}
+.radiobuttons p5{
+  letter-spacing:8px;
+  padding: 0;
+  margin-left: 5px;
+}
+
+#welcomeDiv{
+  font-size:20px;
 }
