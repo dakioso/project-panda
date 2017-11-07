@@ -1581,14 +1581,12 @@ section.radiobuttons{
 
 }
 
-
 .canv {
   display: none;
   width: 100%;
   justify-content: center;
   height: 20px;
   margin-top: 0;
-
 }
 
 #dailyCanvas {
@@ -1598,6 +1596,10 @@ section.radiobuttons{
 }
 
 #dayOption{
+  display: none;
+}
+
+#courseOption {
   display: none;
 }
 
@@ -1611,10 +1613,7 @@ section.radiobuttons{
 #courseCanvas {
   display: none;
   border: 1px solid gray;
-}
-
-#courseOption {
-  display: none;
+  margin-left: 13px;
 }
 
 #weeklyAnswers {
@@ -1628,13 +1627,24 @@ section.radiobuttons{
   font-size: 1.3em;
 }
 
-#weeklyAnswers h2 {
+#courseAnswers1 {
+  display: none;
+  width: 600px;
+  height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 607px;
+  border: 1px solid #292929;
+  font-size: 1.3em;
+}
+
+.weekAndCourseAnswers h2 {
   font-weight: bold;
   text-align: center;
 }
-#weeklyAnswers li {
+
+.weekAndCourseAnswers li {
   margin-left: 10px;
-  margin-right: 10px;
 }
 
 .testing {
