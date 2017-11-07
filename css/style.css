@@ -1084,33 +1084,33 @@ padding-top: 10px;
   display: flex;
   align-items: center;
   height: 300px;
-  background-image: url("https://c.s-microsoft.com/sv-se/CMSImages/Hero_0365ForBusiness.jpg?version=6edbf2ec-bff0-aa85-e725-d0f2237c60e0");
+  background-image: url("https://c.s-microsoft.com/sv-se/CMSImages/Hero_O365ForBusiness_1920x560.jpg?version=6edbf2ec-bff0-aa85-e725-d0f2237c60e0");
   background-size: cover;
   background-position: left top;
   justify-content: center;
   width: 100%;
+  margin-top: -38px;
+  margin-bottom: 10px;
 
 }
-#header-arbetsmetodik{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  border: 3px solid #ffa500;
-  background-color: #292929;
-  color: white;
-  width: 700px;
-  height: 150px;
-  text-transform: uppercase;
-  font-size: 4em;
-  letter-spacing: 3px;
+.header-img h1{
+justify-content: center;
+align-items: center;
+display: flex;
+border: 3px solid #ffa500;
+background-color: #292929;
+color: white;
+width: 700px;
+height: 150px;
+text-transform: uppercase;
+font-size: 4em;
+letter-spacing: 5px;
 }
 #kursinfo-style{
   font-size: 30px;
   padding-left: 71px;
   letter-spacing: 8px;
   text-transform: uppercase;
-
-
 }
 #p-stil{
   font-size: 18px;
