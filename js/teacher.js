@@ -168,31 +168,34 @@ yValue -= 20;
 // goodY neutralY and badY prints out 20px * amount smileys on y-axis
       col1.save();
       col1.fillStyle = '#ffa500';
-      col1.fillRect (110, 367, 15, -goodY );
+      col1.fillRect (90, 367, 30, -goodY );
       col1.font = 'bold 16px Lato, sans-serif';
-      col1.fillText(good, 114, (373-goodY) - 10);
-      col1.fillText('Bra', 105, 390);
+      col1.fillText(good, 102, (373-goodY) - 10);
+      col1.fillStyle = '#292929';
+      col1.fillText('Bra', 90, 390);
       col1.restore();
 
 
       col2.save();
       col2.fillStyle = '#ffa500';
-      col2.fillRect (180, 367, 15, -neutralY );
+      col2.fillRect (170, 367, 30, -neutralY );
       col2.font = 'bold 16px Lato, sans-serif';
-      col2.fillText(neutral, 184, (373-neutralY) - 10);
+      col2.fillText(neutral, 180, (373-neutralY) - 10);
+      col2.fillStyle = '#292929';
       col2.fillText('Neutral', 160, 390);
       col2.restore();
 
       col3.save();
       col3.fillStyle = '#ffa500';
-      col3.fillRect (250, 367, 15, -badY );
+      col3.fillRect (250, 367, 30, -badY );
       col3.font = 'bold 16px Lato, sans-serif';
-      col3.fillText(bad, 255, (373-badY) - 10);
-      col3.fillText('Dåligt', 240, 390);
+      col3.fillText(bad, 259, (373-badY) - 10);
+      col3.fillStyle = '#292929';
+      col3.fillText('Dåligt', 243, 390);
       col3.restore();
 
       col4.save();
-      col4.fillStyle = '#ffa500';
+      col4.fillStyle = '#292929';
       col3.font = 'bold 16px Lato, sans-serif';
       col4.fillText('totalt: ' + total, 320, 390);
       col4.restore();
@@ -214,7 +217,7 @@ function drawWeek(){
       week.font = 'bold 16px Lato, sans-serif';
       week.fillText('Vecka' , 15, 390)
       let weekXvalue = 100;
-        for(let i = 36; i < 46; i++){
+        for(let i = 36; i < 46; i++){ // print out weeknumber 36 - 45
           week.fillText(i, weekXvalue, 390);
             weekXvalue += 50;
         }
@@ -265,7 +268,7 @@ function drawWeek(){
       lines.lineWidth = 0.2;
 
       let yValue = 335;
-      for(let i = 0; i < 9; i++){
+      for(let i = 0; i < 9; i++){ //print out 9 vertical lines
         lines.beginPath();
         lines.moveTo(30, yValue);
         lines.lineTo(600, yValue);
@@ -402,7 +405,7 @@ function drawCourse(){
       lines1.lineWidth = 0.2;
 
       let yValue = 295;
-      for(let i = 0; i < 9; i++){
+      for(let i = 0; i < 9; i++){ //
         lines1.beginPath();
         lines1.moveTo(30, yValue);
         lines1.lineTo(600, yValue);
@@ -426,13 +429,13 @@ function drawCourse(){
       courseInfo.fillText('kursen under läsåret', 435, 370);
 
       courseInfo.fillStyle = 'green';
-      courseInfo.fillRect(120, 325, 50, -179);
+      courseInfo.fillRect(123, 325, 30, -179);
 
       courseInfo.fillStyle = 'red';
-      courseInfo.fillRect(305, 325, 50, -104);
+      courseInfo.fillRect(305, 325, 30, -104);
 
       courseInfo.fillStyle = 'blue';
-      courseInfo.fillRect(485, 325, 50, -204);
+      courseInfo.fillRect(485, 325, 30, -204);
       courseInfo.restore();
 
       sideNumber1.save();
@@ -446,8 +449,4 @@ function drawCourse(){
       sideNumber1.fillText('5', 15, 100);
       sideNumber1.fillText('Bra', 15, 70);
       sideNumber1.restore();
-
-
-
-
 }
