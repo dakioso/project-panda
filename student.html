@@ -119,7 +119,7 @@
               <div class="test">
                 <center> <h1>Utvärdering</h1> </center>
                 <span class="closereview">&times;</span>
-                <form onsubmit="utvard()">
+                <form>
                   <h2>Vilket tempo är det?</h2>
                   <input type="radio" name="pace" id="high" required>
                   <label for="evaluation">Högt</label>
@@ -194,7 +194,7 @@
                             <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
                           </div>
                         </div>
-                        <input type="submit" class="send" value="Skicka" />
+                        <input type="submit" class="send"  onclick="utvard()"value="Skicka" />
                       </div>
                     </form>
                   </div>
@@ -215,6 +215,6 @@
                 </div>
               </footer>
               <script src="js/zenscroll-min.js"></script>
-              <script src="js/javascript.js"> </script>
+              <script src="js/student.js"> </script>
             </body>
             </html>
