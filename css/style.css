@@ -1227,6 +1227,7 @@ padding-top: 10px;
   padding: 5px;
   outline-color: #292929;
   width: 224px;
+  text-align: center;
 }
 
 .attendance div {
@@ -1246,6 +1247,13 @@ padding-top: 10px;
 
 .attendance input[type=button]:active  {
   background-color: #f7f7f7;
+}
+
+.attendance select {
+  height: 29px;
+  width: 63%;
+  margin-top: 6px;
+  outline-color: #292929;
 }
 
 .studentContent {
@@ -1650,6 +1658,7 @@ section.radiobuttons{
  top: 0;
  width: 100%;
  height: 100%;
+ padding-top:50px;
  background-color: rgb(0,0,0); /* Fallback color */
  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
  -webkit-animation-duration: 0.4s;
@@ -1839,16 +1848,16 @@ section.radiobuttons{
 }
 
 .image-upload img {   
- position:relative;
+ position:absolute;
  width: 45px;
- top:180px;
+ top:260px;
  cursor: pointer;
- right:-82px;	
+ left:24%
 }
 .input-text { 
- position:relative;
- top:136px;
- right:-142px;
+ position:absolute;
+ top:266px;
+ right:35%;
  font-size:14px;
  font-family: Gill Sans Extrabold, sans-serif;
 }	
@@ -1859,8 +1868,8 @@ section.radiobuttons{
  font-size: 28px;
  font-weight: bold;
  right:26%;
- top:145px;
- z-index:100;
+ top:95px;
+ z-index:2;
 }
 
 .closetask:hover,
@@ -1887,10 +1896,13 @@ section.radiobuttons{
 }
 
 .teachersubmit {
- background-color: orange; 
- color: white; 
- border: 2px solid orange;
- border-radius:5px;
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #ffa500;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
 }
 
 .teachersubmit:hover {
