@@ -456,7 +456,7 @@ function addHideMe() {
 
 function clearAttendance() {
   attendanceCode.value = "";
-
+}
 function showCourseBox(value){
   if(value == 'arbetsmetodik'){
       weeklyResponse.style.display = 'none';
@@ -476,7 +476,7 @@ function drawCourse(){
       lines1.lineWidth = 0.2;
 
       let yValue = 295;
-      for(let i = 0; i < 9; i++){ //
+      for(let i = 0; i < 9; i++){
         lines1.beginPath();
         lines1.moveTo(30, yValue);
         lines1.lineTo(600, yValue);
@@ -520,5 +520,4 @@ function drawCourse(){
       sideNumber1.fillText('5', 15, 100);
       sideNumber1.fillText('Bra', 15, 70);
       sideNumber1.restore();
-
 }
