@@ -431,7 +431,7 @@ window.onclick = function(event) {
 
 function teacherinput() {
   	modal.style.display = "none";
-	   notif.innerText = "Tack för din åsikt.";
+	   notif.innerText = "Uppgifterna är nu tillagda.";
     notif.style.color = '#3dd43d';
     notif.style.borderColor ="#3dd43d";
     setInterval(addHideMe, 5000);
