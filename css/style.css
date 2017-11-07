@@ -1267,7 +1267,6 @@ padding-top: 10px;
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
@@ -1299,7 +1298,7 @@ padding-top: 10px;
  font-size: 28px;
  font-weight: bold;
  right:21%;
- top:210px;
+ top:110px;
 }
 
 .closereview:hover,
@@ -1372,7 +1371,7 @@ left:100px;
   margin-top:-20px;
   font-size:20px;
   cursor:default;
-  top:200px;
+  top:230px;
 }
 
 .sendreview {
@@ -1391,7 +1390,7 @@ left:100px;
  height:150px;
  font-family:'Lato', sans-serif;
  font-size:15px;
- margin-top:-330px;
+ margin-top:-430px;
  width:20%;
  font-size:16px;
 }
@@ -1444,39 +1443,35 @@ left:100px;
   transition: all 1s ease;
   text-decoration: none;
   right:49%;
-  top:680px;
+  top:600px;
   font-size:16px
 }
 .secondbox {
   position:absolute;
   left:42%;
-  top:242px;
+  top:140px;
 }
 .thirdbox {
  position:absolute;
  left:42%;
- top:494px;
+ top:396px;
 }
 
 .textinput2 {
-position:absolute;
-top:240px;
-right:0px;
-width:100%;
-
+ position:absolute;
+ top:240px;
+ right:0px;
+ width:100%;
 }
 .firstinputhead{
-position:absolute;
-top:245px;
-left:61%;
-width:100%;
-
+ position:absolute;
+ margin-top:-85px;
+ left:61%;
 }
 .secondinputhead{
 position:absolute;
-top:482px;
 left:62%;
-width:100%;
+margin-top:-85px;
 
 }
 .space { /* important cant scroll without it */
@@ -1767,7 +1762,7 @@ section.radiobuttons{
  height: 2.4em;
  background:white;
  border-radius: .25em;
- margin-top:-10px;/*mellan rum*/
+ margin-top:-10px;/*space*/
  display: block;
  margin-left: auto;
  margin-right: auto;
