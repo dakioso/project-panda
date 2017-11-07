@@ -1565,16 +1565,75 @@ padding-left: 8px;
  top:800px;
 }
 .selectCourses{
-  padding: 8px;
-  width: 150px;
-  margin-left: 0px;
-  border: 1px solid #ffa500;
-  border-radius: 2px;
+      width: 150px;
+    margin-left: 0px;
   }
 
 
 section.radiobuttons{
   display:inline-block;
+}
+
+.evalbtn{
+  text-decoration: none;
+  border: 2px solid #ffa500;
+  background:#292929;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+p3{
+  font-size: 45px;
+}
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    //width: 25%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance:;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+    border: 1px solid #292929;
+}
+
+.head-cont{
+  background-color: #292929;
+  display: flex;
+
+  border: 1px solid red;
+  justify-content: center;
+
+
+
+}
+
+.head-cont div{
+  color: #fff;
+  border: 1px solid blue;
+}
+
+.head-cont h1{
+  border: 2px solid white;
+}
+
+.radiobuttons p5{
+  letter-spacing: 8px;
+}
+.slidersinput{
+  letter-spacing: 8px;  
 }
 
 #formAnswerPos{
@@ -1942,4 +2001,73 @@ section.radiobuttons{
  padding:50px;
  top:800px;
  border-style:dotted;
+}
+
+
+
+
+.närvaro-cont{
+  padding:0px;
+  margin-left:10px;
+  margin-bottom:0px;
+
+
+
+  font-size: 1em;
+  width: 200px;
+  border: 1px solid black;
+  height: auto;
+
+
+  width: auto;
+  justify-content: space-between;
+
+}
+
+.attendance-list{
+  padding: 0px;
+  margin 0;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+.elever{
+
+
+  margin: 0 5px 0 5px;
+  margin-bottom:0px;
+  flex-wrap: wrap;
+
+}
+
+.närvaro{
+  flex: 1 1 10px;
+  flex-wrap: nowrap;
+}
+
+.attendance-listcont h2{
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin:0;
+}
+
+
+
+#varoBehållare h3{
+  border-bottom: 1px solid black;
+}
+
+#varoBehållare .here{
+  opacity: 0.3;
+}
+#varoBehållare .nothere{
+  opacity: 0.3;
+}
+
+.närvaroflex{
+  display: flex;
+
+
+  justify-content: center;
 }

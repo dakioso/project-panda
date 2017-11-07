@@ -521,3 +521,8 @@ function drawCourse(){
       sideNumber1.fillText('Bra', 15, 70);
       sideNumber1.restore();
 }
+
+
+function visanärvarolista() {
+   document.getElementById('närvaro-hidden').style.display = "block";
+}
