@@ -1137,6 +1137,7 @@ letter-spacing: 5px;
   display: column;
   padding-bottom: 50px;
   align-items: flex-start;
+  margin-bottom: 20px;
 }
 .betygskriterier{
   height:300px;
@@ -1147,6 +1148,7 @@ letter-spacing: 5px;
   letter-spacing: 0.1em;
   padding-top: 20px;
   text-align: center;
+  margin-left: 25px;
 
 }
 .fakta-text{
