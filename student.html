@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <div class="student-head">
+    <div class="student-head" id="arrow-link">
       <img src="img/KYH1.png" alt="KYH-logo"/>
     </div>
     <!-- NAVBAR -->
@@ -22,145 +22,199 @@
     <div class="login-link">
       <p id="notification"></p>
     </div>
-    </header>
-<!-- Login Navbar -->
- <div id class="placenav">
-	<div id="nav" class="sidenav">
-		<a  class="active" href="student.html">Student</a>
-		<a href="courses.html">Kurser</a>
-		<a href="assigment.html">Uppgifter</a>
-</div>
-</div>
-<!-- Sidenavbar -->
-<div class="navbutton">
-<span  onclick="togNav()">&#9776;</span>
-</div>
-
-<center> <h1>Välkommen Student</h1></center>
-
-<section class="studentContent">
-  <aside class="attendance-hidden">
-  
-
-  </aside>
-<div class="scheme">
-  <h3>Schema Kommer inom kort...</h3>
-</div>
-
-<aside class="attendance">
-  <section>
-    <p>Registrera din närvaro.</p>
-    <input type="text" id="attendanceCode" placeholder="Närvarokod..." /><br />
-<div>
-    <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
-</div>
-  </section>
-  <div class="daily-vote">
-    <p>Daglig utvärdering</p>
-    <div class="smileys">
-      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" height="40px" width="40px" alt="happy-face">
-      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" height="40px" width="40px" alt="okey-face">
-      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" height="40px" width="40px" alt="sad-face">
+  </header>
+  <!-- Login Navbar -->
+  <div id class="placenav">
+    <div id="nav" class="sidenav">
+      <a  class="active" href="student.html">Student</a>
+      <a href="courses.html">Kurser</a>
+      <a href="assigment.html">Uppgifter</a>
     </div>
-	<p>Veckoutvärdering</p>
-	 <center><img src="img/review.png" id="openreview" onclick="openreview()" height="50px" width="50px" style="cursor: pointer"></center>
-
   </div>
-</aside>
-</section>
-
-</div>
-
-
-
-<!--Modalbox-Review -->
-   <div id="mymodal" class="modal">
-    <div class="test">
-	 <center> <h1>Utvärdering</h1> </center>
-     <span class="closereview">&times;</span>
-	     <form onsubmit="utvard()">
-		<h2>Vilket tempo är det?</h2>
-        <input type="radio" name="pace" id="high" required>
-        <label for="evaluation">Högt</label>
-        <br>
-        <input type="radio" name="pace" id="pretty high">
-        <label for="evaluation">Ganska högt</label>
-	    <br>
-        <input type="radio" name="pace" id="pretty low">
-        <label for="evaluation">Ganska lågt</label>
-	    <br>
-	    <input type="radio" name="pace" id="low">
-        <label for="evaluation">Lågt</label>
-	    <h2>Vilken kurs är svårast</h2>
-		<select class="form-control" id="select" name="select" required>
-				<option disabled selected value> -- Välj ett alternativ-- </option>
-				<option value="Arbetsmetodik" name="courses">Arbetsmetodik</option>
-				<option value="Projektmetodik" name="courses">Projektmetodik</option>
-				<option value="Javascript" name="courses">Javascript</option>
-	    </select>
-	<br>
-    <div>
-    <div>
-	  <h2>Nivån på innehållet</h2>
-      <input type="radio" name="level" id="high" required>
-      <label for="evaluation">Högt</label>
-      <br>
-      <input type="radio" name="level" id="pretty high">
-      <label for="evaluation">Ganska högt</label>
-	  <br>
-      <input type="radio" name="level" id="pretty low ">
-      <label for="evaluation">Ganska lågt</label>
-	  <br>
-	  <input type="radio" name="level" id="low">
-      <label for="evaluation">Lågt</label>
-	  <br>
-    <div>
-      <div class="secondbox">
-      <h2>Föreläsningar</h2>
-      <input type="radio" name="lectures" id="Execellent" required>
-      <label for="evaluation">Utmärkt</label>
-      <br>
-      <input type="radio" name="lectures" id="Good">
-      <label for="evaluation">Bra</label>
-	  <br>
-      <input type="radio" name="lectures" id="Less good">
-      <label for="evaluation">Mindre bra</label>
-	  <br>
-	  <input type="radio" name="lectures" id="bad">
-      <label for="evaluation">Dålig</label>
-    </div>
-    <div class="thirdbox">
-      <h2>Trivsel i klassen</h2>
-      <input type="radio" name="comfort" id="Execellent" required>
-      <label for="evaluation">Utmärkt</label>
-    <br>
-      <input type="radio" name="comfort" id="Good">
-      <label for="evaluation">Bra</label>
-	  <br>
-     <input type="radio" name="comfort" id="Less good ">
-      <label for="evaluation">Mindre bra</label>
-	<br>
-	   <input type="radio" name="comfort" id="bad">
-      <label for="evaluation">Dåligt</label>
-    </div>
-      <div class="review">
-       <h3 class="firstinputhead">Övriga frågor</h3>
-       <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
-    </div>
-	<div class="review">
-	<br><h3 class="secondinputhead">Förbättringar</h3>
-    <div class="textinput2">
-    <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
-   </div>
+  <!-- Sidenavbar -->
+  <div class="navbutton">
+    <span  onclick="togNav()">&#9776;</span>
   </div>
-  <input type="submit" class="send" value="Skicka" />
+
+  <center> <h1 id="news">Nyheter</h1></center>
+
+  <section class="studentContent">
+    <aside class="attendance-hidden">
+
+
+    </aside>
+    <div class="scheme">
+      <h2>Ombyggnation i hus A, vecka 36</h2>
+      <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+        eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+        Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+        eu gravida purus aliquet a. Nulla facilisi.</p>
+        <h2>Öppettider för Bibliotek, vecka 36</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+          eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+          Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+          eu gravida purus aliquet a. Nulla facilisi.</p>
+          <h2>Företagsträff, vecka 38</h2>
+          <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+            eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+            Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+            eu gravida purus aliquet a. Nulla facilisi.</p>
+            <h2>Uppskjuten tentamen, vecka 40</h2>
+            <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+              eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+              Pellentesque habitant morbi tristique senectus et netus et malesuada
+              fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+              Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+              eu gravida purus aliquet a. Nulla facilisi.</p>
+              <h2>Skolans öppettider, vecka 40</h2>
+              <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+                eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada
+                fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+                Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+                eu gravida purus aliquet a. Nulla facilisi.</p>
+                <h2>Skolans öppettider under jul/nyår, vecka 52</h2>
+                <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+                  eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+                  Pellentesque habitant morbi tristique senectus et netus et malesuada
+                  fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+                  Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+                  eu gravida purus aliquet a. Nulla facilisi.</p>
+                </div>
+
+                <aside class="attendance">
+                  <section>
+                    <p>Registrera din närvaro.</p>
+                    <input type="text" id="attendanceCode" placeholder="Närvarokod..." /><br />
+                    <div>
+                      <input type="button" value="Skicka" onClick="attendanceCheck()" /><br />
+                    </div>
+                  </section>
+                  <div class="daily-vote">
+                    <p>Daglig utvärdering</p>
+                    <div class="smileys">
+                      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" height="40px" width="40px" alt="happy-face">
+                      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" height="40px" width="40px" alt="okey-face">
+                      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" height="40px" width="40px" alt="sad-face">
+                    </div>
+                    <p>Veckoutvärdering</p>
+                    <center><img src="img/review.png" id="openreview" onclick="openreview()" height="50px" width="50px" style="cursor: pointer"></center>
+
                   </div>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- Invisible space importantee -->
-<div class="space"></div>
-<script src="js/javascript.js"> </script>
-</body>
-</html>
+                </aside>
+              </section>
+
+            </div>
+
+
+
+            <!--Modalbox-Review -->
+            <div id="mymodal" class="modal">
+              <div class="test">
+                <center> <h1>Utvärdering</h1> </center>
+                <span class="closereview">&times;</span>
+                <form>
+                  <h2>Vilket tempo är det?</h2>
+                  <input type="radio" name="pace" id="high" required>
+                  <label for="evaluation">Högt</label>
+                  <br>
+                  <input type="radio" name="pace" id="pretty high">
+                  <label for="evaluation">Ganska högt</label>
+                  <br>
+                  <input type="radio" name="pace" id="pretty low">
+                  <label for="evaluation">Ganska lågt</label>
+                  <br>
+                  <input type="radio" name="pace" id="low">
+                  <label for="evaluation">Lågt</label>
+                  <h2>Vilken kurs är svårast</h2>
+                  <select class="form-control" id="select" name="select" required>
+                    <option disabled selected value> -- Välj ett alternativ-- </option>
+                    <option value="Arbetsmetodik" name="courses">Arbetsmetodik</option>
+                    <option value="Projektmetodik" name="courses">Projektmetodik</option>
+                    <option value="Javascript" name="courses">Javascript</option>
+                  </select>
+                  <br>
+                  <div>
+                    <div>
+                      <h2>Nivån på innehållet</h2>
+                      <input type="radio" name="level" id="high" required>
+                      <label for="evaluation">Högt</label>
+                      <br>
+                      <input type="radio" name="level" id="pretty high">
+                      <label for="evaluation">Ganska högt</label>
+                      <br>
+                      <input type="radio" name="level" id="pretty low ">
+                      <label for="evaluation">Ganska lågt</label>
+                      <br>
+                      <input type="radio" name="level" id="low">
+                      <label for="evaluation">Lågt</label>
+                      <br>
+                      <div>
+                        <div class="secondbox">
+                          <h2>Föreläsningar</h2>
+                          <input type="radio" name="lectures" id="Execellent" required>
+                          <label for="evaluation">Utmärkt</label>
+                          <br>
+                          <input type="radio" name="lectures" id="Good">
+                          <label for="evaluation">Bra</label>
+                          <br>
+                          <input type="radio" name="lectures" id="Less good">
+                          <label for="evaluation">Mindre bra</label>
+                          <br>
+                          <input type="radio" name="lectures" id="bad">
+                          <label for="evaluation">Dålig</label>
+                        </div>
+                        <div class="thirdbox">
+                          <h2>Trivsel i klassen</h2>
+                          <input type="radio" name="comfort" id="Execellent" required>
+                          <label for="evaluation">Utmärkt</label>
+                          <br>
+                          <input type="radio" name="comfort" id="Good">
+                          <label for="evaluation">Bra</label>
+                          <br>
+                          <input type="radio" name="comfort" id="Less good ">
+                          <label for="evaluation">Mindre bra</label>
+                          <br>
+                          <input type="radio" name="comfort" id="bad">
+                          <label for="evaluation">Dåligt</label>
+                        </div>
+                        <div class="review">
+                          <h3 class="firstinputhead">Övriga frågor</h3>
+                          <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
+                        </div>
+                        <div class="review">
+                          <br><h3 class="secondinputhead">Förbättringar</h3>
+                          <div class="textinput2">
+                            <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
+                          </div>
+                        </div>
+                        <input type="button" class="send"  onclick="utvard()"value="Skicka" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="main-footer" id="kontakt">
+              <div class="para">
+                <p>Adress: Bamboovägen 4<br />Telefon: 08 123 45 67<br />
+                  E-mail: Kundservice@pandasoft.se</p>
+
+                </div>
+                <div class="arrow">
+                  <a href="#arrow-link"><img src="img/pil.png" /></a>
+                </div>
+              </footer>
+              <script src="js/zenscroll-min.js"></script>
+              <script src="js/student.js"> </script>
+            </body>
+            </html>

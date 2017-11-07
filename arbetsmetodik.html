@@ -9,11 +9,34 @@
 </head>
 <body>
   <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <header>
+    <div class="student-head" id="arrow-link">
+      <img src="img/kyh1.png" alt="KYH-logo"/>
+    </div>
+    <!-- NAVBAR -->
+    <div class="main-nav" id="navbar" style="top: -20px;">
+      <ul>
+        <li><a class="active" href="courses.html">Kurser</a></a></li>
+      </ul>
+      <a class="icon" href="#">&#9776;</a>
+</div>
+<div class="login-link">
+  <a href="index.html">Logga ut</a>
+</div>
+    </header>
+    <div id class="placenav">
+      <div id="nav" class="sidenav">
+        <a href="student.html">Student</a>
+        <a class="active" href="courses.html">Kurser</a>
+        <a href="assigment.html">Uppgifter</a>
+      </div>
+    </div>
+    <div class="navbutton">
+      <span style onclick="togNav()">☰</span>
+    </div>
 
   <section class = "header-img">
-    <div id = "header-arbetsmetodik">
-      ARBETSMETODIK
-    <div>
+      <h1>Arbetsmetodik</h1>
   </section>
   <section class = "fakta">
     <div class = "undervisning">
@@ -97,7 +120,18 @@
 
   </section>
 
+  <!-- FOOTER -->
+  <footer class="main-footer" id="kontakt">
+    <div class="para">
+      <p>Adress: Bamboovägen 4<br />Telefon: 08 123 45 67<br />
+      E-mail: Kundservice@pandasoft.se</p>
 
+    </div>
+    <div class="arrow">
+    <a href="#arrow-link" ><img src="img/pil.png" /></a>
+    </div>
+  </footer>
+  <script src="js/zenscroll-min.js"></script>
 <script src="js/script.js"> </script>
 </body>
 </html>
