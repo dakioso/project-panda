@@ -2072,3 +2072,11 @@ p3{
 
   justify-content: center;
 }
+
+#welcomeDiv {
+  display: none;
+  position: absolute;
+  top: 925px;
+  left: 100px;
+  color: green;
+}
