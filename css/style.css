@@ -772,6 +772,12 @@ span {
   margin-right: 70px;
   width: 300px;
 }
+
+.finished a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .button1 {
 background-color: #ffa500;
 border: none;
@@ -1612,12 +1618,7 @@ p3{
 .head-cont{
   background-color: #292929;
   display: flex;
-
-  border: 1px solid red;
   justify-content: center;
-
-
-
 }
 
 .head-cont div{
@@ -1626,14 +1627,14 @@ p3{
 }
 
 .head-cont h1{
-  border: 2px solid white;
+  color: #ffa500;
 }
 
 .radiobuttons p5{
   letter-spacing: 8px;
 }
 .slidersinput{
-  letter-spacing: 8px;  
+  letter-spacing: 8px;
 }
 
 #formAnswerPos{
