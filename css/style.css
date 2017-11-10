@@ -1850,9 +1850,9 @@ p3{
 }
 
 .teacherTask input::-webkit-input-placeholder {
- font-size: 14px;
- line-height: 3;
- color:black;
+    font-size: 14px;
+    line-height: 3;
+	color:black;
 }
 
 .teacherTask input::-webkit-clear-button {
@@ -1862,8 +1862,11 @@ p3{
 [type="date"]::-webkit-inner-spin-button {
   display: none;
 }
-[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+[type="date"]::-webkit-calendar-picker-indicator { 
+ position:absolute;
+ left:91%;
+ color:black;
+ font-size:10px;
 }
 
 .teacherTask input {
