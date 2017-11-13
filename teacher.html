@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/panda.png"/>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <title>PandaSoft</title>
 </head>
 <body>
@@ -42,14 +43,6 @@
       <option value="vecko">Veckoutvärdering</option>
       <option value="kurs">Kursutvärdering</option>
     </select>
-    <select onchange="checkDay(this.value)" id="dayOption">
-      <option>Välj dag</option>
-      <option value="måndag">Måndag 23/10</option>
-      <option value="tisdag">Tisdag 24/10</option>
-      <option value="onsdag">Onsdag 25/10</option>
-      <option value="torsdag">Torsdag 26/10</option>
-      <option value="fredag">Fredag 27/10</option>
-    </select>
     <select onchange="showCourseBox(this.value)" id="courseOption">
       <option>Välj kurs</option>
       <option value="arbetsmetodik">Arbetsmetodik</option>
@@ -65,9 +58,9 @@
     <div class="attendance-hidden">
 
     </div>
-    <canvas id="dailyCanvas" width="400px" height="400px"></canvas>
-    <canvas id="weeklyCanvas" width="600px" height="400px"></canvas>
-    <canvas id="courseCanvas" width="600px" height="400px"></canvas>
+
+
+
 
     <div class="attendance">
       <section>
@@ -122,6 +115,17 @@
         <li>Kursen var för kort, jag känner att jag inte har hunnit lära mig allt som förväntades av mig</li>
       </ul>
     </div>
+  </section>
+  <section class="utvärdering">
+  
+    <canvas id="weeklyCanvas"></canvas>
+    <div class="smileys">
+      <img src="img/happy.png" alt="happy picture">
+      <img src="img/neutral.png" alt="neutral picture">
+      <img src="img/sad.png" alt="sad picture">
+    </div>
+    <div id="chart_div"></div>
+    <canvas id="courseCanvas"></canvas>
   </section>
 
 
@@ -195,7 +199,7 @@
           <option disabled selected value>Välj klass</option>
           <option value="1">FE 17</option>
           <option value="2">FE 16</option>
-       
+
         </select>
         <br>
         <select>
@@ -234,6 +238,8 @@
       </div>
     </div>
   </div>
+
+
     <!-- FOOTER -->
     <footer class="teacher-footer" id="kontakt">
       <div class="para">
@@ -245,7 +251,8 @@
           <a href="#arrow-link" ><img src="img/pil.png" /></a>
         </div>
       </footer>
-          <script src="js/zenscroll-min.js"></script>
+
+      <script src="js/zenscroll-min.js"></script>
       <script src="js/teacher.js"> </script>
     </body>
     </html>
