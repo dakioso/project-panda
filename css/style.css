@@ -544,7 +544,7 @@ span {
   left:0px;
   top:150px;
   color:#ffa500;
-  height:190px
+  height:230px
 
 }
 
@@ -1862,7 +1862,7 @@ p3{
 [type="date"]::-webkit-inner-spin-button {
   display: none;
 }
-[type="date"]::-webkit-calendar-picker-indicator { 
+[type="date"]::-webkit-calendar-picker-indicator {
  position:absolute;
  left:91%;
  color:black;
