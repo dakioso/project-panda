@@ -36,10 +36,12 @@ function drawCrosshairs() {
 
 // getElements for Canvas and optionlists
 let chart_div = document.getElementById('chart_div'),
+    chart_div_smileys = document.getElementById('smileys'),
     weeklyCanvas = document.getElementById('weeklyCanvas'),
     courseCanvas = document.getElementById('courseCanvas'),
     courseOption = document.getElementById('courseOption'),
     weeklyResponse = document.getElementById('weeklyAnswers'),
+    weekOption = document.getElementById('weekOption'),
     courseAnswers = document.getElementById('courseAnswers1');
 
 // Weekly answers array with good and improvements from the students
@@ -72,28 +74,33 @@ let showBox = function(box){
 
   if(box == 'daglig'){
       chart_div.style.display = 'flex';
+      chart_div_smileys.style.display = 'block';
       weeklyCanvas.style.display = 'none';
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
-      weeklyResponse.style.display = 'none';
-      courseAnswers.style.display = 'none';
+      weeklyAnswers1.style.display = 'none';
+      weekOption.style.display = 'none';
+      courseAnswers1.style.display = 'none';
   } else if(box == 'vecko'){
       weeklyCanvas.style.display = 'flex';
-      weeklyResponse.style.display = 'block';
-      chart_div.style.display = 'none';
+      weekOption.style.display = 'block';
       courseCanvas.style.display = 'none';
       courseOption.style.display = 'none';
-      courseAnswers.style.display = 'none';
-      drawWeek();
-  } else if(box == 'kurs'){
+      courseAnswers1.style.display = 'none';
       chart_div.style.display = 'none';
-      weeklyCanvas.style.display = 'none';
-      weeklyResponse.style.display = 'none';
+      chart_div_smileys.style.display = 'none';
+      return drawWeek();
+  } else if(box == 'kurs'){
       courseCanvas.style.display = 'flex';
-      courseOption.style.display = 'flex';
+      courseOption.style.display = 'block';
+      chart_div.style.display = 'none';
+      chart_div_smileys.style.display = 'none';
+      weeklyCanvas.style.display = 'none';
+      weeklyAnswers1.style.display = 'none';
+      weekOption.style.display = 'none';
+      return drawCourse();
   }
 }
-
 
 function drawWeek(){
   let canvasAreaWeekly = document.getElementById('weeklyCanvas'),
@@ -256,6 +263,7 @@ function pushWeek(good, improvement){
       fragment = document.createDocumentFragment(),
       element1;
 
+      showWeeklyAnswer.style.display = 'block';
       showWeeklyAnswer.innerHTML = "";
       element1 = document.createElement('h2');
       element1.appendChild(document.createTextNode('Vad har varit bra'));
@@ -340,8 +348,7 @@ function clearAttendance() {
 }
 function showCourseBox(value){
   if(value == 'arbetsmetodik'){
-      weeklyResponse.style.display = 'none';
-      courseAnswers.style.display = 'block';
+    courseAnswers.style.display = 'block';
     return drawCourse();
   }
 }

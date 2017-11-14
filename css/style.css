@@ -1654,52 +1654,6 @@ p3{
 
 }
 
-.canv {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 20px;
-  margin-top: 0;
-}
-
-
-#courseOption {
-  display: block;
-}
-
-
-
-
-#weeklyAnswers {
-  display: none;
-  width: 600px;
-  height: 300px;
-  overflow-y: scroll;
-  position: absolute;
-  top: 607px;
-  border: 1px solid #292929;
-  font-size: 1.3em;
-}
-
-#courseAnswers1 {
-  display: none;
-  width: 600px;
-  height: 300px;
-  overflow-y: scroll;
-  position: absolute;
-  top: 607px;
-  border: 1px solid #292929;
-  font-size: 1.3em;
-}
-
-.weekAndCourseAnswers h2 {
-  font-weight: bold;
-  text-align: center;
-}
-
-.weekAndCourseAnswers li {
-  margin-left: 10px;
-}
 
 .testing {
   display: flex;
@@ -2065,55 +2019,115 @@ p3{
   color: green;
 }
 
-.utvärdering {
+#utvärdering {
   width: 100%;
-  height: 500px;
+  height: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #292929;
+  color: white;
+}
+#utvärdering h1 {
+  position: relative;
+  top: -30px;
+  margin: 0;
+}
+
+#canvasRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #chart_div {
+  display: flex;
   border: 1px solid gray;
   width: 600px;
   height: 400px;
   background: #f7f7f7;
-  z-index: 1;
-
 }
 
 #weeklyCanvas {
+  display: none;
+
   border: 1px solid gray;
   background: #f7f7f7;
-  width: 400px;
-  height: 300px;
-  position: relative;
-  left: 200px
 
 }
 
 #courseCanvas {
-
+  display: none;
   border: 1px solid gray;
-  width: 400px;
-  height: 300px;
-  position: relative;
-  right: 200px;
+  background: white;
+
 }
 
-.smileys {
+#smileys {
   width: 100px;
-  height: 200px;
-  z-index: 2;
+  height: 300px;
+  z-index: 1;
   position: relative;
-  left: 100px;
+  left: 120px;
+  top:90px;
 }
 
-.smileys img {
+#smileys img {
   display: block;
   width: 40px;
   height: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
 
+}
+
+
+.canv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 20px;
+  margin-top: 0;
+}
+
+
+#courseOption {
+  display: none;
+}
+
+#weekOption {
+  display: none;
+}
+#courseAnswers1 {
+  display: none;
+  width: 25%;
+  height: 400px;
+  overflow-y: scroll;
+  font-size: 1.3em;
+}
+
+#weeklyAnswers1 {
+  display: none;
+  width: 25%;
+  height: 400px;
+  overflow-y: scroll;
+  font-size: 1.3em;
+}
+
+.weekAndCourseAnswers h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.weekAndCourseAnswers li {
+  margin-left: 10px;
+}
+
+#selectLists {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
 }
