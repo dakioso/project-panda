@@ -1085,6 +1085,31 @@ padding-top: 10px;
   text-transform: uppercase;
   font-weight: 600;
 }
+/* teacherscheme*/
+.schemebox {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+.teacher-scheme {
+  position: relative;
+  border: 2px solid #292929;
+  color: white;
+  width: 70%;
+  height:350px;
+  text-align: center;
+  color:black;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#newss{
+  margin-top: 280px;
+}
+
+.teacher-scheme p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 /* arbetsmetodik*/
 .header-img{
   display: flex;
