@@ -1,6 +1,9 @@
 // load line-chart api from google to daily line-graph
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawCrosshairs);
+// load Combo Chart api from google to course graph
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawVisualization);
 
 //navbar open and close.
 function togNav() {
@@ -33,12 +36,35 @@ function drawCrosshairs() {
     chart.setSelection([{row: 5, column: 38}]);
 }
 
+// google combo-chart function for course graph
+function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
+         ['2004/05',  165,      938,         522,             998,           450,      614.6],
+         ['2005/06',  135,      1120,        599,             1268,          288,      682],
+         ['2006/07',  157,      1167,        587,             807,           397,      623],
+         ['2007/08',  139,      1110,        615,             968,           215,      609.4],
+         ['2008/09',  136,      691,         629,             1026,          366,      569.6]
+      ]);
+
+    var options = {
+      title : 'Monthly Coffee Production by Country',
+      vAxis: {title: 'Cups'},
+      hAxis: {title: 'Month'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div1'));
+    chart.draw(data, options);
+}
 
 // getElements for Canvas and optionlists
 let chart_div = document.getElementById('chart_div'),
     chart_div_smileys = document.getElementById('smileys'),
     weeklyCanvas = document.getElementById('weeklyCanvas'),
-    courseCanvas = document.getElementById('courseCanvas'),
+    chart_div1 = document.getElementById('chart_div1'),
     courseOption = document.getElementById('courseOption'),
     weeklyResponse = document.getElementById('weeklyAnswers'),
     weekOption = document.getElementById('weekOption'),
@@ -65,18 +91,14 @@ let attendance = document.getElementById("attendanceCode");
 let notif = document.getElementById("notification");
 let aCourse = document.getElementById("attendanceCourse");
 
-
-let show = function(){
-  document.getElementsByClassName('canv')[0].style.display = 'flex';
-}
-
+//shows the canvas evaluation
 let showBox = function(box){
 
   if(box == 'daglig'){
       chart_div.style.display = 'flex';
       chart_div_smileys.style.display = 'block';
       weeklyCanvas.style.display = 'none';
-      courseCanvas.style.display = 'none';
+      chart_div1.style.display = 'none';
       courseOption.style.display = 'none';
       weeklyAnswers1.style.display = 'none';
       weekOption.style.display = 'none';
@@ -84,21 +106,23 @@ let showBox = function(box){
   } else if(box == 'vecko'){
       weeklyCanvas.style.display = 'flex';
       weekOption.style.display = 'block';
-      courseCanvas.style.display = 'none';
+      chart_div1.style.display = 'none';
       courseOption.style.display = 'none';
       courseAnswers1.style.display = 'none';
       chart_div.style.display = 'none';
       chart_div_smileys.style.display = 'none';
       return drawWeek();
   } else if(box == 'kurs'){
-      courseCanvas.style.display = 'flex';
+      chart_div1.style.display = 'flex';
+      chart_div1.style.visibility = 'visible';
+      chart_div1.style.right = 'unset';
+      chart_div1.style.position = 'unset';
       courseOption.style.display = 'block';
       chart_div.style.display = 'none';
       chart_div_smileys.style.display = 'none';
       weeklyCanvas.style.display = 'none';
       weeklyAnswers1.style.display = 'none';
       weekOption.style.display = 'none';
-      return drawCourse();
   }
 }
 
@@ -353,62 +377,6 @@ function showCourseBox(value){
   }
 }
 
-function drawCourse(){
-  let courseArea = document.getElementById('courseCanvas'),
-      sideNumber1 = courseArea.getContext('2d'),
-      courseInfo = courseArea.getContext('2d'),
-      lines1 = courseArea.getContext('2d');
-
-      lines1.save();
-      lines1.fillStyle = "rgba(41, 41, 41, 0.5)";
-      lines1.lineWidth = 0.2;
-
-      let yValue = 295;
-      for(let i = 0; i < 9; i++){
-        lines1.beginPath();
-        lines1.moveTo(30, yValue);
-        lines1.lineTo(600, yValue);
-        lines1.stroke();
-        yValue -= 25;
-      }
-        lines1.restore();
-
-      courseInfo.save();
-      courseInfo.fillStyle = '#292929';
-      courseInfo.font = 'bold 22px Lato, sans-serif';
-      courseInfo.fillText('Arbetsmetodik', 230, 40);
-      courseInfo.font = 'bold 16px Lato, sans-serif';
-      courseInfo.fillText('Hur upplevde du tempot', 70, 350);
-      courseInfo.fillText('i denna kurs', 100, 370 );
-
-      courseInfo.fillText('Hur upplevde du', 275, 350);
-      courseInfo.fillText('svårighetsgraden', 273, 370);
-
-      courseInfo.fillText('Hur välplanerad var', 440, 350);
-      courseInfo.fillText('kursen under läsåret', 435, 370);
-
-      courseInfo.fillStyle = 'green';
-      courseInfo.fillRect(123, 325, 30, -179);
-
-      courseInfo.fillStyle = 'red';
-      courseInfo.fillRect(305, 325, 30, -104);
-
-      courseInfo.fillStyle = 'blue';
-      courseInfo.fillRect(485, 325, 30, -204);
-      courseInfo.restore();
-
-      sideNumber1.save();
-      sideNumber1.fillStyle = '#292929';
-      sideNumber1.font = 'bold 16px Lato, sans-serif';
-      sideNumber1.fillText('Dåligt', 15, 330);
-      sideNumber1.fillText('1', 15, 300);
-      sideNumber1.fillText('2', 15, 250);
-      sideNumber1.fillText('3', 15, 200);
-      sideNumber1.fillText('4', 15, 150);
-      sideNumber1.fillText('5', 15, 100);
-      sideNumber1.fillText('Bra', 15, 70);
-      sideNumber1.restore();
-}
 
 
 function visanärvarolista() {

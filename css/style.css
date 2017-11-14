@@ -2057,11 +2057,15 @@ p3{
 
 }
 
-#courseCanvas {
-  display: none;
+#chart_div1 {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
   border: 1px solid gray;
-  background: white;
-
+  width: 600px;
+  height: 400px;
+  background: #f7f7f7;
 }
 
 #smileys {
