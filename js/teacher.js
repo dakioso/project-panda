@@ -22,7 +22,7 @@ function drawCrosshairs() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'X');
       data.addColumn('number', 'Hur känner du dig idag');
-      data.addRows([ ["måndag 13/11\nAntal svar: 19", 2], ["tisdag 14/11\nAntal svar: 28", 3], ["onsdag 15/11\nAntal svar: 23", 2], ["torsdag 16/11\nAntal svar: 21", 4], ["fredag 17/11\nAntal svar: 31", 4] ]);
+      data.addRows([ ["måndag 13/11\nAntal svar: 19", 2], ["tisdag 14/11\nAntal svar: 28", 1], ["onsdag 15/11\nAntal svar: 23", 3], ["torsdag 16/11\nAntal svar: 21", 2], ["fredag 17/11\nAntal svar: 31", 3] ]);
 
   var options = {
     colors: ['orange'],
@@ -32,8 +32,9 @@ function drawCrosshairs() {
   }
 };
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
     chart.draw(data, options);
-    chart.setSelection([{row: 5, column: 38}]);
+    chart.setSelection([{row: 3, column: 3}]);
 }
 
 // google combo-chart function for course graph
@@ -67,7 +68,8 @@ let chart_div = document.getElementById('chart_div'),
     courseOption = document.getElementById('courseOption'),
     weeklyResponse = document.getElementById('weeklyAnswers'),
     weekOption = document.getElementById('weekOption'),
-    courseAnswers = document.getElementById('courseAnswers1');
+    courseAnswers = document.getElementById('courseAnswers1'),
+    canvasRow = document.getElementById('canvasRow');
 
 // Weekly answers array with good and improvements from the students
 let weekAnswer = [
@@ -106,6 +108,7 @@ let showBox = function(box){
       weeklyCanvas.style.display = 'flex';
       weekOption.style.display = 'block';
       chart_div1.style.display = 'none';
+
       courseOption.style.display = 'none';
       courseAnswers1.style.display = 'none';
       chart_div.style.display = 'none';
@@ -118,6 +121,7 @@ let showBox = function(box){
       chart_div1.style.position = 'unset';
       courseOption.style.display = 'block';
       chart_div.style.display = 'none';
+
       chart_div_smileys.style.display = 'none';
       weeklyCanvas.style.display = 'none';
       weeklyAnswers1.style.display = 'none';

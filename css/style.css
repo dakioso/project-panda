@@ -2039,23 +2039,38 @@ p3{
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
+
 #chart_div {
-  display: flex;
-  border: 1px solid gray;
   width: 600px;
   height: 400px;
+  padding: 0;
+  margin: 0;
   background: #f7f7f7;
 }
 
 #weeklyCanvas {
   display: none;
-
   border: 1px solid gray;
   background: #f7f7f7;
 
 }
+
+@media screen and (max-width: 800px) {
+    #weeklyCanvas {
+        width: 80%;
+        height: 80%;
+    } #utvärdering {
+      height: 1100px;
+    } #canvasRow {
+      flex-wrap: wrap;
+    } #courseAnswers1 {
+      margin-top: 20px;
+    }
+}
+
 
 #chart_div1 {
   display: flex;
@@ -2069,20 +2084,18 @@ p3{
 }
 
 #smileys {
-  width: 100px;
-  height: 300px;
+  height: 220px;
   z-index: 1;
   position: relative;
-  left: 120px;
-  top:90px;
+  left: 106px;
+  top: 110px;
 }
 
 #smileys img {
   display: block;
   width: 40px;
   height: 40px;
-  padding-bottom: 45px;
-
+  padding-bottom: 25px;
 }
 
 
@@ -2104,7 +2117,7 @@ p3{
 }
 #courseAnswers1 {
   display: none;
-  width: 25%;
+  width: 80%;
   height: 400px;
   overflow-y: scroll;
   font-size: 1.3em;
@@ -2112,7 +2125,7 @@ p3{
 
 #weeklyAnswers1 {
   display: none;
-  width: 25%;
+  width: 80%;
   height: 400px;
   overflow-y: scroll;
   font-size: 1.3em;
