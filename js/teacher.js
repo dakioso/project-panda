@@ -22,7 +22,7 @@ function drawCrosshairs() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'X');
       data.addColumn('number', 'Hur känner du dig idag');
-      data.addRows([ ["måndag 13/11", 2], ["tisdag 14/11", 3], ["onsdag 15/11", 2], ["torsdag 16/11", 4], ["fredag 17/11", 4] ]);
+      data.addRows([ ["måndag 13/11\nAntal svar: 19", 2], ["tisdag 14/11\nAntal svar: 28", 3], ["onsdag 15/11\nAntal svar: 23", 2], ["torsdag 16/11\nAntal svar: 21", 4], ["fredag 17/11\nAntal svar: 31", 4] ]);
 
   var options = {
     colors: ['orange'],
@@ -40,18 +40,17 @@ function drawCrosshairs() {
 function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
-         ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
-         ['2004/05',  165,      938,         522,             998,           450,      614.6],
-         ['2005/06',  135,      1120,        599,             1268,          288,      682],
-         ['2006/07',  157,      1167,        587,             807,           397,      623],
-         ['2007/08',  139,      1110,        615,             968,           215,      609.4],
-         ['2008/09',  136,      691,         629,             1026,          366,      569.6]
+         ['Month', 'Jättedåligt', 'Dåligt', 'Neutral', 'Bra', 'Jättebra'],
+         ['Hur upplevde du tempot i denna kurs',  3, 4, 4, 6, 3],
+         ['Hur svår upplevde du kursen',  3, 5, 3, 4, 2],
+         ['Hur välplanerad var kursen under läsåret',  2, 3, 2, 6, 7],
+
       ]);
 
     var options = {
-      title : 'Monthly Coffee Production by Country',
-      vAxis: {title: 'Cups'},
-      hAxis: {title: 'Month'},
+      title : 'Kursutvärdering',
+      vAxis: {title: 'Antal svar'},
+      hAxis: {title: 'Arbetsmetodik'},
       seriesType: 'bars',
       series: {5: {type: 'line'}}
     };
@@ -373,7 +372,6 @@ function clearAttendance() {
 function showCourseBox(value){
   if(value == 'arbetsmetodik'){
     courseAnswers.style.display = 'block';
-    return drawCourse();
   }
 }
 
