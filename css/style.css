@@ -2148,3 +2148,14 @@ p3{
   width: 100%;
   height: 50px;
 }
+
+
+.register {
+  border: 2px solid black;
+  width: 350px;
+  height: 450px;
+}
+
+.register select input {
+  align-content: center;
+}
