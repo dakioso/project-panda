@@ -1990,7 +1990,17 @@ p3{
   flex-shrink: 1;
   margin:0;
 }
+  #varoBehållare .toggle1{
+    opacity: 1.0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 100%;
+  }
 
+  #varoBehållare .toggle2{
+    opacity: 0.2;
+    border: 1px solid #000;
+    border-radius: 100%;
+  }
 
 
 #varoBehållare h3{
@@ -2006,8 +2016,7 @@ p3{
 
 .närvaroflex{
   display: flex;
-
-
+  margin-top: 20px;
   justify-content: center;
 }
 
