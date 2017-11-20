@@ -59,7 +59,7 @@
             <option value="php">PHP</option>
           </select>
           <input type="button" value="Generera" onClick="numGen()" /><br />
-          <input type="button" value="Närvarolista" onClick="visanärvarolista()" /><br />
+        <a href="#narvaroscroll"><input type="button" value="Närvarolista" onClick="visanärvarolista()" /><br /></a>
         </div>
       </section>
     </div>
@@ -141,54 +141,51 @@
 
 
   <div class = "närvaroflex">
-
+    <a id="narvaroscroll"></a>
   <section class ="närvaro-cont" id =  "närvaro-hidden" style="display:none;">
 
     <div class = "attendance-list">
 
         <section class ="elever" id="varoBehållare" >
-          <div><h3>Elever 16 av 30</h3></div>
-          <div class ="attendance-listcont"> <h2>
-          Elaine Stenqvist <br> Amelie Stenqvist <br>Inez Stenqvist<br> Nadine Stenqvist<br>Tea Stenqvist<br> Nilla Stenqvist<br> Ditte Stenqvist<br>
-          Narin Stenqvist<br>Emir Stenqvist<br> Theodor Stenqvist<br> Hasan Stenqvist<br> Wiktor Stenqvist<br> Einar Stenqvist<br> Nicolai Stenqvist<br> Allan Stenqvist<br> Sian Stenqvist<br>
+          <div><h3>Elever 9 av 20</h3></div>
+          <div class ="attendance-listcont"><h2>
+          Elaine Stenqvist <br> Amelie Stenqvist <br>Inez Stenqvist<br> Nadine Stenqvist<br>Tea Stenqvist<br>
+          Narin Stenqvist<br>Emir Stenqvist<br> Theodor Stenqvist<br> Hasan Stenqvist<br>
         </h2>
           </div>
         </section>
 
         <div class ="närvaro" id="varoBehållare">
-          <div><h3>Närvaro</h3></div>
+          <div><h3>Datum: 25/11</h3></div>
           <div class ="attendance-listcont">
             <h2>
-            <img src="img/passed.png" width="12px" alt="" class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt="" class ="here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12x" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
-            <img src="img/passed.png" width="12px" alt="">  <img src="img/failed.png" width="12px" alt=""class = "here"><br>
-            <img src="img/passed.png" width="12px" alt=""class = "nothere">  <img src="img/failed.png" width="12px" alt=""><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+
             </h2>
           </div>
         </div>
 
         <section class ="elever" id="varoBehållare" >
-          <div><h3>Kurs och datum</h3></div>
+          <div><h3>Datum: 28/11</h3></div>
           <div class ="attendance-listcont">
-        <h2>
-          Arbetsmetodik: 21/11<br> Arbetsmetodik: 21/11 <br>Arbetsmetodik: 21/11<br>
-          Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>
-          Arbetsmetodik: 21/11<br>
-          Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>
-          Arbetsmetodik: 21/11<br> Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>
-          Arbetsmetodik: 21/11<br> Arbetsmetodik: 21/11<br>Arbetsmetodik: 21/11<br>
+          <h2>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
         </h2>
           </div>
         </section>
