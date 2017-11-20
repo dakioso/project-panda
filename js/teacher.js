@@ -5,6 +5,8 @@ google.charts.setOnLoadCallback(drawCrosshairs);
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
 
+
+
 //navbar open and close.
 function togNav() {
   var nav = document.getElementById("nav");
@@ -379,8 +381,107 @@ function showCourseBox(value){
   }
 }
 
-
-
 function visanärvarolista() {
    document.getElementById('närvaro-hidden').style.display = "block";
+}
+
+/*------------------------------------------------------------------------
+                        Dropzone functions
+------------------------------------------------------------------------*/
+
+let addDiv = true;
+
+function checkValidDivs(form){
+let divMessage = document.getElementById('numberErrorMessage'),
+    classList = document.getElementById('studentClassList');
+  if(form.totalDivs.value <= 0 || form.totalDivs.value > 9){
+    divMessage.style.marginTop = '10px';
+    divMessage.innerHTML = 'Välj ett heltal mellan 1-9';
+    divMessage.style.color = 'red';
+  } else {
+
+    divMessage.innerHTML = 'Skapar grupper...';
+    divMessage.style.color = '#00b300';
+    classList.style.display = 'flex';
+    return createDivs(form.totalDivs.value);
+  }
+}
+
+function createDivs(number){
+  while(addDiv){
+    for(let i = 1, x = number; i <= x; i++){
+      let divs = document.createElement('div');
+          divs.id = 'grupp'+i;
+          divs.ClassName = 'grupper';
+          divs.setAttribute('ondrop', 'drop_end(event)');
+          divs.setAttribute('ondragover', 'return false');
+
+      let group = document.createTextNode('Grupp: ' + i);
+          divs.appendChild(group);
+
+      let printOutDivs = document.getElementById('drop_zoneArea');
+          printOutDivs.appendChild(divs);
+    }
+          addDiv = false;
+  }
+          printStudentList('sort');
+}
+
+
+let studentClass = [
+  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
+ 'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
+ 'Simon Gribert', 'Elin Gustafsson', 'Niklas Hägg', 'Masudul Hasan', 'Nicklas Hindersson', 'Nasimul Huq', 'Jesse Jonsson', 'Carl Jovér', 'Johanna Jovér', 'Kanyarat Klayjinda', 'Christoffer Korell', 'Elin Kviberg', 'Tim Lappalainen', 'Anna Larsson', 'Elias Liljegard',
+ 'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
+ 'Alexandra Sigurdadottir', 'Viktor Stenqvist', 'Sebastian Stureson', 'Jonny Svahn', 'Mohammed Tandia', 'Thineskumar Thilakana', 'Magnus Wallin', 'Lisa Westerlundh', 'Robin Wisseng']}];
+
+
+function printStudentList(list){
+  let classList,
+      classLength = studentClass[0]['students'].length,
+      printElem = document.getElementById('studentClassList'),
+      fragment = document.createDocumentFragment(),
+      ulList = document.createElement('ul');
+
+      if(list == 'sort'){
+        classList = studentClass[0]['students'].sort()
+      } else if (list == 'unsort') {
+        classList = studentClass[0]['students'];
+      }
+
+  for(let i = 0, x = classLength; i < x; i++ ){
+    let studentContent = document.createElement('li');
+        studentContent.appendChild(document.createTextNode(classList[i]));
+        studentContent.id = i + 1;
+        studentContent.setAttribute('class', 'dragClass');
+        studentContent.setAttribute('draggable', 'true');
+        studentContent.setAttribute('ondragstart', 'drag_start(event)' );
+
+        ulList.appendChild(studentContent);
+  }
+
+        fragment.appendChild(ulList);
+        printElem.appendChild(fragment);
+        studentClassList.style.display = 'flex';
+        console.log(classLength);
+
+}
+
+function _(id){
+   return document.getElementById(id);
+}
+var droppedIn = false;
+
+function drag_start(event) {
+    event.dataTransfer.dropEffect = "move";
+    event.dataTransfer.setData("text", event.target.getAttribute('id') );
+}
+
+var droppedIn = false;
+
+function drop_end(event){
+    event.preventDefault(); /* Prevent undesirable default behavior while dropping */
+    var elem_id = event.dataTransfer.getData("text");
+    event.target.appendChild( _(elem_id) );
+    droppedIn = true;
 }
