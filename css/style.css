@@ -2149,13 +2149,30 @@ p3{
   height: 50px;
 }
 
+.register-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 
-.register {
-  border: 2px solid black;
-  width: 350px;
-  height: 450px;
 }
 
-.register select input {
-  align-content: center;
+.register {
+  border: 1px solid black;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.register h2 {
+  text-align: center;
+}
+
+.register select {
+  margin: 10px;
+}
+
+.register input {
+  margin: 5px;
 }
