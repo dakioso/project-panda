@@ -1,3 +1,10 @@
+// load line-chart api from google to daily line-graph
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawCrosshairs);
+// load Combo Chart api from google to course graph
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawVisualization);
+
 //navbar open and close.
 function togNav() {
   var nav = document.getElementById("nav");
@@ -10,24 +17,59 @@ function togNav() {
  }
 }
 
+// google line-chart function for daily graph
+function drawCrosshairs() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'X');
+      data.addColumn('number', 'Hur känner du dig idag');
+      data.addRows([ ["måndag 13/11\nAntal svar: 19", 2], ["tisdag 14/11\nAntal svar: 28", 1], ["onsdag 15/11\nAntal svar: 23", 3], ["torsdag 16/11\nAntal svar: 21", 2], ["fredag 17/11\nAntal svar: 31", 3] ]);
+
+  var options = {
+    colors: ['orange'],
+    crosshair: {
+    color: '#000',
+    trigger: 'selection'
+  }
+};
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+    chart.setSelection([{row: 3, column: 3}]);
+}
+
+// google combo-chart function for course graph
+function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Month', 'Jättedåligt', 'Dåligt', 'Neutral', 'Bra', 'Jättebra'],
+         ['Hur upplevde du tempot i denna kurs',  3, 4, 4, 6, 3],
+         ['Hur svår upplevde du kursen',  3, 5, 3, 4, 2],
+         ['Hur välplanerad var kursen under läsåret',  2, 3, 2, 6, 7],
+
+      ]);
+
+    var options = {
+      title : 'Kursutvärdering',
+      vAxis: {title: 'Antal svar'},
+      hAxis: {title: 'Arbetsmetodik'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div1'));
+    chart.draw(data, options);
+}
+
 // getElements for Canvas and optionlists
-let dailyCanvas = document.getElementById('dailyCanvas'),
+let chart_div = document.getElementById('chart_div'),
+    chart_div_smileys = document.getElementById('smileys'),
     weeklyCanvas = document.getElementById('weeklyCanvas'),
-    courseCanvas = document.getElementById('courseCanvas'),
-    dayOption = document.getElementById('dayOption'),
+    chart_div1 = document.getElementById('chart_div1'),
     courseOption = document.getElementById('courseOption'),
     weeklyResponse = document.getElementById('weeklyAnswers'),
-    courseAnswers = document.getElementById('courseAnswers1');
-
-// Daily smileys answers from the students
-let dailySurvey = [
-  {day: 'måndag', survey: ['bra', 'bra', 'dåligt','bra', 'bra', 'bra', 'dåligt', 'neutral', 'bra', 'neutral', 'bra', 'bra', 'bra', 'dåligt']},
-  {day: 'tisdag', survey: ['dåligt', 'bra', 'neutral', 'bra', 'bra', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'dåligt', 'bra']},
-  {day: 'onsdag', survey: ['neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'bra', 'neutral', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt' ]},
-  {day: 'torsdag', survey: ['dåligt', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'dåligt', 'bra', 'dåligt', 'neutral', 'neutral', 'dåligt', 'bra', 'dåligt']},
-  {day: 'fredag', survey: ['bra','dåligt', 'bra', 'dåligt', 'bra', 'bra', 'bra','dåligt', 'neutral', 'dåligt', 'bra', 'neutral', 'neutral', 'dåligt', 'dåligt', 'neutral', 'dåligt']}
-];
-
+    weekOption = document.getElementById('weekOption'),
+    courseAnswers = document.getElementById('courseAnswers1'),
+    canvasRow = document.getElementById('canvasRow');
 
 // Weekly answers array with good and improvements from the students
 let weekAnswer = [
@@ -63,159 +105,43 @@ let show = function(){
   document.getElementsByClassName('canv')[0].style.display = 'flex';
 }
 
+
+//shows the canvas evaluation
 let showBox = function(box){
 
   if(box == 'daglig'){
-      dailyCanvas.style.display = 'flex';
-      dayOption.style.display = 'flex';
+      chart_div.style.display = 'flex';
+      chart_div_smileys.style.display = 'block';
       weeklyCanvas.style.display = 'none';
-      courseCanvas.style.display = 'none';
+      chart_div1.style.display = 'none';
       courseOption.style.display = 'none';
-      weeklyResponse.style.display = 'none';
-      courseAnswers.style.display = 'none';
+      weeklyAnswers1.style.display = 'none';
+      weekOption.style.display = 'none';
+      courseAnswers1.style.display = 'none';
   } else if(box == 'vecko'){
       weeklyCanvas.style.display = 'flex';
-      weeklyResponse.style.display = 'block';
-      dailyCanvas.style.display = 'none';
-      dayOption.style.display = 'none';
-      courseCanvas.style.display = 'none';
+      weekOption.style.display = 'block';
+      chart_div1.style.display = 'none';
+
       courseOption.style.display = 'none';
-      courseAnswers.style.display = 'none';
-      drawWeek();
+      courseAnswers1.style.display = 'none';
+      chart_div.style.display = 'none';
+      chart_div_smileys.style.display = 'none';
+      return drawWeek();
   } else if(box == 'kurs'){
-      dailyCanvas.style.display = 'none';
+      chart_div1.style.display = 'flex';
+      chart_div1.style.visibility = 'visible';
+      chart_div1.style.right = 'unset';
+      chart_div1.style.position = 'unset';
+      courseOption.style.display = 'block';
+      chart_div.style.display = 'none';
+
+      chart_div_smileys.style.display = 'none';
       weeklyCanvas.style.display = 'none';
-      dayOption.style.display = 'none';
-      weeklyResponse.style.display = 'none';
-      courseCanvas.style.display = 'flex';
-      courseOption.style.display = 'flex';
+      weeklyAnswers1.style.display = 'none';
+      weekOption.style.display = 'none';
   }
 }
-
-// Search thru the dailySurvey array and check for the right day and return to pushSurvey function
-function checkDay(dag){
-    for(let i = 0, x = dailySurvey.length; i < x; i++){
-      if(dag == dailySurvey[i].day ){
-      return pushSurvey(dailySurvey[i].survey);
-    }
-  }
-}
-
-function pushSurvey(list){
-  let arr = [];
-  for(let i = 0, x = list.length; i < x; i++){
-    arr.push(list[i]);
-  }
-  return countSurvey(arr);
-}
-
-// Counts the answers from daily array
-function countSurvey(array){
-  let good = 0,
-      neutral = 0,
-      bad = 0;
-  for(let i = 0, x = array.length; i < x; i++){
-    switch(array[i]){
-      case 'bra':
-        good ++;
-        break;
-      case 'neutral':
-        neutral ++;
-        break;
-      case 'dåligt':
-        bad ++;
-        break;
-      default: console.log("oops error");
-    }
-  } return surveyXY(good, neutral, bad);
-}
-// surveyXY count the answers and return Y-value for diagram and total amount of answers
-function surveyXY(good, neutral, bad){
-  const heightPerSmiley = 20;
-  let totalSmileys = good + neutral + bad,
-      goodY = good * heightPerSmiley,
-      neutralY = neutral * heightPerSmiley,
-      badY = bad * heightPerSmiley;
-
-      return drawDay(goodY, good, neutralY, neutral, badY, bad, totalSmileys);
-}
-
-// Draw function for daily Canvas, takes y-axis parameter and total amount och votes
-function drawDay(goodY, good, neutralY, neutral, badY, bad, total ){
-  let canvasAreaDaily = document.getElementById('dailyCanvas'),
-      col1 = canvasAreaDaily.getContext('2d'),
-      col2 = canvasAreaDaily.getContext('2d'),
-      col3 = canvasAreaDaily.getContext('2d'),
-      col4 = canvasAreaDaily.getContext('2d'),
-      sidenumber = canvasAreaDaily.getContext('2d'),
-      lines = canvasAreaDaily.getContext('2d');
-
-      sidenumber.clearRect(0, 0 , 400, 400);
-      sidenumber.save();
-      sidenumber.fillStyle = '#292929';
-      sidenumber.font = 'bold 16px Lato, sans-serif';
-
-      let y = 370;
-      for(let i = 0; i < 16; i++){  // print out sidenumber 0-14 + amount of students
-        if(i < 10){
-          sidenumber.fillText(i , 15, y);
-        } else if(i < 15) {
-          sidenumber.fillText(i , 7, y);
-        } else {
-          sidenumber.font = 'bold 22px Lato, sans-serif';
-          sidenumber.fillText('Antal Elever', 7, y);
-        }
-          y-= 20;
-}
-        sidenumber.restore();
-
-let yValue = 367;
-for(let i = 0; i < 15; i++){  // print out 15 vertical lines
-  lines.fillStyle = "rgba(41, 41, 41, 0.5)";
-  lines.lineWidth = 0.2;
-  lines.beginPath();
-  lines.moveTo(20, yValue);
-  lines.lineTo(400, yValue);
-  lines.stroke();
-yValue -= 20;
-}
-
-// goodY neutralY and badY prints out 20px * amount smileys on y-axis
-      col1.save();
-      col1.fillStyle = '#ffa500';
-      col1.fillRect (90, 367, 30, -goodY );
-      col1.font = 'bold 16px Lato, sans-serif';
-      col1.fillText(good, 102, (373-goodY) - 10);
-      col1.fillStyle = '#292929';
-      col1.fillText('Bra', 90, 390);
-      col1.restore();
-
-
-      col2.save();
-      col2.fillStyle = '#ffa500';
-      col2.fillRect (170, 367, 30, -neutralY );
-      col2.font = 'bold 16px Lato, sans-serif';
-      col2.fillText(neutral, 180, (373-neutralY) - 10);
-      col2.fillStyle = '#292929';
-      col2.fillText('Neutral', 160, 390);
-      col2.restore();
-
-      col3.save();
-      col3.fillStyle = '#ffa500';
-      col3.fillRect (250, 367, 30, -badY );
-      col3.font = 'bold 16px Lato, sans-serif';
-      col3.fillText(bad, 259, (373-badY) - 10);
-      col3.fillStyle = '#292929';
-      col3.fillText('Dåligt', 243, 390);
-      col3.restore();
-
-      col4.save();
-      col4.fillStyle = '#292929';
-      col3.font = 'bold 16px Lato, sans-serif';
-      col4.fillText('totalt: ' + total, 320, 390);
-      col4.restore();
-}
-
 
 function drawWeek(){
   let canvasAreaWeekly = document.getElementById('weeklyCanvas'),
@@ -378,6 +304,7 @@ function pushWeek(good, improvement){
       fragment = document.createDocumentFragment(),
       element1;
 
+      showWeeklyAnswer.style.display = 'block';
       showWeeklyAnswer.innerHTML = "";
       element1 = document.createElement('h2');
       element1.appendChild(document.createTextNode('Vad har varit bra'));
@@ -471,70 +398,21 @@ function clearAttendance() {
 }
 function showCourseBox(value){
   if(value == 'arbetsmetodik'){
-      weeklyResponse.style.display = 'none';
-      courseAnswers.style.display = 'block';
-    return drawCourse();
+    courseAnswers.style.display = 'block';
   }
 }
 
-function drawCourse(){
-  let courseArea = document.getElementById('courseCanvas'),
-      sideNumber1 = courseArea.getContext('2d'),
-      courseInfo = courseArea.getContext('2d'),
-      lines1 = courseArea.getContext('2d');
-
-      lines1.save();
-      lines1.fillStyle = "rgba(41, 41, 41, 0.5)";
-      lines1.lineWidth = 0.2;
-
-      let yValue = 295;
-      for(let i = 0; i < 9; i++){
-        lines1.beginPath();
-        lines1.moveTo(30, yValue);
-        lines1.lineTo(600, yValue);
-        lines1.stroke();
-        yValue -= 25;
-      }
-        lines1.restore();
-
-      courseInfo.save();
-      courseInfo.fillStyle = '#292929';
-      courseInfo.font = 'bold 22px Lato, sans-serif';
-      courseInfo.fillText('Arbetsmetodik', 230, 40);
-      courseInfo.font = 'bold 16px Lato, sans-serif';
-      courseInfo.fillText('Hur upplevde du tempot', 70, 350);
-      courseInfo.fillText('i denna kurs', 100, 370 );
-
-      courseInfo.fillText('Hur upplevde du', 275, 350);
-      courseInfo.fillText('svårighetsgraden', 273, 370);
-
-      courseInfo.fillText('Hur välplanerad var', 440, 350);
-      courseInfo.fillText('kursen under läsåret', 435, 370);
-
-      courseInfo.fillStyle = 'green';
-      courseInfo.fillRect(123, 325, 30, -179);
-
-      courseInfo.fillStyle = 'red';
-      courseInfo.fillRect(305, 325, 30, -104);
-
-      courseInfo.fillStyle = 'blue';
-      courseInfo.fillRect(485, 325, 30, -204);
-      courseInfo.restore();
-
-      sideNumber1.save();
-      sideNumber1.fillStyle = '#292929';
-      sideNumber1.font = 'bold 16px Lato, sans-serif';
-      sideNumber1.fillText('Dåligt', 15, 330);
-      sideNumber1.fillText('1', 15, 300);
-      sideNumber1.fillText('2', 15, 250);
-      sideNumber1.fillText('3', 15, 200);
-      sideNumber1.fillText('4', 15, 150);
-      sideNumber1.fillText('5', 15, 100);
-      sideNumber1.fillText('Bra', 15, 70);
-      sideNumber1.restore();
-}
 
 
 function visanärvarolista() {
    document.getElementById('närvaro-hidden').style.display = "block";
+}
+
+function toggleClass(el){
+    if (el.className == "toggle1") {
+      el.className = "toggle2";
+    }
+    else {
+      el.className = "toggle1";
+    }
 }

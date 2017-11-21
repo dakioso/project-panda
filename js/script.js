@@ -1,7 +1,8 @@
 // user-array with username & password.
 let users = [
   {username: 'student', password: 'password1'},
-  {username: 'lärare', password: 'password2'}
+  {username: 'lärare', password: 'password2'},
+  {username: 'admin', password:'password3'}
 ];
 
 // login-button function opens and close login-box
@@ -42,6 +43,9 @@ function loginCheck(form){
     } else if(form.userId.value === 'lärare'){
         return window.location.replace('teacher.html');
       }
+      else if(form.userId.value === 'admin'){
+          return window.location.replace('admin.html');
+        }
     }
   }  error.innerText = "Fel användarnamn eller lösenord.";
 }

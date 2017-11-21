@@ -1660,71 +1660,6 @@ p3{
 
 }
 
-.canv {
-  display: none;
-  width: 100%;
-  justify-content: center;
-  height: 20px;
-  margin-top: 0;
-}
-
-#dailyCanvas {
-  border: 1px solid gray;
-  display: none;
-  background: #f7f7f7;
-}
-
-#dayOption{
-  display: none;
-}
-
-#courseOption {
-  display: none;
-}
-
-#weeklyCanvas {
-  display: none;
-  border: 1px solid gray;
-  background: #f7f7f7;
-  margin-left: 13px;
-}
-
-#courseCanvas {
-  display: none;
-  border: 1px solid gray;
-  margin-left: 13px;
-}
-
-#weeklyAnswers {
-  display: none;
-  width: 600px;
-  height: 300px;
-  overflow-y: scroll;
-  position: absolute;
-  top: 607px;
-  border: 1px solid #292929;
-  font-size: 1.3em;
-}
-
-#courseAnswers1 {
-  display: none;
-  width: 600px;
-  height: 300px;
-  overflow-y: scroll;
-  position: absolute;
-  top: 607px;
-  border: 1px solid #292929;
-  font-size: 1.3em;
-}
-
-.weekAndCourseAnswers h2 {
-  font-weight: bold;
-  text-align: center;
-}
-
-.weekAndCourseAnswers li {
-  margin-left: 10px;
-}
 
 .testing {
   display: flex;
@@ -1856,9 +1791,9 @@ p3{
 }
 
 .teacherTask input::-webkit-input-placeholder {
- font-size: 14px;
- line-height: 3;
- color:black;
+    font-size: 14px;
+    line-height: 3;
+	color:black;
 }
 
 .teacherTask input::-webkit-clear-button {
@@ -1869,7 +1804,10 @@ p3{
   display: none;
 }
 [type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+ position:absolute;
+ left:91%;
+ color:black;
+ font-size:10px;
 }
 
 .teacherTask input {
@@ -2058,7 +1996,17 @@ p3{
   flex-shrink: 1;
   margin:0;
 }
+  #varoBehållare .toggle1{
+    opacity: 1.0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 100%;
+  }
 
+  #varoBehållare .toggle2{
+    opacity: 0.2;
+    border: 1px solid #000;
+    border-radius: 100%;
+  }
 
 
 #varoBehållare h3{
@@ -2074,8 +2022,7 @@ p3{
 
 .närvaroflex{
   display: flex;
-
-
+  margin-top: 20px;
   justify-content: center;
 }
 
@@ -2085,4 +2032,162 @@ p3{
   top: 925px;
   left: 100px;
   color: green;
+}
+
+#utvärdering {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #292929;
+  color: white;
+}
+#utvärdering h1 {
+  position: relative;
+  top: -30px;
+  margin: 0;
+}
+
+#canvasRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+#chart_div {
+  width: 600px;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+#weeklyCanvas {
+  display: none;
+  border: 1px solid gray;
+  background: #f7f7f7;
+
+}
+
+@media screen and (max-width: 800px) {
+    #weeklyCanvas {
+        width: 80%;
+        height: 80%;
+    } #utvärdering {
+      height: 1100px;
+    } #canvasRow {
+      flex-wrap: wrap;
+    } #courseAnswers1 {
+      margin-top: 20px;
+    }
+}
+
+
+#chart_div1 {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  border: 1px solid gray;
+  width: 600px;
+  height: 400px;
+  background: #f7f7f7;
+}
+
+#smileys {
+  height: 220px;
+  z-index: 1;
+  position: relative;
+  left: 106px;
+  top: 110px;
+}
+
+#smileys img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding-bottom: 25px;
+}
+
+
+.canv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 20px;
+  margin-top: 0;
+}
+
+
+#courseOption {
+  display: none;
+}
+
+#weekOption {
+  display: none;
+}
+#courseAnswers1 {
+  display: none;
+  width: 80%;
+  height: 400px;
+  overflow-y: scroll;
+  font-size: 1.3em;
+}
+
+#weeklyAnswers1 {
+  display: none;
+  width: 80%;
+  height: 400px;
+  overflow-y: scroll;
+  font-size: 1.3em;
+}
+
+.weekAndCourseAnswers h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.weekAndCourseAnswers li {
+  margin-left: 10px;
+}
+
+#selectLists {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+}
+
+.register {
+  border: 1px solid black;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.register h2 {
+  text-align: center;
+}
+
+.register select {
+  margin: 10px;
+}
+
+.register input {
+  margin: 5px;
 }
