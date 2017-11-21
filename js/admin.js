@@ -1,7 +1,6 @@
 var fnamntest = document.getElementById("fnamn");
 var enamn = document.getElementById("enamn");
 var datum = document.getElementById("datum");
-var klass = document.getElementById("klass");
 var anvnamn = document.getElementById("anvnamn");
 var lösen = document.getElementById("lösen");
 
@@ -11,7 +10,6 @@ function reg() {
   fnamntest.value = "";
   enamn.value = "";
   datum.value = "";
-  klass.value = "";
   anvnamn.value = "";
   lösen.value = "";
   notif.innerText = "Ny användare skapad!";
