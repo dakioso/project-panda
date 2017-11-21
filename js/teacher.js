@@ -384,3 +384,12 @@ function showCourseBox(value){
 function visanärvarolista() {
    document.getElementById('närvaro-hidden').style.display = "block";
 }
+
+function toggleClass(el){
+    if (el.className == "toggle1") {
+      el.className = "toggle2";
+    }
+    else {
+      el.className = "toggle1";
+    }
+}
