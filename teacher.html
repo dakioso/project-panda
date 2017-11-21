@@ -29,6 +29,7 @@
     <div id="nav" class="sidenav">
       <a  class="active" href="teacher.html">Lärare</a>
       <a href="#utvärdering" >Utvärderingar</a>
+      <a href="#divideGroups" >Gruppindelning</a>
       <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
     </div>
   </div>
@@ -145,18 +146,15 @@
         <div id="studentClassList">
           <!-- Place for student drag and drop classlist -->
         </div>
+        <div id="distributeBtn">
+          <input type="button" onclick="shuffle(studentClass[0]['students'])" value="Auto-indelning" />
+        </div>
       </aside>
       <div id="drop_zoneArea">
          <!-- Dropzone boxes -->
       </div>
     </div>
   </section>
-<input type="button" onclick="shuffle(studentClass[0]['students'])" value="print students" />
-
-
-
-
-
   <div class = "närvaroflex">
 
   <section class ="närvaro-cont" id =  "närvaro-hidden" style="display:none;">

@@ -386,11 +386,13 @@ function visanärvarolista() {
 }
 
 /*------------------------------------------------------------------------
-                        Dropzone functions
+                        Drag and drop functions start
 ------------------------------------------------------------------------*/
 
-let addDiv = true;
+let addDiv = true; // check if boxes allready created
+var droppedIn = false; // checks if the object is dropped in the dropzone
 
+// lets the user create 1-9 dropzones
 function checkValidDivs(form){
 let divMessage = document.getElementById('numberErrorMessage'),
     classList = document.getElementById('studentClassList');
@@ -408,9 +410,8 @@ let divMessage = document.getElementById('numberErrorMessage'),
 }
 
 function createDivs(number){
-
   let dropZoneHeight = '';
-
+  // sets the height value for dropzones
   switch(number){
     case '1':
     case '2': dropZoneHeight = 'inherit'; break;
@@ -422,7 +423,7 @@ function createDivs(number){
     case '8':
     case '9': dropZoneHeight = '350px'; break;
 }
-
+  // Create divs and append it to the dropzone area
   while(addDiv){
     for(let i = 1, x = number; i <= x; i++){
       let divs = document.createElement('div');
@@ -443,26 +444,24 @@ function createDivs(number){
           printStudentListSort();
 }
 
-
+  // returns the id
 function _(id){
    return document.getElementById(id);
 }
-var droppedIn = false;
 
+  // drag and drop function start
 function drag_start(event) {
     event.dataTransfer.dropEffect = "move";
     event.dataTransfer.setData("text", event.target.getAttribute('id') );
 }
-
-var droppedIn = false;
-
+  // drag and drop function end
 function drop_end(event){
     event.preventDefault(); /* Prevent undesirable default behavior while dropping */
     var elem_id = event.dataTransfer.getData("text");
     event.target.appendChild( _(elem_id) );
     droppedIn = true;
 }
-
+  // students Array
 let studentClass = [
   { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
  'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
@@ -470,7 +469,7 @@ let studentClass = [
  'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
  'Alexandra Sigurdadottir', 'Viktor Stenqvist', 'Sebastian Stureson', 'Jonny Svahn', 'Mohammed Tandia', 'Thineskumar Thilakana', 'Magnus Wallin', 'Lisa Westerlundh', 'Robin Wisseng']}];
 
-
+  // add the students to the classlist in sorted order
 function printStudentListSort(){
   let classLength = studentClass[0]['students'].length,
       listSort = studentClass[0]['students'].sort();
@@ -479,23 +478,22 @@ function printStudentListSort(){
       ulList = document.createElement('ul');
       printElem.innerHTML = '';
 
-
-        for(let i = 0, x = classLength; i < x; i++ ){
-          let studContSort = document.createElement('li');
-              studContSort.appendChild(document.createTextNode(listSort[i]));
-              studContSort.id = i + 1;
-              studContSort.setAttribute('class', 'dragClass');
-              studContSort.setAttribute('draggable', 'true');
-              studContSort.setAttribute('ondragstart', 'drag_start(event)' );
-              ulList.appendChild(studContSort);
-        }
-              fragment.appendChild(ulList);
-              printElem.appendChild(fragment);
-              studentClassList.style.display = 'flex';
-              console.log(classLength);
+  for(let i = 0, x = classLength; i < x; i++ ){
+    let studContSort = document.createElement('li');
+      studContSort.appendChild(document.createTextNode(listSort[i]));
+      studContSort.id = i + 1;
+      studContSort.setAttribute('class', 'dragClass');
+      studContSort.setAttribute('draggable', 'true');
+      studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+      ulList.appendChild(studContSort);
+    }
+        fragment.appendChild(ulList);
+        printElem.appendChild(fragment);
+        studentClassList.style.display = 'flex';
+        document.getElementById('distributeBtn').style.display = 'block';
 }
 
-
+  // function for shuffling returns the classlist in random order
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -515,7 +513,7 @@ function shuffle(array) {
   return printStudentListMix(array);
 }
 
-
+  // add the students to the classlist in random order
 function printStudentListMix(array){
   let classLength = array.length,
       printElem = document.getElementById('studentClassList'),
@@ -523,23 +521,78 @@ function printStudentListMix(array){
       ulList = document.createElement('ul');
       printElem.innerHTML = '';
 
-       for(let i = 0, x = classLength; i < x; i++ ){
-          let studContSort = document.createElement('li');
-              studContSort.appendChild(document.createTextNode(array[i]));
-              studContSort.id = i + 1;
-              studContSort.setAttribute('class', 'dragClass');
-              studContSort.setAttribute('draggable', 'true');
-              studContSort.setAttribute('ondragstart', 'drag_start(event)' );
-              ulList.appendChild(studContSort);
-        }
-              fragment.appendChild(ulList);
-              printElem.appendChild(fragment);
-              studentClassList.style.display = 'flex';
-              getEl();
+  for(let i = 0, x = classLength; i < x; i++ ){
+    let studContSort = document.createElement('li');
+        studContSort.appendChild(document.createTextNode(array[i]));
+        studContSort.id = i + 1;
+        studContSort.setAttribute('class', 'dragClass');
+        studContSort.setAttribute('draggable', 'true');
+        studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+        ulList.appendChild(studContSort);
+    }
+          fragment.appendChild(ulList);
+          printElem.appendChild(fragment);
+          studentClassList.style.display = 'flex';
+          startDistributeStudents();
 }
 
+  // function for distribute the students to the dropzones
+function startDistributeStudents(){
+  let list = document.getElementsByClassName('dragClass'),
+      dropZon = document.getElementsByClassName('drop_zones'),
+      dropZonLength = dropZon.length,
+      count = 0,
+      dzCount = 0,  // keeps tracking the amount of dropzones
+      interval = setInterval(writeValue, 1);
 
-function myMove(x, y, zonesX, zonesY, objekt, dropEnd) {
+    // calling getOffset function every millisecond
+  function writeValue(){
+    if(count == list.length){
+      clearInterval(interval);
+  } else {
+      if (dzCount == dropZonLength) {
+        dzCount = 0;
+      }
+        getOffset(list[count], dropZon[dzCount]);
+          dzCount++;
+          count++;
+    }
+  }
+}
+
+var positionCord = [];  // Array to save dropzones y and x coordinate value
+var objectCount = 0;
+var countRepeat = 0;
+
+  // function to get the coordinate value for the objects and dropzones
+function getOffset( objekt, dropEnd ) {
+  var totalZones = document.getElementsByClassName('drop_zones').length,
+      obj = objekt.getBoundingClientRect(),
+      objectLeft = obj.left + window.scrollX,
+      objectTop = obj.top + window.scrollY;
+
+  if(objectCount < totalZones){
+    var el = dropEnd.getBoundingClientRect();
+        dropZoneLeft = el.left + window.scrollX,
+        dropZoneTop = el.top + window.scrollY;
+        positionCord.push( {"dzLeft": dropZoneLeft, "dzTop":dropZoneTop});
+        objectCount++;
+          // return x and y value for the animation function
+        return moveObject( objectLeft, objectTop, dropZoneLeft, dropZoneTop, objekt, dropEnd);
+
+   } else  {
+
+     if(countRepeat == totalZones){
+          countRepeat = 0;
+     }
+          // return x and y value for the objects and recycle the coordinates for dropzones
+        moveObject(objectLeft, objectTop, positionCord[countRepeat].dzLeft , positionCord[countRepeat].dzTop , objekt , dropEnd  );
+        countRepeat++;
+  }
+}
+
+  // animates the object out to the right zone
+function moveObject(x, y, zonesX, zonesY, objekt, dropEnd) {
   var elem = document.getElementById(objekt.id);
   var posX = x,
       posY = y,
@@ -549,7 +602,7 @@ function myMove(x, y, zonesX, zonesY, objekt, dropEnd) {
       yDiff = zoneY - y,
       difference;
 
-   if(xDiff > yDiff){
+   if(xDiff > yDiff){  // gets the difference between x and y value to point the right targetzone
       difference = xDiff / yDiff;
     } else {
       difference = yDiff / xDiff;
@@ -586,61 +639,6 @@ function myMove(x, y, zonesX, zonesY, objekt, dropEnd) {
 }
 
 
-var positionCord = [];
-var objectCount = 0;
-var countRepeat = 0;
-
-function getOffset( objekt, dropEnd ) {
-
-  var totalZones = document.getElementsByClassName('drop_zones').length,
-      obj = objekt.getBoundingClientRect(),
-      objectLeft = obj.left + window.scrollX,
-      objectTop = obj.top + window.scrollY;
-
-  if(objectCount < totalZones){
-
-    var el = dropEnd.getBoundingClientRect();
-        dropZoneLeft = el.left + window.scrollX,
-        dropZoneTop = el.top + window.scrollY;
-        positionCord.push( {"dzLeft": dropZoneLeft, "dzTop":dropZoneTop});
-        objectCount++;
-
-        return myMove( objectLeft, objectTop, dropZoneLeft, dropZoneTop, objekt, dropEnd);
-
-   } else  {
-
-     if(countRepeat == totalZones){
-          countRepeat = 0;
-     }
-
-        myMove(objectLeft, objectTop, positionCord[countRepeat].dzLeft , positionCord[countRepeat].dzTop , objekt , dropEnd  );
-        countRepeat++;
-
-}
-
-}
-
-
-function getEl(){
-  let list = document.getElementsByClassName('dragClass'),
-      dropZon = document.getElementsByClassName('drop_zones'),
-      dropZonLength = dropZon.length,
-      count = 0,
-      dzCount = 0,
-      interval = setInterval(writeValue, 1);
-
-console.log(list.length);
-
-  function writeValue(){
-    if(count == list.length){
-         clearInterval(interval);
-    } else {
-      if (dzCount == dropZonLength) {
-        dzCount = 0;
-      }
-      getOffset(list[count], dropZon[dzCount]);
-      dzCount++;
-      count++;
-    }
-  }
-}
+/*------------------------------------------------------------------------
+                        Drag and drop functions end
+------------------------------------------------------------------------*/
