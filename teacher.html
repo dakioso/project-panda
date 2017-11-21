@@ -83,8 +83,12 @@
             <option value="php">PHP</option>
           </select>
           <input type="button" value="Generera" onClick="numGen()" /><br />
-          <input type="button" value="Närvarolista" onClick="visanärvarolista()" /><br />
         </div>
+        <p>Skriv ny nyhet.</p>
+        <input type="text" id="newsTitle" placeholder="Titel"/><br />
+        <textarea  id="newsContent" placeholder="Nyhetsinnehåll"/></textarea>
+        <input type="button" value="Publicera nyhet" onClick="createNews()" />
+        <input type="button" value="Närvarolista" onClick="visanärvarolista()" /><br />
       </section>
     </div>
   </section>

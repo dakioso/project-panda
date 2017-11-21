@@ -1182,7 +1182,7 @@ letter-spacing: 5px;
 .attendance {
   border: 1px solid #292929;
   right: 0;
-  height: 350px;
+  height: 396px;
   width: 250px;
   margin-right: 20px;
   }
@@ -1242,7 +1242,7 @@ letter-spacing: 5px;
 }
 /*fade out animation end*/
 
-.attendance input[type=text]  {
+.attendance input[type=text], textarea  {
   background-color: #FFF;
   color: #292929;
   border: 1px solid #292929;
@@ -1251,6 +1251,12 @@ letter-spacing: 5px;
   outline-color: #292929;
   width: 224px;
   text-align: center;
+}
+
+.attendance textarea  {
+  height: 100px;
+  text-align: left;
+  resize: none;
 }
 
 .attendance div {

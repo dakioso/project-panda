@@ -50,6 +50,9 @@ let attendance = document.getElementById("attendanceCode");
 let notif = document.getElementById("notification");
 let aCourse = document.getElementById("attendanceCourse");
 
+let newsT = document.getElementById("newsTitle");
+let newsC = document.getElementById("newsContent");
+
 
 /*
 let showSurveyButton = document.getElementById('surveybutton');
@@ -448,6 +451,15 @@ let randomAttendance = Math.random().toString(36).substr(2, 6);
     setInterval(addHideMe, 1000);
   return attendanceCode.value = randomAttendance;
 
+}
+
+function createNews() {
+  newsT.value = "";
+  newsC.value = "";
+  notif.innerText = "Din nyhet är nu publicerad.";
+  notif.style.color = '#3dd43d';
+  notif.style.borderColor ="#3dd43d";
+  setInterval(addHideMe, 5000);
 }
 
 function addHideMe() {
