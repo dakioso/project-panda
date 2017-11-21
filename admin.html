@@ -46,13 +46,13 @@
         <option value="admin">Admin</option>
       </select>
 
-      <input type="text" name="fnamn" placeholder="Förnamn">
-      <input type="text" name="enamn" placeholder="Efternamn">
-      <input type="date" placeholder="Födelsedatum">
-      <input type="text" name="klass" placeholder="Klass">
-      <input type="text" name="anvnamn" placeholder="Användarnamn">
-      <input type="text" name="lösen" placeholder="Default lösenord">
-      <button onclick="submit()">Registrera</button>
+      <input type="text" name="fnamn" placeholder="Förnamn" id="fnamn">
+      <input type="text" name="enamn" placeholder="Efternamn" id="enamn">
+      <input type="date" placeholder="Födelsedatum" id="datum">
+      <input type="text" name="klass" placeholder="Klass" id="klass">
+      <input type="text" name="anvnamn" placeholder="Användarnamn" id="anvnamn">
+      <input type="text" name="lösen" placeholder="Default lösenord" id="lösen">
+      <input type="button" name="reg" value="Registrera"  onclick="reg()">
 
     </div>
   </div>
@@ -77,6 +77,6 @@
     </footer>
 
     <script src="js/zenscroll-min.js"></script>
-    <script src="js/teacher.js"> </script>
+    <script src="js/admin.js"></script>
   </body>
   </html>
