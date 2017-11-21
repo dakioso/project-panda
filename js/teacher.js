@@ -408,11 +408,26 @@ let divMessage = document.getElementById('numberErrorMessage'),
 }
 
 function createDivs(number){
+
+  let dropZoneHeight = '';
+
+  switch(number){
+    case '1':
+    case '2': dropZoneHeight = 'inherit'; break;
+    case '3': dropZoneHeight = '700px'; break;
+    case '4': dropZoneHeight = '560px'; break;
+    case '5': dropZoneHeight = '480px'; break;
+    case '6': dropZoneHeight = '400px'; break;
+    case '7':
+    case '8':
+    case '9': dropZoneHeight = '350px'; break;
+}
+
   while(addDiv){
     for(let i = 1, x = number; i <= x; i++){
       let divs = document.createElement('div');
           divs.id = 'grupp'+i;
-          divs.ClassName = 'grupper';
+          divs.setAttribute('class', 'drop_zones');
           divs.setAttribute('ondrop', 'drop_end(event)');
           divs.setAttribute('ondragover', 'return false');
 
@@ -421,51 +436,13 @@ function createDivs(number){
 
       let printOutDivs = document.getElementById('drop_zoneArea');
           printOutDivs.appendChild(divs);
+          document.getElementById('grupp'+i).style.height = dropZoneHeight;
     }
           addDiv = false;
   }
-          printStudentList('sort');
+          printStudentListSort();
 }
 
-
-let studentClass = [
-  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
- 'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
- 'Simon Gribert', 'Elin Gustafsson', 'Niklas Hägg', 'Masudul Hasan', 'Nicklas Hindersson', 'Nasimul Huq', 'Jesse Jonsson', 'Carl Jovér', 'Johanna Jovér', 'Kanyarat Klayjinda', 'Christoffer Korell', 'Elin Kviberg', 'Tim Lappalainen', 'Anna Larsson', 'Elias Liljegard',
- 'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
- 'Alexandra Sigurdadottir', 'Viktor Stenqvist', 'Sebastian Stureson', 'Jonny Svahn', 'Mohammed Tandia', 'Thineskumar Thilakana', 'Magnus Wallin', 'Lisa Westerlundh', 'Robin Wisseng']}];
-
-
-function printStudentList(list){
-  let classList,
-      classLength = studentClass[0]['students'].length,
-      printElem = document.getElementById('studentClassList'),
-      fragment = document.createDocumentFragment(),
-      ulList = document.createElement('ul');
-
-      if(list == 'sort'){
-        classList = studentClass[0]['students'].sort()
-      } else if (list == 'unsort') {
-        classList = studentClass[0]['students'];
-      }
-
-  for(let i = 0, x = classLength; i < x; i++ ){
-    let studentContent = document.createElement('li');
-        studentContent.appendChild(document.createTextNode(classList[i]));
-        studentContent.id = i + 1;
-        studentContent.setAttribute('class', 'dragClass');
-        studentContent.setAttribute('draggable', 'true');
-        studentContent.setAttribute('ondragstart', 'drag_start(event)' );
-
-        ulList.appendChild(studentContent);
-  }
-
-        fragment.appendChild(ulList);
-        printElem.appendChild(fragment);
-        studentClassList.style.display = 'flex';
-        console.log(classLength);
-
-}
 
 function _(id){
    return document.getElementById(id);
@@ -484,4 +461,186 @@ function drop_end(event){
     var elem_id = event.dataTransfer.getData("text");
     event.target.appendChild( _(elem_id) );
     droppedIn = true;
+}
+
+let studentClass = [
+  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
+ 'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
+ 'Simon Gribert', 'Elin Gustafsson', 'Niklas Hägg', 'Masudul Hasan', 'Nicklas Hindersson', 'Nasimul Huq', 'Jesse Jonsson', 'Carl Jovér', 'Johanna Jovér', 'Kanyarat Klayjinda', 'Christoffer Korell', 'Elin Kviberg', 'Tim Lappalainen', 'Anna Larsson', 'Elias Liljegard',
+ 'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
+ 'Alexandra Sigurdadottir', 'Viktor Stenqvist', 'Sebastian Stureson', 'Jonny Svahn', 'Mohammed Tandia', 'Thineskumar Thilakana', 'Magnus Wallin', 'Lisa Westerlundh', 'Robin Wisseng']}];
+
+
+function printStudentListSort(){
+  let classLength = studentClass[0]['students'].length,
+      listSort = studentClass[0]['students'].sort();
+      printElem = document.getElementById('studentClassList'),
+      fragment = document.createDocumentFragment(),
+      ulList = document.createElement('ul');
+      printElem.innerHTML = '';
+
+
+        for(let i = 0, x = classLength; i < x; i++ ){
+          let studContSort = document.createElement('li');
+              studContSort.appendChild(document.createTextNode(listSort[i]));
+              studContSort.id = i + 1;
+              studContSort.setAttribute('class', 'dragClass');
+              studContSort.setAttribute('draggable', 'true');
+              studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+              ulList.appendChild(studContSort);
+        }
+              fragment.appendChild(ulList);
+              printElem.appendChild(fragment);
+              studentClassList.style.display = 'flex';
+              console.log(classLength);
+}
+
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return printStudentListMix(array);
+}
+
+
+function printStudentListMix(array){
+  let classLength = array.length,
+      printElem = document.getElementById('studentClassList'),
+      fragment = document.createDocumentFragment(),
+      ulList = document.createElement('ul');
+      printElem.innerHTML = '';
+
+       for(let i = 0, x = classLength; i < x; i++ ){
+          let studContSort = document.createElement('li');
+              studContSort.appendChild(document.createTextNode(array[i]));
+              studContSort.id = i + 1;
+              studContSort.setAttribute('class', 'dragClass');
+              studContSort.setAttribute('draggable', 'true');
+              studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+              ulList.appendChild(studContSort);
+        }
+              fragment.appendChild(ulList);
+              printElem.appendChild(fragment);
+              studentClassList.style.display = 'flex';
+              getEl();
+}
+
+
+function myMove(x, y, zonesX, zonesY, objekt, dropEnd) {
+  var elem = document.getElementById(objekt.id);
+  var posX = x,
+      posY = y,
+      zoneX = zonesX + 25,
+      zoneY = zonesY + 300,
+      xDiff = zoneX - x,
+      yDiff = zoneY - y,
+      difference;
+
+   if(xDiff > yDiff){
+      difference = xDiff / yDiff;
+    } else {
+      difference = yDiff / xDiff;
+    }
+
+  var id = setInterval(frame, 1);
+   function frame() {
+    if ( posX > zoneX ) {
+      clearInterval(id);
+
+
+  var zone = document.getElementById(dropEnd.id);
+      zone.setAttribute('droppedIn', true);
+      zone.appendChild(elem);
+      elem.style.position = 'inherit';
+
+
+  }  else if(posX < zoneX) {
+      if(xDiff > yDiff){
+        posX += difference;
+        posY++;
+      } else {
+        posX++;
+        posY += difference;
+      }
+
+    elem.style.color = 'orange';
+    elem.style.position = 'absolute';
+    elem.style.left = posX + 'px';
+    elem.style.top = posY + 'px';
+
+  }
+  }
+}
+
+
+var positionCord = [];
+var objectCount = 0;
+var countRepeat = 0;
+
+function getOffset( objekt, dropEnd ) {
+
+  var totalZones = document.getElementsByClassName('drop_zones').length,
+      obj = objekt.getBoundingClientRect(),
+      objectLeft = obj.left + window.scrollX,
+      objectTop = obj.top + window.scrollY;
+
+  if(objectCount < totalZones){
+
+    var el = dropEnd.getBoundingClientRect();
+        dropZoneLeft = el.left + window.scrollX,
+        dropZoneTop = el.top + window.scrollY;
+        positionCord.push( {"dzLeft": dropZoneLeft, "dzTop":dropZoneTop});
+        objectCount++;
+
+        return myMove( objectLeft, objectTop, dropZoneLeft, dropZoneTop, objekt, dropEnd);
+
+   } else  {
+
+     if(countRepeat == totalZones){
+          countRepeat = 0;
+     }
+
+        myMove(objectLeft, objectTop, positionCord[countRepeat].dzLeft , positionCord[countRepeat].dzTop , objekt , dropEnd  );
+        countRepeat++;
+
+}
+
+}
+
+
+function getEl(){
+  let list = document.getElementsByClassName('dragClass'),
+      dropZon = document.getElementsByClassName('drop_zones'),
+      dropZonLength = dropZon.length,
+      count = 0,
+      dzCount = 0,
+      interval = setInterval(writeValue, 1);
+
+console.log(list.length);
+
+  function writeValue(){
+    if(count == list.length){
+         clearInterval(interval);
+    } else {
+      if (dzCount == dropZonLength) {
+        dzCount = 0;
+      }
+      getOffset(list[count], dropZon[dzCount]);
+      dzCount++;
+      count++;
+    }
+  }
 }
