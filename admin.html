@@ -29,6 +29,8 @@
       <a  class="active" href="student.html">Administratör sida</a>
       <a href="courses.html">Kurser</a>
       <a href="assigment.html">Uppgifter</a>
+	  <a href="#" id="opentask" onclick="opentask()">Lägg till utvärdering</a>
+
     </div>
   </div>
   <!-- Sidenavbar -->
@@ -61,8 +63,53 @@
     </div>
   </div>
 
+<!--Modalbox-Review -->
+ <div id="modaladmin" class="modalAdminForm">
+	
+<div id="modalAdminCreateForm">
 
+  <span class="closeadminform">Tillbaka</span>
+ </center>
+<div class="center">
+ <h1> Skapa formulär </h1>  
+ <input type="text" placeholder="Titel"><br>
+                  <select class="formcheck"  name="select" required>
+                    <option disabled selected value> Välj utvärdering </option>
+                    <option value="Veckoutvärdering">Veckoutvärdering</option>
+                    <option value="Projektmetodik">Kursutvärdering</option>
+					</select>
+<br>
+<br>
 
+ <form id="addQuestion">
+  <h3>Lägg till frågor</h3>
+  <label class="switch">
+  <input type="checkbox">
+  <span class="dedu">Obligatoriskt</span>	
+  </label>
+      <input type="text" id="item"placeholder="Frågor" required>
+      <input type="submit" class="addtext" value="+">
+    </form>
+     <table id="items" class="rutan">
+	  <tr></tr>
+    </table>
+    <form id="addoption">
+	    <h3>Lägg till alternativ</h3>
+      <input type="text" id="submitaddoptions" placeholder="Alternativ" required>
+      <input type="submit" class="addtext" value="+">
+    <table id="options" class="rutan">
+	  <tr></tr>
+    </table>
+  </form>
+   <h3>Välj alternativ knappar</h3> 
+      <input type="radio" required>  
+    <input type="checkbox">
+	<br>
+	<br>
+		<center><button class="adminsubmitTask" onclick="admininput()">Skicka</button></center>
+
+</div>
+</div>
 
 
 

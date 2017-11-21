@@ -2582,3 +2582,135 @@ p3{
 /* -----------------------------------------------------------------------------
         Drag and drop css end
    -------------------------------------------------------------------------*/
+.modalAdminForm {
+  display: none;
+  position: absolute;
+  top:0px;
+  z-index: 1;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height:100%;
+  background-color: rgb(247,247,247); /* Fallback color */
+  background-color: rgba(0,0,0,0.); /* Black w/ opacity */
+  background-size: 100%;
+ -webkit-animation-duration: 0.4s;
+ animation-name: animatetop;
+ animation-duration: 0.4s;	
+}
+
+
+#modalAdminCreateForm{
+	position:relative;
+	color:white;
+	width:40%;
+	min-height:90%;
+	border-radius:6px;
+	margin: 0 auto;
+	bottom:70px;
+	background-color:#292929;
+	background: linear-gradient(to bottom right, #292929, black);
+	overflow:hidden;
+}
+.center {
+	width:100%;
+	text-align:center;	
+	display:inline-block;
+}
+.switch {
+	position:absolute;
+	left:70%;	
+	font-size:10px;
+}
+.dedu {
+	position:relative;
+	left:30%;	
+	font-size:16px;
+
+}
+.rutan {
+	position:relative;
+    border-collapse: collapse;
+	background:#ccc;
+	color: black;
+	text-align:left;	
+	margin:0 auto;
+	width:172px;
+	right:13.5px;
+	font-size:13px;	
+}
+.rutan tr {
+	position:relative;
+	text-indent:2px;
+}
+
+.rutan tr:nth-child(even){background-color: #f2f2f2;
+}
+
+
+.delete {
+	float:right;
+	position:relative;
+	border:1px solid transparent;
+	background:#292929;
+	color:white;
+	outline: none;
+}
+.delete:hover{
+	float:right;
+	border:1px solid red;
+	background:red;
+	color:white;
+	outline: none;
+}
+
+.formcheck {
+	position:relative;
+	right:-2px;
+	width:172px;	
+}
+.closeadminform{
+	position:absolute;
+	float:right;
+	top:5px;
+	right:15px;	
+	cursor:default;
+	font-size:16px;
+}
+.closeadminform:hover{
+	position:absolute;
+	float:right;
+	top:5px;
+	right:15px;	
+	cursor:default;
+	border-bottom:solid 1px;
+}
+.addtext{
+	background:green;
+	color:white;
+	border:#292929;
+	margin-right:3px
+}
+
+.addtext:hover{
+	background:white;
+	color:green;
+}
+.adminsubmitTask {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #ffa500;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+  left:43%;
+  margin:auto;
+}
+
+.adminsubmitTask:hover {
+ background-color: white;
+ color: black;
+ border: 2px solid white;
+}
