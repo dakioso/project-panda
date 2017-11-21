@@ -544,7 +544,7 @@ span {
   left:0px;
   top:150px;
   color:#ffa500;
-  height:190px
+  height:280px
 
 }
 
@@ -1084,6 +1084,31 @@ padding-top: 10px;
 #news {
   text-transform: uppercase;
   font-weight: 600;
+}
+/* teacherscheme*/
+.schemebox {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+.teacher-scheme {
+  position: relative;
+  border: 2px solid #292929;
+  color: white;
+  width: 70%;
+  height:350px;
+  text-align: center;
+  color:black;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#newss{
+  margin-top: 280px;
+}
+
+.teacher-scheme p {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 /* arbetsmetodik*/
 .header-img{
@@ -1675,6 +1700,280 @@ p3{
 }
 
 /* The ModalTeacher (background) */
+.modalteacher2 {
+ display: none;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ padding-top:50px;
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+ -webkit-animation-duration: 0.4s;
+ animation-name: animatetop;
+ animation-duration: 0.4s;
+}
+
+#teacherTask2{
+ position:relative;
+ background-color:#292929;
+ color:white;
+ width:50%;
+ background: linear-gradient(to bottom right, #292929, black);
+ height:540px;
+ border-radius:6px;
+ margin: 0 auto;
+}
+.RTcontent2{
+ position:absolute;
+ width:50%;
+ height:540px;
+}
+
+.RTcontent2 select {
+ position: relative;
+ outline: 0;
+ box-shadow: none;
+ border: 0 !important;
+ background-image: none;
+ width: 50%;
+ height: 100%;
+ margin: 0;
+ padding: 0 0 0 .5em;
+ color: black;
+ cursor: cursor;
+ display: block;
+ height: 3em;
+ line-height: 3;
+ overflow: hidden;
+ border-radius: .25em;
+ margin-top:100px;
+ margin-right: auto;
+ margin-left: auto;
+ margin-top:-10px;
+ top:70px;
+}
+
+.LTcontent2 {
+ position:absolute;
+ width:50%;
+ height:540px;
+ right:0px;
+ top:0px;
+}
+
+.LTcontent2 input {
+ position:relative;
+ top:70px;
+ width:50%;
+ display: block;
+ line-height: 3;
+ background:white;
+ overflow: hidden;
+ border-radius: .25em;
+ border:1px solid white;
+ color:black;
+ margin-right: auto;
+ margin-left: auto;
+ margin-top:-10px;
+
+}
+
+.LTcontent2 textarea {
+ position:relative;
+ top:70px;
+ background:white no-repeat scroll;
+ height: 250px;
+ border: 1px solid rgba(255,255,255,.6);
+ width:60%;
+ font-size:15px;
+ font-family: 'Lato', sans-serif;
+ border-radius:5px;
+ color:black;
+ justify-content: center;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.teacherTask2 {
+ position: relative;
+ display: block;
+ width: 50%;
+ font-size:1em;
+ height: 2.4em;
+ background:white;
+ border-radius: .25em;
+ margin-top:-10px;/*space*/
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ top:90px;
+ color:black
+}
+
+.teacherTask2 input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 3;
+	color:black;
+}
+
+.teacherTask2 input::-webkit-clear-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+ position:absolute;
+ left:91%;
+ color:black;
+ font-size:10px;
+}
+
+.teacherTask2 input {
+ outline: 0;
+ box-shadow: none;
+ border: 0 !important;
+ background:white;
+ background-image: none;
+ width: 90%;
+ height: 100%;
+ margin: 0;
+ padding: 0 0 0 .5em;
+ color: black;
+ font-size:1em;
+ cursor: cursor;
+ font-size:1em;
+}
+.TestOrExam2{
+ position:absolute;
+ height:40px;
+ left:24%;
+ top:220px;
+ width:100%;
+}
+/* Custom radio buttons */
+.TestOrExam2 input[type="radio"] + label {
+ display: inline-block;
+ cursor: pointer;
+ position: relative;
+ padding-left: 30px;
+ margin-right: 43px;
+ color:orange;
+ font-size:1em;
+}
+.TestOrExam2 input[type="radio"] + label:before {
+ content: "";
+ display: block;
+ width: 22px;
+ height: 22px;
+ margin-right: 14px;
+ position: absolute;
+ top: -3px;
+ left: 0;
+ border: 1px solid #2c3e50;
+ background-color: #fff;
+ border-radius: 50%;
+}
+.TestOrExam2 input[type="radio"] {
+ display: none !important;
+}
+.TestOrExam2 input[type="radio"]:checked + label:after {
+ content: "";
+ display: block;
+ position: absolute;
+ top: 1px;
+ left: 4px;
+ width: 16px;
+ height: 16px;
+ border-radius: 50%;
+ background:#1a1a1a;
+}
+
+.image-upload2 > input
+{
+ display: none;
+}
+
+.image-upload2 img {
+ position:absolute;
+ width: 45px;
+ top:260px;
+ cursor: pointer;
+ left:24%
+}
+.input-text2 {
+ position:absolute;
+ top:266px;
+ right:35%;
+ font-size:14px;
+ font-family: Gill Sans Extrabold, sans-serif;
+}
+
+.closetask2 {
+ position:absolute;
+ color: orange;
+ font-size: 28px;
+ font-weight: bold;
+ right:26%;
+ top:95px;
+ z-index:2;
+}
+
+.closetask2:hover,
+.closetask:focus {
+ color: white;
+ text-decoration: none;
+ cursor: pointer;
+}
+.teachersubmit2{
+ position:relative;
+ background-color: #90caf9;
+ border: none;
+ color: white;
+ padding: 6px 22px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ transition-duration: 0.4s;
+ cursor: cursor;
+ top:500px;
+ z-index:2;
+}
+
+.teachersubmit2 {
+  display: inline;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #ffa500;
+  color: white;
+  background-color: #292929;
+  transition: all 1s ease;
+  text-decoration: none;
+}
+
+.teachersubmit2:hover {
+ background-color: white;
+ color: black;
+ border: 2px solid white;
+}
+
+.teacherscrollinvbox {
+ position:absolute;
+ width:10px;
+ height:10px;
+ padding:50px;
+ top:800px;
+ border-style:dotted;
+}
+
+
+/* test */
 .modalteacher {
  display: none;
  position: fixed;

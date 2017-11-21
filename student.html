@@ -29,6 +29,7 @@
       <a  class="active" href="student.html">Student</a>
       <a href="courses.html">Kurser</a>
       <a href="assigment.html">Uppgifter</a>
+      <a href="#" id="opentask" onclick="opentask()">Lämna in uppgifter</a>
     </div>
   </div>
   <!-- Sidenavbar -->
@@ -201,7 +202,52 @@
                 </div>
               </div>
             </div>
+            <!--Modalbox-Review -->
+            <div id="modalteacher" class="modalteacher">
+              <span class="closetask">&times;</span>
+              <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
+              <div id="teacherTask">
+                <div class="RTcontent">
+                  <select>
+                    <option disabled selected value>Välj kurs</option>
+                    <option value="1">Arbetsmetodik</option>
+                    <option value="2">Javascript</option>
 
+                  </select>
+                  <br>
+                  <select>
+                    <option disabled selected value>Välj uppgift</option>
+                    <option value="1">Git</option>
+                    <option value="2">Grupparbete 1</option>
+                    <option value="3">Objekt</option>
+                  </select>
+
+                  <div class="teacherTask">
+                    <input placeholder="Inlämningsdatum" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date" style="cursor:default">
+                  </div>
+
+                  <div class="TestOrExam">
+                    <input type="radio" id="radio01" name="radio"/>
+                    <label for="radio01"><span></span>Examination</label>
+                    <input type="radio" id="radio02" name="radio" />
+                    <label for="radio02"><span></span>Uppgift</label>
+                  </div>
+
+                  <div class="image-upload">
+                    <label for="file-input">
+                      <img src="img/addfile.png">
+                    </label>
+                    <input id="file-input" type="file"/>
+                    <div class="input-text"><p>Lägg till fil</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="LTcontent">
+                  <textarea placeholder="Max 330 ord..." ></textarea>
+                </div>
+              </div>
+            </div>
 
             <!-- FOOTER -->
             <footer class="main-footer" id="kontakt">

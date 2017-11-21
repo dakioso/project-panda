@@ -31,6 +31,7 @@
       <a href="#utvärdering" >Utvärderingar</a>
       <a href="#divideGroups" >Gruppindelning</a>
       <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
+      <a href="#" id="opentask2" onclick="opentask2()">Inlämnade uppgifter</a>
     </div>
   </div>
   <!-- Sidenavbar -->
@@ -213,9 +214,6 @@
       </div>
   </section>
   </div>
-
-
-
   <!--Modalbox-Review -->
   <div id="modalteacher" class="modalteacher">
     <span class="closetask">&times;</span>
@@ -267,8 +265,101 @@
   </div>
 
 
+  <!--Modalbox-Review 2 -->
+  <div id="modalteacher2" class="modalteacher2">
+    <span class="closetask2">&times;</span>
+    <center>  <button class="teachersubmit2"onclick="teacherinput2()">Skicka</button> </center>
+    <div id="teacherTask2">
+      <div class="RTcontent2">
+        <select>
+          <option disabled selected value>Välj Kurs</option>
+          <option value="1">Arbetsmetodik</option>
+          <option value="2">JavaScript</option>
+          <option value="3">HTML</option>
+
+        </select>
+        <br>
+        <select>
+          <option disabled selected value>Elever</option>
+          <option value="1">Carl Brunngård</option>
+          <option value="2">David Hansson</option>
+          <option value="3">Emil Brunngård</option>
+          <option value="4">Marcus Holmberg</option>
+        </select>
+        <br>
+        <select>
+          <option disabled selected value>Uppgifter</option>
+          <option value="1">Git</option>
+          <option value="2">Grupparbete 1</option>
+          <option value="3">Objekt</option>
+        </select>
+
+        <div class="TestOrExam2">
+          <input type="radio" id="radio03" name="radio"/>
+          <label for="radio03"><span></span>IG</label>
+          <input type="radio" id="radio04" name="radio" />
+          <label for="radio04"><span></span>G</label>
+          <input type="radio" id="radio05" name="radio" />
+          <label for="radio05"><span></span>VG</label>
+        </div>
+      </div>
 
 
+      <div class="LTcontent2">
+        <input type="text" placeholder="Kommentar.."><br>
+
+        <textarea placeholder="Max 330 ord..." ></textarea>
+      </div>
+    </div>
+  </div>
+  <center> <h1 id="newss">NYHETER</h1></center>
+<section class = "schemebox">
+
+  <div class="teacher-scheme">
+    <h2>Ombyggnation i hus A, vecka 36</h2>
+    <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+      eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+      Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+      eu gravida purus aliquet a. Nulla facilisi.</p>
+      <h2>Öppettider för Bibliotek, vecka 36</h2>
+      <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+        eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+        Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+        eu gravida purus aliquet a. Nulla facilisi.</p>
+        <h2>Företagsträff, vecka 38</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+          eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+          Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+          eu gravida purus aliquet a. Nulla facilisi.</p>
+          <h2>Uppskjuten tentamen, vecka 40</h2>
+          <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+            eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+            Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+            eu gravida purus aliquet a. Nulla facilisi.</p>
+            <h2>Skolans öppettider, vecka 40</h2>
+            <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+              eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+              Pellentesque habitant morbi tristique senectus et netus et malesuada
+              fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+              Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+              eu gravida purus aliquet a. Nulla facilisi.</p>
+              <h2>Skolans öppettider under jul/nyår, vecka 52</h2>
+              <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+                eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada
+                fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+                Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+                eu gravida purus aliquet a. Nulla facilisi.</p>
+              </div>
+            </section>
     <!-- FOOTER -->
     <footer class="teacher-footer" id="kontakt">
       <div class="para">
