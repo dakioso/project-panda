@@ -2164,6 +2164,7 @@ p3{
   height: 50px;
 }
 
+
 .register-container {
   display: flex;
   justify-content: flex-end;
@@ -2191,3 +2192,94 @@ p3{
 .register input {
   margin: 5px;
 }
+
+/* -----------------------------------------------------------------------------
+        Drag and drop css start
+   -------------------------------------------------------------------------*/
+
+#divideGroups {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+#divideGroups h1 {
+  text-align: center;
+}
+
+#divideGroupsRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#divideGroups aside {
+  width: 250px;
+  height: 600px;
+  margin-left: 25px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+#studentClassList {
+  display: none;
+  width: 246px;
+  height: 475px;
+  margin-top: 20px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#studentClassList li {
+  list-style-type: none;
+}
+
+#distributeBtn {
+  margin: 10px 0 0 10px;
+  display: none;
+}
+
+.dragClass {
+  height: 20px;
+  width: 170px;
+  margin: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+
+#drop_zoneArea{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 100px;
+  width: 70%;
+  height: auto;
+
+}
+
+.drop_zones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #292929;
+    color: orange;
+    width: 250px;
+    height: 350px;
+    border: 1px solid black;
+    cursor: move;
+    margin: 10px;
+}
+
+#drop_zoneArea li {
+  list-style-type: none;
+}
+
+/* -----------------------------------------------------------------------------
+        Drag and drop css end
+   -------------------------------------------------------------------------*/

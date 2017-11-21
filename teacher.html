@@ -29,6 +29,7 @@
     <div id="nav" class="sidenav">
       <a  class="active" href="teacher.html">Lärare</a>
       <a href="#utvärdering" >Utvärderingar</a>
+      <a href="#divideGroups" >Gruppindelning</a>
       <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
     </div>
   </div>
@@ -103,47 +104,61 @@
     </div>
     <div id="canvasRow">
       <canvas id="weeklyCanvas" width="600px" height="400px"></canvas>
-    <div id="smileys">
+      <div id="smileys">
         <img src="img/happy.png" alt="happy picture">
         <img src="img/neutral.png" alt="neutral picture">
         <img src="img/sad.png" alt="sad picture">
-     </div>
+      </div>
       <div id="chart_div"></div>
       <div id="chart_div1"></div>
-
-
-    <div id="courseAnswers1" class="weekAndCourseAnswers">
-      <h2>Vad var bra med kursen</h2>
-      <ul>
-        <li>Upplägget på kursen var riktigt bra och läraren hade ett pedagogiskt lärosätt</li>
-        <li>Läraren förklarade på ett bra sätt så man lätt kunde förstå. Tydliga mål från start vad vi förväntades kunna när kursen var avslutad</li>
-        <li>Föreläsningarna var kanonbra</li>
-        <li>Mitt betyg</li>
-        <li>Allt</li>
-        <li>Att vi har kört projektarbete har gjort att man lärt sig väldigt mycket på vägens gång</li>
-      </ul>
-      <h2>Vad har varit dåligt med kursen</h2>
-      <ul>
-        <li>Jag tycker att det var lite för stressigt med alla uppgifter</li>
-        <li>Det var för mycket föreläsningar</li>
-        <li>För långa föreläsningar så man tappade fokus lätt</li>
-        <li>Läraren var duktig men kunde ha gått in mer invecklat i ämnet, kände att det var alldeles för lätt nu och kursen gav mig inte så jätte mycket</li>
-        <li>För långa föreläsningar, hade vart bättre med flera pauser för att behålla fokus</li>
-        <li>Kursen var för kort, jag känner att jag inte har hunnit lära mig allt som förväntades av mig</li>
-      </ul>
+      <div id="courseAnswers1" class="weekAndCourseAnswers">
+        <h2>Vad var bra med kursen</h2>
+        <ul>
+          <li>Upplägget på kursen var riktigt bra och läraren hade ett pedagogiskt lärosätt</li>
+          <li>Läraren förklarade på ett bra sätt så man lätt kunde förstå. Tydliga mål från start vad vi förväntades kunna när kursen var avslutad</li>
+          <li>Föreläsningarna var kanonbra</li>
+          <li>Mitt betyg</li>
+          <li>Allt</li>
+          <li>Att vi har kört projektarbete har gjort att man lärt sig väldigt mycket på vägens gång</li>
+        </ul>
+        <h2>Vad har varit dåligt med kursen</h2>
+        <ul>
+          <li>Jag tycker att det var lite för stressigt med alla uppgifter</li>
+          <li>Det var för mycket föreläsningar</li>
+          <li>För långa föreläsningar så man tappade fokus lätt</li>
+          <li>Läraren var duktig men kunde ha gått in mer invecklat i ämnet, kände att det var alldeles för lätt nu och kursen gav mig inte så jätte mycket</li>
+          <li>För långa föreläsningar, hade vart bättre med flera pauser för att behålla fokus</li>
+          <li>Kursen var för kort, jag känner att jag inte har hunnit lära mig allt som förväntades av mig</li>
+        </ul>
+      </div>
+      <div id="weeklyAnswers1" class="weekAndCourseAnswers">
+      </div>
     </div>
-    <div id="weeklyAnswers1" class="weekAndCourseAnswers">
-    </div>
-  </div>
-
-
   </section>
-
-
-
-
-
-
+  <section id="divideGroups">
+    <h1>Gruppindelning</h1>
+    <div id="divideGroupsRow">
+      <aside>
+        <form name="boxNumber">
+          <label>Välj antal grupper</label><hr>
+          <input type="number" name="totalDivs" placeholder="1-9"><br />
+          <input type="button" onclick="checkValidDivs(this.form)" value="Skapa grupper">
+        </form>
+        <div id="numberErrorMessage">
+            <!-- Message -->
+        </div>
+        <div id="studentClassList">
+          <!-- Place for student drag and drop classlist -->
+        </div>
+        <div id="distributeBtn">
+          <input type="button" onclick="shuffle(studentClass[0]['students'])" value="Auto-indelning" />
+        </div>
+      </aside>
+      <div id="drop_zoneArea">
+         <!-- Dropzone boxes -->
+      </div>
+    </div>
+  </section>
   <div class = "närvaroflex">
     <a id="narvaroscroll"></a>
   <section class ="närvaro-cont" id =  "närvaro-hidden" style="display:none;">

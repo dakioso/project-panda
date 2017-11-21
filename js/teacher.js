@@ -5,6 +5,8 @@ google.charts.setOnLoadCallback(drawCrosshairs);
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
 
+
+
 //navbar open and close.
 function togNav() {
   var nav = document.getElementById("nav");
@@ -402,11 +404,10 @@ function showCourseBox(value){
   }
 }
 
-
-
 function visanärvarolista() {
    document.getElementById('närvaro-hidden').style.display = "block";
 }
+
 
 function toggleClass(el){
     if (el.className == "toggle1") {
@@ -416,3 +417,261 @@ function toggleClass(el){
       el.className = "toggle1";
     }
 }
+
+/*------------------------------------------------------------------------
+                        Drag and drop functions start
+------------------------------------------------------------------------*/
+
+let addDiv = true; // check if boxes allready created
+var droppedIn = false; // checks if the object is dropped in the dropzone
+
+// lets the user create 1-9 dropzones
+function checkValidDivs(form){
+let divMessage = document.getElementById('numberErrorMessage'),
+    classList = document.getElementById('studentClassList');
+  if(form.totalDivs.value <= 0 || form.totalDivs.value > 9){
+    divMessage.style.marginTop = '10px';
+    divMessage.innerHTML = 'Välj ett heltal mellan 1-9';
+    divMessage.style.color = 'red';
+  } else {
+
+    divMessage.innerHTML = 'Skapar grupper...';
+    divMessage.style.color = '#00b300';
+    classList.style.display = 'flex';
+    return createDivs(form.totalDivs.value);
+  }
+}
+
+function createDivs(number){
+  let dropZoneHeight = '';
+  // sets the height value for dropzones
+  switch(number){
+    case '1':
+    case '2': dropZoneHeight = 'inherit'; break;
+    case '3': dropZoneHeight = '700px'; break;
+    case '4': dropZoneHeight = '560px'; break;
+    case '5': dropZoneHeight = '480px'; break;
+    case '6': dropZoneHeight = '400px'; break;
+    case '7':
+    case '8':
+    case '9': dropZoneHeight = '350px'; break;
+}
+  // Create divs and append it to the dropzone area
+  while(addDiv){
+    for(let i = 1, x = number; i <= x; i++){
+      let divs = document.createElement('div');
+          divs.id = 'grupp'+i;
+          divs.setAttribute('class', 'drop_zones');
+          divs.setAttribute('ondrop', 'drop_end(event)');
+          divs.setAttribute('ondragover', 'return false');
+
+      let group = document.createTextNode('Grupp: ' + i);
+          divs.appendChild(group);
+
+      let printOutDivs = document.getElementById('drop_zoneArea');
+          printOutDivs.appendChild(divs);
+          document.getElementById('grupp'+i).style.height = dropZoneHeight;
+    }
+          addDiv = false;
+  }
+          printStudentListSort();
+}
+
+  // returns the id
+function _(id){
+   return document.getElementById(id);
+}
+
+  // drag and drop function start
+function drag_start(event) {
+    event.dataTransfer.dropEffect = "move";
+    event.dataTransfer.setData("text", event.target.getAttribute('id') );
+}
+  // drag and drop function end
+function drop_end(event){
+    event.preventDefault(); /* Prevent undesirable default behavior while dropping */
+    var elem_id = event.dataTransfer.getData("text");
+    event.target.appendChild( _(elem_id) );
+    droppedIn = true;
+}
+  // students Array
+let studentClass = [
+  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
+ 'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
+ 'Simon Gribert', 'Elin Gustafsson', 'Niklas Hägg', 'Masudul Hasan', 'Nicklas Hindersson', 'Nasimul Huq', 'Jesse Jonsson', 'Carl Jovér', 'Johanna Jovér', 'Kanyarat Klayjinda', 'Christoffer Korell', 'Elin Kviberg', 'Tim Lappalainen', 'Anna Larsson', 'Elias Liljegard',
+ 'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
+ 'Alexandra Sigurdadottir', 'Viktor Stenqvist', 'Sebastian Stureson', 'Jonny Svahn', 'Mohammed Tandia', 'Thineskumar Thilakana', 'Magnus Wallin', 'Lisa Westerlundh', 'Robin Wisseng']}];
+
+  // add the students to the classlist in sorted order
+function printStudentListSort(){
+  let classLength = studentClass[0]['students'].length,
+      listSort = studentClass[0]['students'].sort();
+      printElem = document.getElementById('studentClassList'),
+      fragment = document.createDocumentFragment(),
+      ulList = document.createElement('ul');
+      printElem.innerHTML = '';
+
+  for(let i = 0, x = classLength; i < x; i++ ){
+    let studContSort = document.createElement('li');
+      studContSort.appendChild(document.createTextNode(listSort[i]));
+      studContSort.id = i + 1;
+      studContSort.setAttribute('class', 'dragClass');
+      studContSort.setAttribute('draggable', 'true');
+      studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+      ulList.appendChild(studContSort);
+    }
+        fragment.appendChild(ulList);
+        printElem.appendChild(fragment);
+        studentClassList.style.display = 'flex';
+        document.getElementById('distributeBtn').style.display = 'block';
+}
+
+  // function for shuffling returns the classlist in random order
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return printStudentListMix(array);
+}
+
+  // add the students to the classlist in random order
+function printStudentListMix(array){
+  let classLength = array.length,
+      printElem = document.getElementById('studentClassList'),
+      fragment = document.createDocumentFragment(),
+      ulList = document.createElement('ul');
+      printElem.innerHTML = '';
+
+  for(let i = 0, x = classLength; i < x; i++ ){
+    let studContSort = document.createElement('li');
+        studContSort.appendChild(document.createTextNode(array[i]));
+        studContSort.id = i + 1;
+        studContSort.setAttribute('class', 'dragClass');
+        studContSort.setAttribute('draggable', 'true');
+        studContSort.setAttribute('ondragstart', 'drag_start(event)' );
+        ulList.appendChild(studContSort);
+    }
+          fragment.appendChild(ulList);
+          printElem.appendChild(fragment);
+          studentClassList.style.display = 'flex';
+          startDistributeStudents();
+}
+
+  // function for distribute the students to the dropzones
+function startDistributeStudents(){
+  let list = document.getElementsByClassName('dragClass'),
+      dropZon = document.getElementsByClassName('drop_zones'),
+      dropZonLength = dropZon.length,
+      count = 0,
+      dzCount = 0,  // keeps tracking the amount of dropzones
+      interval = setInterval(writeValue, 1);
+
+    // calling getOffset function every millisecond
+  function writeValue(){
+    if(count == list.length){
+      clearInterval(interval);
+  } else {
+      if (dzCount == dropZonLength) {
+        dzCount = 0;
+      }
+        getOffset(list[count], dropZon[dzCount]);
+          dzCount++;
+          count++;
+    }
+  }
+}
+
+var positionCord = [];  // Array to save dropzones y and x coordinate value
+var objectCount = 0;
+var countRepeat = 0;
+
+  // function to get the coordinate value for the objects and dropzones
+function getOffset( objekt, dropEnd ) {
+  var totalZones = document.getElementsByClassName('drop_zones').length,
+      obj = objekt.getBoundingClientRect(),
+      objectLeft = obj.left + window.scrollX,
+      objectTop = obj.top + window.scrollY;
+
+  if(objectCount < totalZones){
+    var el = dropEnd.getBoundingClientRect();
+        dropZoneLeft = el.left + window.scrollX,
+        dropZoneTop = el.top + window.scrollY;
+        positionCord.push( {"dzLeft": dropZoneLeft, "dzTop":dropZoneTop});
+        objectCount++;
+          // return x and y value for the animation function
+        return moveObject( objectLeft, objectTop, dropZoneLeft, dropZoneTop, objekt, dropEnd);
+
+   } else  {
+
+     if(countRepeat == totalZones){
+          countRepeat = 0;
+     }
+          // return x and y value for the objects and recycle the coordinates for dropzones
+        moveObject(objectLeft, objectTop, positionCord[countRepeat].dzLeft , positionCord[countRepeat].dzTop , objekt , dropEnd  );
+        countRepeat++;
+  }
+}
+
+  // animates the object out to the right zone
+function moveObject(x, y, zonesX, zonesY, objekt, dropEnd) {
+  var elem = document.getElementById(objekt.id);
+  var posX = x,
+      posY = y,
+      zoneX = zonesX + 25,
+      zoneY = zonesY + 300,
+      xDiff = zoneX - x,
+      yDiff = zoneY - y,
+      difference;
+
+   if(xDiff > yDiff){  // gets the difference between x and y value to point the right targetzone
+      difference = xDiff / yDiff;
+    } else {
+      difference = yDiff / xDiff;
+    }
+
+  var id = setInterval(frame, 1);
+   function frame() {
+    if ( posX > zoneX ) {
+      clearInterval(id);
+
+
+  var zone = document.getElementById(dropEnd.id);
+      zone.setAttribute('droppedIn', true);
+      zone.appendChild(elem);
+      elem.style.position = 'inherit';
+
+
+  }  else if(posX < zoneX) {
+      if(xDiff > yDiff){
+        posX += difference;
+        posY++;
+      } else {
+        posX++;
+        posY += difference;
+      }
+
+    elem.style.color = 'orange';
+    elem.style.position = 'absolute';
+    elem.style.left = posX + 'px';
+    elem.style.top = posY + 'px';
+
+  }
+  }
+}
+
+
+/*------------------------------------------------------------------------
+                        Drag and drop functions end
+------------------------------------------------------------------------*/
