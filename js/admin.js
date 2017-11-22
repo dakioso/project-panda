@@ -168,10 +168,138 @@ function addoption(event){
 
 // Remove item
 function removeItem(event){
-  if(event.target.classList.contains("delete")){
+  if(event.target.classList.contains("delete1")){
     if(confirm("Är du saker att du vill radera svaret?")){
       let li = event.target.parentElement;
       itemList.removeChild(li);
     }
   }
 }
+
+// Get the modal
+var modaladminchange = document.getElementById('modaladminchange');
+
+// Get the button that opens the modal
+var openadminchange = document.getElementById("openadminchange");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closechangeform")[0];
+
+
+
+// When the user clicks the button, open the modal
+openadminchange.onclick = function() {
+modaladminchange.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modaladminchange.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modaladminchange) {
+        modaladminchange.style.display = "none";
+    }
+}
+
+function adminchangeinput() {
+  	modaladminchange.style.display = "none";
+	   notif.innerText = "Veckoutvärding Uppdaterad!";
+    notif.style.color = '#3dd43d';
+    notif.style.borderColor ="#3dd43d";
+    setInterval(addHideMe, 5000);
+    dailyInvoke = true;
+}
+
+let addAdminchange = document.getElementById('sven');
+let addAdminchangelist = document.getElementById('items1');
+
+
+// addAdminchange submit event
+addAdminchange.addEventListener('submit', addchangeitem);
+// Delete event
+addAdminchangelist.addEventListener('click', removechangeanswer);
+
+
+// Add item
+function addchangeitem(event){
+  event.preventDefault();
+
+  // Get input value
+  let newItem = document.getElementById('item1').value;
+
+  // Create new li element
+  let li = document.createElement('li');
+  // Add text node with input value
+  li.appendChild(document.createTextNode(newItem));
+
+  // Create del button element
+  let removechangeanswer = document.createElement('button');
+
+  // Add classes to del button
+  removechangeanswer.className = "delete1";
+
+  // Append text node
+  removechangeanswer.appendChild(document.createTextNode("X"));
+
+  // Append button to li
+  li.appendChild(removechangeanswer);
+
+  // Append li to list
+  addAdminchangelist.appendChild(li);
+}
+
+// Remove item
+function removechangeanswer(event){
+  if(event.target.classList.contains("delete1")){
+    if(confirm("Är du saker att du vill radera svaret?")){
+      let li = event.target.parentElement;
+      addAdminchangelist.removeChild(li);
+    }
+  }
+}
+
+
+
+
+let form2 = document.getElementById('addoption1');
+let itemlistAdmin = document.getElementById('options1');
+
+
+
+form2.addEventListener('submit', addoption1);
+
+itemlistAdmin.addEventListener('click', removeItem);
+
+
+
+function addoption1(event){
+  event.preventDefault();
+
+  let newItem = document.getElementById('submitaddoptions1').value;
+
+  let li = document.createElement('li');
+  li.appendChild(document.createTextNode(newItem));
+
+  let removeAnswer = document.createElement('button');
+  removeAnswer.className = "delete1";
+
+  removeAnswer.appendChild(document.createTextNode("X"));
+
+  li.appendChild(removeAnswer);
+
+  itemlistAdmin.appendChild(li);
+
+}
+
+function removeItem(event){
+  if(event.target.classList.contains("delete1")){
+    if(confirm("Är du saker att du vill radera svaret?")){
+      let li = event.target.parentElement;
+      itemlistAdmin.removeChild(li);
+    }
+  }
+}
+
