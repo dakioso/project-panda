@@ -2676,27 +2676,17 @@ p3{
 	top:5px;
 	right:15px;	
 	cursor:default;
-	font-size:16px;
+	font-size:30px;
 }
 .closeadminform:hover{
 	position:absolute;
+	color:orange;
 	float:right;
 	top:5px;
 	right:15px;	
 	cursor:default;
-	border-bottom:solid 1px;
-}
-.addtext{
-	background:green;
-	color:white;
-	border:#292929;
-	margin-right:3px
 }
 
-.addtext:hover{
-	background:white;
-	color:green;
-}
 .adminsubmitTask {
   display: inline;
   padding: 5px 15px 5px 15px;
@@ -2740,7 +2730,7 @@ p3{
  height:90%;
  border-radius:6px;
  margin: 0 auto;
- top:0px;
+ top:-60px;
  background-color:#292929;
  background: linear-gradient(to bottom right, #292929, black);
 }
@@ -2790,24 +2780,24 @@ color:white;
 .closechangeform {
 	position:absolute;
 	right:31%;
-	top:100px;
+	top:40px;
 	z-index:1;
 	color:white;
-	font-size:40px;
+	font-size:30px;
 }
 .closechangeform:hover {
 	position:absolute;
 	right:31%;
-	top:30px;
+	top:40px;
 	z-index:1;
 	color:orange;
-	font-size:40px;
+	font-size:30px;
 	cursor:default;
 }
 .middle {
 	position:relative;
-	left:100px;
-	top:100px;
+	left:90px;
+
 	
 	
 }
