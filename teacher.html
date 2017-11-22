@@ -98,6 +98,7 @@
       <section>
         <p>Generera en närvarokod.</p>
         <input type="text" id="attendanceCode" placeholder="Närvarokod..." readonly /><br />
+
         <div>
           <select id="attendanceCourse" onchange="clearAttendance()">
             <option value="arbetsmetodik" selected>Arbetsmetodik</option>
@@ -108,12 +109,18 @@
             <option value="php">PHP</option>
           </select>
           <input type="button" value="Generera" onClick="numGen()" /><br />
+
         </div>
+        <center>
+          <a href="#narvaroscroll" onclick="visanärvarolista()">Närvarolista</a>
+        </center>
         <p>Skriv ny nyhet.</p>
         <input type="text" id="newsTitle" placeholder="Titel"/><br />
         <textarea  id="newsContent" placeholder="Nyhetsinnehåll"/></textarea>
         <input type="button" value="Publicera nyhet" onClick="createNews()" />
-        <input type="button" value="Närvarolista" onClick="visanärvarolista()" /><br />
+
+      <!--  <input type="button" a href="#narvaroscroll" value="Närvarolista" onClick="visanärvarolista()" /><br />
+-->
       </section>
     </div>
   </section>
