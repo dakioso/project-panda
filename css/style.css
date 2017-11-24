@@ -1317,8 +1317,8 @@ letter-spacing: 5px;
   margin-bottom: 100px;
 }
 
-/* The Modal (background) */
-.modal {
+/* The Reviewbox (background) and animation  */
+.Reviewbox {
     display: none;
     position: fixed;
     z-index: 1;
@@ -1974,7 +1974,7 @@ p3{
 
 
 /* test */
-.modalteacher {
+.Assigmentbox {
  display: none;
  position: fixed;
  z-index: 1;
