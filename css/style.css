@@ -1699,7 +1699,7 @@ p3{
   justify-content: center;
 }
 
-/* The ModalTeacher (background) */
+/* The ModalTeacher2 (background) */
 .modalteacher2 {
  display: none;
  position: fixed;
@@ -1973,7 +1973,7 @@ p3{
 }
 
 
-/* test */
+/* The ModalTeacher (background) */
 .Assigmentbox {
  display: none;
  position: fixed;
@@ -2073,57 +2073,6 @@ p3{
  margin-right: auto;
 }
 
-.teacherTask {
- position: relative;
- display: block;
- width: 50%;
- font-size:1em;
- height: 2.4em;
- background:white;
- border-radius: .25em;
- margin-top:-10px;/*space*/
- display: block;
- margin-left: auto;
- margin-right: auto;
- top:90px;
- color:black
-}
-
-.teacherTask input::-webkit-input-placeholder {
-    font-size: 14px;
-    line-height: 3;
-	color:black;
-}
-
-.teacherTask input::-webkit-clear-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-[type="date"]::-webkit-calendar-picker-indicator {
- position:absolute;
- left:91%;
- color:black;
- font-size:10px;
-}
-
-.teacherTask input {
- outline: 0;
- box-shadow: none;
- border: 0 !important;
- background:white;
- background-image: none;
- width: 90%;
- height: 100%;
- margin: 0;
- padding: 0 0 0 .5em;
- color: black;
- font-size:1em;
- cursor: cursor;
- font-size:1em;
-}
 .TestOrExam{
  position:absolute;
  height:40px;
