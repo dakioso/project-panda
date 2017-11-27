@@ -1,165 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="img/panda.png"/>
-  <title>PandaSoft</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="img/panda.png"/>
+	<title>PandaSoft</title>
 </head>
+
 <body>
-  <header>
-    <div class="student-head" id="arrow-link">
-      <img src="img/kyh1.png" alt="KYH-logo"/>
-    </div>
-    <!-- NAVBAR -->
-    <div class="main-nav" id="navbar" style="top: -20px;">
-      <a class="icon" href="#">&#9776;</a>
-    </div>
-    <div class="login-link">
-      <a href="index.html">Logga ut</a>
-    </div>
-    <div class="login-link">
-      <p id="notification"></p>
-    </div>
-  </header>
-  <!-- Login Navbar -->
-  <div id class="placenav">
-    <div id="nav" class="sidenav">
-      <a  class="active" href="student.html">Administratör sida</a>
-      <a href="#" id="opentask" onclick="opentask()">Lägg till utvärdering</a>
-      <a href="#" id="openadminchange" onclick="opentask()">Ändra utvärdering</a>
-    </div>
-  </div>
-  <!-- Sidenavbar -->
-  <div class="navbutton">
-    <span  onclick="togNav()">&#9776;</span>
-  </div>
-  <!-- Main -->
-  <div class="register-container">
-    <div class="register">
-      <h2>Registrera ny person</h2>
-
-      <select>
-        <option value="elev">Elev</option>
-        <option value="lärare">Lärare</option>
-        <option value="admin">Admin</option>
-      </select>
-
-      <input type="text" name="fnamn" placeholder="Förnamn" id="fnamn">
-      <input type="text" name="enamn" placeholder="Efternamn" id="enamn">
-      <input type="date" placeholder="Födelsedatum" id="datum">
-      <select>
-        <option value="klass">FE17</option>
-        <option value="klass">AM17</option>
-        <option value="klass">SE17</option>
-      </select>
-      <input type="text" name="anvnamn" placeholder="Användarnamn" id="anvnamn">
-      <input type="text" name="lösen" placeholder="Default lösenord" id="lösen">
-      <input type="button" name="reg" value="Registrera"  onclick="reg()">
-
-    </div>
-  </div>
-
-  <!--Modalbox-Review -->
-  <div id="modaladmin" class="modalAdminForm">
-
-    <div id="modalAdminCreateForm">
-
-      <span class="closeadminform">&times;</span>
-    </center>
-    <div class="center">
-      <h1> Skapa formulär </h1>
-      <input type="text" placeholder="Titel"><br>
-      <select class="formcheck"  name="select" required>
-        <option disabled selected value> Välj utvärdering </option>
-        <option value="Veckoutvärdering">Veckoutvärdering</option>
-        <option value="Projektmetodik">Kursutvärdering</option>
-      </select>
-      <br>
-      <br>
-
-      <form id="addQuestion">
-        <h3>Lägg till frågor</h3>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="dedu">Obligatoriskt</span>
-        </label>
-        <input type="text" id="item"placeholder="Frågor" required>
-        <input type="submit" class="addtext" value="+">
-      </form>
-      <table id="items" class="rutan">
-        <tr></tr>
-      </table>
-      <form id="addoption">
-        <h3>Lägg till alternativ</h3>
-        <input type="text" id="submitaddoptions" placeholder="Alternativ" required>
-        <input type="submit" class="addtext" value="+">
-        <table id="options" class="rutan">
-          <tr></tr>
-        </table>
-      </form>
-      <h3>Välj alternativ knappar</h3>
-      <input type="radio" required>
-      <input type="checkbox">
-      <br>
-      <br>
-      <center><button class="adminsubmitTask" onclick="admininput()">Skicka</button></center>
-
-    </div>
-  </div>
-</div>
-<div id="modaladminchange" class="modalhej">
-  <span class="closechangeform">&times;</span>
-  <div id="Adminchange">
-    <div class="hej">
-      <h2>Lägg till eller tabort</h2>
-      <form id="sven">
-        <input type="text" id="item1" placeholder="Frågor" required>
-        <input type="submit" value="Lägg till">
-      </form>
-      <h2>Veckoutvärdering</h2>
-      <ul id="items1">
-        <li class="listan">Vilket tempo är det?<button class="delete1">X</button></li>
-        <li class="listan">Vilken kurs är svårast?<button class="delete1">X</button></li>
-        <li class="listan">Nivån på innehållet?<button class="delete1">X</button></li>
-        <li class="listan">Trivsel i klassen?<button class="delete1">X</button></li>
-      </ul>
-    </div>
-    <div class="snabel">
-      <form id="addoption1">
-        <input type="text" id="submitaddoptions1"  placeholder="Alternativ" required>
-        <input type="submit"value="Lägg till">
-      </form>
-      <h2>Alternativ</h2>
-      <ul id="options1">
-        <li class="listan">Utmärkt<button class="delete1">X</button></li>
-        <li class="listan">Bra<button class="delete1">X</button></li>
-        <li class="listan">Mindre bra<button class="delete1">X</button></li>
-        <li class="listan">Dålig<button class="delete1">X</button></li>
-      </ul>
-      <div class="middle">
-        <button class="adminsubmitTask" onclick="adminchangeinput()">Spara</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-<!-- Footer-->
-<footer class="teacher-footer" id="kontakt">
-  <div class="para">
-    <p>Adress: Bamboovägen 4<br/>Telefon: 08 123 45 67<br/>
-      E-mail: Kundservice@pandasoft.se</p>
-
-    </div>
-    <div class="arrow">
-      <a href="#arrow-link"><img src="img/pil.png"/></a>
-    </div>
-  </footer>
-
-  <script src="js/zenscroll-min.js"></script>
-  <script src="js/admin.js"></script>
+	<header>
+		<div class="student-head" id="arrow-link"> <img src="img/kyh1.png" alt="KYH-logo" /> </div>
+		<!-- NAVBAR -->
+		<div class="main-nav" id="navbar" style="top: -20px;"> <a class="icon" href="#">&#9776;</a> </div>
+		<div class="login-link"> <a href="index.html">Logga ut</a> </div>
+		<div class="login-link">
+			<p id="notification"></p>
+		</div>
+	</header>
+	<!-- Login Navbar -->
+	<div id class="placenav">
+		<div id="nav" class="sidenav"> <a class="active" href="student.html">Administratör sida</a> <a href="#" id="opentask" onclick="opentask()">Lägg till utvärdering</a> <a href="#" id="openadminchange" onclick="opentask()">Ändra utvärdering</a> </div>
+	</div>
+	<!-- Sidenavbar -->
+	<div class="navbutton"> <span onclick="togNav()">&#9776;</span> </div>
+	<!-- Main -->
+	<div class="register-container">
+		<div class="register">
+			<h2>Registrera ny person</h2>
+			<select>
+				<option value="elev">Elev</option>
+				<option value="lärare">Lärare</option>
+				<option value="admin">Admin</option>
+			</select>
+			<input type="text" name="fnamn" placeholder="Förnamn" id="fnamn">
+			<input type="text" name="enamn" placeholder="Efternamn" id="enamn">
+			<input type="date" placeholder="Födelsedatum" id="datum">
+			<select>
+				<option value="klass">FE17</option>
+				<option value="klass">AM17</option>
+				<option value="klass">SE17</option>
+			</select>
+			<input type="text" name="anvnamn" placeholder="Användarnamn" id="anvnamn">
+			<input type="text" name="lösen" placeholder="Default lösenord" id="lösen">
+			<input type="button" name="reg" value="Registrera" onclick="reg()"> </div>
+	</div>
+	<!--Modalbox-Review -->
+	<div id="modaladmin" class="modalAdminForm">
+		<div id="modalAdminCreateForm"> <span class="closeadminform">&times;</span> </center>
+			<div class="center">
+				<h1> Skapa formulär </h1>
+				<input type="text" placeholder="Titel">
+				<br>
+				<select class="formcheck" name="select" required>
+					<option disabled selected value> Välj utvärdering </option>
+					<option value="Veckoutvärdering">Veckoutvärdering</option>
+					<option value="Projektmetodik">Kursutvärdering</option>
+				</select>
+				<br>
+				<br>
+				<form id="addQuestion">
+					<h3>Lägg till frågor</h3>
+					<label class="switch">
+						<input type="checkbox"> <span class="dedu">Obligatoriskt</span> </label>
+					<input type="text" id="item" placeholder="Frågor" required>
+					<input type="submit" class="addtext" value="+"> </form>
+				<table id="items" class="rutan">
+					<tr></tr>
+				</table>
+				<form id="addoption">
+					<h3>Lägg till alternativ</h3>
+					<input type="text" id="submitaddoptions" placeholder="Alternativ" required>
+					<input type="submit" class="addtext" value="+">
+					<table id="options" class="rutan">
+						<tr></tr>
+					</table>
+				</form>
+				<h3>Välj alternativ knappar</h3>
+				<input type="radio" required>
+				<input type="checkbox">
+				<br>
+				<br>
+				<center>
+					<button class="adminsubmitTask" onclick="admininput()">Skicka</button>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div id="modaladminchange" class="modalhej"> <span class="closechangeform">&times;</span>
+		<div id="Adminchange">
+			<div class="hej">
+				<h2>Lägg till eller tabort</h2>
+				<form id="sven">
+					<input type="text" id="item1" placeholder="Frågor" required>
+					<input type="submit" value="Lägg till"> </form>
+				<h2>Veckoutvärdering</h2>
+				<ul id="items1">
+					<li class="listan">Vilket tempo är det?
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Vilken kurs är svårast?
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Nivån på innehållet?
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Trivsel i klassen?
+						<button class="delete1">X</button>
+					</li>
+				</ul>
+			</div>
+			<div class="snabel">
+				<form id="addoption1">
+					<input type="text" id="submitaddoptions1" placeholder="Alternativ" required>
+					<input type="submit" value="Lägg till"> </form>
+				<h2>Alternativ</h2>
+				<ul id="options1">
+					<li class="listan">Utmärkt
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Bra
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Mindre bra
+						<button class="delete1">X</button>
+					</li>
+					<li class="listan">Dålig
+						<button class="delete1">X</button>
+					</li>
+				</ul>
+				<div class="middle">
+					<button class="adminsubmitTask" onclick="adminchangeinput()">Spara</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer-->
+	<footer class="teacher-footer" id="kontakt">
+		<div class="para">
+			<p>Adress: Bamboovägen 4
+				<br/>Telefon: 08 123 45 67
+				<br/> E-mail: Kundservice@pandasoft.se </p>
+		</div>
+		<div class="arrow">
+			<a href="#arrow-link"><img src="img/pil.png" /> </a>
+		</div>
+	</footer>
+	<script src="js/zenscroll-min.js"></script>
+	<script src="js/admin.js"></script>
 </body>
+
 </html>
