@@ -116,7 +116,7 @@
 
 
             <!--Modalbox-Review -->
-            <div id="mymodal" class="modal">
+            <div id="Reviewbox" class="Reviewbox">
               <div class="test">
                 <center> <h1>Utvärdering</h1> </center>
                 <span class="closereview">&times;</span>
@@ -195,7 +195,7 @@
                             <textarea name="text" class="feedback-input" id="comment" placeholder="Skriv här..."></textarea>
                           </div>
                         </div>
-                        <input type="button" class="send"  onclick="utvard()"value="Skicka" />
+                        <input type="button" class="send"  onclick="reviewinput()"value="Skicka" />
                       </div>
                     </form>
                   </div>
@@ -203,7 +203,7 @@
               </div>
             </div>
             <!--Modalbox-Review -->
-            <div id="modalteacher" class="modalteacher">
+            <div id="Assigmentbox" class="Assigmentbox">
               <span class="closetask">&times;</span>
               <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
               <div id="teacherTask">
@@ -222,9 +222,7 @@
                     <option value="3">Objekt</option>
                   </select>
 
-                  <div class="teacherTask">
-                    <input placeholder="Inlämningsdatum" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date" style="cursor:default">
-                  </div>
+                  
 
                   <div class="TestOrExam">
                     <input type="radio" id="radio01" name="radio"/>

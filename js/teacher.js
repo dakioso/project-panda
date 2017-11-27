@@ -5,8 +5,6 @@ google.charts.setOnLoadCallback(drawCrosshairs);
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
 
-
-
 //navbar open and close.
 function togNav() {
   var nav = document.getElementById("nav");
@@ -124,7 +122,6 @@ let showBox = function(box){
       weeklyCanvas.style.display = 'flex';
       weekOption.style.display = 'block';
       chart_div1.style.display = 'none';
-
       courseOption.style.display = 'none';
       courseAnswers1.style.display = 'none';
       chart_div.style.display = 'none';
@@ -137,14 +134,13 @@ let showBox = function(box){
       chart_div1.style.position = 'unset';
       courseOption.style.display = 'block';
       chart_div.style.display = 'none';
-
       chart_div_smileys.style.display = 'none';
       weeklyCanvas.style.display = 'none';
       weeklyAnswers1.style.display = 'none';
       weekOption.style.display = 'none';
   }
 }
-
+  // Draw weekly canvas
 function drawWeek(){
   let canvasAreaWeekly = document.getElementById('weeklyCanvas'),
       week = canvasAreaWeekly.getContext('2d'),
@@ -365,7 +361,8 @@ function teacherinput() {
 	   notif.innerText = "Uppgifterna är nu tillagda.";
     notif.style.color = '#3dd43d';
     notif.style.borderColor ="#3dd43d";
-    setInterval(addHideMe, 5000);
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
     dailyInvoke = true;
 }
 // Get the modal2
@@ -397,10 +394,11 @@ window.onclick = function(event) {
 }
 function teacherinput2() {
   	modal2.style.display = "none";
-	   notif.innerText = "Uppgifterna är nu tillagda.";
+	   notif.innerText = "Uppgifterna är nu inlämnade.";
     notif.style.color = '#3dd43d';
     notif.style.borderColor ="#3dd43d";
-    setInterval(addHideMe, 5000);
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
     dailyInvoke = true;
 }
 // Generates a random number for attendance
@@ -422,7 +420,8 @@ function createNews() {
   notif.innerText = "Din nyhet är nu publicerad.";
   notif.style.color = '#3dd43d';
   notif.style.borderColor ="#3dd43d";
-  setInterval(addHideMe, 5000);
+  notif.classList.remove("hideMe");
+  setInterval(addHideMe, 1000);
 }
 
 function addHideMe() {
@@ -463,11 +462,11 @@ var droppedIn = false; // checks if the object is dropped in the dropzone
 function checkValidDivs(form){
 let divMessage = document.getElementById('numberErrorMessage'),
     classList = document.getElementById('studentClassList');
-  if(form.totalDivs.value <= 0 || form.totalDivs.value > 9){
+  if(form.totalDivs.value <= 0){
     divMessage.style.marginTop = '10px';
-    divMessage.innerHTML = 'Välj ett heltal mellan 1-9';
+    divMessage.innerHTML = 'Vänligen välj ett giltigt heltal';
     divMessage.style.color = 'red';
-  } else {
+} else {
 
     divMessage.innerHTML = 'Skapar grupper...';
     divMessage.style.color = '#00b300';
