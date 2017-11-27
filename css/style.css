@@ -19,6 +19,7 @@ h1 {
 h2 {
     font-weight: 300;
 }
+<<<<<<< HEAD
 .main-head {
     box-sizing: border-box;
     display: flex;
@@ -54,6 +55,12 @@ h2 {
     height: auto;
     margin-top: 35px;
 }
+=======
+
+/*-----------------------------------------------------------------------------
+                    Main CSS Start
+-----------------------------------------------------------------------------*/
+>>>>>>> e4012cbdb0f912470c2152895519b091a16cdd39
 .main-nav {
     box-sizing: border-box;
     display: flex;
@@ -87,6 +94,48 @@ h2 {
 .main-nav a.active {
     color: #ffa500;
 }
+<<<<<<< HEAD
+=======
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+span {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*-----------------------------------------------------------------------------
+                    Main Css End
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+                    Index.HTML Start
+-----------------------------------------------------------------------------*/
+.main-head {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101px;
+  width: 100%;
+  background-color: #292929;
+}
+
+.main-head img {
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  width: 100px;
+  max-width:100%;
+  height:auto;
+}
+
+>>>>>>> e4012cbdb0f912470c2152895519b091a16cdd39
 .login-link {
     display: flex;
     align-items: center;
@@ -252,6 +301,7 @@ p.price-head {
     width: 700px;
     /* Could be more or less, depending on screen size */
 
+<<<<<<< HEAD
     height: 400px;
 }
 .close:hover,
@@ -264,7 +314,41 @@ span {
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
+=======
+/*-----------------------------------------------------------------------------
+                    Index.HTML End
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------------
+                    student.HTML Start
+-----------------------------------------------------------------------------*/
+.student-head {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101px;
+  width: 100%;
+  background-color: #292929;
 }
+
+.student-head img {
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  width: 180px;
+  max-width:100%;
+  height:auto;
+  margin-top: 35px;
+>>>>>>> e4012cbdb0f912470c2152895519b091a16cdd39
+}
+/*-----------------------------------------------------------------------------
+                    student.HTML End
+-----------------------------------------------------------------------------*/
+
 .grid-box {
     width: 100%;
     height: 600px;
@@ -1228,9 +1312,9 @@ textarea {
     justify-content: space-between;
     margin-bottom: 100px;
 }
-/* The Modal (background) */
 
-.modal {
+/* The Reviewbox (background) and animation  */
+.Reviewbox {
     display: none;
     position: fixed;
     z-index: 1;
@@ -1862,17 +1946,22 @@ p3 {
 }
 /* test */
 
-.modalteacher {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 50px;
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
+.Assigmentbox {
+ display: none;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ padding-top:50px;
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+ -webkit-animation-duration: 0.4s;
+ animation-name: animatetop;
+ animation-duration: 0.4s;
+}
+
 
     background-color: rgba(0, 0, 0, 0.7);
     /* Black w/ opacity */
@@ -2242,11 +2331,11 @@ p3 {
     background: #f7f7f7;
 }
 #smileys {
-    height: 220px;
-    z-index: 1;
-    position: relative;
-    left: 106px;
-    top: 110px;
+  height: 220px;
+  z-index: 1;
+  position: relative;
+  left: 106px;
+  top: 50px;
 }
 #smileys img {
     display: block;

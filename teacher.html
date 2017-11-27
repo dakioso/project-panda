@@ -160,6 +160,7 @@
     <div id="canvasRow">
       <canvas id="weeklyCanvas" width="600px" height="400px"></canvas>
       <div id="smileys">
+        <img src="img/whitesmiley.png" alt"whitespace">
         <img src="img/happy.png" alt="happy picture">
         <img src="img/neutral.png" alt="neutral picture">
         <img src="img/sad.png" alt="sad picture">
@@ -196,7 +197,7 @@
       <aside>
         <form name="boxNumber">
           <label>Välj antal grupper</label><hr>
-          <input type="number" name="totalDivs" placeholder="1-9"><br />
+          <input type="number" name="totalDivs"><br />
           <input type="button" onclick="checkValidDivs(this.form)" value="Skapa grupper">
         </form>
         <div id="numberErrorMessage">
@@ -269,7 +270,7 @@
   </section>
   </div>
   <!--Modalbox-Review -->
-  <div id="modalteacher" class="modalteacher">
+  <div id="modalteacher" class="Assigmentbox">
     <span class="closetask">&times;</span>
     <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
     <div id="teacherTask">
