@@ -361,7 +361,8 @@ function teacherinput() {
 	   notif.innerText = "Uppgifterna är nu tillagda.";
     notif.style.color = '#3dd43d';
     notif.style.borderColor ="#3dd43d";
-    setInterval(addHideMe, 5000);
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
     dailyInvoke = true;
 }
 // Get the modal2
@@ -393,10 +394,11 @@ window.onclick = function(event) {
 }
 function teacherinput2() {
   	modal2.style.display = "none";
-	   notif.innerText = "Uppgifterna är nu tillagda.";
+	   notif.innerText = "Uppgifterna är nu inlämnade.";
     notif.style.color = '#3dd43d';
     notif.style.borderColor ="#3dd43d";
-    setInterval(addHideMe, 5000);
+    notif.classList.remove("hideMe");
+    setInterval(addHideMe, 1000);
     dailyInvoke = true;
 }
 // Generates a random number for attendance
@@ -418,7 +420,8 @@ function createNews() {
   notif.innerText = "Din nyhet är nu publicerad.";
   notif.style.color = '#3dd43d';
   notif.style.borderColor ="#3dd43d";
-  setInterval(addHideMe, 5000);
+  notif.classList.remove("hideMe");
+  setInterval(addHideMe, 1000);
 }
 
 function addHideMe() {
