@@ -1,104 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="img/panda.png"/>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <title>PandaSoft</title>
-</head>
-<body>
-  <header>
-    <div class="student-head" id="arrow-link">
-      <img src="img/KYH1.png" alt="KYH-logo"/>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/panda.png"/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>PandaSoft</title>
+  </head>
+  <body>
+    <header>
+      <div class="student-head" id="arrow-link">
+        <img src="img/KYH1.png" alt="KYH-logo"/>
+      </div>
+      <!-- NAVBAR -->
+      <div class="main-nav" id="navbar" style="top: -20px;">
+        <a class="icon" href="#">&#9776;</a>
+      </div>
+      <div class="login-link">
+        <a href="index.html">Logga ut</a>
+      </div>
+      <div class="login-link">
+        <p id="notification"></p>
+      </div>
+    </header>
+    <!-- Login Navbar -->
+    <div class="placenav">
+      <div id="nav" class="sidenav">
+        <a  class="active" href="teacher.html">Lärare</a>
+        <a href="#utvärdering" >Utvärderingar</a>
+        <a href="#divideGroups" >Gruppindelning</a>
+        <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
+        <a href="#" id="opentask2" onclick="opentask2()">Inlämnade uppgifter</a>
+      </div>
     </div>
-    <!-- NAVBAR -->
-    <div class="main-nav" id="navbar" style="top: -20px;">
-      <a class="icon" href="#">&#9776;</a>
+    <!-- Sidenavbar -->
+    <div class="navbutton">
+      <span  onclick="togNav()">&#9776;</span>
     </div>
-    <div class="login-link">
-      <a href="index.html">Logga ut</a>
-    </div>
-    <div class="login-link">
-      <p id="notification"></p>
-    </div>
-  </header>
-  <!-- Login Navbar -->
-  <div id class="placenav">
-    <div id="nav" class="sidenav">
-      <a  class="active" href="teacher.html">Lärare</a>
-      <a href="#utvärdering" >Utvärderingar</a>
-      <a href="#divideGroups" >Gruppindelning</a>
-      <a href="#" id="opentask" onclick="opentask()">Lägg till uppgifter</a>
-      <a href="#" id="opentask2" onclick="opentask2()">Inlämnade uppgifter</a>
-    </div>
-  </div>
-  <!-- Sidenavbar -->
-  <div class="navbutton">
-    <span  onclick="togNav()">&#9776;</span>
-  </div>
-
-  <section class="testing">
-    <div class="attendance-hidden">
-
-    </div>
-
+    <section class="testing">
+      <div class="attendance-hidden">
+        <!-- hidden box-->
+      </div>
     <section class = "schemebox">
-
-    <div class="teacher-scheme">
-      <h1>NYHETER</h1>
-      <h2>Ombyggnation i hus A, vecka 36</h2>
-      <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
-        eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada
-        fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
-        Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
-        eu gravida purus aliquet a. Nulla facilisi.</p>
+      <div class="teacher-scheme">
+        <h1>NYHETER</h1>
+        <h2>Ombyggnation i hus A, vecka 36</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+           eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+           Pellentesque habitant morbi tristique senectus et netus et malesuada
+           fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+           Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+           eu gravida purus aliquet a. Nulla facilisi.</p>
         <h2>Öppettider för Bibliotek, vecka 36</h2>
         <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
-          eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
-          Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
-          eu gravida purus aliquet a. Nulla facilisi.</p>
-          <h2>Företagsträff, vecka 38</h2>
-          <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+           eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
+           Pellentesque habitant morbi tristique senectus et netus et malesuada
+           fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
+           Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
+           eu gravida purus aliquet a. Nulla facilisi.</p>
+        <h2>Företagsträff, vecka 38</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
             eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
             Pellentesque habitant morbi tristique senectus et netus et malesuada
             fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
             Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
             eu gravida purus aliquet a. Nulla facilisi.</p>
-            <h2>Uppskjuten tentamen, vecka 40</h2>
-            <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+        <h2>Uppskjuten tentamen, vecka 40</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
               eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
               Pellentesque habitant morbi tristique senectus et netus et malesuada
               fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
               Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
               eu gravida purus aliquet a. Nulla facilisi.</p>
-              <h2>Skolans öppettider, vecka 40</h2>
-              <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+        <h2>Skolans öppettider, vecka 40</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
                 eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
                 Pellentesque habitant morbi tristique senectus et netus et malesuada
                 fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
                 Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
                 eu gravida purus aliquet a. Nulla facilisi.</p>
-                <h2>Skolans öppettider under jul/nyår, vecka 52</h2>
-                <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
+        <h2>Skolans öppettider under jul/nyår, vecka 52</h2>
+        <p>Vestibulum quis euismod magna. Maecenas nisi libero, faucibus eget aliquam
                   eget, tristique eget est. Maecenas ultricies mattis justo id rutrum.
                   Pellentesque habitant morbi tristique senectus et netus et malesuada
                   fames ac turpis egestas. Curabitur pretium felis sed leo commodo aliquam.
                   Ut consectetur sit amet nibh vitae sagittis. Suspendisse hendrerit dui dolor,
                   eu gravida purus aliquet a. Nulla facilisi.</p>
-                </div>
-              </section>
-
-
+      </div>
+    </section>
     <div class="attendance">
       <section>
         <p>Generera en närvarokod.</p>
         <input type="text" id="attendanceCode" placeholder="Närvarokod..." readonly /><br />
-
         <div>
           <select id="attendanceCourse" onchange="clearAttendance()">
             <option value="arbetsmetodik" selected>Arbetsmetodik</option>
@@ -109,176 +103,162 @@
             <option value="php">PHP</option>
           </select>
           <input type="button" value="Generera" onClick="numGen()" /><br />
-
         </div>
-
         <p>Skriv ny nyhet.</p>
         <input type="text" id="newsTitle" placeholder="Titel"/><br />
-        <textarea  id="newsContent" placeholder="Nyhetsinnehåll"/></textarea>
+        <textarea  id="newsContent" placeholder="Nyhetsinnehåll"></textarea>
         <input type="button" value="Publicera nyhet" onClick="createNews()" />
         <a href="#narvaroscroll" onclick="visanärvarolista()">Närvarolista</a>
-
-      <!--  <input type="button" a href="#narvaroscroll" value="Närvarolista" onClick="visanärvarolista()" /><br />
--->
+        <!--  <input type="button" a href="#narvaroscroll" value="Närvarolista" onClick="visanärvarolista()" /><br />-->
       </section>
     </div>
-  </section>
-  <section class="evaluation-response">
-
-
-    </div>
-
-  </section>
-  <section id="utvärdering">
-    <h1>Utvärderingar</h1>
-    <div id="selectLists">
-      <select onchange="showBox(this.value)">
-        <option>Välj utvärdering</option>
-        <option value="daglig">Daglig utvärdering</option>
-        <option value="vecko">Veckoutvärdering</option>
-        <option value="kurs">Kursutvärdering</option>
-      </select>
-      <select onchange="checkWeek(this.value)" id="weekOption">
-        <option>Välj vecka</option>
-        <option value="v36">Vecka 36</option>
-        <option value="v37">Vecka 37</option>
-        <option value="v38">Vecka 38</option>
-        <option value="v39">Vecka 39</option>
-        <option value="v40">Vecka 40</option>
-      </select>
-      <select onchange="showCourseBox(this.value)" id="courseOption">
-        <option>Välj kurs</option>
-        <option value="arbetsmetodik">Arbetsmetodik</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="javascript">Javascript</option>
-        <option value="php">PHP</option>
-        <option value="backend">Backend</option>
-      </select>
-    </div>
-    <div id="canvasRow">
-      <canvas id="weeklyCanvas" width="600px" height="400px"></canvas>
-      <div id="smileys">
-        <img src="img/whitesmiley.png" alt"whitespace">
-        <img src="img/happy.png" alt="happy picture">
-        <img src="img/neutral.png" alt="neutral picture">
-        <img src="img/sad.png" alt="sad picture">
+    </section>
+    <section class="evaluation-response">
+      <!-- evaluation responsetext-->
+    </section>
+    <section id="utvärdering">
+      <h1>Utvärderingar</h1>
+      <div id="selectLists">
+        <select onchange="showBox(this.value)">
+          <option>Välj utvärdering</option>
+          <option value="daglig">Daglig utvärdering</option>
+          <option value="vecko">Veckoutvärdering</option>
+          <option value="kurs">Kursutvärdering</option>
+        </select>
+        <select onchange="checkWeek(this.value)" id="weekOption">
+          <option>Välj vecka</option>
+          <option value="v36">Vecka 36</option>
+          <option value="v37">Vecka 37</option>
+          <option value="v38">Vecka 38</option>
+          <option value="v39">Vecka 39</option>
+          <option value="v40">Vecka 40</option>
+        </select>
+        <select onchange="showCourseBox(this.value)" id="courseOption">
+          <option>Välj kurs</option>
+          <option value="arbetsmetodik">Arbetsmetodik</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">Javascript</option>
+          <option value="php">PHP</option>
+          <option value="backend">Backend</option>
+        </select>
       </div>
-      <div id="chart_div"></div>
-      <div id="chart_div1"></div>
-      <div id="courseAnswers1" class="weekAndCourseAnswers">
-        <h2>Vad var bra med kursen</h2>
-        <ul>
-          <li>Upplägget på kursen var riktigt bra och läraren hade ett pedagogiskt lärosätt</li>
-          <li>Läraren förklarade på ett bra sätt så man lätt kunde förstå. Tydliga mål från start vad vi förväntades kunna när kursen var avslutad</li>
-          <li>Föreläsningarna var kanonbra</li>
-          <li>Mitt betyg</li>
-          <li>Allt</li>
-          <li>Att vi har kört projektarbete har gjort att man lärt sig väldigt mycket på vägens gång</li>
-        </ul>
-        <h2>Vad har varit dåligt med kursen</h2>
-        <ul>
-          <li>Jag tycker att det var lite för stressigt med alla uppgifter</li>
-          <li>Det var för mycket föreläsningar</li>
-          <li>För långa föreläsningar så man tappade fokus lätt</li>
-          <li>Läraren var duktig men kunde ha gått in mer invecklat i ämnet, kände att det var alldeles för lätt nu och kursen gav mig inte så jätte mycket</li>
-          <li>För långa föreläsningar, hade vart bättre med flera pauser för att behålla fokus</li>
-          <li>Kursen var för kort, jag känner att jag inte har hunnit lära mig allt som förväntades av mig</li>
-        </ul>
+      <div id="canvasRow">
+        <canvas id="weeklyCanvas" width="600" height="400"></canvas>
+        <div id="smileys">
+          <img src="img/whitesmiley.png" alt="whitespace">
+          <img src="img/happy.png" alt="happy picture">
+          <img src="img/neutral.png" alt="neutral picture">
+          <img src="img/sad.png" alt="sad picture">
+        </div>
+        <div id="chart_div"></div>
+        <div id="chart_div1"></div>
+        <div id="courseAnswers1" class="weekAndCourseAnswers">
+          <h2>Vad var bra med kursen</h2>
+          <ul>
+            <li>Upplägget på kursen var riktigt bra och läraren hade ett pedagogiskt lärosätt</li>
+            <li>Läraren förklarade på ett bra sätt så man lätt kunde förstå. Tydliga mål från start vad vi förväntades kunna när kursen var avslutad</li>
+            <li>Föreläsningarna var kanonbra</li>
+            <li>Mitt betyg</li>
+            <li>Allt</li>
+            <li>Att vi har kört projektarbete har gjort att man lärt sig väldigt mycket på vägens gång</li>
+          </ul>
+          <h2>Vad har varit dåligt med kursen</h2>
+          <ul>
+            <li>Jag tycker att det var lite för stressigt med alla uppgifter</li>
+            <li>Det var för mycket föreläsningar</li>
+            <li>För långa föreläsningar så man tappade fokus lätt</li>
+            <li>Läraren var duktig men kunde ha gått in mer invecklat i ämnet, kände att det var alldeles för lätt nu och kursen gav mig inte så jätte mycket</li>
+            <li>För långa föreläsningar, hade vart bättre med flera pauser för att behålla fokus</li>
+            <li>Kursen var för kort, jag känner att jag inte har hunnit lära mig allt som förväntades av mig</li>
+          </ul>
+        </div>
+        <div id="weeklyAnswers1" class="weekAndCourseAnswers">
+          <!-- place for weekly answertext-->
+        </div>
       </div>
-      <div id="weeklyAnswers1" class="weekAndCourseAnswers">
-      </div>
-    </div>
-  </section>
-  <section id="divideGroups">
-    <h1>Gruppindelning</h1>
-    <div id="divideGroupsRow">
-      <aside>
-        <form name="boxNumber">
-          <label>Välj antal grupper</label><hr>
-          <input type="number" name="totalDivs"><br />
-          <input type="button" onclick="checkValidDivs(this.form)" value="Skapa grupper">
-        </form>
-        <div id="numberErrorMessage">
+    </section>
+    <section id="divideGroups">
+      <h1>Gruppindelning</h1>
+      <div id="divideGroupsRow">
+        <aside>
+          <form name="boxNumber">
+            <label>Välj antal grupper</label><hr>
+            <input type="number" name="totalDivs"><br />
+            <input type="button" onclick="checkValidDivs(this.form)" value="Skapa grupper">
+          </form>
+          <div id="numberErrorMessage">
             <!-- Message -->
+          </div>
+          <div id="studentClassList">
+            <!-- Place for student drag and drop classlist -->
+          </div>
+          <div id="distributeBtn">
+            <input type="button" onclick="shuffle(studentClass[0]['students'])" value="Auto-indelning" />
+          </div>
+        </aside>
+        <div id="drop_zoneArea">
+          <!-- Dropzone boxes -->
         </div>
-        <div id="studentClassList">
-          <!-- Place for student drag and drop classlist -->
-        </div>
-        <div id="distributeBtn">
-          <input type="button" onclick="shuffle(studentClass[0]['students'])" value="Auto-indelning" />
-        </div>
-      </aside>
-      <div id="drop_zoneArea">
-         <!-- Dropzone boxes -->
       </div>
-    </div>
-  </section>
-  <div class = "närvaroflex">
-    <a id="narvaroscroll"></a>
-  <section class ="närvaro-cont" id =  "närvaro-hidden" style="display:none;">
-
-    <div class = "attendance-list">
-
-        <section class ="elever" id="varoBehållare" >
+    </section>
+    <div class = "närvaroflex">
+      <a id="narvaroscroll"></a>
+    <section class="närvaro-cont" id="närvaro-hidden" style="display:none;">
+      <div class = "attendance-list">
+        <section class ="elever" id="varoBehållare">
           <div><h3>Elever 9 av 20</h3></div>
           <div class ="attendance-listcont"><h2>
           Elaine Stenqvist <br> Amelie Stenqvist <br>Inez Stenqvist<br> Nadine Stenqvist<br>Tea Stenqvist<br>
           Narin Stenqvist<br>Emir Stenqvist<br> Theodor Stenqvist<br> Hasan Stenqvist<br>
-        </h2>
+          </h2>
           </div>
         </section>
-
         <div class ="närvaro" id="varoBehållare">
           <div><h3>Datum: 25/11</h3></div>
           <div class ="attendance-listcont">
             <h2>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-              Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+              Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
             </h2>
           </div>
         </div>
-
-        <section class ="elever" id="varoBehållare" >
+        <section class ="elever" id="varoBehållare">
           <div><h3>Datum: 28/11</h3></div>
           <div class ="attendance-listcont">
           <h2>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-            Här:   <img src="img/passed.png" alt="" width="20px" class="toggle1" onclick="toggleClass(this)"><br>
-        </h2>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt="" class="toggle1" onclick="toggleClass(this)"><br>
+            Här:   <img src="img/passed.png" alt=""  class="toggle1" onclick="toggleClass(this)"><br>
+          </h2>
           </div>
         </section>
-
-
       </div>
-  </section>
-  </div>
-  <!--Modalbox-Review -->
-  <div id="modalteacher" class="Assigmentbox">
-    <span class="closetask">&times;</span>
-    <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
-    <div id="teacherTask">
+    </section>
+    </div>
+      <!--Modalbox-Review -->
+    <div id="modalteacher" class="Assigmentbox">
+      <span class="closetask">&times;</span>
+      <center><button class="teachersubmit" onclick="teacherinput()">Skicka</button></center>
+      <div id="teacherTask">
       <div class="RTcontent">
         <select>
           <option disabled selected value>Välj klass</option>
           <option value="1">FE 17</option>
           <option value="2">FE 16</option>
-
         </select>
         <br>
         <select>
@@ -287,47 +267,39 @@
           <option value="2">Arbetsmetodik</option>
           <option value="3">Arbetsmetodik</option>
         </select>
-
-
         <div class="TestOrExam">
           <input type="radio" id="radio01" name="radio"/>
           <label for="radio01"><span></span>Exam</label>
           <input type="radio" id="radio02" name="radio" />
           <label for="radio02"><span></span>Prov</label>
         </div>
-
         <div class="image-upload">
           <label for="file-input">
-            <img src="img/addfile.png">
+            <img src="img/addfile.png" alt="addfile picture">
           </label>
           <input id="file-input" type="file"/>
           <div class="input-text"><p>Lägg till fil</p>
           </div>
         </div>
       </div>
-
       <div class="LTcontent">
         <input type="text" placeholder="Titel..."><br>
         <input type="text" placeholder="Uppgifter..."><br>
-
         <textarea placeholder="Max 330 ord..." ></textarea>
       </div>
     </div>
-  </div>
-
-
-  <!--Modalbox-Review 2 -->
-  <div id="modalteacher2" class="modalteacher2">
-    <span class="closetask2">&times;</span>
-    <center>  <button class="teachersubmit2"onclick="teacherinput2()">Skicka</button> </center>
-    <div id="teacherTask2">
+    </div>
+      <!--Modalbox-Review 2 -->
+    <div id="modalteacher2" class="modalteacher2">
+      <span class="closetask2">&times;</span>
+      <center>  <button class="teachersubmit2" onclick="teacherinput2()">Skicka</button> </center>
+      <div id="teacherTask2">
       <div class="RTcontent2">
         <select>
           <option disabled selected value>Välj Kurs</option>
           <option value="1">Arbetsmetodik</option>
           <option value="2">JavaScript</option>
           <option value="3">HTML</option>
-
         </select>
         <br>
         <select>
@@ -344,7 +316,6 @@
           <option value="2">Grupparbete 1</option>
           <option value="3">Objekt</option>
         </select>
-
         <div class="TestOrExam2">
           <input type="radio" id="radio03" name="radio"/>
           <label for="radio03"><span></span>IG</label>
@@ -354,26 +325,21 @@
           <label for="radio05"><span></span>VG</label>
         </div>
       </div>
-
-
       <div class="LTcontent2">
         <input type="text" placeholder="Kommentar.."><br>
-
         <textarea placeholder="Max 330 ord..." ></textarea>
       </div>
     </div>
-  </div>
-
+    </div>
     <!-- FOOTER -->
     <footer class="teacher-footer" id="kontakt">
       <div class="para">
         <p>Adress: Bamboovägen 4<br />Telefon: 08 123 45 67<br />
           E-mail: Kundservice@pandasoft.se</p>
-
-        </div>
-        <div class="arrow">
-          <a href="#arrow-link" ><img src="img/pil.png" /></a>
-        </div>
+      </div>
+      <div class="arrow">
+        <a href="#" ><img src="img/pil.png" alt="arrowlink to top"></a>
+      </div>
       </footer>
 
       <script src="js/zenscroll-min.js"></script>

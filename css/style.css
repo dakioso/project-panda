@@ -2014,6 +2014,7 @@ p3{
  animation-duration: 0.4s;
 }
 
+
 #teacherTask{
  position:relative;
  background-color:#292929;
@@ -2268,6 +2269,11 @@ p3{
   flex-shrink: 1;
   margin:0;
 }
+
+.attendance-listcont img {
+  width: 20px;
+}
+
   #varoBehållare .toggle1{
     opacity: 1.0;
     border: 1px solid rgba(0,0,0,0.1);
