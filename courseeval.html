@@ -1,74 +1,58 @@
+<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <title>PandaSoft</title>
 </head>
+
 <body>
-
-  <div class ="courseEval">
-
-    <div class ="head-cont">
-
+  <div class="courseEval">
+    <div class="head-cont">
       <h1>Kursutvärdering</h1>
     </div>
-    <form action="" class = "evalForm">
-      <p2>Obligatoriska frågor markeras med *</p2>
+    <form action="#" class="evalForm">
+      <p class="courseEvalP">Obligatoriska frågor markeras med *</p>
       <h3>Välj kurs</h3>
-      <select name="kurser" class = "selectCourses">
-        <option value="kurs">Välj kurs</option>
-        <option value="Arbetsmetodik">Arbetsmetodik</option>
-
-      </select>
+      <select name="kurser" class="selectCourses">
+                  <option value="kurs">Välj kurs</option>
+                  <option value="Arbetsmetodik">Arbetsmetodik</option>
+              </select>
       <h3>* Hur upplevde du tempot i <br> denna kurs?</h3>
-      <div class ="slidersinput">
-      <p5>1 2 3 4 5 </p5> <br>
+      <div class="slidersinput">
+        <p>1 2 3 4 5 </p> <br>
       </div>
-      <section class ="radiobuttons">
-
-      <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-
-      <h3>* Hur svår upplevde du kursen?</h3>
-      <p5>1 2 3 4 5</p5> <br>
-      <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-
-
-      <h3>* Hur välplanerad var kursen <br>under läsåret?</h3>
-      <p5>1 2 3 4 5</p5> <br>
-      <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-
+      <section class="radiobuttons">
+        <input type="range" min="1" max="5" value="1" class="slider">
+        <h3>* Hur svår upplevde du kursen?</h3>
+        <p>1 2 3 4 5</p> <br>
+        <input type="range" min="1" max="5" value="1" class="slider">
+        <h3>* Hur välplanerad var kursen <br>under läsåret?</h3>
+        <p>1 2 3 4 5</p> <br>
+        <input type="range" min="1" max="5" value="1" class="slider">
       </section>
-
-
       <h3> Vad var bra med kursen?</h3>
-      <textarea name="freeForm" class="courseText" cols="50" rows="10" placeholder="Skriv texten här..."></textarea> <br>
-
+      <textarea name="freeForm" class="courseText" cols="50" rows="10" placeholder="Skriv texten här..."></textarea><br>
       <h3>Vad har varit dåligt med kursen?</h3>
-      <textarea name="freeForm" class="courseText" cols="50" rows="10" placeholder="Skriv texten här..." required></textarea> <br>
-      <input id = "formBTN"type="button" name="answer" value="Skicka" onclick="showDiv()" />
-
+      <textarea name="freeForm" class="courseText" cols="50" rows="10" placeholder="Skriv texten här..."></textarea><br>
+      <input id="formBTN" type="button" name="answer" value="Skicka" onclick="showDiv()"><br>
       <div id="welcomeDiv">
         <h2>Tack för din åsikt</h2>
       </div>
-      </form>
-
-
-    </div>
-
-    <section class ="script1">
-      <script>
+    </form>
+  </div>
+  <div class="script1">
+    <script type="text/javascript">
       function showDiv() {
-         document.getElementById('welcomeDiv').style.display = "block";
-         setTimeout(function(){window.close()}, 2500);
+        document.getElementById('welcomeDiv').style.display = "block";
+        setTimeout(function() {
+          window.close()
+        }, 2500);
       }
-      </script>
-    </section>
-
-
+    </script>
+  </div>
 </body>
-
-
-
 
 </html>
