@@ -1227,50 +1227,53 @@ p.price-head {
   letter-spacing: 5px;
 }
 
-#kursinfo-style {
+
+#courseinfo-style{
+>>>>>>> c324d92bce1727624416ae42f65bc2c0b5e59f26
   font-size: 30px;
   padding-left: 71px;
   letter-spacing: 8px;
   text-transform: uppercase;
 }
 
-#p-stil {
+.p-style{
+
   font-size: 18px;
   padding-left: 71px;
   width: 600px;
   padding-right: 50px;
 }
 
-#h2-stil {
+.h2-style{
+
   font-size: 30px;
   padding-left: 71px;
   text-transform: uppercase;
 }
 
-#h3-stil {
+.h3-style{
+
   font-size: 20px;
   padding-left: 71px;
   text-transform: uppercase;
 }
 
-#mål-info {
+.goals-info{
+
   font-size: 18px;
   padding-left: 92px;
 }
 
-.kursinfo-box {
+.courseinfo-box{
+
   display: column;
   padding-bottom: 50px;
   align-items: flex-start;
   margin-bottom: 20px;
 }
 
-.betygskriterier {
-  height: 300px;
-  background-color: black;
-}
+.facts{
 
-.fakta {
   display: flex;
   letter-spacing: 0.1em;
   padding-top: 20px;
@@ -1278,16 +1281,21 @@ p.price-head {
   margin-left: 50px;
 }
 
-.fakta-text {
+.facts-text{
   font-weight: bold;
   font-size: 1.5em;
 }
+.teaching{
+  flex: 2;
 
-.undervisning {
+}
+.place{
+
   flex: 2;
 }
 
-.ort {
+.language{
+
   flex: 2;
 }
 
@@ -1295,7 +1303,8 @@ p.price-head {
   flex: 2;
 }
 
-.ort-text {
+.place-text{
+
   padding-left: 100px;
   font-weight: bold;
   font-size: 1.5em;
@@ -1317,6 +1326,8 @@ p.price-head {
 .smileys img {
   flex-direction: row;
   margin: 5px;
+  width:40px;
+  height:40px;
 }
 
 #answers {
