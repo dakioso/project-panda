@@ -577,7 +577,7 @@ p.price-head {
 
 .sidenav {
   height: 0px;
-  width: 140%;
+  width: 200px;
   position: sticky;
   z-index: 1;
   bottom: 300px;
