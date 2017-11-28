@@ -1161,44 +1161,40 @@ text-transform: uppercase;
 font-size: 4em;
 letter-spacing: 5px;
 }
-#kursinfo-style{
+#courseinfo-style{
   font-size: 30px;
   padding-left: 71px;
   letter-spacing: 8px;
   text-transform: uppercase;
 }
-#p-stil{
+.p-style{
   font-size: 18px;
   padding-left: 71px;
   width: 600px;
   padding-right: 50px;
 }
-#h2-stil{
+.h2-style{
   font-size: 30px;
   padding-left: 71px;
   text-transform: uppercase;
 }
-#h3-stil{
+.h3-style{
   font-size: 20px;
   padding-left: 71px;
   text-transform: uppercase;
 }
-#mål-info{
+.goals-info{
   font-size: 18px;
   padding-left: 92px;
 
 }
-.kursinfo-box{
+.courseinfo-box{
   display: column;
   padding-bottom: 50px;
   align-items: flex-start;
   margin-bottom: 20px;
 }
-.betygskriterier{
-  height:300px;
-  background-color: black;
-}
-.fakta{
+.facts{
   display: flex;
   letter-spacing: 0.1em;
   padding-top: 20px;
@@ -1206,23 +1202,23 @@ letter-spacing: 5px;
   margin-left:50px;
 
 }
-.fakta-text{
+.facts-text{
   font-weight: bold;
   font-size: 1.5em;
 }
-.undervisning{
+.teaching{
   flex: 2;
 
 }
-.ort{
+.place{
   flex: 2;
 
 }
-.språk{
+.language{
   flex: 2;
 
 }
-.ort-text{
+.place-text{
   padding-left: 100px;
   font-weight: bold;
   font-size: 1.5em;
