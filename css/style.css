@@ -1244,6 +1244,8 @@ letter-spacing: 5px;
 .smileys img {
   flex-direction: row;
   margin: 5px;
+  width:40px;
+  height:40px;
 }
 
 #answers {

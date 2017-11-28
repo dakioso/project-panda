@@ -100,9 +100,9 @@
                   <div class="daily-vote">
                     <p>Daglig utvärdering</p>
                     <div class="smileys">
-                      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" height="40px" width="40px" alt="happy-face">
-                      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" height="40px" width="40px" alt="okey-face">
-                      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" height="40px" width="40px" alt="sad-face">
+                      <img src="img/happy.png" id="happyF" onclick="printMess('Nöjd')" alt="happy-face">
+                      <img src="img/neutral.png" id="neutralF" onclick="printMess('Neutral')" alt="okey-face">
+                      <img src="img/sad.png" id="sadF" onclick="printMess('Missnöjd')" alt="sad-face">
                     </div>
                     <p>Veckoutvärdering</p>
                     <center><img src="img/review.png" id="openreview" onclick="openreview()" height="50px" width="50px" style="cursor: pointer"></center>
@@ -110,6 +110,8 @@
                   </div>
                 </aside>
               </section>
+
+
 
 
             <!--Modalbox-Review -->
@@ -138,6 +140,7 @@
                     <option value="Javascript">Javascript</option>
                   </select>
                   <br>
+				  <form>
                       <h2>Nivån på innehållet</h2>
                       <input type="radio" name="level" required>
                       <label>Högt</label>
@@ -192,6 +195,7 @@
                         </div>
                         <input type="button" class="send"  onclick="reviewinput()" value="Skicka" />
                       </div>
+					  </div>
 					  </div>
                 </div>
               </div>
