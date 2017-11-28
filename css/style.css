@@ -2744,7 +2744,7 @@ p3{
 .modaladminchange {
   display: none;
   position: absolute;
-  top:0px;
+  top:-60px;
   z-index: 1;
   padding-top: 100px; /* Location of the box */
   left: 0;
