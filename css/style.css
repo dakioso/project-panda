@@ -2741,7 +2741,7 @@ p3{
  border: 2px solid white;
 }
 
-.modalhej {
+.modaladminchange {
   display: none;
   position: absolute;
   top:0px;
@@ -2805,7 +2805,7 @@ color:white;
 }
 
 
-.snabel {
+.secondboxchange {
 	position:absolute;
     left:30%;
 	width:97.9%;
@@ -2910,7 +2910,7 @@ color:white;
 
 }
 
-.hej {
+.firstboxchange {
 	position:absolute;
     left:30%;
 	width:97.9%;
