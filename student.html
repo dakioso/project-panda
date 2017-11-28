@@ -123,66 +123,65 @@
                 <form>
                   <h2>Vilket tempo är det?</h2>
                   <input type="radio" name="pace" required>
-                  <label for="evaluation">Högt</label>
+                  <label>Högt</label>
                   <br>
                   <input type="radio" name="pace">
-                  <label for="evaluation">Ganska högt</label>
+                  <label>Ganska högt</label>
                   <br>
                   <input type="radio" name="pace">
-                  <label for="evaluation">Ganska lågt</label>
+                  <label>Ganska lågt</label>
                   <br>
                   <input type="radio" name="pace">
-                  <label for="evaluation">Lågt</label>
+                  <label>Lågt</label>
                   <h2>Vilken kurs är svårast</h2>
                   <select class="form-control" id="select" name="select" required>
                     <option disabled selected value> -- Välj ett alternativ-- </option>
-                    <option value="Arbetsmetodik" name="courses">Arbetsmetodik</option>
-                    <option value="Projektmetodik" name="courses">Projektmetodik</option>
-                    <option value="Javascript" name="courses">Javascript</option>
+                    <option value="Arbetsmetodik">Arbetsmetodik</option>
+                    <option value="Projektmetodik">Projektmetodik</option>
+                    <option value="Javascript">Javascript</option>
                   </select>
                   <br>
-                    <div>
                       <h2>Nivån på innehållet</h2>
                       <input type="radio" name="level" required>
-                      <label for="evaluation">Högt</label>
+                      <label>Högt</label>
                       <br>
                       <input type="radio" name="level">
-                      <label for="evaluation">Ganska högt</label>
+                      <label>Ganska högt</label>
                       <br>
                       <input type="radio" name="level">
-                      <label for="evaluation">Ganska lågt</label>
+                      <label>Ganska lågt</label>
                       <br>
                       <input type="radio" name="level">
-                      <label for="evaluation">Lågt</label>
+                      <label>Lågt</label>
                       <br>
-                      <div>
                         <div class="secondbox">
                           <h2>Föreläsningar</h2>
                           <input type="radio" name="lectures" required>
-                          <label for="evaluation">Utmärkt</label>
+                          <label>Utmärkt</label>
                           <br>
                           <input type="radio" name="lectures">
-                          <label for="evaluation">Bra</label>
+                          <label>Bra</label>
                           <br>
                           <input type="radio" name="lectures">
-                          <label for="evaluation">Mindre bra</label>
+                          <label>Mindre bra</label>
                           <br>
                           <input type="radio" name="lectures">
-                          <label for="evaluation">Dålig</label>
+                          <label>Dålig</label>
                         </div>
                         <div class="thirdbox">
                           <h2>Trivsel i klassen</h2>
                           <input type="radio" name="comfort" required>
-                          <label for="evaluation">Utmärkt</label>
+                          <label>Utmärkt</label>
                           <br>
                           <input type="radio" name="comfort">
-                          <label for="evaluation">Bra</label>
+                          <label>Bra</label>
                           <br>
                           <input type="radio" name="comfort">
-                          <label for="evaluation">Mindre bra</label>
+                          <label>Mindre bra</label>
                           <br>
                           <input type="radio" name="comfort">
-                          <label for="evaluation">Dåligt</label>
+                          <label>Dåligt</label>
+						  
                         </div>
                         <div class="review">
                           <h3 class="firstinputhead">Övriga frågor</h3>
@@ -196,14 +195,14 @@
                         </div>
                         <input type="button" class="send"  onclick="reviewinput()" value="Skicka" />
                       </div>
-                  </div>
+					  </div>
                 </div>
               </div>
             </div>
             <!--Modalbox-Review -->
             <div id="Assigmentbox" class="Assigmentbox">
               <span class="closetask">&times;</span>
-              <center>  <button class="teachersubmit"onclick="teacherinput()">Skicka</button> </center>
+              <center>  <button class="teachersubmit" onclick="teacherinput()">Skicka</button> </center>
               <div id="teacherTask">
                 <div class="RTcontent">
                   <select>
@@ -231,7 +230,7 @@
 
                   <div class="image-upload">
                     <label for="file-input">
-                      <img src="img/addfile.png">
+                      <img alt="addafil" src="img/addfile.png">
                     </label>
                     <input id="file-input" type="file"/>
                     <div class="input-text"><p>Lägg till fil</p>
@@ -253,7 +252,7 @@
 
                 </div>
                 <div class="arrow">
-                  <a href="#arrow-link"><img src="img/pil.png" /></a>
+                  <a href="#arrow-link"><img alt="pil" src="img/pil.png" /></a>
                 </div>
               </footer>
               <script src="js/zenscroll-min.js"></script>
