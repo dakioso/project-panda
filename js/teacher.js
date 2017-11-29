@@ -529,7 +529,7 @@ function drop_end(event){
 }
   // students Array
 let studentClass = [
-  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milosevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
+  { schoolClass: 'fe17', students: ['Mikael Gustafsson', 'Daniel Milojevic', 'Fadi Gourie', 'David Hansson', 'Guled Ali', 'Ahmad Alkhlif', 'Mahmoud Allam', 'Tim Aro', 'Stina Aunes', 'Julia Bäcks', 'Mikael Berglund', 'Sebastian Bergström',
  'Natasa Bosnjak', 'Benjamin Brankovic', 'Carl Brunngård', 'Emil Brunngård', 'Rikard Carlsson', 'Alexander Dahlberg', 'Eleonor Dammfors', 'Leo Ebenezer', 'Patrik Ellboj', 'Robbin Eriksson', 'Andreas Fält', 'Johnny Feng', 'Oscar Fredriksson',
  'Simon Gribert', 'Elin Gustafsson', 'Niklas Hägg', 'Masudul Hasan', 'Nicklas Hindersson', 'Nasimul Huq', 'Jesse Jonsson', 'Carl Jovér', 'Johanna Jovér', 'Kanyarat Klayjinda', 'Christoffer Korell', 'Elin Kviberg', 'Tim Lappalainen', 'Anna Larsson', 'Elias Liljegard',
  'Paulina Lönngren', 'Joakim Luong', 'Simon Melin Liolios', 'Silvia Morais Rodrigu', 'Emmeline Mutka', 'Miranda Mutka', 'Miriam Noyan', 'Daniel Öhrn Hasslöf', 'Victor Pettersson', 'Oskar Ray Frayssinet', 'Hugo Rune', 'Obed Samuel', 'Elias Sannefur', 'Thérèse Scott Rossi',
