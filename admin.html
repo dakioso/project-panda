@@ -27,8 +27,8 @@
   <div class="placenav">
     <div id="nav" class="sidenav">
       <a  class="active" href="student.html">Administratör sida</a>
-	  <a href="#" id="opentask" onclick="opentask()">Lägg till utvärdering</a>
-        <a href="#" id="openadminchange" onclick="opentask()">Ändra utvärdering</a>
+      <a href="#" id="opentask" onclick="opentask()">Lägg till utvärdering</a>
+      <a href="#" id="openadminchange" onclick="opentask()">Ändra utvärdering</a>
     </div>
   </div>
   <!-- Sidenavbar -->
@@ -37,10 +37,10 @@
   </div>
   <!-- Main -->
   <div class="register-container">
-    <div class="register">
-      <h2>Registrera ny person</h2>
+    <div class="attendance">
+      <p>Registrera ny person<p>
 
-      <select>
+      <select class="admin-select">
         <option value="elev">Elev</option>
         <option value="lärare">Lärare</option>
         <option value="admin">Admin</option>
@@ -49,7 +49,7 @@
       <input type="text" name="fnamn" placeholder="Förnamn" id="fnamn">
       <input type="text" name="enamn" placeholder="Efternamn" id="enamn">
       <input type="date" id="datum">
-      <select>
+      <select class="admin-select">
         <option value="klass">FE17</option>
         <option value="klass">AM17</option>
         <option value="klass">SE17</option>
@@ -61,89 +61,100 @@
     </div>
   </div>
 
-<!--Modalbox-Review -->
- <div id="modaladmin" class="modalAdminForm">
+  <div class="add-news-container">
+    <div class="add-news">
+      <p>Lägg till nyhet</p>
 
-<div id="modalAdminCreateForm">
+        <input type="text" name="Lägg till titel" value="titel">
+        <textarea name="news" placeholder="Nyhets innehåll "rows="8" cols="80"></textarea>
+        <input type="button" value="Publicera nyhet">
 
-  <span class="closeadminform">&times;</span>
-<div class="center">
- <h1> Skapa formulär </h1>
- <input type="text" placeholder="Titel"><br>
-                  <select class="formcheck"  name="select" required>
-                    <option disabled selected value> Välj utvärdering </option>
-                    <option value="Veckoutvärdering">Veckoutvärdering</option>
-                    <option value="Projektmetodik">Kursutvärdering</option>
-					</select>
-<br>
-<br>
+    </div>
+  </div>
 
- <form id="addQuestion">
-  <h3>Lägg till frågor</h3>
-  <label class="switch">
-  <input type="checkbox">
-  <span class="dedu">Obligatoriskt</span>
-  </label>
-      <input type="text" id="item" placeholder="Frågor" required>
-      <input type="submit" class="addtext" value="+">
-    </form>
-     <table id="items" class="rutan">
-	  <tr></tr>
-    </table>
-    <form id="addoption">
-	    <h3>Lägg till alternativ</h3>
-      <input type="text" id="submitaddoptions" placeholder="Alternativ" required>
-      <input type="submit" class="addtext" value="+">
-    <table id="options" class="rutan">
-	  <tr></tr>
-    </table>
-  </form>
-   <h3>Välj alternativ knappar</h3>
-      <input type="radio" required>
-    <input type="checkbox">
-	<br>
-	<br>
-    <button class="adminsubmitTask" onclick="admininput()">Skicka</button>
+  <!--Modalbox-Review -->
+  <div id="modaladmin" class="modalAdminForm">
 
-</div>
-</div>
-</div>
- <div id="modaladminchange" class="modaladmin">
-  <span class="closechangeform">&times;</span>
-<div id="Adminchange">
-  <div class="firstboxchange">
-    <h2>Lägg till eller tabort</h2>
-    <form id="sven">
-      <input type="text" id="item1" placeholder="Frågor" required>
-      <input type="submit" value="Lägg till">
-    </form>
-    <h2>Veckoutvärdering</h2>
-    <ul id="items1">
-      <li class="listan">Vilket tempo är det?<button class="delete1">X</button></li>
-      <li class="listan">Vilken kurs är svårast?<button class="delete1">X</button></li>
-      <li class="listan">Nivån på innehållet?<button class="delete1">X</button></li>
-      <li class="listan">Trivsel i klassen?<button class="delete1">X</button></li>
-    </ul>
-	</div>
-    <div class="secondboxchange">
-    <form id="addoption1">
-      <input type="text" id="submitaddoptions1"  placeholder="Alternativ" required>
-      <input type="submit" value="Lägg till">
-    </form>
-    <h2>Alternativ</h2>
-    <ul id="options1">
-      <li class="listan">Utmärkt<button class="delete1">X</button></li>
-      <li class="listan">Bra<button class="delete1">X</button></li>
-      <li class="listan">Mindre bra<button class="delete1">X</button></li>
-      <li class="listan">Dålig<button class="delete1">X</button></li>
-    </ul>
-  <div class="middle">
-  	<button class="adminsubmitTask" onclick="adminchangeinput()">Spara</button>
-	</div>
-	</div>
-</div>
+    <div id="modalAdminCreateForm">
 
-</div>
+      <span class="closeadminform">&times;</span>
+      <div class="center">
+        <h1> Skapa formulär </h1>
+        <input type="text" placeholder="Titel"><br>
+        <select class="formcheck"  name="select" required>
+          <option disabled selected value> Välj utvärdering </option>
+          <option value="Veckoutvärdering">Veckoutvärdering</option>
+          <option value="Projektmetodik">Kursutvärdering</option>
+        </select>
+        <br>
+        <br>
+
+        <form id="addQuestion">
+          <h3>Lägg till frågor</h3>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="dedu">Obligatoriskt</span>
+          </label>
+          <input type="text" id="item" placeholder="Frågor" required>
+          <input type="submit" class="addtext" value="+">
+        </form>
+        <table id="items" class="rutan">
+          <tr></tr>
+        </table>
+        <form id="addoption">
+          <h3>Lägg till alternativ</h3>
+          <input type="text" id="submitaddoptions" placeholder="Alternativ" required>
+          <input type="submit" class="addtext" value="+">
+          <table id="options" class="rutan">
+            <tr></tr>
+          </table>
+        </form>
+        <h3>Välj alternativ knappar</h3>
+        <input type="radio" required>
+        <input type="checkbox">
+        <br>
+        <br>
+        <button class="adminsubmitTask" onclick="admininput()">Skicka</button>
+
+      </div>
+    </div>
+  </div>
+  <div id="modaladminchange" class="modaladmin">
+    <span class="closechangeform">&times;</span>
+    <div id="Adminchange">
+      <div class="firstboxchange">
+        <h2>Lägg till eller tabort</h2>
+        <form id="sven">
+          <input type="text" id="item1" placeholder="Frågor" required>
+          <input type="submit" value="Lägg till">
+        </form>
+        <h2>Veckoutvärdering</h2>
+        <ul id="items1">
+          <li class="listan">Vilket tempo är det?<button class="delete1">X</button></li>
+          <li class="listan">Vilken kurs är svårast?<button class="delete1">X</button></li>
+          <li class="listan">Nivån på innehållet?<button class="delete1">X</button></li>
+          <li class="listan">Trivsel i klassen?<button class="delete1">X</button></li>
+        </ul>
+      </div>
+      <div class="secondboxchange">
+        <form id="addoption1">
+          <input type="text" id="submitaddoptions1"  placeholder="Alternativ" required>
+          <input type="submit" value="Lägg till">
+        </form>
+        <h2>Alternativ</h2>
+        <ul id="options1">
+          <li class="listan">Utmärkt<button class="delete1">X</button></li>
+          <li class="listan">Bra<button class="delete1">X</button></li>
+          <li class="listan">Mindre bra<button class="delete1">X</button></li>
+          <li class="listan">Dålig<button class="delete1">X</button></li>
+        </ul>
+        <div class="middle">
+          <button class="adminsubmitTask" onclick="adminchangeinput()">Spara</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <!-- Footer-->
   <footer class="teacher-footer" id="kontakt">
     <div class="para">
