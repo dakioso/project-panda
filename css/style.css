@@ -1310,13 +1310,20 @@ p.price-head {
   font-size: 1.5em;
 }
 
-.attendance {
+.attendance, .add-news {
   border: 1px solid #292929;
   right: 0;
   height: 396px;
   width: 250px;
   margin-right: 20px;
+  text-align: center;
 }
+
+.add-news input[type=text], textarea {
+  background: #fff;
+  text-align: center;
+}
+
 
 .daily-vote {
   display: flex;
@@ -1376,7 +1383,7 @@ p.price-head {
 
 /*fade out animation end*/
 
-.attendance input[type=text], textarea {
+.attendance input[type=text], textarea, input[type=date] {
   background-color: #FFF;
   color: #292929;
   border: 1px solid #292929;
@@ -1386,6 +1393,7 @@ p.price-head {
   width: 224px;
   text-align: center;
 }
+
 
 .attendance textarea {
   height: 100px;
@@ -1417,6 +1425,10 @@ p.price-head {
   width: 63%;
   margin-top: 6px;
   outline-color: #292929;
+}
+
+.attendance .admin-select {
+  width: 95%;
 }
 
 .studentContent {
@@ -2606,7 +2618,6 @@ p3 {
 .register-container {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
 }
 
 .register {
@@ -2628,6 +2639,24 @@ p3 {
 .register input {
   margin: 5px;
 }
+
+.add-news-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+/*.add-news {
+  border: 1px solid black;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}*/
+
+
+
 
 /* -----------------------------------------------------------------------------
         Drag and drop css start
