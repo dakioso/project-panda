@@ -166,7 +166,8 @@ span {
   flex: 2;
   order: 3;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
+  margin-bottom: 50px;
 }
 
 .pricing-box {
