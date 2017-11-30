@@ -6,6 +6,9 @@ var lösen = document.getElementById("lösen");
 
 let notif = document.getElementById("notification");
 
+let newsTA = document.getElementById("newsTitleA");
+let newsCA = document.getElementById("newsContentA");
+
 function reg() {
   fnamntest.value = "";
   enamn.value = "";
@@ -303,3 +306,12 @@ function removeItem(event){
   }
 }
 
+function createNews() {
+  newsTA.value = "";
+  newsCA.value = "";
+  notif.innerText = "Din nyhet är nu publicerad.";
+  notif.style.color = '#3dd43d';
+  notif.style.borderColor ="#3dd43d";
+  notif.classList.remove("hideMe");
+  setInterval(addHideMe, 1000);
+}

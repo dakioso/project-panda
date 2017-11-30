@@ -38,15 +38,15 @@
   <!-- Main -->
   <div class="register-container">
     <div class="attendance-hidden">
-      
+
     </div>
     <div class="add-news-container">
       <div class="add-news">
         <p>Lägg till nyhet</p>
 
-          <input type="text" name="Lägg till titel" value="titel">
-          <textarea name="news" placeholder="Nyhets innehåll "rows="8" cols="80"></textarea>
-          <input type="button" value="Publicera nyhet">
+          <input type="text" id="newsTitleA" name="Lägg till titel" placeholder="Titel">
+          <textarea name="news" id="newsContentA" placeholder="Nyhetsinnehåll" rows="8" cols="80"></textarea>
+          <input type="button" value="Publicera nyhet" onClick="createNews()">
 
       </div>
     </div>
